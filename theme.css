@@ -30,10 +30,10 @@
 
 /* add spacing */
 .content__76dcf /* outside edges */ {
-	margin: var(--txt-pad) var(--pad) var(--pad) 0;
+	margin: var(--pad) var(--pad) var(--pad) 0;
 }
 .guilds__2b93a /* outside edges */ {
-	margin: var(--txt-pad) 0 var(--pad) var(--pad);
+	margin: var(--pad) 0 var(--pad) var(--pad);
 }
 .container_d1f8f5 /* server list and everything else */,
 .sidebar_e031be /* channel list and user panel */,
@@ -137,6 +137,50 @@
 	height: 53px;
 }
 
+/* add text */
+#app-mount .sidebar_e031be,
+.chat__52833,
+.wrapper__216eb {
+	overflow: visible;
+}
+.container__7e23c::after,
+.container__26baa::after,
+.messagesWrapper_add28b::after,
+.panels__58331::after,
+.channelTextArea_c2094b::after,
+.guilds__2b93a::after,
+.membersWrap__5ca6b::after {
+	display: block;
+	color: var(--txt-3);
+	font-weight: 500;
+	position: absolute;
+	top: -10px;
+	left: 8px;
+	background-color: var(--bg-0);
+	padding: 0 4px;
+}
+.container__7e23c::after {
+	content: 'server';
+}
+.container__26baa::after {
+	content: 'channel';
+}
+.messagesWrapper_add28b::after {
+	content: 'messages';
+}
+.panels__58331::after {
+	content: 'user';
+}
+.channelTextArea_c2094b::after {
+	content: 'input';
+}
+.guilds__2b93a::after {
+	content: 'nav';
+}
+.membersWrap__5ca6b::after {
+	content: 'members';
+}
+
 /* fix more shit */
 .scroller_e412fe,
 .newMessagesBar__8b272 {
@@ -150,49 +194,28 @@
 #vc-spotify-player {
 	padding: var(--txt-pad) var(--txt-pad) 0 var(--txt-pad);
 }
-
-/* add text */
-#app-mount .sidebar_e031be,
-.chat__52833,
-.wrapper__216eb {
-	overflow: visible;
-}
-.container__7e23c::after,
-.container__26baa::after,
-.messagesWrapper_add28b::after,
-.panels__58331::after,
-.channelTextArea_c2094b::after,
-.guilds__2b93a::after {
-	display: block;
-	color: var(--txt-3);
-	font-weight: 500;
-	position: absolute;
-	top: -10px;
-	left: 8px;
-	background-color: var(--bg-0);
-	padding: 0 4px;
-	z-index: 100;
-}
-.container__7e23c::after {
-	content: 'server';
-}
-.container__26baa::after {
-	content: 'channel';
-}
-.messagesWrapper_add28b::after {
-	content: 'messages';
+.membersWrap__5ca6b::after {
+	top: -8px;
 }
 .panels__58331 {
 	position: relative;
 }
-.panels__58331::after {
-	content: 'user';
+
+/* wordmark */
+.wordmarkWindows_ffbc5e > svg {
+	display: none;
 }
-.channelTextArea_c2094b::after {
-	content: 'input';
-}
-.guilds__2b93a::after {
-	content: 'nav';
+.wordmarkWindows_ffbc5e::after {
+	content: 'system24';
+	display: block;
+	position: relative;
+	color: var(--txt-2);
+	margin-left: 6px;
+	width: 100px;
+	height: 12px;
+	font-family: var(--font);
+	font-size: 16px;
+	font-weight: 700;
 }
 
 .theme-dark {
