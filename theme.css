@@ -4,6 +4,7 @@
 	--txt-pad: 10px;
 
 	--bg-0: oklch(18% 0 0);
+	--bg-1: oklch(22% 0 0);
 	--acc-0: oklch(30% 0 0);
 	--txt-0: oklch(90% 0 0);
 	--txt-1: oklch(80% 0 0);
@@ -24,7 +25,11 @@
 .member_b44d5d /* member containers */ {
 	background: var(--bg-0);
 }
-.sidebar_e031be /* remove bg of channel list */ {
+.sidebar_e031be /* remove bg of channel list */,
+#app-mount .container__7e23c /* channel list inner */,
+.privateChannels__9b518 /* dms list */,
+#app-mount .scroller__89969 /* dms list inner */,
+.attachedBars_c1606a, .replyBar_ed6afc, .threadSuggestionBar__717a3 /* reply & thread bars */ {
 	background: none;
 }
 
@@ -39,7 +44,8 @@
 .sidebar_e031be /* channel list and user panel */,
 .content__01e65 /* between chat and member list */,
 .container_bd15da /* friend page */,
-.tabBody_a90ea8 /* friends page inner */ {
+.tabBody_a90ea8 /* friends page inner */,
+.container__694a1 /* forum post header and chat */ {
 	gap: var(--pad);
 }
 .sidebar_e031be /* channel list and chat */ {
@@ -68,7 +74,9 @@
 .container__26baa /* header bar */,
 .peopleColumn__0c784 /* friends page list */,
 .nowPlayingColumn_b025fe /* now playing column */,
-.channelTextArea_c2094b /* chat bar */ {
+.channelTextArea_c2094b /* chat bar */,
+.container_b92032 /* forum */,
+.profilePanel_e2cafe /* dm profile panel */ {
 	border: 2px solid var(--acc-0);
 }
 .container_f79ab4 .membersWrap__5ca6b {
@@ -138,18 +146,16 @@
 }
 
 /* add text */
-#app-mount .sidebar_e031be,
-.chat__52833,
-.wrapper__216eb {
-	overflow: visible;
-}
 .container__7e23c::after,
 .container__26baa::after,
 .messagesWrapper_add28b::after,
 .panels__58331::after,
 .channelTextArea_c2094b::after,
 .guilds__2b93a::after,
-.membersWrap__5ca6b::after {
+.membersWrap__5ca6b::after,
+.privateChannels__9b518::after,
+.container_b92032::after,
+.profilePanel_e2cafe:after {
 	display: block;
 	color: var(--txt-3);
 	font-weight: 500;
@@ -180,13 +186,36 @@
 .membersWrap__5ca6b::after {
 	content: 'members';
 }
+.privateChannels__9b518::after {
+	content: 'dms';
+}
+.container_b92032::after {
+	content: 'forum';
+}
+.profilePanel_e2cafe:after {
+	content: 'profile';
+}
 
 /* fix more shit */
+#app-mount .sidebar_e031be,
+.chat__52833,
+.wrapper__216eb,
+.privateChannels__9b518,
+.container__694a1,
+.container_bd15da /* friends header */ {
+	overflow: visible;
+}
+.privateChannels__9b518 {
+	min-height: 0;
+}
+.container_bd15da /* friends header */ {
+	min-width: 0;
+}
 .scroller_e412fe,
 .newMessagesBar__8b272 {
-	top: 12px;
+	top: var(--txt-pad);
 }
-.animatedContainer__0e828 {
+.animatedContainer__0e828 /* server banner */ {
 	top: var(--txt-pad);
 	left: var(--txt-pad);
 	width: calc(100% - 2 * var(--txt-pad));
@@ -200,13 +229,22 @@
 .panels__58331 {
 	position: relative;
 }
+.platform-win .scroller_de945b,
+.platform-osx .scroller_de945b {
+	padding-top: var(--txt-pad);
+}
+.bannerSVGWrapper__8a38c {
+	margin: var(--txt-pad);
+	min-width: calc(340px - 2 * var(--txt-pad)) !important;
+	width: calc(100% - 2 * var(--txt-pad));
+}
 
 /* wordmark */
 .wordmarkWindows_ffbc5e > svg {
 	display: none;
 }
 .wordmarkWindows_ffbc5e::after {
-	content: 'system24';
+	content: 'discord';
 	display: block;
 	position: relative;
 	color: var(--txt-2);
@@ -215,7 +253,7 @@
 	height: 12px;
 	font-family: var(--font);
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 500;
 }
 
 .theme-dark {
@@ -245,7 +283,7 @@
 	--background-modifier-selected: hsl(228 calc(1 * 6%) 32.5% / 0.6);
 	--background-nested-floating: var(--primary-630);
 	--background-primary: var(--bg-0);
-	--background-secondary: var(--bg-0);
+	--background-secondary: var(--bg-1);
 	--background-secondary-alt: var(--bg-0);
 	--background-tertiary: var(--bg-0);
 	--bg-backdrop: hsl(0 calc(1 * 0%) 0% / 0.7);
@@ -254,7 +292,7 @@
 	--bg-base-secondary: var(--primary-630);
 	--bg-base-tertiary: var(--primary-660);
 	--bg-brand: var(--brand-500);
-	--bg-mod-faint: hsl(228 calc(1 * 6%) 32.5% / 0.3);
+	--bg-mod-faint: var(--bg-1);
 	--bg-mod-strong: hsl(228 calc(1 * 6%) 32.5% / 0.54);
 	--bg-mod-subtle: hsl(228 calc(1 * 6%) 32.5% / 0.48);
 	--bg-surface-overlay: var(--primary-800);
@@ -382,7 +420,7 @@
 	--header-muted: var(--primary-360);
 	--header-primary: var(--txt-1);
 	--header-secondary: var(--primary-330);
-	--home-background: var(--primary-645);
+	--home-background: none;
 	--home-card-resting-border: hsl(0 calc(1 * 0%) 0% / 0);
 	--icon-muted: var(--primary-400);
 	--icon-primary: var(--primary-130);
