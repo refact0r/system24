@@ -4,7 +4,8 @@
 	--txt-pad: 10px;
 
 	--bg-0: oklch(18% 0 0);
-	--bg-1: oklch(22% 0 0);
+	--bg-1: oklch(23% 0 0);
+	--bg-2: oklch(27% 0 0);
 
 	--hover: oklch(54% 0 0 / 0.1);
 	--active: oklch(54% 0 0 / 0.2);
@@ -15,6 +16,15 @@
 	--txt-1: oklch(80% 0 0);
 	--txt-2: oklch(60% 0 0);
 	--txt-3: oklch(40% 0 0);
+
+	--pink: oklch(73% 0.12 0);
+	--yellow: oklch(73% 0.12 90);
+	--green: oklch(73% 0.12 160);
+	--purple: oklch(73% 0.12 300);
+
+	--online-dot: var(--green);
+	--dnd-dot: var(--pink);
+	--idle-dot: var(--yellow);
 }
 
 :root {
@@ -26,47 +36,78 @@
 }
 
 /* colors */
-.members__573eb, /* member list */
-.member_b44d5d /* member containers */ {
-	background: var(--bg-0);
-}
-.sidebar_e031be /* remove bg of channel list */,
-#app-mount .container__7e23c /* channel list inner */,
-.privateChannels__9b518 /* dms list */,
-#app-mount .scroller__89969 /* dms list inner */,
-.attachedBars_c1606a, .replyBar_ed6afc, .threadSuggestionBar__717a3 /* reply & thread bars */ {
+/* remove bg */
+[class^=sidebar_]  /* channel list */,
+#app-mount [class^=sidebar_] > [class^=container__] /* channel list inner */,
+[class^=privateChannels__] /* dms list */,
+[class^=privateChannels__] > [class^=scroller__] /* dms list inner */,
+[class^=attachedBars_], [class^=replyBar_], [class^=threadSuggestionBar__] /* reply, thread, atttachment bars above chat bar */,
+[class^=panels__] /* user panel */,
+#app-mount #vc-spotify-player,
+[class^=panels__] > [class^=container_],
+[class^=chat__] > [class^=content__] > [class^=container_] /* member list */,
+[class^=members__] /* member list inner */,
+[class^=member_] /* member containers */ {
 	background: none;
+}
+/* status dots */
+rect[fill='#23a55a'] {
+	fill: var(--online-dot);
+}
+rect[fill='#f23f43'] {
+	fill: var(--dnd-dot);
+}
+rect[fill='#f0b232'] {
+	fill: var(--idle-dot);
+}
+/* fix white-500 */
+[class*='lookFilled__'][class*='colorPrimary_'],
+#app-mount [class*='lookLink_'][class*='colorPrimary_'],
+[class*='buttonColor__'],
+#app-mount [class*='tooltipGrey__'] {
+	color: var(--txt-1);
+}
+.color_b28e35,
+#app-mount [class^='headerContent__'],
+[class*='barButtonBase__'] {
+	color: var(--txt-0);
+}
+path[fill='var(--white-500)'] {
+	fill: var(--txt-0);
+}
+/* accents */
+[class^='expandedFolderIconWrapper__'] > svg {
+	color: var(--purple) !important;
 }
 
 /* add spacing */
 .content__76dcf /* outside edges */ {
 	margin: var(--pad) var(--pad) var(--pad) 0;
 }
-.guilds__2b93a /* outside edges */ {
+[class*=guilds__] /* outside edges */ {
 	margin: var(--pad) 0 var(--pad) var(--pad);
 }
 .container_d1f8f5 /* server list and everything else */,
-.sidebar_e031be /* channel list and user panel */,
+[class^=sidebar_] /* channel list and user panel */,
 .content__01e65 /* between chat and member list */,
 .container_bd15da /* friend page */,
 .tabBody_a90ea8 /* friends page inner */,
-.container__694a1 /* forum post header and chat */ {
+.container__694a1 /* forum post header and chat */,
+[class^=chat__] /* header bar and chat */,
+.container__6113a /* new thread header and chat */ {
 	gap: var(--pad);
 }
-.sidebar_e031be /* channel list and chat */ {
+[class^=sidebar_] /* channel list and chat */ {
 	margin-right: var(--pad);
 }
-.sidebar_e031be.hidden__3ab58 {
+[class^='sidebar_'].hidden__3ab58 {
 	margin-right: 0;
 }
-.resizeHandle_cc9d34 /* pretend to be a margin */ {
+[class^=resizeHandle_] /* pretend to be a margin */ {
 	width: var(--pad);
 }
 .wrapper__6bf2d.fullScreen_b3f0af .callContainer__1477d /* fullscreen vc */ {
 	margin-top: var(--pad);
-}
-.subtitleContainer_f50402 /* header bar */ {
-	margin-bottom: var(--pad);
 }
 
 /* borders */
@@ -80,9 +121,11 @@
 .peopleColumn__0c784 /* friends page list */,
 .nowPlayingColumn_b025fe /* now playing column */,
 .channelTextArea_c2094b /* chat bar */,
+.channelTextArea_cb604a /* new thread chat bar */,
 .container_b92032 /* forum */,
 .profilePanel_e2cafe /* dm profile panel */,
-.searchResultsWrap__2e184 /* search results */ {
+.searchResultsWrap__2e184 /* search results */,
+.scroller_b6c35f /* new thread */ {
 	border: 2px solid var(--acc-0);
 }
 .container_f79ab4 .membersWrap__5ca6b {
@@ -95,7 +138,7 @@
 	border: none;
 }
 
-#app-mount .sidebar_e031be /* fix channel list radius cutoff */ {
+#app-mount [class^=sidebar_] /* fix channel list radius cutoff */ {
 	border-radius: 0;
 }
 
@@ -117,7 +160,8 @@
 .channelTextAreaContainer__37a67 {
 	margin-top: var(--pad);
 }
-.channelTextArea_c2094b {
+.channelTextArea_c2094b,
+.channelTextArea_cb604a {
 	margin: 0;
 	border-radius: 0;
 	box-sizing: border-box;
@@ -157,12 +201,14 @@
 .messagesWrapper_add28b::after,
 .panels__58331::after,
 .channelTextArea_c2094b::after,
+.channelTextArea_cb604a::after,
 .guilds__2b93a::after,
 .membersWrap__5ca6b::after,
 .privateChannels__9b518::after,
 .container_b92032::after,
 .profilePanel_e2cafe::after,
-.searchResultsWrap__2e184::after {
+.searchResultsWrap__2e184::after,
+.scroller_b6c35f::after {
 	display: block;
 	color: var(--txt-3);
 	font-weight: 500;
@@ -179,13 +225,15 @@
 .container__26baa::after {
 	content: 'channel';
 }
-.messagesWrapper_add28b::after {
+.messagesWrapper_add28b::after,
+.scroller_b6c35f::after {
 	content: 'messages';
 }
 .panels__58331::after {
 	content: 'user';
 }
-.channelTextArea_c2094b::after {
+.channelTextArea_c2094b::after,
+.channelTextArea_cb604a::after {
 	content: 'input';
 }
 .guilds__2b93a::after {
@@ -208,7 +256,7 @@
 }
 
 /* fix more shit */
-#app-mount .sidebar_e031be,
+#app-mount [class^=sidebar_],
 .chat__52833,
 .wrapper__216eb,
 .privateChannels__9b518,
@@ -216,6 +264,9 @@
 .container_bd15da /* friends header */,
 .searchResultsWrap__2e184 {
 	overflow: visible;
+}
+.scroller_b6c35f /* new thread messages box */ {
+	overflow: visible !important;
 }
 .privateChannels__9b518 {
 	min-height: 0;
@@ -268,6 +319,77 @@
 	font-weight: 500;
 }
 
+/* vencord spotify progress bar */
+#vc-spotify-progress-bar {
+	margin-bottom: 0.7em;
+}
+#vc-spotify-progress-bar [class^='bar_'] {
+	height: 20px;
+	border-radius: 0;
+	background: var(--bg-1);
+}
+.vc-spotify-time-left,
+.vc-spotify-time-right {
+	z-index: 1;
+	top: 4px;
+	mix-blend-mode: difference;
+	font-size: 14px;
+}
+.vc-spotify-time-left {
+	left: 6px;
+}
+.vc-spotify-time-right {
+	right: 6px;
+}
+.grabber_e3daf3 {
+	visibility: hidden;
+}
+
+/* the unrounding */
+::-webkit-scrollbar-thumb,
+* {
+	border-radius: 0 !important;
+}
+.svg__34dd4 > mask {
+	display: none;
+}
+
+.childWrapperNoHoverBg_bc176a {
+	background-color: var(--bg-1);
+}
+
+/* bigger folder experiment 
+.expandedFolderBackground_b1385f {
+	left: 6px;
+	width: 60px;
+}
+.wrapper__832f2 {
+	padding: 4px 0;
+}
+*/
+
+/* border experiment
+.wrapper_a6f950 {
+	border: 2px solid var(--acc-0);
+	box-sizing: border-box;
+}
+.childWrapper__760c6, .icon_e2a8c1 {
+	width: 44px;
+	height: 44px;
+}
+*/
+
+/* .wrapper_a6f950 {
+	margin-top: 4px;
+	margin-left: 4px;
+	width: 40px;
+	height: 40px;
+}
+.childWrapper__760c6, .icon_e2a8c1 {
+	width: 40px;
+	height: 40px;
+} */
+
 .theme-dark {
 	--action-sheet-gradient-bg: var(--primary-630);
 	--activity-card-background: var(--primary-700);
@@ -296,7 +418,7 @@
 	--background-nested-floating: var(--primary-630);
 	--background-primary: var(--bg-0);
 	--background-secondary: var(--bg-1);
-	--background-secondary-alt: var(--bg-0);
+	--background-secondary-alt: var(--bg-1);
 	--background-tertiary: var(--bg-0);
 	--bg-backdrop: hsl(0 calc(1 * 0%) 0% / 0.7);
 	--bg-backdrop-no-opacity: var(--black-500);
@@ -330,36 +452,36 @@
 	--button-outline-brand-border: var(--brand-500);
 	--button-outline-brand-border-active: var(--brand-560);
 	--button-outline-brand-border-hover: var(--brand-500);
-	--button-outline-brand-text: var(--white-500);
-	--button-outline-brand-text-active: var(--white-500);
-	--button-outline-brand-text-hover: var(--white-500);
+	--button-outline-brand-text: var(--txt-1);
+	--button-outline-brand-text-active: var(--txt-1);
+	--button-outline-brand-text-hover: var(--txt-1);
 	--button-outline-danger-background: hsl(0 calc(1 * 0%) 100% / 0);
 	--button-outline-danger-background-active: var(--red-460);
 	--button-outline-danger-background-hover: var(--red-430);
 	--button-outline-danger-border: var(--red-400);
 	--button-outline-danger-border-active: var(--red-430);
 	--button-outline-danger-border-hover: var(--red-430);
-	--button-outline-danger-text: var(--white-500);
-	--button-outline-danger-text-active: var(--white-500);
-	--button-outline-danger-text-hover: var(--white-500);
+	--button-outline-danger-text: var(--txt-1);
+	--button-outline-danger-text-active: var(--txt-1);
+	--button-outline-danger-text-hover: var(--txt-1);
 	--button-outline-positive-background: hsl(0 calc(1 * 0%) 100% / 0);
 	--button-outline-positive-background-active: var(--green-530);
 	--button-outline-positive-background-hover: var(--green-430);
 	--button-outline-positive-border: var(--green-360);
 	--button-outline-positive-border-active: var(--green-530);
 	--button-outline-positive-border-hover: var(--green-430);
-	--button-outline-positive-text: var(--white-500);
-	--button-outline-positive-text-active: var(--white-500);
-	--button-outline-positive-text-hover: var(--white-500);
+	--button-outline-positive-text: var(--txt-1);
+	--button-outline-positive-text-active: var(--txt-1);
+	--button-outline-positive-text-hover: var(--txt-1);
 	--button-outline-primary-background: hsl(0 calc(1 * 0%) 100% / 0);
 	--button-outline-primary-background-active: var(--primary-430);
 	--button-outline-primary-background-hover: var(--primary-500);
 	--button-outline-primary-border: var(--primary-500);
 	--button-outline-primary-border-active: var(--primary-430);
 	--button-outline-primary-border-hover: var(--primary-500);
-	--button-outline-primary-text: var(--white-500);
-	--button-outline-primary-text-active: var(--white-500);
-	--button-outline-primary-text-hover: var(--white-500);
+	--button-outline-primary-text: var(--txt-1);
+	--button-outline-primary-text-active: var(--txt-1);
+	--button-outline-primary-text-hover: var(--txt-1);
 	--button-positive-background: var(--green-430);
 	--button-positive-background-active: var(--green-530);
 	--button-positive-background-disabled: var(--green-430);
@@ -455,8 +577,8 @@
 	--input-focused-border: hsl(0 calc(1 * 0%) 100% / 0.16);
 	--input-placeholder-text: var(--input-placeholder-text-dark);
 	--interactive-active: var(--txt-1);
-	--interactive-hover: var(--primary-230);
-	--interactive-muted: var(--primary-500);
+	--interactive-hover: var(--txt-1);
+	--interactive-muted: var(--txt-3);
 	--interactive-normal: var(--txt-2);
 	--legacy-android-blur-overlay-default: hsl(228 calc(1 * 6.7%) 14.7% / 0.5);
 	--legacy-android-blur-overlay-ultra-thin: hsl(0 calc(1 * 0%) 0% / 0.025);
@@ -580,14 +702,14 @@
 	--redesign-only-background-sunken: var(--primary-660);
 	--scrollbar-auto-scrollbar-color-thumb: var(--primary-730);
 	--scrollbar-auto-scrollbar-color-track: var(--primary-630);
-	--scrollbar-auto-thumb: var(--primary-730);
+	--scrollbar-auto-thumb: var(--bg-1);
 	--scrollbar-auto-track: transparent;
-	--scrollbar-thin-thumb: var(--primary-730);
+	--scrollbar-thin-thumb: var(--bg-1);
 	--scrollbar-thin-track: transparent;
 	--spoiler-hidden-background: var(--primary-700);
 	--spoiler-revealed-background: var(--primary-660);
 	--stage-card-pill-bg: var(--primary-630);
-	--status-danger: var(--red-400);
+	--status-danger: var(--pink);
 	--status-danger-background: var(--red-430);
 	--status-danger-text: var(--white-500);
 	--status-dnd: var(--red-400);
@@ -630,4 +752,10 @@
 	--you-bar-bg: var(--primary-800);
 
 	--elevation-low: none;
+
+	--brand-500: var(--purple);
+
+	--primary-500: var(--bg-2);
+
+	--white-500: var(--bg-0);
 }
