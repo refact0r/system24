@@ -4,23 +4,34 @@
 	--txt-pad: 10px;
 
 	--bg-0: oklch(18% 0 0);
-	--bg-1: oklch(23% 0 0);
-	--bg-2: oklch(27% 0 0);
+	--bg-1: oklch(22% 0 0);
+	--bg-2: oklch(26% 0 0);
+	--bg-3: oklch(30% 0 0);
 
 	--hover: oklch(54% 0 0 / 0.1);
 	--active: oklch(54% 0 0 / 0.2);
-	--selected: oklch(54% 0 0 / 0.2);
+	--selected: var(--active);
 
-	--acc-0: oklch(30% 0 0);
+	--txt-dark: var(--bg-0);
 	--txt-0: oklch(90% 0 0);
 	--txt-1: oklch(80% 0 0);
 	--txt-2: oklch(60% 0 0);
 	--txt-3: oklch(40% 0 0);
 
+	--txt-link: oklch(76% 0.12 200);
+
+	--mention-overlay: color-mix(in srgb, var(--purple), transparent 80%);
+	--mention-hover-overlay: color-mix(in srgb, var(--purple), transparent 90%);
+	--reply-overlay: var(--active);
+	--reply-hover-overlay: var(--hover);
+
 	--pink: oklch(73% 0.12 0);
+	--pink-1: oklch(66% 0.12 0);
 	--yellow: oklch(73% 0.12 90);
 	--green: oklch(73% 0.12 160);
 	--purple: oklch(73% 0.12 300);
+	--purple-1: oklch(66% 0.12 300);
+	--purple-2: oklch(59% 0.12 300);
 
 	--online-dot: var(--green);
 	--dnd-dot: var(--pink);
@@ -47,8 +58,40 @@
 [class^=panels__] > [class^=container_],
 [class^=chat__] > [class^=content__] > [class^=container_] /* member list */,
 [class^=members__] /* member list inner */,
-[class^=member_] /* member containers */ {
+[class^=member_] /* member containers */,
+[class^=searchResultsWrap__] /* search results */ {
 	background: none;
+}
+/* fix bg */
+[class^='folderIconWrapper__'][style='background-color: rgba(88, 101, 242, 0.4);'] {
+	background-color: var(--bg-1) !important;
+}
+/* fix white-500 */
+[class*=lookFilled__][class*=colorPrimary_],
+#app-mount [class*=lookLink_][class*=colorPrimary_],
+[class*=buttonColor_],
+#app-mount [class^=headerContent__],
+#app-mount [class*=tooltipGrey__],
+#app-mount [class^=wrapperAudio__],
+[class^=numberBadge_][class*=base_] /* inbox friend requests number */,
+[class^=searchAnswer__],
+[class^=searchFilter_] {
+	color: var(--txt-1);
+}
+.color_b28e35,
+[class^=jumpToPresentBar__] > button,
+[class^=gifFavoriteButton_], 
+[class^=bar_] /* new unread bar */,
+.icon__09787 /* new thread icon */,
+[class^=centerContent__] > [class^=wrapper_] /* video embed play button */ {
+	color: var(--txt-0);
+}
+#app-mount [class^=centerContent__] [class^=anchor_] /* video embed external button */ {
+	color: var(--txt-0) !important;
+}
+[role='button'] path[fill='var(--white-500)'],
+#app-mount button path[fill='var(--white-500)'] {
+	fill: var(--txt-0);
 }
 /* status dots */
 rect[fill='#23a55a'] {
@@ -60,24 +103,21 @@ rect[fill='#f23f43'] {
 rect[fill='#f0b232'] {
 	fill: var(--idle-dot);
 }
-/* fix white-500 */
-[class*='lookFilled__'][class*='colorPrimary_'],
-#app-mount [class*='lookLink_'][class*='colorPrimary_'],
-[class*='buttonColor__'],
-#app-mount [class*='tooltipGrey__'] {
-	color: var(--txt-1);
-}
-.color_b28e35,
-#app-mount [class^='headerContent__'],
-[class*='barButtonBase__'] {
-	color: var(--txt-0);
-}
-path[fill='var(--white-500)'] {
-	fill: var(--txt-0);
-}
 /* accents */
 [class^='expandedFolderIconWrapper__'] > svg {
 	color: var(--purple) !important;
+}
+[style="opacity: 1; background-color: rgb(35, 165, 90);"] /* settings checkbuttons */ {
+	background-color: var(--green) !important;
+}
+svg[class^=slider__] > rect[fill="white"] /* settings checkbuttons slider */ {
+	fill: var(--txt-dark);
+}
+[class*=replying__]::before /* reply message left bar */ {
+	background: var(--txt-1);
+}
+[class*=mentioned_]::before /* mention message left bar */ {
+	background: var(--purple);
 }
 
 /* add spacing */
@@ -126,10 +166,20 @@ path[fill='var(--white-500)'] {
 .profilePanel_e2cafe /* dm profile panel */,
 .searchResultsWrap__2e184 /* search results */,
 .scroller_b6c35f /* new thread */ {
-	border: 2px solid var(--acc-0);
+	border: 2px solid var(--bg-3);
 }
 .container_f79ab4 .membersWrap__5ca6b {
 	flex: 1;
+}
+
+/* adjust divider/border thickness */
+#app-mount [class^='divider__'],
+.container_bc43c1:after,
+[class^='peopleListItem_'] {
+	border-width: 2px;
+}
+#app-mount [class^='divider__'] {
+	margin-bottom: -2px;
 }
 
 /* fix existing borders */
@@ -175,7 +225,7 @@ path[fill='var(--white-500)'] {
 	border-bottom: none;
 }
 .typing__6fd1d {
-	border: 2px solid var(--acc-0);
+	border: 2px solid var(--bg-3);
 	border-top: none;
 }
 .clipContainer_ab9cf6 {
@@ -208,7 +258,9 @@ path[fill='var(--white-500)'] {
 .container_b92032::after,
 .profilePanel_e2cafe::after,
 .searchResultsWrap__2e184::after,
-.scroller_b6c35f::after {
+.scroller_b6c35f::after,
+.peopleColumn__0c784::after,
+.nowPlayingColumn_b025fe::after {
 	display: block;
 	color: var(--txt-3);
 	font-weight: 500;
@@ -254,6 +306,12 @@ path[fill='var(--white-500)'] {
 .searchResultsWrap__2e184::after {
 	content: 'search';
 }
+.peopleColumn__0c784::after {
+	content: 'friends';
+}
+.nowPlayingColumn_b025fe::after {
+	content: 'activity';
+}
 
 /* fix more shit */
 #app-mount [class^=sidebar_],
@@ -261,8 +319,10 @@ path[fill='var(--white-500)'] {
 .wrapper__216eb,
 .privateChannels__9b518,
 .container__694a1,
-.container_bd15da /* friends header */,
-.searchResultsWrap__2e184 {
+.container_bd15da /* friends page header */,
+.searchResultsWrap__2e184,
+.peopleColumn__0c784 /* friends page */ ,
+.tabBody_a90ea8 /* friends page outer */ {
 	overflow: visible;
 }
 .scroller_b6c35f /* new thread messages box */ {
@@ -289,7 +349,8 @@ path[fill='var(--white-500)'] {
 .membersWrap__5ca6b::after {
 	top: -8px;
 }
-.panels__58331 {
+.panels__58331,
+.nowPlayingColumn_b025fe {
 	position: relative;
 }
 .platform-win .scroller_de945b,
@@ -320,6 +381,9 @@ path[fill='var(--white-500)'] {
 }
 
 /* vencord spotify progress bar */
+#vc-spotify-player {
+	--vc-spotify-green: var(--green);
+}
 #vc-spotify-progress-bar {
 	margin-bottom: 0.7em;
 }
@@ -344,7 +408,6 @@ path[fill='var(--white-500)'] {
 .grabber_e3daf3 {
 	visibility: hidden;
 }
-
 /* the unrounding */
 ::-webkit-scrollbar-thumb,
 * {
@@ -370,7 +433,7 @@ path[fill='var(--white-500)'] {
 
 /* border experiment
 .wrapper_a6f950 {
-	border: 2px solid var(--acc-0);
+	border: 2px solid var(--bg-3);
 	box-sizing: border-box;
 }
 .childWrapper__760c6, .icon_e2a8c1 {
@@ -399,18 +462,19 @@ path[fill='var(--white-500)'] {
 	--android-navigation-scrim-background: hsl(240 calc(1 * 4%) 4.9% / 0.5);
 	--android-ripple: hsl(0 calc(1 * 0%) 100% / 0.07);
 	--autocomplete-bg: var(--primary-630);
-	--background-accent: var(--primary-530);
+	--background-accent: var(--bg-1);
 	--background-floating: var(--primary-800);
-	--background-mentioned: hsl(40 calc(1 * 86.4%) 56.9% / 0.1);
-	--background-mentioned-hover: hsl(40 calc(1 * 86.4%) 56.9% / 0.08);
+	--background-mentioned: var(--mention-overlay);
+	--background-mentioned-hover: var(--mention-hover-overlay);
 	--background-message-automod: hsl(359 calc(1 * 87.3%) 59.8% / 0.05);
 	--background-message-automod-hover: hsl(359 calc(1 * 87.3%) 59.8% / 0.1);
-	--background-message-highlight: hsl(235 calc(1 * 86.1%) 77.5% / 0.08);
-	--background-message-highlight-hover: hsl(235 calc(1 * 86.1%) 77.5% / 0.06);
+	--background-message-highlight: var(--reply-overlay);
+	--background-message-highlight-hover: var(--reply-hover-overlay);
+	--brand-experiment-10a: var(--background-message-highlight-hover);
 	--background-message-hover: hsl(0 calc(1 * 0%) 0.8% / 0.06);
 	--background-mobile-primary: var(--primary-600);
 	--background-mobile-secondary: var(--primary-630);
-	--background-modifier-accent: var(--acc-0);
+	--background-modifier-accent: var(--bg-3);
 	--background-modifier-accent-2: hsl(228 calc(1 * 6%) 32.5% / 0.48);
 	--background-modifier-active: var(--active);
 	--background-modifier-hover: var(--hover);
@@ -487,9 +551,9 @@ path[fill='var(--white-500)'] {
 	--button-positive-background-disabled: var(--green-430);
 	--button-positive-background-hover: var(--green-500);
 	--button-secondary-background: var(--primary-500);
-	--button-secondary-background-active: var(--primary-400);
-	--button-secondary-background-disabled: var(--primary-500);
-	--button-secondary-background-hover: var(--primary-430);
+	--button-secondary-background-active: var(--txt-3);
+	--button-secondary-background-disabled: red;
+	--button-secondary-background-hover: var(--bg-3);
 	--card-gradient-bg: hsl(0 calc(1 * 0%) 0% / 0.4);
 	--card-gradient-pressed-bg: hsl(0 calc(1 * 0%) 0% / 0.5);
 	--card-primary-bg: var(--primary-600);
@@ -725,14 +789,14 @@ path[fill='var(--white-500)'] {
 	--status-warning-text: var(--black-500);
 	--text-brand: var(--brand-360);
 	--text-danger: var(--red-345);
-	--text-link: var(--blue-345);
+	--text-link: var(--txt-link);
 	--text-link-low-saturation: var(--blue-330);
 	--text-low-contrast: var(--primary-360);
 	--text-message-preview-low-sat: var(--primary-360);
 	--text-muted: var(--txt-3);
 	--text-muted-on-default: var(--primary-330);
 	--text-normal: var(--txt-1);
-	--text-positive: var(--green-330);
+	--text-positive: var(--green);
 	--text-primary: var(--primary-230);
 	--text-secondary: var(--primary-330);
 	--text-warning: var(--yellow-300);
@@ -748,14 +812,27 @@ path[fill='var(--white-500)'] {
 	--voice-video-video-tile-blur-fallback: hsl(
 		225 calc(1 * 6.3%) 12.5% / 0.48
 	);
-	--white: var(--white-500);
+	--white: var(--txt-0);
 	--you-bar-bg: var(--primary-800);
 
 	--elevation-low: none;
 
 	--brand-500: var(--purple);
+	--brand-530: var(--purple);
+	--brand-560: var(--purple-1);
+	--brand-600: var(--purple-2);
 
 	--primary-500: var(--bg-2);
 
-	--white-500: var(--bg-0);
+	--white-500: var(--txt-dark);
+
+	--red-400: var(--pink);
+	--red-430: var(--pink);
+	--red-460: var(--pink-1);
+	--red-530: var(--pink);
+
+	--green-360: var(--green);
+	--green-430: var(--green);
+
+	--yellow-360: var(--yellow);
 }
