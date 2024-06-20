@@ -273,6 +273,7 @@ rect[fill='#f0b232'] {
 }
 .container_e44302::after {
 	content: 'channel';
+	top: -12px;
 }
 [class^='chatContent_'] > [class^='messagesWrapper_']::after,
 .scroller_fb4810::after {
