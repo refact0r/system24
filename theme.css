@@ -3,10 +3,10 @@
 	--pad: 16px;
 	--txt-pad: 10px;
 
-	--bg-0: oklch(18% 0 0);
-	--bg-1: oklch(22% 0 0);
-	--bg-2: oklch(26% 0 0);
-	--bg-3: oklch(30% 0 0);
+	--bg-0: oklch(19% 0 0);
+	--bg-1: oklch(23% 0 0);
+	--bg-2: oklch(27% 0 0);
+	--bg-3: oklch(31% 0 0);
 
 	--hover: oklch(54% 0 0 / 0.1);
 	--active: oklch(54% 0 0 / 0.2);
@@ -28,8 +28,8 @@
 	--reply-hover-overlay: var(--hover);
 
 	--pink: oklch(73% 0.12 0);
-	--pink-1: oklch(66% 0.12 0);
-	--yellow: oklch(73% 0.12 90);
+	--pink-1: oklch(63% 0.12 0);
+	--yellow: oklch(73% 0.12 80);
 	--green: oklch(73% 0.12 160);
 	--purple: oklch(73% 0.12 300);
 	--purple-1: oklch(63% 0.12 300);
@@ -127,7 +127,7 @@ rect[fill='#f0b232'] {
 }
 
 /* add spacing */
-[class^=base_] > [class^=content] /* outside edges */ {
+[class^=base_] /* outside edges */ {
 	margin: var(--pad) var(--pad) var(--pad) 0;
 }
 [class*=guilds_] /* outside edges */ {
@@ -140,7 +140,8 @@ rect[fill='#f0b232'] {
 [class^=tabBody_] /* friends page inner */,
 .container_d1c246 /* forum post header and chat */,
 [class^=chat_] /* header bar and chat */,
-.container_fb4810 /* new thread header and chat */ {
+.container_fb4810 /* new thread header and chat */,
+[class^=base_] /* banner and main stuff */ {
 	gap: var(--pad);
 }
 [class^=sidebar_] /* channel list and chat */ {
@@ -313,7 +314,8 @@ rect[fill='#f0b232'] {
 	top: -8px;
 }
 /* fix overflow visible */
-[class^=privateChannels_] /* dms */ {
+[class^=privateChannels_] /* dms */,
+[class^=tabBody_] /* friends page */ {
 	min-height: 0;
 }
 /* add padding to make label not look weird */
@@ -387,9 +389,14 @@ aside[class^='profilePanel_'] {
 	margin-left: 6px;
 	width: 100px;
 	height: 12px;
-	font-family: var(--font);
+	font-family: var(--font-primary);
 	font-size: 16px;
 	font-weight: 500;
+}
+
+/* unrounding */
+[class^='notice_'] {
+	border-radius: 0;
 }
 
 .theme-dark {
@@ -774,4 +781,6 @@ aside[class^='profilePanel_'] {
 	--green-430: var(--green);
 
 	--yellow-360: var(--yellow);
+
+	--twitch: var(--purple-1);
 }
