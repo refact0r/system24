@@ -2,6 +2,9 @@
 
 :root {
 	--font: 'DM Mono';
+	letter-spacing: -0.05ch;
+	font-weight: 300;
+
 	--pad: 16px;
 	--txt-pad: 10px;
 
@@ -47,8 +50,6 @@
 	--font-primary: var(--font), 'gg mono', monospace;
 	--font-display: var(--font), 'gg mono', monospace;
 	--font-code: var(--font), 'gg mono', monospace;
-	letter-spacing: -0.05ch;
-	font-weight: 300;
 }
 
 /* colors */
