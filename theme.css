@@ -31,11 +31,12 @@
 
 	--pink: oklch(73% 0.12 0);
 	--pink-1: oklch(63% 0.12 0);
-	--yellow: oklch(73% 0.12 80);
-	--green: oklch(73% 0.12 160);
+	--pink-2: oklch(53% 0.12 0);
 	--purple: oklch(73% 0.12 300);
 	--purple-1: oklch(63% 0.12 300);
 	--purple-2: oklch(53% 0.12 300);
+	--yellow: oklch(73% 0.12 80);
+	--green: oklch(73% 0.12 160);
 
 	--online-dot: var(--green);
 	--dnd-dot: var(--pink);
@@ -59,6 +60,7 @@
 [class^=attachedBars_], [class^=replyBar_], [class^=threadSuggestionBar_] /* reply, thread, atttachment bars above chat bar */,
 [class^=panels_] /* user panel */,
 #app-mount #vc-spotify-player,
+[class^=panels_] > [class^=panel_] /* streaming panel */, 
 [class^=panels_] > [class^=container_] /* user panel inner */,
 [class^=chat_] > [class^=content_] > [class^=container_] /* member list */,
 [class^=members_] /* member list inner */,
@@ -86,7 +88,8 @@
 [class^=searchFilter_],
 #app-mount [class^=partyStatus_] [class^=anchor_] /* spotify listen along link */,
 #app-mount [class^=partyStatus_] /* spotify listen along text */,
-[class^=iconBadge_] /* vc icon */ {
+[class^=iconBadge_]:not([class*=isCurrentUserConnected_]) /* vc icon */,
+#app-mount [class*=controlIcon_] /* stop streaming icon in preview */ {
 	color: var(--txt-1);
 }
 [class*=bannerVisible_] [class^=headerContent_] /* server name (when banner) */,
@@ -179,8 +182,13 @@ rect[fill='#f0b232'] {
 }
 /* adjust border thickness */
 #vc-spotify-player,
-.container_adcaac /* vc panel */ {
+[class^=panels_] > [class^=wrapper_] > [class^=container] /* vc panel */,
+[class^=panels_] > [class^=panel_] /* streaming panel */ {
 	border-width: 2px;
+}
+/* remove borders */
+[class^='dot_'][class*='maskSecondary_'] {
+	border: none;
 }
 
 /* move chat bar out */
@@ -425,22 +433,27 @@ aside[class^='profilePanel_'] {
 
 /* unrounding */
 ::-webkit-scrollbar-thumb,
+[class^='avatarStack_']:after,
 * {
 	border-radius: 0 !important;
 }
-[class^='listItem_'] [class^='wrapper_'] [class^='svg_'] > mask {
+/* hide round masks */
+[class^='listItem_'] [class^='wrapper_'] > [class^='svg_'] > mask,
+[class^='bannerSVGWrapper_'] > mask {
 	display: none;
 }
 [class^='mask_'] > foreignObject {
 	mask-image: none;
 }
 [class^='mask_'] > rect,
+[class^='mask_'] > circle,
 [class^='mask_'] > svg {
 	display: none;
 }
-
+/* re-add status indicators */
 [class^='wrapper_'][class*='avatar']::after,
 [class^='wrapper_'][class*='Avatar']::after,
+[class^='clickable_'] [class^='wrapper_']::after,
 [class^='avatar'] > [class^='wrapper_']:has(rect)::after {
 	content: '';
 	display: block;
@@ -466,46 +479,29 @@ aside[class^='profilePanel_'] {
 [class^='wrapper_']:has(rect[fill='#80848e'])::after {
 	background: var(--txt-3);
 }
-
-/* [class^=avatarWrapper_] > [class^=wrapper_] {
-	margin: 4px;
+/* adjust status indicator size for profiles */
+[class^='userPanelInner_'] [class^='avatar'] > [class^='wrapper_']::after,
+[class^='clickable_'] [class^='wrapper_']:has(rect)::after {
+	width: 12px;
+	height: 12px;
+	bottom: -5px;
+	right: -5px;
 }
-[class^=memberInner_] > div[class^=avatar_] {
-	width: 28px !important;
-	height: 28px !important;
+[class^='userPanelInner_'] [class^='avatar'] > [class^='wrapper_'],
+[class^='clickable_'] [class^='wrapper_'] {
+	border: 2px solid var(--bg-0);
 }
-div[class^=avatar] > [class^=wrapper_]  {
-	width: 28px !important;
-	height: 28px !important;
-	z-index: 2;
+/* fix server list badges */
+[class^='lowerBadge_'] {
+	border: 2px solid var(--bg-0);
+	bottom: -4px;
+	right: -4px;
 }
-div[class^=avatar] > [class^=wrapper_]::before {
-	content: '';
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	outline: 2px solid var(--bg-0);
-	z-index: 0;
+[class^='upperBadge_'] {
+	border: 2px solid var(--bg-0);
+	top: -4px;
+	right: -4px;
 }
-div[class^=avatar] > [class^=wrapper_] foreignObject[width="32"][height="32"] {
-	width: 28px;
-	height: 28px;
-}
-div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#23a55a"]) {
-	outline: 4px solid var(--green);
-}
-div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#f23f43"]) {
-	outline: 4px solid var(--pink);
-}
-div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#f0b232"]) {
-	outline: 4px solid var(--yellow);
-}
-div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#593695"]) {
-	outline: 4px solid var(--purple);
-} */
 
 .theme-dark {
 	--action-sheet-gradient-bg: var(--primary-630);
@@ -878,17 +874,15 @@ div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#593695"]) {
 
 	--primary-500: var(--bg-2); /* neutral button background */
 
-	--white-500: var(--txt-dark);
+	--white-500: var(--txt-dark); /* THE BANE OF MY EXISTENCE */
 
-	--red-400: var(--pink);
-	--red-430: var(--pink);
-	--red-460: var(--pink-1);
-	--red-530: var(--pink);
+	--red-400: var(--pink); /* red outline buttons */
+	--red-430: var(--pink); /* red buttons, outline button hover */
+	--red-460: var(--pink-1); /* outline button active */
+	--red-500: var(--pink-1); /* button hover */
+	--red-530: var(--pink-2); /* button active */
 
-	--green-360: var(--green);
-	--green-430: var(--green);
-
-	--yellow-360: var(--yellow);
+	--green-360: var(--green); /* vc icon on server */
 
 	--twitch: var(--purple-1);
 }
