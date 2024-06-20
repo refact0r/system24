@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
 :root {
 	--font: 'DM Mono';
 	--pad: 16px;
@@ -73,6 +75,9 @@
 [class^=childWrapper_] /* no color servers */ {
 	background-color: var(--bg-1);
 }
+[class*=embedFull_] /* embed default color */ {
+	border-color: var(--bg-2);
+}
 /* fix white-500 */
 [class*=lookFilled_][class*=colorPrimary_] /* neutral buttons (like in account settings) */,
 #app-mount [class*=lookLink_][class*=colorPrimary_] /* link buttons (like in account settings) */,
@@ -103,6 +108,9 @@
 /* accents */
 svg[style="color: rgb(88, 101, 242);"] /* folder icons */ {
 	color: var(--purple) !important;
+}
+[class^='folderIconWrapper_'][style='background-color: rgba(88, 101, 242, 0.4);'] {
+	background: var(--bg-1) !important;
 }
 [style="opacity: 1; background-color: rgb(35, 165, 90);"] /* settings checkbuttons */ {
 	background-color: var(--green) !important;
@@ -401,6 +409,20 @@ aside[class^='profilePanel_'] {
 	font-weight: 500;
 }
 
+/* adjust divider/border thickness */
+#app-mount [class^='divider_'],
+.container_c75f85:after,
+[class^='peopleListItem_'] {
+	border-width: 2px;
+}
+#app-mount [class^='divider_'] {
+	margin-bottom: -2px;
+}
+[class^='sectionDivider_'] {
+	border-bottom: 2px solid var(--bg-3);
+	height: 0;
+}
+
 /* unrounding */
 ::-webkit-scrollbar-thumb,
 * {
@@ -409,15 +431,17 @@ aside[class^='profilePanel_'] {
 [class^='listItem_'] [class^='wrapper_'] [class^='svg_'] > mask {
 	display: none;
 }
-div[class^='avatar'] [class^='mask_'] > foreignObject {
+[class^='mask_'] > foreignObject {
 	mask-image: none;
 }
-div[class^='avatar'] [class^='mask_'] > rect,
-div[class^='avatar'] [class^='mask_'] > svg {
+[class^='mask_'] > rect,
+[class^='mask_'] > svg {
 	display: none;
 }
 
-div[class^='avatar'] > [class^='wrapper_']::after {
+[class^='wrapper_'][class*='avatar']::after,
+[class^='wrapper_'][class*='Avatar']::after,
+[class^='avatar'] > [class^='wrapper_']:has(rect)::after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -427,17 +451,20 @@ div[class^='avatar'] > [class^='wrapper_']::after {
 	right: -4px;
 	border: 2px solid var(--bg-0);
 }
-div[class^='avatar'] > [class^='wrapper_']:has(rect[fill='#23a55a'])::after {
+[class^='wrapper_']:has(rect[fill='#23a55a'])::after {
 	background: var(--green);
 }
-div[class^='avatar'] > [class^='wrapper_']:has(rect[fill='#f23f43'])::after {
+[class^='wrapper_']:has(rect[fill='#f23f43'])::after {
 	background: var(--pink);
 }
-div[class^='avatar'] > [class^='wrapper_']:has(rect[fill='#f0b232'])::after {
+[class^='wrapper_']:has(rect[fill='#f0b232'])::after {
 	background: var(--yellow);
 }
-div[class^='avatar'] > [class^='wrapper_']:has(rect[fill='#593695'])::after {
+[class^='wrapper_']:has(rect[fill='#593695'])::after {
 	background: var(--purple);
+}
+[class^='wrapper_']:has(rect[fill='#80848e'])::after {
+	background: var(--txt-3);
 }
 
 /* [class^=avatarWrapper_] > [class^=wrapper_] {
@@ -664,7 +691,7 @@ div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#593695"]) {
 	--info-warning-background: hsl(40 calc(1 * 86.4%) 56.9% / 0.1);
 	--info-warning-foreground: var(--yellow-300);
 	--info-warning-text: var(--white-500);
-	--input-background: var(--primary-700);
+	--input-background: var(--bg-1);
 	--input-focused-border: hsl(0 calc(1 * 0%) 100% / 0.16);
 	--input-placeholder-text: var(--input-placeholder-text-dark);
 	--interactive-active: var(--txt-1);
@@ -849,7 +876,7 @@ div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#593695"]) {
 	--brand-560: var(--purple-1); /* accent button hover */
 	--brand-600: var(--purple-2); /* accent button active */
 
-	--primary-500: var(--bg-2);
+	--primary-500: var(--bg-2); /* neutral button background */
 
 	--white-500: var(--txt-dark);
 
