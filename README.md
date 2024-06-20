@@ -16,7 +16,8 @@ join <https://discord.gg/nz87hXyvcy>
 
 1. download `system24.theme.css` from this repo.
 2. move the file into your theme folder. (there should be a button to open the theme folder in theme settings)
-3. (optional) customize the theme by editing `system24.theme.css`.
+3. you may need to enable the theme in your theme settings.
+4. (optional) customize the theme by editing `system24.theme.css`.
 
 #### install through link
 
