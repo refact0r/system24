@@ -80,7 +80,8 @@
 [class^=friendRequestsButton_] [class^=numberBadge_] /* inbox friend requests number */,
 [class^=searchFilter_],
 #app-mount [class^=partyStatus_] [class^=anchor_] /* spotify listen along link */,
-#app-mount [class^=partyStatus_] /* spotify listen along text */ {
+#app-mount [class^=partyStatus_] /* spotify listen along text */,
+[class^=iconBadge_] /* vc icon */ {
 	color: var(--txt-1);
 }
 [class*=bannerVisible_] [class^=headerContent_] /* server name (when banner) */,
@@ -155,7 +156,7 @@ rect[fill='#f0b232'] {
 [class^=panels_] /* user panel */,
 [class^=sidebar_] > [class^=container_] /* channel list */,
 [class^=chatContent_] > [class^=messagesWrapper_] /* chat */,
-[class^=members_] /* member list */,
+[class^=membersWrap_] /* member list */,
 [class*=guilds_] /* server list */,
 [class^=privateChannels_] /* dm list */,
 .container_e44302 /* header bar */,
@@ -298,7 +299,8 @@ rect[fill='#f0b232'] {
 [class^=searchResultsWrap_] /* search results */,
 [class^=peopleColumn_] /* friends page */ ,
 .tabBody_c2739c /* friends page outer */,
-.container_d1c246 /* thread outer */ {
+.container_d1c246 /* thread outer */,
+[class^=base_] {
 	overflow: visible;
 }
 .scroller_fb4810 /* new thread messages box */ {
@@ -308,10 +310,6 @@ rect[fill='#f0b232'] {
 .panels_a4d4d9,
 [class^='nowPlayingColumn_'] {
 	position: relative;
-}
-/* adjust label vertical position */
-[class^='membersWrap_']::after {
-	top: -8px;
 }
 /* fix overflow visible */
 [class^=privateChannels_] /* dms */,
@@ -336,8 +334,12 @@ rect[fill='#f0b232'] {
 .horizontal_bba380 > .flex_bba380 /* fix voice connected cut off */ {
 	margin-left: 4px;
 }
-[class*='guilds_'] {
+[class*='guilds_'],
+[class^='membersWrap_'] {
 	padding-top: var(--txt-pad);
+}
+[class^='membersWrap_'] {
+	height: calc(100% - var(--txt-pad) - 4px);
 }
 /* add padding to user profile panel */
 aside[class^='profilePanel_'] {
