@@ -177,7 +177,7 @@ rect[fill='#f0b232'] {
 
 /* move chat bar out */
 :root {
-	--custom-channel-textarea-text-area-height: 53px;
+	--custom-channel-textarea-text-area-height: 56px;
 }
 .form_a7d72e {
 	padding: 0;
@@ -220,8 +220,10 @@ rect[fill='#f0b232'] {
 	height: var(--custom-channel-textarea-text-area-height);
 }
 /* make header bar height match chat bar */
-.container_e44302 {
-	height: 53px;
+.container_e44302,
+.container_b2ca13 {
+	height: var(--custom-channel-textarea-text-area-height);
+	box-sizing: border-box;
 }
 
 /* add text labels */
@@ -316,6 +318,9 @@ rect[fill='#f0b232'] {
 [class^=tabBody_] /* friends page */ {
 	min-height: 0;
 }
+[class^='base_'] {
+	min-width: 0;
+}
 /* add padding to make label not look weird */
 .scroller_e2e187 /* main chat */,
 .newMessagesBar_cf58b5 {
@@ -397,9 +402,83 @@ aside[class^='profilePanel_'] {
 }
 
 /* unrounding */
-[class^='notice_'] {
-	border-radius: 0;
+::-webkit-scrollbar-thumb,
+* {
+	border-radius: 0 !important;
 }
+[class^='listItem_'] [class^='wrapper_'] [class^='svg_'] > mask {
+	display: none;
+}
+div[class^='avatar'] [class^='mask_'] > foreignObject {
+	mask-image: none;
+}
+div[class^='avatar'] [class^='mask_'] > rect,
+div[class^='avatar'] [class^='mask_'] > svg {
+	display: none;
+}
+
+div[class^='avatar'] > [class^='wrapper_']::after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	bottom: -4px;
+	right: -4px;
+	border: 2px solid var(--bg-0);
+}
+div[class^='avatar'] > [class^='wrapper_']:has(rect[fill='#23a55a'])::after {
+	background: var(--green);
+}
+div[class^='avatar'] > [class^='wrapper_']:has(rect[fill='#f23f43'])::after {
+	background: var(--pink);
+}
+div[class^='avatar'] > [class^='wrapper_']:has(rect[fill='#f0b232'])::after {
+	background: var(--yellow);
+}
+div[class^='avatar'] > [class^='wrapper_']:has(rect[fill='#593695'])::after {
+	background: var(--purple);
+}
+
+/* [class^=avatarWrapper_] > [class^=wrapper_] {
+	margin: 4px;
+}
+[class^=memberInner_] > div[class^=avatar_] {
+	width: 28px !important;
+	height: 28px !important;
+}
+div[class^=avatar] > [class^=wrapper_]  {
+	width: 28px !important;
+	height: 28px !important;
+	z-index: 2;
+}
+div[class^=avatar] > [class^=wrapper_]::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	outline: 2px solid var(--bg-0);
+	z-index: 0;
+}
+div[class^=avatar] > [class^=wrapper_] foreignObject[width="32"][height="32"] {
+	width: 28px;
+	height: 28px;
+}
+div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#23a55a"]) {
+	outline: 4px solid var(--green);
+}
+div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#f23f43"]) {
+	outline: 4px solid var(--pink);
+}
+div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#f0b232"]) {
+	outline: 4px solid var(--yellow);
+}
+div[class^=avatar] > [class^=wrapper_]:has(rect[fill="#593695"]) {
+	outline: 4px solid var(--purple);
+} */
 
 .theme-dark {
 	--action-sheet-gradient-bg: var(--primary-630);
