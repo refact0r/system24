@@ -140,7 +140,7 @@ rect[fill='#f0b232'] {
 }
 
 /* add spacing */
-[class^=base_] /* outside edges */ {
+[class^=container_] > [class^=base_] /* outside edges */ {
 	margin: var(--pad) var(--pad) var(--pad) 0;
 }
 [class*=guilds_] /* outside edges */ {
@@ -154,7 +154,7 @@ rect[fill='#f0b232'] {
 .container_d1c246 /* forum post header and chat */,
 [class^=chat_] /* header bar and chat */,
 .container_fb4810 /* new thread header and chat */,
-[class^=base_] /* banner and main stuff */ {
+[class^=container_] > [class^=base_] /* banner and main stuff */ {
 	gap: var(--pad);
 }
 [class^=sidebar_] /* channel list and chat */ {
@@ -320,7 +320,7 @@ rect[fill='#f0b232'] {
 [class^=peopleColumn_] /* friends page */ ,
 .tabBody_c2739c /* friends page outer */,
 .container_d1c246 /* thread outer */,
-[class^=base_] {
+[class^=container_] > [class^=base_] {
 	overflow: visible;
 }
 .scroller_fb4810 /* new thread messages box */ {
@@ -336,7 +336,7 @@ rect[fill='#f0b232'] {
 [class^=tabBody_] /* friends page */ {
 	min-height: 0;
 }
-[class^='base_'] {
+[class^='container_'] > [class^='base_'] {
 	min-width: 0;
 }
 /* add padding to make label not look weird */
@@ -449,7 +449,8 @@ aside[class^='profilePanel_'] {
 [class^='bannerSVGWrapper_'] > mask {
 	display: none;
 }
-[class^='mask_'] > foreignObject {
+[class^='mask_'] > foreignObject,
+[class^='svg_'] > foreignObject {
 	mask-image: none;
 }
 [class^='mask_'] > rect,
