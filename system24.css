@@ -487,6 +487,7 @@ aside[class^='profilePanel_'] {
 	background: var(--txt-3);
 }
 /* adjust status indicator size for profiles */
+[class*='userProfileInner_'] [class^='wrapper_'][class*='avatar']::after,
 [class^='userPanelInner_'] [class^='avatar'] > [class^='wrapper_']::after,
 [class^='clickable_'] [class^='wrapper_']:has(rect)::after {
 	width: 12px;
@@ -494,6 +495,7 @@ aside[class^='profilePanel_'] {
 	bottom: -5px;
 	right: -5px;
 }
+[class*='userProfileInner_'] [class^='wrapper_'][class*='avatar'],
 [class^='userPanelInner_'] [class^='avatar'] > [class^='wrapper_'],
 [class^='clickable_'] [class^='wrapper_'] {
 	border: 2px solid var(--bg-0);
