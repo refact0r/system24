@@ -38,7 +38,7 @@
 	--purple: oklch(73% 0.12 300);
 	--purple-1: oklch(63% 0.12 300);
 	--purple-2: oklch(53% 0.12 300);
-	--yellow: oklch(73% 0.12 80);
+	--yellow: oklch(78% 0.12 80);
 	--green: oklch(73% 0.12 160);
 
 	--online-dot: var(--green);
@@ -273,7 +273,7 @@ rect[fill='#f0b232'] {
 }
 .container_e44302::after {
 	content: 'channel';
-	top: -12px;
+	top: -11px;
 }
 [class^='chatContent_'] > [class^='messagesWrapper_']::after,
 .scroller_fb4810::after {
@@ -618,8 +618,8 @@ aside[class^='profilePanel_'] {
 	--card-primary-pressed-bg: var(--primary-645);
 	--card-secondary-bg: var(--primary-630);
 	--card-secondary-pressed-bg: var(--primary-645);
-	--channel-icon: var(--primary-400);
-	--channel-text-area-placeholder: var(--primary-430);
+	--channel-icon: var(--txt-2);
+	--channel-text-area-placeholder: var(--txt-3);
 	--channels-default: var(--txt-2);
 	--channeltextarea-background: var(--bg-0);
 	--chat-background: var(--primary-600);
