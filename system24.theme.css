@@ -44,6 +44,7 @@
 	--mention-hover-overlay: color-mix(in srgb, var(--purple), transparent 95%);
 	--reply-overlay: var(--active);
 	--reply-hover-overlay: var(--hover);
+	--panel-hover: var(--purple); /* set to --bg-3 to disable */
 
 	--pink: oklch(73% 0.12 0);
 	--pink-1: oklch(63% 0.12 0);
