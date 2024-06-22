@@ -31,6 +31,7 @@
 	--mention-hover-overlay: color-mix(in srgb, var(--purple), transparent 95%);
 	--reply-overlay: var(--active);
 	--reply-hover-overlay: var(--hover);
+	--panel-hover: var(--purple);
 
 	--pink: oklch(73% 0.12 0);
 	--pink-1: oklch(63% 0.12 0);
@@ -186,6 +187,26 @@ rect[fill='#f0b232'] {
 [class^=panels_] > [class^=wrapper_] > [class^=container] /* vc panel */,
 [class^=panels_] > [class^=panel_] /* streaming panel */ {
 	border-width: 2px;
+}
+/* border hover effect */
+[class^=panels_],
+[class^=sidebar_] > [class^=container_],
+[class^=chatContent_] > [class^=messagesWrapper_],
+[class^=membersWrap_],
+[class*=guilds_],
+[class^=privateChannels_],
+.container_e44302,
+[class^=peopleColumn_], [class^=nowPlayingColumn_],
+[class^=form_] [class^=channelTextArea_],
+.container_a6d69a,
+[class^=profilePanel_], [class^=searchResultsWrap_],
+.scroller_fb4810 {
+  &:hover {
+    border: 2px solid var(--panel-hover);
+    &::after {
+      color: var(--panel-hover);
+    }
+  }
 }
 /* remove borders */
 [class^='dot_'][class*='maskSecondary_'] {
