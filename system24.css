@@ -4,6 +4,7 @@
 	--font: 'DM Mono';
 	letter-spacing: -0.05ch;
 	font-weight: 300;
+	--label-font-weight: 500;
 
 	--pad: 16px;
 	--txt-pad: 10px;
@@ -18,12 +19,11 @@
 	--selected: var(--active);
 
 	--txt-dark: var(--bg-0);
+	--txt-link: var(--cyan);
 	--txt-0: oklch(90% 0 0);
 	--txt-1: oklch(80% 0 0);
 	--txt-2: oklch(60% 0 0);
 	--txt-3: oklch(40% 0 0);
-
-	--txt-link: oklch(76% 0.12 200);
 
 	--mention-txt: var(--purple);
 	--mention-bg: color-mix(in srgb, var(--purple), transparent 90%);
@@ -32,12 +32,14 @@
 	--reply-overlay: var(--active);
 	--reply-hover-overlay: var(--hover);
 
+	--border-width: 2px;
+	--border-color: var(--bg-3);
+	--border-hover-color: var(--purple);
+	--border-transition: 0.2s ease;
+
 	--online-dot: var(--green);
 	--dnd-dot: var(--pink);
 	--idle-dot: var(--yellow);
-
-	--hover-border: var(--purple);
-	--hover-border-transition: 0.2s ease;
 
 	--pink: oklch(73% 0.12 0);
 	--pink-1: oklch(63% 0.12 0);
@@ -45,6 +47,7 @@
 	--purple: oklch(73% 0.12 300);
 	--purple-1: oklch(63% 0.12 300);
 	--purple-2: oklch(53% 0.12 300);
+	--cyan: oklch(73% 0.12 200);
 	--yellow: oklch(78% 0.12 80);
 	--green: oklch(73% 0.12 160);
 }
@@ -167,6 +170,11 @@ rect[fill='#f0b232'] {
 	width: var(--pad);
 }
 
+/* platform spacing */
+.platform-osx [class*='guilds_'] {
+	margin-top: calc(32px + var(--pad));
+}
+
 /* borders */
 [class^=panels_] /* user panel */,
 [class^=sidebar_] > [class^=container_] /* channel list */,
@@ -182,14 +190,14 @@ rect[fill='#f0b232'] {
 [class^=profilePanel_] /* dm profile panel */,
 [class^=searchResultsWrap_] /* search results */,
 .scroller_fb4810 /* new thread */ {
-	border: 2px solid var(--bg-3);
-	transition: border-color var(--hover-border-transition);
+	border: var(--border-width) solid var(--border-color);
+	transition: border-color var(--border-transition);
 }
 /* adjust border thickness */
 #vc-spotify-player,
 [class^=panels_] > [class^=wrapper_] > [class^=container] /* vc panel */,
 [class^=panels_] > [class^=panel_] /* streaming panel */ {
-	border-width: 2px;
+	border-width: var(--border-width);
 }
 /* remove borders */
 [class^='dot_'][class*='maskSecondary_'] {
@@ -212,15 +220,15 @@ rect[fill='#f0b232'] {
 [class^='searchResultsWrap_'],
 .scroller_fb4810 {
 	&:hover {
-		border-color: var(--hover-border);
+		border-color: var(--border-hover-color);
 		&::after {
-			color: var(--hover-border);
+			color: var(--border-hover-color);
 		}
 	}
 }
 [class^='chatContent_']:has([class^='messagesWrapper_']:hover) {
 	[class^='typing_'] {
-		border-color: var(--hover-border);
+		border-color: var(--border-hover-color);
 	}
 }
 
@@ -251,9 +259,9 @@ rect[fill='#f0b232'] {
 	background: var(--bg-0);
 	order: -1;
 	position: static;
-	border: 2px solid var(--bg-3);
+	border: var(--border-width) solid var(--border-color);
 	border-top: none;
-	transition: border-color var(--hover-border-transition);
+	transition: border-color var(--border-transition);
 }
 [class^='chatContent_']:has([class^='typing_']) > [class^='messagesWrapper_'] {
 	border-bottom: none;
@@ -293,14 +301,14 @@ rect[fill='#f0b232'] {
 [class^='nowPlayingColumn_']::after {
 	display: block;
 	color: var(--txt-3);
-	font-weight: 500;
+	font-weight: var(--label-font-weight);
 	position: absolute;
 	top: -10px;
 	left: 8px;
 	background-color: var(--bg-0);
 	padding: 0 4px;
 	z-index: 100;
-	transition: color var(--hover-border-transition);
+	transition: color var(--border-transition);
 }
 [class^='sidebar_'] > [class^='container_']::after {
 	content: 'server';
@@ -396,7 +404,7 @@ rect[fill='#f0b232'] {
 	padding-top: var(--txt-pad);
 }
 [class^='membersWrap_'] {
-	height: calc(100% - var(--txt-pad) - 4px);
+	height: calc(100% - var(--txt-pad) - 2 * var(--border-width));
 }
 /* add padding to user profile panel */
 aside[class^='profilePanel_'] {
@@ -457,13 +465,15 @@ aside[class^='profilePanel_'] {
 #app-mount [class^='divider_'],
 .container_c75f85:after,
 [class^='peopleListItem_'] {
-	border-width: 2px;
+	border-width: var(--border-width);
 }
 #app-mount [class^='divider_'] {
-	margin-bottom: -2px;
+}
+[class^='unreadPill_'][class*='endCap_'] {
+	top: calc(-6px - 0.5 * var(--border-width));
 }
 [class^='sectionDivider_'] {
-	border-bottom: 2px solid var(--bg-3);
+	border-bottom: var(--border-width) solid var(--border-color);
 	height: 0;
 }
 
