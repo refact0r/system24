@@ -467,8 +467,6 @@ aside[class^='profilePanel_'] {
 [class^='peopleListItem_'] {
 	border-width: var(--border-width);
 }
-#app-mount [class^='divider_'] {
-}
 [class^='unreadPill_'][class*='endCap_'] {
 	top: calc(-6px - 0.5 * var(--border-width));
 }
@@ -490,7 +488,7 @@ aside[class^='profilePanel_'] {
 }
 /* hide round masks */
 [class^='listItem_'] [class^='wrapper_'] > [class^='svg_'] > mask,
-[class^='bannerSVGWrapper_'] > mask {
+[class^='bannerSVGWrapper_'] > mask > circle {
 	display: none;
 }
 [class^='mask_'] > foreignObject,
