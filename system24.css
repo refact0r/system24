@@ -42,6 +42,7 @@
 	--online-dot: var(--green);
 	--dnd-dot: var(--pink);
 	--idle-dot: var(--yellow);
+	--streaming-dot: var(--purple);
 
 	--pink: oklch(73% 0.12 0);
 	--pink-1: oklch(63% 0.12 0);
@@ -135,16 +136,6 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 }
 [class*=mentioned_]::before /* mention message left bar */ {
 	background: var(--purple);
-}
-/* status dots */
-rect[fill='#23a55a'] {
-	fill: var(--online-dot);
-}
-rect[fill='#f23f43'] {
-	fill: var(--dnd-dot);
-}
-rect[fill='#f0b232'] {
-	fill: var(--idle-dot);
 }
 
 /* add spacing */
@@ -517,16 +508,16 @@ aside[class^='profilePanel_'] {
 	border: 2px solid var(--bg-0);
 }
 [class^='wrapper_']:has(rect[fill='#23a55a'])::after {
-	background: var(--green);
+	background: var(--online-dot);
 }
 [class^='wrapper_']:has(rect[fill='#f23f43'])::after {
-	background: var(--pink);
+	background: var(--dnd-dot);
 }
 [class^='wrapper_']:has(rect[fill='#f0b232'])::after {
-	background: var(--yellow);
+	background: var(--idle-dot);
 }
 [class^='wrapper_']:has(rect[fill='#593695'])::after {
-	background: var(--purple);
+	background: var(--streaming-dot);
 }
 [class^='wrapper_']:has(rect[fill='#80848e'])::after {
 	background: var(--txt-3);
