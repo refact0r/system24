@@ -6,6 +6,8 @@
 	font-weight: 300;
 	--label-font-weight: 500;
 
+	--corner-text: 'system24';
+
 	--pad: 16px;
 	--txt-pad: 10px;
 
@@ -449,7 +451,7 @@ aside[class^='profilePanel_'] {
 	display: none;
 }
 .wordmarkWindows_a934d8::after {
-	content: 'system24';
+	content: var(--corner-text);
 	display: block;
 	position: relative;
 	color: var(--txt-2);
