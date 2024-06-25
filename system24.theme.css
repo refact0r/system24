@@ -17,6 +17,9 @@
 	--font: 'DM Mono';
 	letter-spacing: -0.05ch;
 	font-weight: 300;
+	--label-font-weight: 500;
+
+	--corner-text: 'system24';
 
 	--pad: 16px;
 	--txt-pad: 10px;
@@ -31,12 +34,11 @@
 	--selected: var(--active);
 
 	--txt-dark: var(--bg-0);
+	--txt-link: var(--cyan);
 	--txt-0: oklch(90% 0 0);
 	--txt-1: oklch(80% 0 0);
 	--txt-2: oklch(60% 0 0);
 	--txt-3: oklch(40% 0 0);
-
-	--txt-link: oklch(76% 0.12 200);
 
 	--mention-txt: var(--purple);
 	--mention-bg: color-mix(in srgb, var(--purple), transparent 90%);
@@ -45,12 +47,14 @@
 	--reply-overlay: var(--active);
 	--reply-hover-overlay: var(--hover);
 
+	--border-width: 2px;
+	--border-color: var(--bg-3);
+	--border-hover-color: var(--purple);
+	--border-transition: 0.2s ease;
+
 	--online-dot: var(--green);
 	--dnd-dot: var(--pink);
 	--idle-dot: var(--yellow);
-
-	--hover-border: var(--purple);
-	--hover-border-transition: 0.2s ease;
 
 	--pink: oklch(73% 0.12 0);
 	--pink-1: oklch(63% 0.12 0);
@@ -58,6 +62,7 @@
 	--purple: oklch(73% 0.12 300);
 	--purple-1: oklch(63% 0.12 300);
 	--purple-2: oklch(53% 0.12 300);
+	--cyan: oklch(73% 0.12 200);
 	--yellow: oklch(78% 0.12 80);
 	--green: oklch(73% 0.12 160);
 }
