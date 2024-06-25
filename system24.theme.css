@@ -55,6 +55,7 @@
 	--online-dot: var(--green);
 	--dnd-dot: var(--pink);
 	--idle-dot: var(--yellow);
+	--streaming-dot: var(--purple);
 
 	--pink: oklch(73% 0.12 0);
 	--pink-1: oklch(63% 0.12 0);
