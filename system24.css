@@ -225,7 +225,7 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 .form_a7d72e:before {
 	display: none !important;
 }
-[class^='form_'] {
+[class^='form_'] [class^='channelBottomBarArea_'] {
 	margin-top: var(--pad);
 }
 [class^='form_'] [class^='channelTextArea_'] {
