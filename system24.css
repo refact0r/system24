@@ -185,6 +185,12 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 .scroller_fb4810 /* new thread */ {
 	border: var(--border-width) solid var(--border-color);
 	transition: border-color var(--border-transition);
+	&:hover {
+		border-color: var(--border-hover-color);
+		&::after {
+			color: var(--border-hover-color);
+		}
+	}
 }
 /* adjust border thickness */
 #vc-spotify-player,
@@ -197,28 +203,7 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 	border: none;
 }
 
-/* border hover effect */
-[class^='panels_'],
-[class^='sidebar_'] > [class^='container_'],
-[class^='chatContent_'] > [class^='messagesWrapper_'],
-[class^='membersWrap_'],
-[class*='guilds_'],
-[class^='privateChannels_'],
-.container_e44302,
-[class^='peopleColumn_'],
-[class^='nowPlayingColumn_'],
-[class^='form_'] [class^='channelTextArea_'],
-.container_a6d69a,
-[class^='profilePanel_'],
-[class^='searchResultsWrap_'],
-.scroller_fb4810 {
-	&:hover {
-		border-color: var(--border-hover-color);
-		&::after {
-			color: var(--border-hover-color);
-		}
-	}
-}
+/* fix border hover effect */
 [class^='chatContent_']:has([class^='messagesWrapper_']:hover) {
 	[class^='typing_'] {
 		border-color: var(--border-hover-color);
@@ -240,7 +225,7 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 .form_a7d72e:before {
 	display: none !important;
 }
-[class^='form_'] [class^='channelTextAreaContainer_'] {
+[class^='form_'] {
 	margin-top: var(--pad);
 }
 [class^='form_'] [class^='channelTextArea_'] {
