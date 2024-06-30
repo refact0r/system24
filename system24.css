@@ -95,7 +95,7 @@
 #app-mount [class*=lookLink_][class*=colorPrimary_] /* link buttons (like in account settings) */,
 [class*=buttonColor_] /* example button in profile settings, idk what else */,
 [class^=friendRequestsButton_] [class^=numberBadge_] /* inbox friend requests number */,
-[class^=searchFilter_],
+[class^=searchFilter_], [class^=searchAnswer_], 
 #app-mount [class^=partyStatus_] [class^=anchor_] /* spotify listen along link */,
 #app-mount [class^=partyStatus_] /* spotify listen along text */,
 [class^=iconBadge_]:not([class*=isCurrentUserConnected_]) /* vc icon */,
@@ -225,11 +225,9 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 .form_a7d72e:before {
 	display: none !important;
 }
-[class^='form_'] [class^='channelBottomBarArea_'] {
-	margin-top: var(--pad);
-}
 [class^='form_'] [class^='channelTextArea_'] {
 	margin: 0;
+	margin-top: var(--pad);
 	border-radius: 0;
 	box-sizing: border-box;
 }
