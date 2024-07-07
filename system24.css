@@ -107,7 +107,8 @@
 [class^=gifFavoriteButton_],
 [class^=iconWrapper_] /* video play button */,
 .wrapper_f316dd /* video controls */,
-.custom-profile-theme [class*=color_][class*=text_] /* message button in custom profiles */ {
+.custom-profile-theme [class*=color_][class*=text_] /* message button in custom profiles */,
+[class*=overlayTitle_] /* vc names */ {
 	color: var(--txt-0);
 }
 [class^=embedVideoActions_] [class^=wrapper_] /* youtube embed play button */,
@@ -477,7 +478,7 @@ aside[class^='profilePanel_'] {
 	display: none;
 }
 /* re-add status indicators */
-[class^='wrapper_'][class*='avatar']::after,
+[class^='wrapper_'][class*='avatar']:has(rect)::after,
 [class^='wrapper_'][class*='Avatar']::after,
 [class^='clickable_'] [class^='wrapper_']::after,
 [class^='avatar'] > [class^='wrapper_']:has(rect)::after {
