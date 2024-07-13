@@ -176,7 +176,7 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 [class^=membersWrap_] /* member list */,
 [class*=guilds_] /* server list */,
 [class^=privateChannels_] /* dm list */,
-.container_e44302 /* header bar */,
+.container_fc4f04 /* header bar */,
 [class^=peopleColumn_] /* friends page list */,
 [class^=nowPlayingColumn_] /* friends page active now */,
 [class^=form_] [class^=channelTextArea_] /* chat bar */,
@@ -255,7 +255,7 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 	height: var(--custom-channel-textarea-text-area-height);
 }
 /* make header bar height match chat bar */
-.container_e44302,
+.container_fc4f04,
 .container_b2ca13 {
 	height: var(--custom-channel-textarea-text-area-height);
 	box-sizing: border-box;
@@ -263,7 +263,7 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 
 /* add text labels */
 [class^='sidebar_'] > [class^='container_']::after,
-.container_e44302::after,
+.container_fc4f04::after,
 [class^='chatContent_'] > [class^='messagesWrapper_']::after,
 [class^='panels_']::after,
 [class^='form_'] [class^='channelTextArea_']::after,
@@ -290,7 +290,7 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 [class^='sidebar_'] > [class^='container_']::after {
 	content: 'server';
 }
-.container_e44302::after {
+.container_fc4f04::after {
 	content: 'channel';
 	top: -11px;
 }
