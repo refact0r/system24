@@ -183,7 +183,8 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 .container_a6d69a /* forum */,
 [class^=profilePanel_] /* dm profile panel */,
 [class^=searchResultsWrap_] /* search results */,
-.scroller_fb4810 /* new thread */ {
+.scroller_fb4810 /* new thread */,
+[class^=chat_] > [class*=container_] {
 	border: var(--border-width) solid var(--border-color);
 	transition: border-color var(--border-transition);
 	&:hover {
@@ -259,6 +260,15 @@ svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
 .container_b2ca13 {
 	height: var(--custom-channel-textarea-text-area-height);
 	box-sizing: border-box;
+}
+
+/* fix chat bar when no chat bar */
+[class^='form_'] > [class^='wrapper_'] {
+	margin: 0;
+	padding: 0;
+	height: var(--custom-channel-textarea-text-area-height);
+	border: var(--border-width) solid var(--border-color);
+	margin-top: var(--pad);
 }
 
 /* add text labels */
@@ -478,8 +488,7 @@ aside[class^='profilePanel_'] {
 	display: none;
 }
 /* re-add status indicators */
-[class^='wrapper_'][class*='avatar']:has(rect)::after,
-[class^='wrapper_'][class*='Avatar']::after,
+[class^='wrapper_'][class*='vatar']:has(rect)::after,
 [class^='avatar'] > [class^='wrapper_']:has(rect)::after {
 	content: '';
 	display: block;
