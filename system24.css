@@ -480,7 +480,6 @@ aside[class^='profilePanel_'] {
 /* re-add status indicators */
 [class^='wrapper_'][class*='avatar']:has(rect)::after,
 [class^='wrapper_'][class*='Avatar']::after,
-[class^='clickable_'] [class^='wrapper_']::after,
 [class^='avatar'] > [class^='wrapper_']:has(rect)::after {
 	content: '';
 	display: block;
@@ -515,11 +514,6 @@ aside[class^='profilePanel_'] {
 	bottom: -5px;
 	right: -5px;
 }
-[class*='userProfileInner_'] [class^='wrapper_'][class*='avatar'],
-[class^='userPanelInner_'] [class^='avatar'] > [class^='wrapper_'],
-[class^='clickable_'] [class^='wrapper_'] {
-	border: 2px solid var(--bg-0);
-}
 /* fix server list badges */
 [class^='lowerBadge_'] {
 	border: 2px solid var(--bg-0);
@@ -541,7 +535,7 @@ aside[class^='profilePanel_'] {
 	--android-navigation-bar-background: var(--primary-830);
 	--android-navigation-scrim-background: hsl(240 calc(1 * 4%) 4.9% / 0.5);
 	--android-ripple: hsl(0 calc(1 * 0%) 100% / 0.07);
-	--autocomplete-bg: var(--primary-630);
+	--autocomplete-bg: var(--bg-1);
 	--background-accent: var(--bg-1);
 	--background-floating: var(--primary-800);
 	--background-mentioned: var(--mention-overlay);
@@ -888,7 +882,7 @@ aside[class^='profilePanel_'] {
 	--user-profile-header-overflow-background: hsl(
 		225 calc(1 * 6.3%) 12.5% / 0.5
 	);
-	--voice-video-video-tile-background: hsl(233 calc(1 * 9.3%) 19% / 0.4);
+	--voice-video-video-tile-background: hsl(233 calc(1 * 9 / 0.3%) 19% / 0.4);
 	--voice-video-video-tile-blur-fallback: hsl(
 		225 calc(1 * 6.3%) 12.5% / 0.48
 	);
@@ -903,6 +897,7 @@ aside[class^='profilePanel_'] {
 	--brand-600: var(--purple-2); /* accent button active */
 
 	--primary-500: var(--bg-2); /* neutral button background */
+	--primary-800: var(--bg-1); /* bot command panel suggestion argument */
 
 	--white-500: var(--txt-dark); /* THE BANE OF MY EXISTENCE */
 
