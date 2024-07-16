@@ -120,16 +120,16 @@
 	fill: var(--txt-0);
 }
 /* accents */
-svg[style="color: rgb(88, 101, 242);"] /* folder icons */ {
+svg[style='color: rgb(88, 101, 242);'] /* folder icons */ {
 	color: var(--purple) !important;
 }
 [class^='folderIconWrapper_'][style='background-color: rgba(88, 101, 242, 0.4);'] {
 	background: var(--bg-1) !important;
 }
-[style="opacity: 1; background-color: rgb(35, 165, 90);"] /* settings checkbuttons */ {
+[style='opacity: 1; background-color: rgb(35, 165, 90);'] /* settings checkbuttons */ {
 	background-color: var(--green) !important;
 }
-svg[class^=slider_] > rect[fill="white"] /* settings checkbuttons slider */ {
+svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	fill: var(--txt-dark);
 }
 [class*=replying_]::before /* reply message left bar */ {

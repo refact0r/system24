@@ -1,0 +1,191 @@
+Selector,Time (ms)
+"[class^='wrapper_']:has(rect[fill='#23a55a'])",0.325200,15
+"[class^='chatContent_']:has([class^='typing_']) > [class^='messagesWrapper_']",0.319600,0
+"[class^='clickable_'] [class^='wrapper_']:has(rect)",0.319100,0
+"[class^='chatContent_']:has([class^='messagesWrapper_']:hover)",0.317500,0
+"[class^='wrapper_']:has(rect[fill='#593695'])",0.317300,1
+"[class^='wrapper_']:has(rect[fill='#f0b232'])",0.316600,10
+"[class^='wrapper_']:has(rect[fill='#f23f43'])",0.316300,6
+"[class^='wrapper_']:has(rect[fill='#80848e'])",0.312500,0
+"[class^='avatar'] > [class^='wrapper_']:has(rect)",0.300200,32
+"[class*=guilds_]",0.213400,1
+"[class*='guilds_']",0.212400,1
+"[class*='guilds_']",0.212300,1
+"[class*='guilds_']",0.210100,1
+"[class*=guilds_]",0.209800,1
+"[class^=chat_] > [class*=container_]",0.208500,0
+"[class*=replying_]",0.208400,0
+"[class*=embedFull_]",0.208200,2
+"[class*=lookFilled_][class*=colorPrimary_]",0.207000,0
+"[class*=mentioned_]",0.206300,0
+"[class*=buttonColor_]",0.202100,0
+"#app-mount [class*=lookLink_][class*=colorPrimary_]",0.201500,0
+"[class*=overlayTitle_]",0.197100,0
+"#app-mount [class*=controlIcon_]",0.194200,0
+"[class^=embedVideoActions_] [class^=wrapper_]",0.191900,0
+"[class^='userPanelInner_'] [class^='avatar'] > [class^='wrapper_']",0.152300,0
+"[class^='wrapper_'][class*='vatar']:has(rect)",0.149600,1
+"[class*='userProfileInner_'] [class^='wrapper_'][class*='avatar']",0.148300,0
+"[class^=sidebar_] > [class^=container_]",0.147000,1
+"[class^=privateChannels_] > [class^=scroller_]",0.146900,0
+"[class^=panels_] > [class^=wrapper_] > [class^=container]",0.145300,0
+"[class^='form_'] > [class^='wrapper_']",0.145200,0
+"[class^='sidebar_'] > [class^='container_']",0.144900,1
+"[class^='sidebar_'] > [class^='container_']",0.144900,1
+"[class^=panels_] > [class^=container_]",0.144600,1
+"[class^='form_'] [class^='channelTextArea_']",0.144600,1
+"[class^='chatContent_'] > [class^='messagesWrapper_']",0.144500,1
+"[class*=bannerVisible_] [class^=headerContent_]",0.144400,0
+"[class^='form_'] [class^='channelTextArea_']",0.144100,1
+"#app-mount [class^=partyStatus_] [class^=anchor_]",0.144000,0
+"[class^='folderIconWrapper_'][style='background-color: rgba(88, 101, 242, 0.4);']",0.143700,10
+"[class^=form_] [class^=channelTextArea_]",0.143700,1
+"[class^=chatContent_] > [class^=messagesWrapper_]",0.143700,1
+"[class^=privateChannels_]",0.143600,0
+"[class^='privateChannels_']",0.143400,0
+"[class^='nowPlayingColumn_']",0.143300,0
+"[class^=chat_] > [class^=content_] > [class^=container_]",0.143200,1
+"[class^='privateChannels_']",0.143100,0
+"[class^=privateChannels_]",0.143100,0
+"[class^=searchResultsWrap_]",0.143000,0
+"[class^=embedVideoActions_] [class^=wrapper_] > [class^=anchor_]",0.143000,0
+"[class^='searchResultsWrap_']",0.142700,0
+"[class^=privateChannels_]",0.142600,0
+"[class^='peopleColumn_']",0.142600,0
+"[class^='chatContent_'] > [class^='messagesWrapper_']",0.142500,1
+"[class^='peopleColumn_']",0.142500,0
+"[class^=panels_]",0.142400,1
+"[class^=sidebar_]",0.142400,1
+"[class^=threadSuggestionBar_]",0.142300,0
+"[class^='profilePanel_']",0.142300,0
+"[class^='sectionDivider_']",0.142300,0
+"[class^=privateChannels_]",0.142300,0
+"[class^='form_'] [class^='channelTextArea_']",0.142200,1
+"[class^='membersWrap_']",0.142200,1
+"[class^='peopleListItem_']",0.142200,0
+"[class^='nowPlayingColumn_']",0.142200,0
+"[class^=childWrapper_]",0.142100,5
+"[class^=membersWrap_]",0.142100,1
+"[class^='profilePanel_']",0.142000,0
+"[class^=searchResultsWrap_]",0.141900,0
+"[class^=searchFilter_]",0.141900,0
+"[class^=peopleColumn_]",0.141900,0
+"[class^='searchResultsWrap_']",0.141900,0
+"[class^=resizeHandle_]",0.141800,0
+"[class^=profilePanel_]",0.141800,0
+"[class^=nowPlayingColumn_]",0.141800,0
+"[class^='nowPlayingColumn_']",0.141800,0
+"[class^='userPanelInner_']",0.141700,0
+"[class^=profilePanel_] > [class^=userPanelOuter_]",0.141600,0
+"[class^=searchResultsWrap_]",0.141600,0
+"[class^='membersWrap_']",0.141600,1
+"[class^=container_] > [class^=base_]",0.141600,1
+"[class^=attachedBars_]",0.141500,0
+"[class^='membersWrap_']",0.141500,1
+"#app-mount [class^=sidebar_] > [class^=container_]",0.141400,1
+"[class^='toolbar_'] > [class^='search_']",0.141300,1
+"[class^=gifFavoriteButton_]",0.141100,0
+"[class^=searchAnswer_]",0.141000,0
+"[class^=panels_] > [class^=panel_]",0.141000,0
+"[class^='membersWrap_']",0.141000,1
+"[class^=members_]",0.140900,1
+"[class^=member_]",0.140700,30
+"[class^='panels_']",0.140700,1
+"[class^='avatarStack_']",0.140600,46
+"[class^=iconBadge_]:not([class*=isCurrentUserConnected_])",0.140500,1
+"[class^=iconWrapper_]",0.140400,6
+"[class^=panels_]",0.140300,1
+"[class^=tabBody_]",0.140200,0
+"[class^=friendRequestsButton_] [class^=numberBadge_]",0.140100,0
+"[class^='upperBadge_']",0.140100,1
+"[class^='panels_']",0.140100,1
+"[class^=panels_] > [class^=panel_]",0.140000,0
+"[class^=sidebar_]",0.139900,1
+"[class^=replyBar_]",0.139800,0
+"[class^=peopleColumn_]",0.139800,0
+"[class^='container_'] > [class^='base_']",0.139700,1
+"[class^=container_] > [class^=base_]",0.139200,1
+"[class^=chat_]",0.138800,1
+"[class^='typing_']",0.138700,0
+"[class^=tabBody_]",0.138700,0
+"[class^=sidebar_]",0.138700,1
+"[class^='lowerBadge_']",0.138600,0
+"[class^='dot_'][class*='maskSecondary_']",0.138400,0
+"[class^='unreadPill_'][class*='endCap_']",0.138300,0
+"[class^=container_] > [class^=base_]",0.137700,1
+"#app-mount [class^='divider_']",0.136000,32
+"#app-mount [class^=sidebar_]",0.133000,1
+"#app-mount [class^=partyStatus_]",0.131000,0
+"[class^='mask_'] > svg",0.088900,1
+"[class^='listItem_'] [class^='wrapper_'] > [class^='svg_'] > mask",0.087000,28
+"svg[style='color: rgb(88, 101, 242);']",0.086800,4
+"[role='button'] path[fill='var(--white-500)']",0.086600,0
+"svg[class^=slider_] > rect[fill='white']",0.085800,0
+"[class^='mask_'] > rect",0.083600,32
+"[class^='mask_'] > circle",0.083100,1
+"aside[class^='profilePanel_']",0.083000,0
+"[class^='bannerSVGWrapper_'] > mask > circle",0.082700,1
+"[class^='mask_'] > foreignObject",0.082700,32
+"[class^='svg_'] > foreignObject",0.082300,46
+":root",0.081000,1
+"[style='opacity: 1; background-color: rgb(35, 165, 90);']",0.079300,0
+"[class^=jumpToPresentBar_] > button",0.077900,0
+"#app-mount button path[fill='var(--white-500)']",0.070900,0
+":root",0.065300,1
+":root",0.060700,1
+"*",0.056700,7021
+".custom-profile-theme [class*=color_][class*=text_]",0.056200,0
+".container_fb4810",0.052900,0
+".container_a6d69a",0.052800,0
+".container_adcaac",0.052500,0
+".wordmarkWindows_a934d8 > svg",0.052300,1
+".container_c75f85",0.052000,0
+".theme-dark",0.051900,3
+".container_b2ca13",0.051800,1
+".container_adcaac",0.051800,0
+".scroller_fb4810",0.051700,0
+".container_d1c246",0.051700,0
+".grabber_c7a159",0.051700,1
+".container_a6d69a",0.051400,0
+".theme-light",0.051200,0
+".container_fc4f04",0.051200,1
+".wrapper_f316dd",0.051100,0
+".panels_a4d4d9",0.051100,1
+".vc-spotify-time-left",0.051100,1
+".scroller_e2e187",0.050900,1
+".horizontal_bba380 > .flex_bba380",0.050900,0
+".textArea_d0696b",0.050800,2
+".container_fc4f04",0.050700,1
+".wrapper_fea3ef",0.050700,1
+".animatedContainer_fd6364",0.050700,1
+".vc-spotify-time-right",0.050700,1
+".container_c2739c",0.050600,0
+".wordmarkWindows_a934d8",0.050600,1
+".scroller_fb4810",0.050500,0
+".container_c2739c",0.050500,0
+".scroller_fb4810",0.050400,0
+".attachButton_f298d4",0.050400,1
+".chat_a7d72e",0.050400,1
+".tabBody_c2739c",0.050400,0
+".clipContainer_b11c5e",0.050300,0
+".container_a6d69a",0.050200,0
+".scroller_fb4810",0.050200,0
+".form_a7d72e",0.050200,1
+".content_a7d72e",0.050100,1
+".container_d1c246",0.050100,0
+".platform-osx [class*='guilds_']",0.050100,0
+".container_a4d4d9",0.049900,1
+".newMessagesBar_cf58b5",0.049900,0
+".container_fc4f04",0.049500,1
+".vc-spotify-time-left",0.049300,1
+".form_a7d72e",0.049200,1
+".container_fc4f04",0.049200,1
+".form_a7d72e",0.049100,1
+".vc-spotify-time-right",0.049000,1
+"#app-mount #vc-spotify-player",0.000300,1
+"#vc-spotify-progress-bar [class^='bar_']",0.000300,1
+"#vc-spotify-player",0.000200,1
+"#vc-spotify-progress-bar",0.000200,1
+"#vc-spotify-player",0.000200,1
+"#vc-spotify-player",0.000200,1
+"::-webkit-scrollbar-thumb",0.000100,0
