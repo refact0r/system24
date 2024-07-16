@@ -1,0 +1,12 @@
+
+[data-list-item-id="guildsnav___home"] > [class^=childWrapper_] > svg {
+	display: none;
+}
+[data-list-item-id="guildsnav___home"] > [class^=childWrapper_]::after {
+	content: '          # # #           # # #\A       # # # # # # # # # # # # # # #\A     # # # # # # # # # # # # # # # # #\A     # # # # # # # # # # # # # # # # #\A   # # # # # # # # # # # # # # # # # # #\A   # # # # # # # # # # # # # # # # # # #  \A   # # # # #     # # # # #     # # # # #  \A   # # # #         # # #         # # # #  \A# # # # #         # # #         # # # # #\A# # # # # #     # # # # #     # # # # # #\A# # # # # # # # # # # # # # # # # # # # #\A# # # # # # # # # # # # # # # # # # # # #\A# # # # #     # # # # # # #     # # # # #\A     # # # #                   # # # #    ';
+	display: block;
+	white-space: pre;
+	font-size: 1.6px;
+	font-weight: bold;
+	letter-spacing: -0.2ch;
+}
