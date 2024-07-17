@@ -223,8 +223,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	flex-direction: column;
 	margin-top: 0;
 }
-.form_a7d72e:after,
-.form_a7d72e:before {
+.form_a7d72e::after,
+.form_a7d72e::before {
 	display: none !important;
 }
 [class^='form_'] [class^='channelTextArea_'] {
@@ -397,7 +397,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 aside[class^='profilePanel_'] {
 	padding: var(--txt-pad);
 }
-[class^='userPanelInner_']:before {
+[class^='userPanelInner_']::before {
 	height: calc(100% - 2 * var(--txt-pad));
 	width: calc(100% - 2 * var(--txt-pad));
 }
@@ -450,7 +450,7 @@ aside[class^='profilePanel_'] {
 
 /* adjust divider/border thickness */
 #app-mount [class^='divider_'],
-.container_c75f85:after,
+.container_c75f85::after,
 [class^='peopleListItem_'] {
 	border-width: var(--border-width);
 }
@@ -469,7 +469,6 @@ aside[class^='profilePanel_'] {
 
 /* unrounding */
 ::-webkit-scrollbar-thumb,
-[class^='avatarStack_']:after,
 * {
 	border-radius: 0 !important;
 }
@@ -488,8 +487,7 @@ aside[class^='profilePanel_'] {
 	display: none;
 }
 /* re-add status indicators */
-[class^='wrapper_'][class*='vatar']:has(rect)::after,
-[class^='avatar'] > [class^='wrapper_']:has(rect)::after {
+.wrapper_c51b4e:has(rect)::after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -499,30 +497,22 @@ aside[class^='profilePanel_'] {
 	right: -4px;
 	border: 2px solid var(--bg-0);
 }
-[class^='wrapper_']:has(rect[fill='#23a55a'])::after {
+.wrapper_c51b4e:has(rect[fill='#23a55a'])::after {
 	background: var(--online-dot);
 }
-[class^='wrapper_']:has(rect[fill='#f23f43'])::after {
+.wrapper_c51b4e:has(rect[fill='#f23f43'])::after {
 	background: var(--dnd-dot);
 }
-[class^='wrapper_']:has(rect[fill='#f0b232'])::after {
+.wrapper_c51b4e:has(rect[fill='#f0b232'])::after {
 	background: var(--idle-dot);
 }
-[class^='wrapper_']:has(rect[fill='#593695'])::after {
+.wrapper_c51b4e:has(rect[fill='#593695'])::after {
 	background: var(--streaming-dot);
 }
-[class^='wrapper_']:has(rect[fill='#80848e'])::after {
+.wrapper_c51b4e:has(rect[fill='#80848e'])::after {
 	background: var(--txt-3);
 }
-/* adjust status indicator size for profiles */
-[class*='userProfileInner_'] [class^='wrapper_'][class*='avatar']::after,
-[class^='userPanelInner_'] [class^='avatar'] > [class^='wrapper_']::after,
-[class^='clickable_'] [class^='wrapper_']:has(rect)::after {
-	width: 12px;
-	height: 12px;
-	bottom: -5px;
-	right: -5px;
-}
+
 /* fix server list badges */
 [class^='lowerBadge_'] {
 	border: 2px solid var(--bg-0);
@@ -536,7 +526,7 @@ aside[class^='profilePanel_'] {
 }
 
 .theme-dark,
-.theme-light {
+html.theme-light {
 	--action-sheet-gradient-bg: var(--primary-630);
 	--activity-card-background: var(--primary-700);
 	--activity-card-icon-overlay: hsl(223 calc(1 * 6.7%) 20.6% / 0.85);
