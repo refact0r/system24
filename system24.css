@@ -481,6 +481,7 @@ aside[class^='profilePanel_'] {
 [class^='svg_'] > foreignObject {
 	mask-image: none;
 }
+/* hide status indicators */
 [class^='mask_'] > rect,
 [class^='mask_'] > circle,
 [class^='mask_'] > svg {
@@ -497,20 +498,24 @@ aside[class^='profilePanel_'] {
 	right: -4px;
 	border: 2px solid var(--bg-0);
 }
-.wrapper_c51b4e:has(rect[fill='#23a55a'])::after {
-	background: var(--online-dot);
+.wrapper_c51b4e:has(rect[fill='#23a55a'])::after,
+[class^='status_'][style='background-color: rgb(35, 165, 90);'] {
+	background: var(--online-dot) !important;
 }
-.wrapper_c51b4e:has(rect[fill='#f23f43'])::after {
-	background: var(--dnd-dot);
+.wrapper_c51b4e:has(rect[fill='#f23f43'])::after,
+[class^='status_'][style='background-color: rgb(242, 63, 67);'] {
+	background: var(--dnd-dot) !important;
 }
-.wrapper_c51b4e:has(rect[fill='#f0b232'])::after {
-	background: var(--idle-dot);
+.wrapper_c51b4e:has(rect[fill='#f0b232'])::after,
+[class^='status_'][style='background-color: rgb(240, 178, 50);'] {
+	background: var(--idle-dot) !important;
+}
+.wrapper_c51b4e:has(rect[fill='#80848e'])::after,
+[class^='status_'][style='background-color: rgb(128, 132, 142);'] {
+	background: var(--txt-3) !important;
 }
 .wrapper_c51b4e:has(rect[fill='#593695'])::after {
 	background: var(--streaming-dot);
-}
-.wrapper_c51b4e:has(rect[fill='#80848e'])::after {
-	background: var(--txt-3);
 }
 
 /* fix server list badges */
