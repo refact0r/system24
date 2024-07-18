@@ -4,7 +4,7 @@
 
 a tui-style discord theme, inspired by [spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text).
 
-![screenshot](/assets/screenshot2.png)
+![screenshot](/assets/screenshot3.png)
 
 ## discord server
 
