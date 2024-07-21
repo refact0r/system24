@@ -164,6 +164,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	width: var(--pad);
 }
 
+/* fix inbox overflow and hiding window controls */
+[class^='notAppAsidePanel_'] > [class^='layerContainer_'] {
+	overflow: hidden;
+}
+
 /* platform spacing */
 .platform-osx [class*='guilds_'] {
 	margin-top: calc(32px + var(--pad));
