@@ -1,0 +1,319 @@
+Selector,Time (ms),Matches
+"[class^='wordmarkWindows']",0.144000,1
+"[class^='winButtonMinMax']:nth-child(4)",0.140000,1
+"[class^='winButtonClose']",0.137000,1
+"[class^='winButton']",0.136000,3
+"[class^='winButtonMinMax']:nth-child(3)",0.136000,1
+"[class^='wordmarkWindows']",0.135000,1
+"[class^='winButton']",0.134000,3
+"[class^='typeWindows']",0.133000,1
+"[class^='winButton']:hover",0.133000,0
+"[class^='winButton']:active",0.133000,0
+"[class^='winButtonClose']",0.132000,1
+".container_a4d4d9 > [style$='display: flex;']",0.108000,0
+"#app-mount .panels_a4d4d9 > div",0.105000,3
+".chat_a7d72e:has(.searchResultsWrap_c2b47d) .searchBar_a46bef",0.095000,0
+":root",0.089000,1
+"#app-mount .button__33db6",0.089000,0
+".chat_a7d72e:has(.userPanelOuter_c69a7b) .searchBar_a46bef",0.089000,0
+"svg[fill='#f0b232']",0.086000,0
+"rect[fill='#f0b232']",0.085000,18
+"svg[fill='#23a55a']",0.082000,0
+"[class^='winButton'] > svg",0.081000,3
+"svg[fill='#f23f43']",0.080000,0
+"path[fill='rgba(35, 165, 90, 1)']",0.079000,0
+"path[fill='var(--white-500)']",0.079000,1
+"rect[fill='#23a55a']",0.079000,11
+"svg[fill='#593695']",0.079000,0
+"[class^='wordmarkWindows'] > svg",0.079000,1
+"rect[fill='#f23f43']",0.077000,7
+"#app-mount .container_b2ca13",0.076000,1
+"#app-mount .header_f1fd9c",0.076000,0
+"#app-mount .container_f1fd9c",0.075000,0
+"#app-mount .uploadModal_f82cc7",0.075000,0
+"#app-mount .categoryText_af1167",0.075000,0
+"rect[fill='#593695']",0.075000,2
+"#app-mount .scroller_fea3ef",0.075000,1
+"#app-mount .searchFilter_b0fa94",0.074000,0
+"#app-mount .container_c2efea",0.074000,0
+"#app-mount .outer_c0f6a6.interactive_c0f6a6:hover",0.074000,0
+"#app-mount .tooltipBrand_b6c360",0.074000,0
+"#app-mount .app_bd26cc .base_a4d4d9",0.074000,1
+"#app-mount .button__33db6:hover",0.073000,0
+"#app-mount .container_ee69e0",0.073000,1
+"a[href="https://support.discord.com"]",0.073000,1
+"#app-mount .scrollerContainer_c6b11b",0.072000,0
+"#app-mount .outer_c0f6a6.active_c0f6a6",0.072000,0
+"#app-mount .centerButton_ef18ee",0.072000,0
+"#app-mount .searchAnswer_b0fa94",0.072000,0
+"#app-mount .button__33db6",0.071000,0
+"#app-mount .header_b56bbc",0.071000,0
+"#app-mount .textContentFooter_a57509",0.071000,0
+"#app-mount .activeButton_b48941",0.070000,0
+"#app-mount .container_f3abf4",0.070000,0
+"#app-mount .callContainer_d880dc",0.070000,0
+":root",0.058000,1
+".chat_a7d72e:has(.membersWrap_cbd271) .searchBar_a46bef",0.055000,1
+".root_b9fccc",0.054000,0
+".theme-dark .tooltipGreen_b6c360",0.053000,0
+".message_d5deea.replying_d5deea.selected_d5deea",0.053000,0
+".expandedFolderIconWrapper_bc7085 > svg[style="color: rgb(88, 101, 242);"]",0.053000,6
+".userPopoutOuter_c69a7b",0.053000,1
+".numberBadge_df8943",0.052000,0
+".uploadModal_f82cc7 .footer_f82cc7",0.052000,0
+".select_f6639d",0.052000,0
+".scrollableContainer_d0696b.hasConnectedBar_d0696b",0.052000,0
+".item_d90b3d",0.052000,0
+".wrapper_f90abb.selected_f90abb > .childWrapper_f90abb",0.052000,0
+".container_e9f61e:hover",0.052000,0
+".icon_c07d45",0.052000,0
+".container_a4d4d9 > [style$='display: flex;'] > .guilds_a4d4d9",0.052000,0
+".wrapper_f90abb:hover > .childWrapper_f90abb",0.052000,0
+".item_c4cd66",0.052000,1
+".wrapper_d8bfb3:hover .link_d8bfb3",0.052000,0
+".emojiButton_d0696b .contents_dd4f85",0.052000,2
+".members_cbd271",0.051000,1
+".mouse-mode.full-motion .message_d5deea.replying_d5deea:hover",0.051000,0
+".status_c7d26b[style='background-color: rgb(35, 165, 90);']",0.051000,0
+".status_c7d26b[style='background-color: rgb(242, 63, 67);']",0.051000,0
+".userPanelInner_c69a7b",0.051000,0
+".banner_ab876d",0.051000,0
+".embed_ad0b71",0.051000,3
+".itemCard_f02fcf",0.051000,0
+".channelTextArea_a7d72e",0.051000,1
+".item_eb92a8",0.051000,0
+".select_f6639d.open_f6639d",0.051000,0
+".content_cdc675",0.051000,0
+".lowerBadge_c5f96a",0.051000,0
+".container_e9f61e",0.051000,36
+".container__93316",0.051000,0
+":root.reduce-motion",0.050000,0
+".privateChannels_f0963d",0.050000,0
+".newChannel_ecb303",0.050000,0
+"div.message_d5deea.replying_d5deea",0.050000,0
+".numberBadge_df8943",0.050000,0
+".divider_d5deea",0.050000,1
+".colorDefault_d90b3d.focused_d90b3d",0.050000,0
+".wrapper_d880dc.minimum_d880dc",0.050000,0
+".userPanelOuter_c69a7b",0.050000,0
+".overlayBackground_c69a7b",0.050000,0
+".peopleListItem_d51464:hover",0.050000,0
+".layout_e9f61e",0.050000,36
+".item_eb92a8 .radioBar_eb92a8",0.050000,0
+".replyBar_b11c5e",0.050000,0
+".container_effbe2",0.050000,0
+".icon_c07d45",0.050000,0
+".base_a4d4d9",0.050000,1
+".container_a4d4d9",0.050000,1
+".message_d5deea.mentioned_d5deea",0.050000,6
+".wrapper_d8bfb3 .link_d8bfb3",0.050000,36
+".container_cebd1c.checked_cebd1c > .slider_cebd1c > rect",0.049000,0
+".footer_f9a4c9",0.049000,0
+".membersWrap_cbd271",0.049000,1
+".side_a0 .item_a0",0.049000,0
+".contents_dd4f85:hover > .closeIcon_f9a4c9",0.049000,0
+".member_a31c43",0.049000,36
+".sidebarRegionScroller_c25c6d",0.049000,0
+".chat_a7d72e.background_e85cee",0.049000,0
+".selected_fd6364 .header_fd6364",0.049000,0
+".activeButtonChild_a06035",0.049000,0
+".container_b2ca13",0.049000,1
+".newMessagesBar_cf58b5 .barButtonBase_cf58b5",0.049000,0
+".lookFilled_dd4f85.colorRed_dd4f85",0.049000,0
+".categoryItem_c72b37.selectedCategoryItem_c72b37",0.049000,0
+".menu_ad5fac .menuItemFocused_ad5fac",0.049000,0
+".iconBadge_c96c45.isCurrentUserConnected_c96c45",0.049000,0
+".resizeHandle_d1c246",0.049000,0
+".contentWrapper_af5dbb",0.049000,0
+".imageContainer_cf58b5 .imageWrapper__178ee",0.049000,0
+".withTagAsButton_b2ca13:hover",0.049000,0
+".scrollableContainer_d0696b",0.049000,2
+".input_f8bc55",0.049000,0
+".popout_f6639d",0.049000,0
+".link_d8bfb3",0.049000,36
+".guilds_a4d4d9",0.049000,1
+".guilds_a4d4d9.hidden_fea3ef",0.049000,0
+".childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4))",0.049000,1
+".button_f67531:last-child:hover .contents_dd4f85",0.049000,0
+".searchTitle_a3a4ce",0.048000,0
+".checkbox_f6cde8",0.048000,0
+".container_aef5fd:first-child .icon_aef5fd",0.048000,0
+".clipContainer_b11c5e",0.048000,0
+".membersWrap_cbd271",0.048000,1
+".wrapper_d880dc.minimum_d880dc",0.048000,0
+".withTagless_b2ca13:hover",0.048000,0
+".container_c15230",0.048000,0
+".wrapper_f90abb:hover .childWrapper_f90abb",0.048000,0
+".divider_c2654d .content_c2654d",0.048000,1
+"button.button_f67531",0.048000,4
+".emojiButton_d0696b:hover .contents_dd4f85",0.048000,0
+".bottom_eba0ba > .containerPadding_eba0ba",0.048000,1
+".theme-light",0.048000,1
+".theme-dark",0.048000,2
+".folder_bc7085.hover_bc7085",0.048000,0
+".lookFilled_dd4f85.colorBrandNew__8872c",0.048000,0
+".wrapper_f90abb.selected_ae80f7 .childWrapper_f90abb",0.048000,0
+".newBadge_a57509",0.048000,0
+".status_c7d26b[style='background-color: rgb(240, 178, 50);']",0.048000,0
+".status_c7d26b[style='background-color: rgb(89, 54, 149);']",0.048000,0
+".chatContent_a7d72e",0.048000,1
+".roundedBanner_c3e427",0.048000,1
+".mediaAttachmentsContainer__242e2",0.048000,0
+".messageGroupWrapper_ac90a2",0.048000,0
+"button.button_dd4f85",0.048000,18
+".container__33507",0.048000,0
+".guilds_a4d4d9",0.048000,1
+".endCap_c2654d",0.048000,0
+".newMessagesBar_cf58b5:hover",0.048000,0
+".bottom_eba0ba > .containerPadding_eba0ba:hover",0.048000,0
+".container_adcaac",0.047000,0
+".shop_e77fa3",0.047000,0
+".attachedBars_d0696b",0.047000,0
+".colorDefault_d90b3d.focused_d90b3d .caret_d90b3d",0.047000,0
+".header_dd5a33",0.047000,0
+".vcd-screen-picker-radio[data-checked="true"] .defaultColor_a595eb",0.047000,0
+".menu_ad5fac .menuItemFocused_ad5fac path",0.047000,0
+".controlIcon_ef18ee:hover",0.047000,0
+".searchResultsWrap_c2b47d",0.047000,0
+".sidebar_a4d4d9.hidden_a4d4d9",0.047000,0
+".panels_a4d4d9",0.047000,1
+".main_d8215a",0.047000,0
+".chatContent_a7d72e",0.047000,1
+".oneByOneGridSingle_cda674",0.047000,6
+".wrapper_ef319f",0.047000,2
+".replying_d5deea",0.047000,0
+".closeButton_df5532",0.047000,0
+".newMessagesBar_cf58b5",0.047000,0
+".container__33507",0.047000,0
+".navRow_be9398[data-theme=dark]",0.047000,0
+".interactive:hover",0.047000,0
+".button_adcaac.buttonColor_adcaac.buttonActive_adcaac:hover",0.047000,0
+".button_adcaac.buttonColor_adcaac:hover",0.047000,0
+".controlIcon_ef18ee",0.047000,0
+".title_a7d72e.themed_fc4f04",0.047000,1
+".sidebar_a4d4d9",0.047000,1
+".container_d1c246",0.047000,0
+".animatedContainer_fd6364",0.047000,1
+".profilePanel_b433b4",0.047000,0
+".layerContainer_cd0de5 .root_f9a4c9",0.047000,0
+".markup_f8f345 code",0.047000,22
+".interactive_f5eb4b",0.047000,0
+".previewChannelRowContent_c5d9bc",0.047000,0
+".searchBar_a46bef",0.047000,1
+".channel_c91bad",0.047000,0
+".channel_c91bad:hover",0.047000,0
+".wrapper_d880dc.minimum_d880dc",0.046000,0
+".container_effbe2",0.046000,0
+".uploadModal_f82cc7 .footer_f82cc7",0.046000,0
+".mainCard_a6d69a",0.046000,0
+".sidebar_a4d4d9",0.046000,1
+".privateChannels_f0963d .scroller_c47fa9",0.046000,0
+".clickable_fd6364 .header_fd6364:hover",0.046000,0
+".toolbar_fc4f04",0.046000,1
+".mention_c10249",0.046000,0
+".botTagOP_a02df3",0.046000,0
+".container_cebd1c.checked_cebd1c",0.046000,0
+".botTagRegular_a02df3",0.046000,3
+".lookFilled_dd4f85.colorBrand_dd4f85",0.046000,0
+".bar_c10249",0.046000,2
+".wrapper_f90abb:hover .childWrapper_f90abb",0.046000,0
+".colorDefault_d90b3d:active:not(.hideInteraction_d90b3d) .caret_d90b3d",0.046000,0
+".lookOutlined_dd4f85.colorWhite_dd4f85",0.046000,0
+".theme-light .button__33db6",0.046000,0
+".colorDefault_d90b3d.focused_d90b3d path",0.046000,0
+".container_cebd1c > .slider_cebd1c > rect",0.046000,0
+".mini_c7a159 .grabber_c7a159",0.046000,1
+".grabber_c7a159",0.046000,1
+".gifIcon_f2f431",0.046000,0
+".container_aef5fd:last-child .icon_aef5fd",0.046000,0
+".userPanelOuter_c69a7b",0.046000,0
+".container_a6d69a",0.046000,0
+".search_ff5f90",0.046000,1
+".base_a4d4d9",0.046000,1
+".container_adcaac",0.046000,0
+".privateChannels_f0963d",0.046000,0
+".shop_e77fa3",0.046000,0
+".container_cbd271",0.046000,1
+".messagesPopoutWrap_ac90a2",0.046000,0
+".menu_d90b3d .item_d90b3dd",0.046000,0
+".menu_d90b3d",0.046000,0
+".side_a0 .item_a0",0.046000,0
+".childWrapper_f90abb > svg:not(.favoriteIcon_dcc7a4)",0.046000,1
+".embedFull_ad0b71",0.046000,2
+".contents_dd4f85 > .closeIcon_f9a4c9",0.046000,0
+".chat_a7d72e",0.046000,1
+".dots_ce0450",0.046000,0
+".container_cebd1c",0.046000,0
+".userMenuItem_e1268c path[fill="var(--white-500)"]",0.046000,0
+".artwork_bdd070",0.046000,0
+".searchResultsWrap_c2b47d",0.046000,0
+".container_ee69e0",0.046000,1
+".banner_d29eee",0.046000,0
+".divider_c2654d",0.046000,1
+".closeButton_df5532:hover",0.046000,0
+"html.theme-light",0.046000,0
+".searchResultsWrap_c2b47d",0.045000,0
+".searchHeader_b7c924",0.045000,0
+".chat_a7d72e.container_f3abf4",0.045000,0
+".lookFilled_dd4f85.colorBrand_dd4f85 .defaultColor__77578",0.045000,0
+".lookFilled_dd4f85.colorGreen_dd4f85",0.045000,0
+".lookFilled_dd4f85.colorYellow__818c3",0.045000,0
+".colorDefault_d90b3d:active:not(.hideInteraction_d90b3d)",0.045000,0
+".tabBar_c2739c .addFriend_c2739c.addFriend_c2739c.addFriend_c2739c",0.045000,0
+".button_adcaac.buttonColor_adcaac",0.045000,0
+".bannerVisible_fd6364 .headerContent_fd6364",0.045000,0
+".content_a7d72e",0.045000,1
+".notice__5fd4c",0.045000,0
+".applicationStore_cecc86",0.045000,0
+".container_d576e9",0.045000,0
+".searchResultsWrap_c2b47d",0.045000,0
+".background_ae3c77",0.045000,0
+".hoverButtonGroup_e5c1dc",0.045000,3
+".wrapper_a7c28c",0.045000,0
+".searchBar_f0963d .searchBarComponent_f0963d",0.045000,0
+".childWrapper_f90abb",0.045000,8
+".side_a0 .item_a0:hover",0.045000,0
+".newMessagesBar_cf58b5",0.045000,0
+".folderIconWrapper_bc7085[style="background-color: rgba(88, 101, 242, 0.4);"]",0.044000,8
+".focused_e1268c .userMenuUsername_e1268c .userMenuText_e1268c",0.044000,0
+".button_adcaac.buttonColor_adcaac.buttonActive_adcaac",0.044000,0
+".membersWrap_cbd271",0.044000,1
+".chat_a7d72e",0.044000,1
+".mentionsBar_eba0ba",0.044000,0
+".mention_c10249:active",0.044000,0
+".endCap_c2654d",0.044000,0
+".uploadIcon_f2f431",0.044000,0
+".theme-light .tooltipGreen_b6c360",0.044000,0
+".closeIcon__967e7 path",0.044000,0
+".wrapper_d880dc.minimum_d880dc ~ .content_a7d72e .container__93316",0.044000,0
+".sidebar_a4d4d9",0.044000,1
+".container_c2739c",0.044000,0
+".notice__5fd4c",0.044000,0
+".wrapper_d880dc.minimum_d880dc ~ .content_a7d72e",0.044000,0
+".members_cbd271",0.044000,1
+".container_a6d69a",0.044000,0
+".container_e664f3",0.044000,0
+".topPill_a0 .item_a0",0.044000,0
+".guilds_a4d4d9",0.044000,1
+".platform-win .container_a4d4d9",0.044000,1
+".attachButton_f298d4 .attachButtonInner_f298d4",0.044000,1
+".attachButton_f298d4:hover .attachButtonInner_f298d4",0.044000,0
+".top_eba0ba > .containerPadding_eba0ba",0.044000,1
+".top_eba0ba:hover > .containerPadding_eba0ba:hover",0.044000,0
+".wrapper_d880dc.fullScreen_d880dc .callContainer_d880dc",0.043000,0
+".panel_bf1a22",0.043000,0
+".userPanelInner_c69a7b",0.043000,0
+".hoverButtonGroup_e5c1dc",0.043000,3
+".live_e17fae",0.043000,0
+".lookOutlined_dd4f85.colorWhite_dd4f85",0.043000,0
+".lookFilled_f6639d.select_f6639d",0.043000,0
+".messagesWrapper_e2e187",0.043000,1
+"*",0.040000,6521
+"#vc-spotify-player",0.001000,1
+"#app-mount .innerHeader_f1fd9c:after",0.000000,0
+".message_d5deea.mentioned_d5deea:before",0.000000,0
+"::selection",0.000000,0
+".userPopoutInner_c69a7b:before",0.000000,0
+".userProfileModalInner_c69a7b:before",0.000000,0
+"#vc-spotify-album-image",0.000000,1
+"#vc-spotify-player",0.000000,1

@@ -1,191 +1,195 @@
 Selector,Time (ms),Matches
-"[class^='wrapper_']:has(rect[fill='#23a55a'])",0.361000,13
-"[class^='wrapper_']:has(rect[fill='#f0b232'])",0.358000,16
-"[class^='wrapper_']:has(rect[fill='#f23f43'])",0.355000,7
-"[class^='wrapper_']:has(rect[fill='#80848e'])",0.354000,0
-"[class^='avatar'] > [class^='wrapper_']:has(rect)",0.353000,38
-"[class^='wrapper_']:has(rect[fill='#593695'])",0.350000,2
-"[class^='clickable_'] [class^='wrapper_']:has(rect)",0.347000,0
-"[class^='chatContent_']:has([class^='messagesWrapper_']:hover)",0.289000,0
-"[class^=chat_] > [class*=container_]",0.228000,0
-"[class^='chatContent_']:has([class^='typing_']) > [class^='messagesWrapper_']",0.228000,1
-"[class*='guilds_']",0.223000,1
-"[class*='guilds_']",0.219000,1
-"#app-mount [class*=lookLink_][class*=colorPrimary_]",0.217000,0
-"[class*=overlayTitle_]",0.217000,0
-"[class^=embedVideoActions_] [class^=wrapper_]",0.217000,0
-"[class*=embedFull_]",0.216000,0
-"[class*=replying_]",0.216000,0
-"[class*='guilds_']",0.214000,1
-"[class*=mentioned_]",0.213000,0
-"[class*=guilds_]",0.213000,1
-"[class*=buttonColor_]",0.212000,0
-"[class*=guilds_]",0.212000,1
-"[class*=lookFilled_][class*=colorPrimary_]",0.209000,0
-"#app-mount [class*=controlIcon_]",0.197000,0
-"[class^=sidebar_]",0.173000,1
-"[class^='wrapper_'][class*='vatar']:has(rect)",0.166000,1
-"[class^='userPanelInner_'] [class^='avatar'] > [class^='wrapper_']",0.156000,0
-"[class^='form_'] > [class^='wrapper_']",0.155000,0
-"[class^=searchAnswer_]",0.152000,0
-"[class^=friendRequestsButton_] [class^=numberBadge_]",0.152000,0
-"[class^=searchFilter_]",0.151000,0
-"[class^='container_'] > [class^='base_']",0.151000,1
-"[class^=iconBadge_]:not([class*=isCurrentUserConnected_])",0.150000,2
-"[class^=panels_] > [class^=wrapper_] > [class^=container]",0.149000,0
-"[class^='form_'] [class^='channelTextArea_']",0.149000,1
-"[class^=privateChannels_]",0.149000,0
-"[class^='folderIconWrapper_'][style='background-color: rgba(88, 101, 242, 0.4);']",0.148000,8
-"[class^='sidebar_'] > [class^='container_']",0.148000,1
-"[class^='sectionDivider_']",0.148000,1
-"[class^=embedVideoActions_] [class^=wrapper_] > [class^=anchor_]",0.148000,0
-"[class^=panels_]",0.148000,1
-"[class^=sidebar_] > [class^=container_]",0.148000,1
-"[class*='userProfileInner_'] [class^='wrapper_'][class*='avatar']",0.148000,0
-"[class^=searchResultsWrap_]",0.147000,0
-"[class^='peopleColumn_']",0.147000,0
-"[class^='userPanelInner_']",0.147000,0
-"[class^='lowerBadge_']",0.147000,0
-"[class^='sidebar_'] > [class^='container_']",0.147000,1
-"[class^=gifFavoriteButton_]",0.146000,0
-"[class^=profilePanel_]",0.146000,0
-"[class^='peopleColumn_']",0.146000,0
-"[class^=privateChannels_]",0.146000,0
-"[class^='upperBadge_']",0.146000,2
-"[class^=container_] > [class^=base_]",0.145000,1
-"[class^='panels_']",0.145000,1
-"[class^='profilePanel_']",0.145000,0
-"[class^='nowPlayingColumn_']",0.145000,0
-"[class^=searchResultsWrap_]",0.145000,0
-"[class^=tabBody_]",0.144000,0
-"[class^=privateChannels_]",0.144000,0
-"[class^=peopleColumn_]",0.144000,0
-"[class^=form_] [class^=channelTextArea_]",0.144000,1
-"[class^=searchResultsWrap_]",0.144000,0
-"[class^='form_'] [class^='channelTextArea_']",0.144000,1
-"[class^='membersWrap_']",0.144000,1
-"[class^=container_] > [class^=base_]",0.144000,1
-"[class^='nowPlayingColumn_']",0.144000,0
-"[class^='membersWrap_']",0.144000,1
-"[class^='typing_']",0.143000,1
-"[class^=tabBody_]",0.143000,0
-"[class^='avatarStack_']",0.143000,56
-"[class^=attachedBars_]",0.143000,0
-"[class^=chat_] > [class^=content_] > [class^=container_]",0.143000,1
-"[class^=chat_]",0.143000,1
-"[class^=resizeHandle_]",0.143000,0
-"[class^='membersWrap_']",0.143000,1
-"[class^='privateChannels_']",0.143000,0
-"[class^=iconWrapper_]",0.142000,6
-"[class^=nowPlayingColumn_]",0.142000,0
-"[class^='privateChannels_']",0.142000,0
-"#app-mount [class^=sidebar_] > [class^=container_]",0.142000,1
-"#app-mount [class^=partyStatus_] [class^=anchor_]",0.142000,0
-"[class^=membersWrap_]",0.142000,1
-"[class^='panels_']",0.142000,1
-"[class^='chatContent_'] > [class^='messagesWrapper_']",0.142000,1
-"[class^='toolbar_'] > [class^='search_']",0.142000,1
-"[class^=panels_] > [class^=container_]",0.141000,1
-"[class^=panels_] > [class^=panel_]",0.141000,0
-"[class^='profilePanel_']",0.141000,0
-"[class*=bannerVisible_] [class^=headerContent_]",0.141000,0
-"[class^='unreadPill_'][class*='endCap_']",0.141000,1
-"[class^=replyBar_]",0.140000,0
-"[class^=profilePanel_] > [class^=userPanelOuter_]",0.140000,0
-"[class^=sidebar_]",0.140000,1
-"[class^=container_] > [class^=base_]",0.140000,1
-"[class^='dot_'][class*='maskSecondary_']",0.140000,0
-"[class^='form_'] [class^='channelTextArea_']",0.140000,1
-"[class^='searchResultsWrap_']",0.140000,0
-"[class^='searchResultsWrap_']",0.140000,0
-"[class^=peopleColumn_]",0.140000,0
-"[class^='peopleListItem_']",0.140000,0
-"[class^=sidebar_]",0.139000,1
-"[class^=chatContent_] > [class^=messagesWrapper_]",0.139000,1
-"[class^=childWrapper_]",0.139000,8
-"[class^='chatContent_'] > [class^='messagesWrapper_']",0.139000,1
-"[class^='nowPlayingColumn_']",0.139000,0
-"[class^='membersWrap_']",0.139000,1
-"[class^=privateChannels_] > [class^=scroller_]",0.138000,0
-"#app-mount [class^=sidebar_]",0.138000,1
-"[class^=panels_]",0.136000,1
-"#app-mount [class^='divider_']",0.136000,3
-"[class^=members_]",0.135000,1
-"[class^=panels_] > [class^=panel_]",0.134000,0
-"[class^=member_]",0.134000,36
-"[class^=privateChannels_]",0.133000,0
-"[class^=threadSuggestionBar_]",0.132000,0
-"#app-mount [class^=partyStatus_]",0.131000,0
-"[class^='bannerSVGWrapper_'] > mask > circle",0.083000,1
-"[role='button'] path[fill='var(--white-500)']",0.082000,0
-"svg[style='color: rgb(88, 101, 242);']",0.082000,6
-"[style='opacity: 1; background-color: rgb(35, 165, 90);']",0.082000,0
-"[class^='listItem_'] [class^='wrapper_'] > [class^='svg_'] > mask",0.082000,58
-"[class^='mask_'] > svg",0.082000,5
-"[class^='mask_'] > circle",0.079000,1
-"[class^='svg_'] > foreignObject",0.079000,60
-"[class^='mask_'] > rect",0.079000,38
-"svg[class^=slider_] > rect[fill='white']",0.078000,0
-"[class^='mask_'] > foreignObject",0.078000,38
-"[class^=jumpToPresentBar_] > button",0.075000,0
-":root",0.075000,1
-"aside[class^='profilePanel_']",0.075000,0
-"#app-mount button path[fill='var(--white-500)']",0.065000,0
-":root",0.059000,1
-":root",0.059000,1
-".custom-profile-theme [class*=color_][class*=text_]",0.057000,0
-".scroller_e2e187",0.055000,1
-".panels_a4d4d9",0.054000,1
-".container_adcaac",0.054000,0
-".container_fb4810",0.053000,0
-".form_a7d72e",0.053000,1
-".container_fc4f04",0.053000,1
-".scroller_fb4810",0.053000,0
-".container_c75f85",0.053000,1
-".horizontal_bba380 > .flex_bba380",0.053000,0
-".scroller_fb4810",0.052000,0
-".animatedContainer_fd6364",0.052000,1
-".theme-dark",0.052000,2
-".scroller_fb4810",0.051000,0
-".textArea_d0696b",0.051000,2
-".attachButton_f298d4",0.051000,1
-".container_fc4f04",0.051000,1
-".newMessagesBar_cf58b5",0.051000,1
-".vc-spotify-time-right",0.051000,1
-".container_a6d69a",0.051000,0
-".wrapper_f316dd",0.050000,0
-".content_a7d72e",0.050000,1
-".container_fc4f04",0.050000,1
-".container_a6d69a",0.050000,0
-".wrapper_fea3ef",0.050000,1
-".container_d1c246",0.050000,0
-".wordmarkWindows_a934d8 > svg",0.050000,1
-".theme-light",0.050000,1
-".container_adcaac",0.049000,0
-".clipContainer_b11c5e",0.049000,0
-".container_a6d69a",0.049000,0
-".scroller_fb4810",0.049000,0
-".tabBody_c2739c",0.049000,0
-".wordmarkWindows_a934d8",0.049000,1
-".container_b2ca13",0.048000,1
-".chat_a7d72e",0.048000,1
-".container_c2739c",0.048000,0
-".vc-spotify-time-left",0.048000,1
-".form_a7d72e",0.048000,1
-".container_fc4f04",0.048000,1
-".vc-spotify-time-left",0.048000,1
-".grabber_c7a159",0.048000,1
-".container_c2739c",0.047000,0
-".container_d1c246",0.047000,0
-".platform-osx [class*='guilds_']",0.047000,0
-".container_a4d4d9",0.047000,1
-".vc-spotify-time-right",0.047000,1
-".form_a7d72e",0.046000,1
-"*",0.035000,6656
-"#vc-spotify-progress-bar [class^='bar_']",0.002000,1
-"::-webkit-scrollbar-thumb",0.001000,0
-"#app-mount #vc-spotify-player",0.000000,1
-"#vc-spotify-player",0.000000,1
-"#vc-spotify-player",0.000000,1
-"#vc-spotify-player",0.000000,1
-"#vc-spotify-progress-bar",0.000000,1
+"[class^='chatContent_']:has([class^='messagesWrapper_']:hover)",0.256000,0
+"[class^='chatContent_']:has([class^='typing_']) > [class^='messagesWrapper_']",0.252800,0
+"[class^=chat_] > [class*=container_]",0.191900,0
+"[class*=embedFull_]",0.191100,1
+"[class*=lookFilled_][class*=colorPrimary_]",0.187400,0
+"#app-mount [class*=lookLink_][class*=colorPrimary_]",0.186500,0
+"#app-mount [class*=controlIcon_]",0.180000,0
+"[class^=container_] > [class^=wrapper_]",0.134800,1
+"[class^=container_] > [class^=wrapper_]",0.133600,1
+"[class^=container_] > [class^=wrapper_]",0.132400,1
+"[class^=message_][class*=replying_]",0.132300,0
+"[class^=embedVideoActions_] > [class^=centerContent_] > [class^=wrapper_]",0.131900,1
+"[class^=panels_] > [class^=wrapper_] > [class^=container]",0.131600,0
+"[class^=sidebar_] > [class^=container_]",0.131200,1
+"[class^=container_] > [class^=wrapper_]",0.131200,1
+"[class^='form_'] > [class^='wrapper_']",0.131000,0
+"[class^=chat_] > [class^=content_] > [class^=container_]",0.130700,1
+"[class^=message_][class*=mentioned_]",0.130200,0
+"[class^=container_] > [class^=wrapper_]",0.130000,1
+"[class^=panels_] > [class^=container_]",0.129600,1
+"#app-mount [class^=sidebar_] > [class^=container_]",0.128500,1
+"[class^='sidebar_'] > [class^='container_']",0.128500,1
+"[class^=member_]",0.126500,28
+"[class^=panels_]",0.126500,1
+"[class^='membersWrap_']",0.126400,1
+"[class^=navButton_][class*=navButtonActive_]",0.126000,0
+"[class^='sidebar_'] > [class^='container_']",0.125800,1
+"[class^='dot_'][class*='maskSecondary_']",0.125800,0
+"[class^='membersWrap_']",0.125600,1
+"[class^=panels_]",0.125600,1
+"[class^=sidebar_]",0.125500,1
+"[class^=centerContent_] > [class^=wrapper_] > [class^=anchor_]",0.125300,1
+"[class^=privateChannels_] > [class^=scroller_]",0.125200,0
+"[class^=childWrapper_]",0.125200,9
+"#app-mount [class^=partyStatus_] [class^=anchor_]",0.125200,0
+"[class^=iconBadge_]:not([class*=isCurrentUserConnected_])",0.125200,1
+"[class^='toolbar_'] > [class^='search_']",0.125100,1
+"[class^=container_] > [class^=base_]",0.125100,1
+"[class^='panels_']",0.125000,1
+"[class^='status_'][style='background-color: rgb(242, 63, 67);']",0.124900,0
+"[class^=chatContent_] > [class^=messagesWrapper_]",0.124800,1
+"[class^='form_'] [class^='channelTextArea_']",0.124700,1
+"#app-mount [class^=sidebar_]",0.124700,1
+"[class^=members_]",0.124500,1
+"[class*=bannerVisible_] [class^=headerContent_]",0.124500,0
+"[class^=form_] [class^=channelTextArea_]",0.124500,1
+"[class^='typing_']",0.124500,0
+"[class^='upperBadge_']",0.124500,1
+"[class^=tabBody_]",0.124400,0
+"[class^=resizeHandle_]",0.124200,0
+"[class^='userPanelInner_']",0.124200,0
+"[class^=attachedBars_]",0.124100,0
+"[class^=container_] > [class^=base_]",0.124100,1
+"[class^=gifFavoriteButton_]",0.124000,0
+"[class^=membersWrap_]",0.124000,1
+"[class^=panels_] > [class^=panel_]",0.124000,0
+"[class^='searchResultsWrap_']",0.124000,0
+"[class^=profilePanel_] > [class^=userPanelOuter_]",0.123900,0
+"[class^=chat_]",0.123900,1
+"[class^=sidebar_]",0.123900,1
+"[class^='form_'] [class^='channelTextArea_']",0.123900,1
+"[class^=panels_] > [class^=panel_]",0.123800,0
+"[class^='membersWrap_']",0.123800,1
+"[class^='nowPlayingColumn_']",0.123800,0
+"[class^=replyBar_]",0.123700,0
+"[class^=iconWrapper_]",0.123700,7
+"[class^='status_'][style='background-color: rgb(35, 165, 90);']",0.123700,0
+"[class^=searchResultsWrap_]",0.123700,0
+"[class^='unreadPill_'][class*='endCap_']",0.123600,1
+"[class^=overlayBottom_] > [class^=text-]",0.123600,0
+"[class^=privateChannels_]",0.123600,0
+"[class^=categoryText_]",0.123500,0
+"[class^=profilePanel_]",0.123500,0
+"[class^='searchResultsWrap_']",0.123400,0
+"[class^='membersWrap_']",0.123400,1
+"[class^='peopleListItem_']",0.123400,0
+"[class^='status_'][style='background-color: rgb(240, 178, 50);']",0.123300,0
+"[class^=tabBody_]",0.123200,0
+"[class^=privateChannels_]",0.123200,0
+"[class^='status_'][style='background-color: rgb(128, 132, 142);']",0.123200,0
+"[class^='chatContent_'] > [class^='messagesWrapper_']",0.123100,1
+"[class^='profilePanel_']",0.123100,0
+"[class^=videoControls_]",0.123000,0
+"[class^=sidebar_]",0.123000,1
+"[class^=searchAnswer_]",0.122800,0
+"[class^='profilePanel_']",0.122800,0
+"[class^='peopleColumn_']",0.122800,0
+"[class^='nowPlayingColumn_']",0.122800,0
+"[class^='sectionDivider_']",0.122800,1
+"[class^=notAppAsidePanel_] > [class^=layerContainer_]",0.122700,2
+"[class^='privateChannels_']",0.122700,0
+"[class^=privateChannels_]",0.122500,0
+"[class^=container_] > [class^=base_]",0.122500,1
+"[class^='lowerBadge_']",0.122400,0
+"[class^=searchResultsWrap_]",0.122400,0
+"[class^=threadSuggestionBar_]",0.122200,0
+"[class^='chatContent_'] > [class^='messagesWrapper_']",0.122200,1
+"[class^=searchResultsWrap_]",0.122200,0
+"[class^=peopleColumn_]",0.122200,0
+"[class^='nowPlayingColumn_']",0.122100,0
+"[class^=searchFilter_]",0.122000,0
+"[class^=privateChannels_]",0.122000,0
+"[class^=nowPlayingColumn_]",0.122000,0
+"[class^='folderIconWrapper_'][style='background-color: rgba(88, 101, 242, 0.4);']",0.121900,6
+"[class^='container_'] > [class^='base_']",0.121900,1
+"[class^='panels_']",0.121800,1
+"[class^=friendRequestsButton_] [class^=numberBadge_]",0.121600,0
+"[class^=peopleColumn_]",0.121400,0
+"#app-mount [class^=partyStatus_]",0.121300,0
+"[class^='form_'] [class^='channelTextArea_']",0.121100,1
+"[class^='privateChannels_']",0.121100,0
+"[class^='peopleColumn_']",0.120900,0
+"#app-mount [class^='divider_']",0.120100,3
+".wrapper_c51b4e:has(rect[fill='#593695'])",0.109200,0
+".wrapper_c51b4e:has(rect[fill='#80848e'])",0.107600,0
+".wrapper_c51b4e:has(rect[fill='#23a55a'])",0.096000,18
+".wrapper_c51b4e:has(rect[fill='#f0b232'])",0.095800,4
+".wrapper_c51b4e:has(rect[fill='#f23f43'])",0.089600,8
+".wrapper_c51b4e:has(rect)",0.087900,30
+"[style='opacity: 1; background-color: rgb(35, 165, 90);']",0.074800,0
+"svg[style='color: rgb(88, 101, 242);']",0.062200,8
+"#app-mount button path[fill='var(--white-500)']",0.061600,0
+"[role='button'] path[fill='var(--white-500)']",0.060400,0
+"[class^='mask_'] > svg",0.060400,2
+"[class^='listItem_'] [class^='wrapper_'] > [class^='svg_'] > mask",0.058600,48
+"[class^='bannerSVGWrapper_'] > mask > circle",0.056000,1
+"svg[class^=slider_] > rect[fill='white']",0.055400,0
+"[class^='mask_'] > rect",0.055400,30
+":root",0.055200,1
+"[class^='mask_'] > foreignObject",0.055100,32
+"[class^='svg_'] > foreignObject",0.054900,70
+"[class^='mask_'] > circle",0.054300,1
+":root",0.053800,1
+":root",0.052300,1
+"[class^=jumpToPresentBar_] > button",0.051700,0
+"aside[class^='profilePanel_']",0.051000,0
+".custom-profile-theme [class*=color_][class*=text_]",0.049900,0
+".horizontal_bba380 > .flex_bba380",0.044800,0
+".container_fb4810",0.044300,0
+".container_a4d4d9",0.043900,1
+".clipContainer_b11c5e",0.043900,0
+".content_a7d72e",0.043600,1
+".container_fc4f04",0.043600,1
+".scroller_e2e187",0.043400,1
+"html.theme-light",0.043400,0
+".platform-osx [class^=container_] > [class^=wrapper_]",0.043300,0
+".container_fc4f04",0.043300,1
+".container_fc4f04",0.043300,1
+".container_adcaac",0.043200,0
+".attachButton_f298d4",0.043200,1
+".wrapper_fea3ef",0.043200,1
+".container_d1c246",0.043200,0
+".container_e85446:has(div[style='background-color: rgb(35, 165, 90);'])",0.043100,0
+".textArea_d0696b",0.043000,2
+".chat_a7d72e",0.043000,1
+".wordmarkWindows_a934d8 > svg",0.043000,1
+".vc-spotify-time-right",0.042900,1
+".theme-dark",0.042900,3
+".container_c75f85",0.042800,0
+".form_a7d72e",0.042800,1
+".container_a6d69a",0.042800,0
+".vc-spotify-time-left",0.042800,1
+".form_a7d72e",0.042700,1
+".container_b2ca13",0.042700,1
+".container_a6d69a",0.042700,0
+".container_c2739c",0.042700,0
+".tabBody_c2739c",0.042700,0
+".vc-spotify-time-right",0.042700,1
+".container_e85446 > [class^='svg_'] > foreignObject > [class^='status_']",0.042600,0
+".container_d1c246",0.042600,0
+".panels_a4d4d9",0.042600,1
+".container_adcaac",0.042600,0
+".container_c2739c",0.042500,0
+".scroller_fb4810",0.042500,0
+".form_a7d72e",0.042400,1
+".newMessagesBar_cf58b5",0.042400,1
+".animatedContainer_fd6364",0.042400,1
+".vc-spotify-time-left",0.042400,1
+".scroller_fb4810",0.042300,0
+".wordmarkWindows_a934d8",0.042300,1
+".container_e85446:has(div[style='background-color: rgb(35, 165, 90);'])",0.042300,0
+".grabber_c7a159",0.042200,1
+".container_a6d69a",0.042100,0
+".scroller_fb4810",0.042100,0
+".scroller_fb4810",0.042100,0
+".container_fc4f04",0.041600,1
+"*",0.036500,6407
+"#vc-spotify-progress-bar [class^='bar_']",0.000300,1
+"#app-mount #vc-spotify-player",0.000200,1
+"#vc-spotify-player",0.000200,1
+"#vc-spotify-player",0.000200,1
+"#vc-spotify-progress-bar",0.000200,1
+"::-webkit-scrollbar-thumb",0.000200,0
+"#vc-spotify-player",0.000100,1
