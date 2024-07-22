@@ -132,6 +132,7 @@
 #app-mount button path[fill='var(--white-500)'] {
 	fill: var(--txt-0);
 }
+
 /* accents */
 svg[style='color: rgb(88, 101, 242);'] /* folder icons */ {
 	color: var(--acc-0) !important;
@@ -915,7 +916,7 @@ html.theme-light {
 	--voice-video-video-tile-blur-fallback: hsl(
 		225 calc(1 * 6.3%) 12.5% / 0.48
 	);
-	--white: var(--txt-0);
+	--white: var(--bg-0);
 	--you-bar-bg: var(--primary-800);
 
 	--elevation-low: none;
