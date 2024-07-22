@@ -101,6 +101,7 @@
 	color: var(--bg-0);
 }
 /* fix white-500 */
+[class*=buttonColor_] /* play on spotify button */, 
 [class*=lookFilled_][class*=colorPrimary_] /* neutral buttons (like in account settings) */,
 #app-mount [class*=lookLink_][class*=colorPrimary_] /* link buttons (like in account settings) */,
 [class^=friendRequestsButton_] [class^=numberBadge_] /* inbox friend requests number */,
