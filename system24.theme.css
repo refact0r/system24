@@ -70,4 +70,6 @@
 	--cyan: oklch(73% 0.12 200);
 	--yellow: oklch(78% 0.12 80);
 	--green: oklch(73% 0.12 160);
+	--green-1: oklch(63% 0.12 160);
+	--green-2: oklch(53% 0.12 160);
 }
