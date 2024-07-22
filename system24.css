@@ -84,9 +84,8 @@
 	background: none;
 }
 /* fix bgs */
-[class^=profilePanel_] > [class^=userPanelOuter_] /* profile panel */ {
-	--background-secondary-alt: var(--bg-0);
-	--background-floating: var(--bg-1);
+[class^=userPanelOuter_] /* profile panel */ {
+	--background-secondary-alt: var(--bg-0) !important;
 }
 [class^=childWrapper_] /* no color servers */ {
 	background-color: var(--bg-1);
@@ -104,14 +103,14 @@
 [class^=iconBadge_]:not([class*=isCurrentUserConnected_]) /* vc icon */,
 [class^=videoControls_] /* video controls */,
 #app-mount [class*=controlIcon_] /* stop streaming icon in preview */,
-[class^=navButton_][class*=navButtonActive_] /* gif picker header selected */ {
+[class^=navButton_][class*=navButtonActive_] /* gif picker header selected */,
+[class^=button_][class*=bannerColor_] {
 	color: var(--txt-1);
 }
 [class*=bannerVisible_] [class^=headerContent_] /* server name (when banner) */,
 [class^=jumpToPresentBar_] > button,
 [class^=gifFavoriteButton_],
 [class^=iconWrapper_] /* video play button */,
-.custom-profile-theme [class*=color_][class*=text_] /* message button in custom profiles */,
 [class^=overlayBottom_] > [class^=text-] /* vc names */,
 [class^=categoryText_] /* gif category labels */ {
 	color: var(--txt-0);
@@ -148,7 +147,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=container_] > [class^=base_] /* outside edges */ {
 	margin: var(--pad) var(--pad) var(--pad) 0;
 }
-[class^=container_] > [class^=wrapper_] /* outside edges */ {
+[class^=layer_] > [class^=container_] > [class^=wrapper_] /* outside edges */ {
 	margin: var(--pad) 0 var(--pad) var(--pad);
 }
 .container_a4d4d9 /* server list and everything else */,
@@ -175,7 +174,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 
 /* platform spacing */
-.platform-osx [class^='container_'] > [class^='wrapper_'] {
+.platform-osx [class^='layer_'] > [class^='container_'] > [class^='wrapper_'] {
 	margin-top: calc(32px + var(--pad));
 }
 
@@ -184,14 +183,14 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=sidebar_] > [class^=container_] /* channel list */,
 [class^=chatContent_] > [class^=messagesWrapper_] /* chat */,
 [class^=membersWrap_] /* member list */,
-[class^=container_] > [class^=wrapper_] /* server list */,
+[class^=layer_] > [class^=container_] > [class^=wrapper_] /* server list */,
 [class^=privateChannels_] /* dm list */,
 .container_fc4f04 /* header bar */,
 [class^=peopleColumn_] /* friends page list */,
 [class^=nowPlayingColumn_] /* friends page active now */,
 [class^=form_] [class^=channelTextArea_] /* chat bar */,
 .container_a6d69a /* forum */,
-[class^=profilePanel_] /* dm profile panel */,
+[class^=userPanelOuter_] /* dm profile panel */,
 [class^=searchResultsWrap_] /* search results */,
 .scroller_fb4810 /* new thread */,
 [class^=chat_] > [class*=container_] {
@@ -246,7 +245,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='typing_'] {
 	background: var(--bg-0);
 	order: -1;
-	position: static;
+	top: -24px;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	position: absolute;
 	border: var(--border-width) solid var(--border-color);
 	border-top: none;
 	transition: border-color var(--border-transition);
@@ -287,11 +290,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='chatContent_'] > [class^='messagesWrapper_']::after,
 [class^='panels_']::after,
 [class^='form_'] [class^='channelTextArea_']::after,
-[class^='container_'] > [class^='wrapper_']::after,
+[class^='layer_'] > [class^='container_'] > [class^='wrapper_']::after,
 [class^='membersWrap_']::after,
 [class^='privateChannels_']::after,
 .container_a6d69a::after,
-[class^='profilePanel_']::after,
+[class^='userPanelOuter_']::after,
 [class^='searchResultsWrap_']::after,
 .scroller_fb4810::after,
 [class^='peopleColumn_']::after,
@@ -324,7 +327,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='form_'] [class^='channelTextArea_']::after {
 	content: 'input';
 }
-[class^='container_'] > [class^='wrapper_']::after {
+[class^='layer_'] > [class^='container_'] > [class^='wrapper_']::after {
 	content: 'nav';
 }
 [class^='membersWrap_']::after {
@@ -336,7 +339,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container_a6d69a::after {
 	content: 'forum';
 }
-[class^='profilePanel_']::after {
+[class^='userPanelOuter_']::after {
 	content: 'profile';
 }
 [class^='searchResultsWrap_']::after {
@@ -396,20 +399,22 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .horizontal_bba380 > .flex_bba380 /* fix voice connected cut off */ {
 	margin-left: 4px;
 }
-[class^='container_'] > [class^='wrapper_'],
+[class^='layer_'] > [class^='container_'] > [class^='wrapper_'],
 [class^='membersWrap_'] {
 	padding-top: var(--txt-pad);
 }
 [class^='membersWrap_'] {
-	height: calc(100% - var(--txt-pad) - 2 * var(--border-width));
+	height: 100%;
+	box-sizing: border-box;
 }
 /* add padding to user profile panel */
-aside[class^='profilePanel_'] {
+[class^='userPanelOuter_'] {
 	padding: var(--txt-pad);
+	box-sizing: border-box;
+	background-clip: content-box;
 }
-[class^='userPanelInner_']::before {
-	height: calc(100% - 2 * var(--txt-pad));
-	width: calc(100% - 2 * var(--txt-pad));
+[class^='userPanelInner_'] /* fix profile effects */ {
+	position: relative;
 }
 
 /* vencord spotify progress bar */
