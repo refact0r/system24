@@ -111,7 +111,8 @@
 [class^=videoControls_] /* video controls */,
 #app-mount [class*=controlIcon_] /* stop streaming icon in preview */,
 [class^=navButton_][class*=navButtonActive_] /* gif picker header selected */,
-[class^=button_][class*=bannerColor_] {
+[class^=button_][class*=bannerColor_] /* user profile buttons */,
+[class*=backgroundAccent_] /* server insights warning */ {
 	color: var(--txt-1);
 }
 [class*=bannerVisible_] [class^=headerContent_] /* server name (when banner) */,
