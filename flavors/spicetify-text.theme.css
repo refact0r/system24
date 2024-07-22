@@ -1,11 +1,11 @@
 /**
- * @name system24
- * @description A tui-style discord theme.
+ * @name system24 (spicetify text theme)
+ * @description A tui-style discord theme. Settings configured to match the spicetify text theme.
  * @author refact0r
  * @version 1.0.0
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/system24
- * @source https://github.com/refact0r/system24/blob/master/system24.theme.css
+ * @source https://github.com/refact0r/system24/blob/master/flavors/text.theme.css 
  * @authorId 508863359777505290
  * @authorLink https://www.refact0r.dev
 */
@@ -15,38 +15,38 @@
 /* customize things here */
 :root {
 	--font: 'DM Mono';
-	letter-spacing: -0.05ch;
-	font-weight: 300;
-	--label-font-weight: 500;
+	letter-spacing: 0;
+	font-weight: 400;
+	--label-font-weight: 400;
 
 	--corner-text: 'system24';
 
 	--pad: 16px;
 	--txt-pad: 10px;
 
-	--bg-0: oklch(19% 0 0);
-	--bg-1: oklch(23% 0 0);
-	--bg-2: oklch(27% 0 0);
-	--bg-3: oklch(31% 0 0);
+	--bg-0: hsl(0, 0%, 7%);
+	--bg-1: hsl(0, 0%, 10%);
+	--bg-2: hsl(0, 0%, 13%);
+	--bg-3: hsl(0, 0%, 16%);
 
-	--hover: oklch(54% 0 0 / 0.1);
-	--active: oklch(54% 0 0 / 0.2);
+	--hover: hsla(0, 0%, 40%, 0.1);
+	--active: hsla(0, 0%, 40%, 0.2);
 	--selected: var(--active);
 
 	--txt-dark: var(--bg-0);
 	--txt-link: var(--cyan);
-	--txt-0: oklch(90% 0 0);
-	--txt-1: oklch(80% 0 0);
-	--txt-2: oklch(60% 0 0);
-	--txt-3: oklch(40% 0 0);
+	--txt-0: hsl(0, 0%, 100%);
+	--txt-1: hsl(0, 0%, 70%);
+	--txt-2: hsl(0, 0%, 50%);
+	--txt-3: hsl(0, 0%, 30%);
 
-	--acc-0: var(--purple);
-	--acc-1: var(--purple-1);
+	--acc-0: #1ed760;
+	--acc-1: #1db954;
 	--acc-2: var(--purple-2);
 
-	--border-width: 2px;
-	--border-color: var(--bg-3);
-	--border-hover-color: var(--acc-0);
+	--border-width: 1px;
+	--border-color: #535353;
+	--border-hover-color: #1ed760;
 	--border-transition: 0.2s ease;
 
 	--online-dot: var(--green);

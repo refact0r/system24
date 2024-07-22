@@ -27,26 +27,26 @@
 	--txt-2: oklch(60% 0 0);
 	--txt-3: oklch(40% 0 0);
 
-	--mention-txt: var(--purple);
-	--mention-bg: color-mix(in oklch, var(--purple), transparent 90%);
-	--mention-overlay: color-mix(in oklch, var(--purple), transparent 90%);
-	--mention-hover-overlay: color-mix(
-		in oklch,
-		var(--purple),
-		transparent 95%
-	);
-	--reply-overlay: var(--active);
-	--reply-hover-overlay: var(--hover);
+	--acc-0: var(--purple);
+	--acc-1: var(--purple-1);
+	--acc-2: var(--purple-2);
 
 	--border-width: 2px;
 	--border-color: var(--bg-3);
-	--border-hover-color: var(--purple);
+	--border-hover-color: var(--acc-0);
 	--border-transition: 0.2s ease;
 
 	--online-dot: var(--green);
 	--dnd-dot: var(--pink);
 	--idle-dot: var(--yellow);
 	--streaming-dot: var(--purple);
+
+	--mention-txt: var(--acc-0);
+	--mention-bg: color-mix(in oklch, var(--acc-0), transparent 90%);
+	--mention-overlay: color-mix(in oklch, var(--acc-0), transparent 90%);
+	--mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 95%);
+	--reply-overlay: var(--active);
+	--reply-hover-overlay: var(--hover);
 
 	--pink: oklch(73% 0.12 0);
 	--pink-1: oklch(63% 0.12 0);
@@ -93,6 +93,11 @@
 [class*=embedFull_] /* embed default color */ {
 	border-color: var(--bg-2);
 }
+/* fix text */
+[class^='newChannel_'],
+[class^='newBadge_'] {
+	color: var(--bg-0);
+}
 /* fix white-500 */
 [class*=lookFilled_][class*=colorPrimary_] /* neutral buttons (like in account settings) */,
 #app-mount [class*=lookLink_][class*=colorPrimary_] /* link buttons (like in account settings) */,
@@ -125,7 +130,7 @@
 }
 /* accents */
 svg[style='color: rgb(88, 101, 242);'] /* folder icons */ {
-	color: var(--purple) !important;
+	color: var(--acc-0) !important;
 }
 [class^='folderIconWrapper_'][style='background-color: rgba(88, 101, 242, 0.4);'] {
 	background: var(--bg-1) !important;
@@ -140,7 +145,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	background: var(--txt-1);
 }
 [class^=message_][class*=mentioned_]::before /* mention message left bar */ {
-	background: var(--purple);
+	background: var(--acc-0);
 }
 
 /* add spacing */
@@ -911,10 +916,10 @@ html.theme-light {
 
 	--elevation-low: none;
 
-	--brand-500: var(--purple); /* unread bar, accent buttons, spotify */
-	--brand-530: var(--purple); /* hover highlight in context menu */
-	--brand-560: var(--purple-1); /* accent button hover */
-	--brand-600: var(--purple-2); /* accent button active */
+	--brand-500: var(--acc-0); /* unread bar, accent buttons, spotify */
+	--brand-530: var(--acc-0); /* hover highlight in context menu */
+	--brand-560: var(--acc-1); /* accent button hover */
+	--brand-600: var(--acc-2); /* accent button active */
 
 	--primary-500: var(--bg-2); /* neutral button background */
 	--primary-800: var(--bg-1); /* bot command panel suggestion argument */
@@ -929,5 +934,5 @@ html.theme-light {
 
 	--green-360: var(--green); /* vc icon on server */
 
-	--twitch: var(--purple-1);
+	--twitch: var(--acc-1);
 }
