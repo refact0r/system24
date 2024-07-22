@@ -40,9 +40,9 @@
 	--txt-2: hsl(0, 0%, 50%);
 	--txt-3: hsl(0, 0%, 30%);
 
-	--acc-0: #1ed760;
-	--acc-1: #1db954;
-	--acc-2: var(--purple-2);
+	--acc-0: var(--green);
+	--acc-1: var(--green-1);
+	--acc-2: var(--green-2);
 
 	--border-width: 1px;
 	--border-color: #535353;
@@ -69,5 +69,7 @@
 	--purple-2: oklch(53% 0.12 300);
 	--cyan: oklch(73% 0.12 200);
 	--yellow: oklch(78% 0.12 80);
-	--green: oklch(73% 0.12 160);
+	--green: hsl(141, 76%, 48%);
+	--green-1: hsl(141, 73%, 42%);
+	--green-2: hsl(141, 73%, 36%);
 }
