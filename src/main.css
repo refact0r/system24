@@ -436,7 +436,6 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 #vc-spotify-progress-bar [class^='bar_'] {
 	height: 20px;
-	border-radius: 0;
 	background: var(--bg-1);
 }
 .vc-spotify-time-left,
