@@ -1,0 +1,75 @@
+/**
+ * @name system24 (catppuccin mocha)
+ * @description A tui-style discord theme. Based on the catppuccin mocha color palette.
+ * @author refact0r
+ * @version 1.0.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24/blob/master/flavors/catppuccin-mocha.theme.css 
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+@import url('https://refact0r.github.io/system24/system24.css');
+
+/* customize things here */
+:root {
+	--font: 'DM Mono';
+	letter-spacing: -0.05ch;
+	font-weight: 300;
+	--label-font-weight: 500;
+
+	--corner-text: 'catppuccin24';
+
+	--pad: 16px;
+	--txt-pad: 10px;
+
+	--bg-0: #1e1e2e;
+	--bg-1: #181825;
+	--bg-2: #313244;
+	--bg-3: #45475a;
+
+	--hover: color-mix(in oklch, var(--txt-3), transparent 80%);
+	--active: color-mix(in oklch, var(--txt-3), transparent 60%);
+	--selected: var(--active);
+
+	--txt-dark: var(--bg-0);
+	--txt-link: var(--cyan);
+	--txt-0: #eaeefa;
+	--txt-1: #cdd6f4;
+	--txt-2: #9399b2;
+	--txt-3: #585b70;
+
+	--acc-0: var(--purple);
+	--acc-1: var(--purple-1);
+	--acc-2: var(--purple-2);
+
+	--border-width: 2px;
+	--border-color: var(--bg-2);
+	--border-hover-color: var(--acc-0);
+	--border-transition: 0.2s ease;
+
+	--online-dot: var(--green);
+	--dnd-dot: var(--pink);
+	--idle-dot: var(--yellow);
+	--streaming-dot: var(--purple);
+
+	--mention-txt: var(--acc-0);
+	--mention-bg: color-mix(in oklch, var(--acc-0), transparent 90%);
+	--mention-overlay: color-mix(in oklch, var(--acc-0), transparent 90%);
+	--mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 95%);
+	--reply-overlay: var(--active);
+	--reply-hover-overlay: var(--hover);
+
+	--pink: #f38ba8;
+	--pink-1: #d16c89;
+	--pink-2: #af4e6c;
+	--purple: #cba6f7;
+	--purple-1: #ab87d6;
+	--purple-2: #8d69b5;
+	--cyan: #74c7ec;
+	--yellow: #f9e2af;
+	--green: #a6e3a1;
+	--green-1: #87c282;
+	--green-2: #68a364;
+}
