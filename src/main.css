@@ -177,7 +177,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=sidebar_] /* channel list and chat */ {
 	margin-right: var(--pad);
 }
-[class^=resizeHandle_] /* pretend to be a margin */ {
+[class^=content_] > [class^=resizeHandle_] /* pretend to be a margin */ {
 	width: var(--pad);
 }
 
