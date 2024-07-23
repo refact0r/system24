@@ -8,7 +8,7 @@ a tui-style discord theme, inspired by [spicetify text theme](https://github.com
 
 ## discord server
 
-need help? want to report a bug? want to give feedback? join <https://discord.gg/nz87hXyvcy>
+need help? want to get notified about updates? have feedback? join <https://discord.gg/nz87hXyvcy>
 
 ## install
 
