@@ -698,7 +698,7 @@ html.theme-light {
 	--content-inventory-overlay-ui-mod-bg: hsl(0 calc(1 * 0%) 0% / 0.1);
 	--context-menu-backdrop-background: hsl(0 calc(1 * 0%) 0% / 0.7);
 	--control-brand-foreground: var(--brand-360);
-	--control-brand-foreground-new: var(--brand-360);
+	--control-brand-foreground-new: var(--acc-0);
 	--creator-revenue-icon-gradient-end: var(--teal-430);
 	--creator-revenue-icon-gradient-start: var(--teal-360);
 	--creator-revenue-info-box-background: hsl(190 calc(1 * 63%) 33.9% / 0.1);
