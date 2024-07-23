@@ -34,3 +34,11 @@ matches the spotify/spicetify "text" theme. thinner borders and different font w
 [theme file](https://github.com/refact0r/system24/blob/master/flavors/spotify-text.theme.css)
 
 ![image](https://github.com/user-attachments/assets/f459f9fc-7b6c-4e9d-a8c9-4adefb0be417)
+
+### catppuccin mocha
+
+based on the mocha palette of [catppuccin].
+
+[theme file](https://github.com/refact0r/system24/blob/master/flavors/catppuccin-mocha.theme.css)
+
+![image](https://github.com/user-attachments/assets/994d35f6-90d8-4f99-bfce-c3df13f415d4)
