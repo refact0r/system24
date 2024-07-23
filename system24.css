@@ -252,7 +252,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	border-radius: 0;
 	box-sizing: border-box;
 }
-[class^='typing_'] {
+[class^='form_'] > [class^='typing_'] {
 	background: var(--bg-0);
 	order: -1;
 	top: -24px;
