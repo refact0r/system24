@@ -37,7 +37,7 @@ matches the spotify/spicetify "text" theme. thinner borders and different font w
 
 ### catppuccin mocha
 
-based on the mocha palette of [catppuccin].
+based on the mocha palette of [catppuccin](https://catppuccin.com/palette).
 
 [theme file](https://github.com/refact0r/system24/blob/master/flavors/catppuccin-mocha.theme.css)
 
