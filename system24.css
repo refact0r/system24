@@ -471,17 +471,31 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 
 /* adjust divider/border thickness */
-#app-mount [class^='divider_'],
-.container_c75f85::after,
-[class^='peopleListItem_'] {
+[class^='sectionDivider_'] /* channel list dividers */,
+.separator_a0 /* settings divider */,
+[class^=guildSeparator_] /* server list divider */ {
+	border-bottom: var(--border-width) solid var(--border-color);
+	height: 0;
+}
+#app-mount [class^='divider_'] /* chat dividers */ {
 	border-width: var(--border-width);
+}
+.container_c75f85::after /* channel list dividers */,
+[class^=customizationSection_],
+[class^=session_],
+[class^=columnHeading_], [class^=tableCell_] {
+	border-width: var(--border-width);
+	border-color: var(--border-color);
+}
+[class^='divider_']:not(.isUnread_c2654d),
+[class^='sectionDivider_'],
+#vc-spotify-player,
+.separator_a0,
+[class^='guildSeparator_'] {
+	border-color: var(--border-color);
 }
 [class^='unreadPill_'][class*='endCap_'] {
 	top: calc(-6px - 0.5 * var(--border-width));
-}
-[class^='sectionDivider_'] {
-	border-bottom: var(--border-width) solid var(--border-color);
-	height: 0;
 }
 
 /* toolbar order */
@@ -566,7 +580,7 @@ html.theme-light {
 	--android-navigation-scrim-background: hsl(240 calc(1 * 4%) 4.9% / 0.5);
 	--android-ripple: hsl(0 calc(1 * 0%) 100% / 0.07);
 	--autocomplete-bg: var(--bg-1);
-	--background-accent: var(--bg-1);
+	--background-accent: var(--bg-2);
 	--background-floating: var(--primary-800);
 	--background-mentioned: var(--mention-overlay);
 	--background-mentioned-hover: var(--mention-hover-overlay);
