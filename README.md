@@ -29,7 +29,7 @@ customized variants of the theme.
 
 ### spotify-text
 
-matches the spotify/spicetify "text" theme. thinner borders and different font weights from the default system24.
+matches the spotify/spicetify ["text" theme](https://github.com/spicetify/spicetify-themes/tree/master/text). thinner borders and different font weights from the default system24.
 
 [theme file](https://github.com/refact0r/system24/blob/master/flavors/spotify-text.theme.css)
 
