@@ -1,11 +1,11 @@
 /**
- * @name system24 (spicetify text theme)
- * @description A tui-style discord theme. Settings configured to match the spicetify text theme.
+ * @name system24 (spotify text theme)
+ * @description A tui-style discord theme. Settings configured to match the spotify/spicetify text theme.
  * @author refact0r
  * @version 1.0.0
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/system24
- * @source https://github.com/refact0r/system24/blob/master/flavors/text.theme.css 
+ * @source https://github.com/refact0r/system24/blob/master/flavors/spotify-text.theme.css 
  * @authorId 508863359777505290
  * @authorLink https://www.refact0r.dev
 */
@@ -21,7 +21,7 @@
 
 	--corner-text: 'system24';
 
-	--pad: 16px;
+	--pad: 18px;
 	--txt-pad: 10px;
 
 	--bg-0: hsl(0, 0%, 7%);
