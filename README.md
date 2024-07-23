@@ -14,10 +14,10 @@ need help? want to report a bug? want to give feedback? join <https://discord.gg
 
 #### vencord/betterdiscord (or client with theme folder)
 
-1. download `system24.theme.css` from this repo.
+1. download `system24.theme.css` from this repo. (click on the file above, then click the download button in the top right)
 2. move the file into your theme folder. (there should be a button to open the theme folder in theme settings)
-3. you may need to enable the theme in your theme settings.
-4. (optional) customize the theme by editing `system24.theme.css`.
+3. you may need to enable the theme in your theme settings by clicking a toggle switch.
+4. (optional) customize the theme by editing the variables in `system24.theme.css`.
 
 #### install through link
 
