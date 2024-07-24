@@ -268,6 +268,9 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	border-top: none;
 	transition: border-color var(--border-transition);
 }
+[class^='chatContent_']:has([class^='typing_']) > [class^='messagesWrapper_'] > [class^='jumpToPresentBar_'] {
+	margin-bottom: 22px;
+}
 .clipContainer_b11c5e {
 	margin-top: 0;
 }
