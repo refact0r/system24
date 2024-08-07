@@ -201,12 +201,13 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container_fc4f04 /* header bar */,
 [class^=peopleColumn_] /* friends page list */,
 [class^=nowPlayingColumn_] /* friends page active now */,
-[class^=form_] [class^=channelTextArea_] /* chat bar */,
+[class^=channelBottomBarArea_] /* chat bar */,
 .container_a6d69a /* forum */,
 [class^=userPanelOuter_] /* dm profile panel */,
 [class^=searchResultsWrap_] /* search results */,
 .scroller_fb4810 /* new thread */,
-[class^=chat_] > [class*=container_] {
+[class^=chat_] > [class*=container_] /* header bar */,
+[class^='form_'] > [class^='wrapper_'] /* no access chat bar */ {
 	border-radius: var(--panel-roundness);
 	border: var(--border-width) solid var(--border-color);
 	transition: border-color var(--border-transition);
@@ -229,8 +230,12 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 
 /* fix border hover effect */
-[class^='chatContent_']:has([class^='messagesWrapper_']:hover) {
+[class^='chatContent_']:has([class^='messagesWrapper_']:hover),
+[class^='chatContent_']:has([class^='typing_']:hover) {
 	[class^='typing_'] {
+		border-color: var(--border-hover-color);
+	}
+	& > [class^='messagesWrapper_'] {
 		border-color: var(--border-hover-color);
 	}
 }
@@ -252,9 +257,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 [class^='form_'] [class^='channelTextArea_'] {
 	margin: 0;
-	margin-top: var(--pad);
 	border-radius: var(--panel-roundness);
 	box-sizing: border-box;
+}
+[class^='channelBottomBarArea_'] {
+	margin-top: var(--pad);
 }
 [class^='form_'] > [class^='typing_'] {
 	background: var(--bg-0);
@@ -293,9 +300,25 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='form_'] > [class^='wrapper_'] {
 	margin: 0;
 	padding: 0;
-	height: var(--custom-channel-textarea-text-area-height);
+	box-sizing: border-box;
+	height: calc(var(--custom-channel-textarea-text-area-height) + 2 * var(--border-width));
 	border: var(--border-width) solid var(--border-color);
 	margin-top: var(--pad);
+}
+
+/* fix app button */
+[class^='channelAppLauncher_'] {
+	margin: 0;
+
+	& > [class^='buttonContainer_'] {
+		height: 100%;
+		border-left: var(--border-width) solid var(--border-color);
+		transition: border-color var(--border-transition);
+		box-sizing: border-box;
+	}
+}
+[class^='channelBottomBarArea_']:hover [class^='buttonContainer_'] {
+	border-color: var(--border-hover-color);
 }
 
 /* add text labels */
