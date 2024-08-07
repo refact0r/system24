@@ -317,8 +317,13 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 		box-sizing: border-box;
 	}
 }
-[class^='channelBottomBarArea_']:hover [class^='buttonContainer_'] {
-	border-color: var(--border-hover-color);
+[class^='channelBottomBarArea_']:hover {
+	[class^='buttonContainer_'] {
+		border-color: var(--border-hover-color);
+	}
+	[class^='channelTextArea_']::after {
+		color: var(--border-hover-color);
+	}
 }
 
 /* add text labels */
