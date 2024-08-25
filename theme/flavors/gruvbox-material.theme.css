@@ -15,8 +15,8 @@
 
 /* customize things here */
 :root {
-	--font: 'DM Mono'; /* UI font name. it must be installed on your system. */
-	letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
+	--font: 'Iosevka Nerd Font Mono'; /* UI font name. it must be installed on your system. */
+	letter-spacing: 0.03ch; /* decreases letter spacing for better readability. */
 	font-weight: 400; /* UI font weight. */
 	--label-font-weight: 500; /* font weight for panel labels. */
 	--corner-text: 'catppuccin24'; /* custom text to display in the corner. only works on windows. */
@@ -26,7 +26,7 @@
 
 	/* background colors */
 	--bg-0: #282828; /* main background color. */
-	--bg-1: #1d2021; /* background color for secondary elements like code blocks, embeds, etc. */
+	--bg-1: #282828; /* background color for secondary elements like code blocks, embeds, etc. */
 	--bg-2: #3c3836; /* color of neutral buttons. */
 	--bg-3: #504945; /* color of neutral buttons when hovered. */
 
