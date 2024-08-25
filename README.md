@@ -51,3 +51,11 @@ based on the vim theme [gruvbox material](https://github.com/sainnhe/gruvbox-mat
 [theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/gruvbox-material.theme.css)
 
 ![image](/assets/gruv-material.png)
+
+### monochrome
+
+A monochrome version of the default theme with mostly neutral colors.
+
+[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/monochrome.theme.css)
+
+![image](/assets/monochrome.png)
