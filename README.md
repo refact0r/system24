@@ -43,3 +43,11 @@ based on the mocha palette of [catppuccin](https://catppuccin.com/palette).
 [theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/catppuccin-mocha.theme.css)
 
 ![image](https://github.com/user-attachments/assets/994d35f6-90d8-4f99-bfce-c3df13f415d4)
+
+### gruvbox material
+
+based on the vim theme [gruvbox material](https://github.com/sainnhe/gruvbox-material).
+
+[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/gruvbox-material.theme.css)
+
+![image](/assets/gruv-material.png)
