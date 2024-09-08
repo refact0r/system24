@@ -70,17 +70,17 @@
 	--reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered. */
 
 	/* color shades */
-	--pink: oklch(55% 0.13 0);
-	--pink-1: oklch(48% 0.13 0);
-	--pink-2: oklch(41% 0.13 0);
-	--purple: oklch(55% 0.13 300);
-	--purple-1: oklch(48% 0.13 300);
-	--purple-2: oklch(41% 0.13 300);
-	--cyan: oklch(55% 0.13 200);
-	--yellow: oklch(60% 0.13 80);
-	--green: oklch(55% 0.13 160);
-	--green-1: oklch(48% 0.13 160);
-	--green-2: oklch(41% 0.13 160);
+	--pink: oklch(57% 0.13 0);
+	--pink-1: oklch(50% 0.13 0);
+	--pink-2: oklch(43% 0.13 0);
+	--purple: oklch(57% 0.13 300);
+	--purple-1: oklch(50% 0.13 300);
+	--purple-2: oklch(43% 0.13 300);
+	--cyan: oklch(57% 0.13 200);
+	--yellow: oklch(71% 0.13 80);
+	--green: oklch(57% 0.13 160);
+	--green-1: oklch(50% 0.13 160);
+	--green-2: oklch(43% 0.13 160);
 }
 
 [class^=jumpToPresentBar_] > button {
