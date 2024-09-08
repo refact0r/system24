@@ -27,9 +27,9 @@
 
 	/* background colors */
 	--bg-0: oklch(from {background} l c h); /* main background color. */
-	--bg-1: oklch(from {background} calc(l + 0.05) c h); /* background color for secondary elements like code blocks, embeds, etc. */
+	--bg-1: oklch(from {background} calc(l + 0.04) c h); /* background color for secondary elements like code blocks, embeds, etc. */
 	--bg-2: oklch(from {background} calc(l + 0.08) c h); /* color of neutral buttons. */
-	--bg-3: oklch(from {background} calc(l + 0.11) c h); /* color of neutral buttons when hovered. */
+	--bg-3: oklch(from {background} calc(l + 0.12) c h); /* color of neutral buttons when hovered. */
 
 	/* state modifiers */
 	--hover: oklch(54% 0 0 / 0.1); /* color of hovered elements. */
