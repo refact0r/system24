@@ -82,3 +82,7 @@
 	--green-1: oklch(48% 0.13 160);
 	--green-2: oklch(41% 0.13 160);
 }
+
+[class^=jumpToPresentBar_] > button {
+	color: var(--txt-1);
+}
