@@ -693,7 +693,7 @@ html.theme-light {
 	--halo-positive: hsl(145 calc(1 * 65%) 39.2% / 0.24);
 	--header-muted: var(--primary-360);
 	--header-primary: var(--txt-1);
-	--header-secondary: var(--primary-330);
+	--header-secondary: var(--txt-2);
 	--home-background: none;
 	--home-card-resting-border: hsl(0 calc(1 * 0%) 0% / 0);
 	--icon-muted: var(--primary-400);
