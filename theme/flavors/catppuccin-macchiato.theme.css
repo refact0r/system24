@@ -14,13 +14,14 @@
 @import url('https://refact0r.github.io/system24/src/main.css'); /* main theme css. DO NOT REMOVE */
 @import url('https://refact0r.github.io/system24/src/unrounding.css'); /* gets rid of all rounded corners. remove if you want rounded corners. */
 
+
 /* customize things here */
 :root {
 	--font: 'DM Mono'; /* UI font name. it must be installed on your system. */
 	letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
 	font-weight: 300; /* UI font weight. */
 	--label-font-weight: 500; /* font weight for panel labels. */
-	--corner-text: 'catppuccin24'; /* custom text to display in the corner. only works on windows. */
+	--corner-text: 'macchiato24'; /* custom text to display in the corner. only works on windows. */
 	--pad: 16px; /* padding between panels. */
 	--txt-pad: 10px; /* padding inside panels to prevent labels from clipping */
 	--panel-roundness: 0px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
