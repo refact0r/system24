@@ -443,6 +443,15 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .rtcConnectionStatusConnected_c02c63 { /* dirty workaround for the voice connected cut off */
 	font-size: 0.95em; 
 }
+.container_fc4f04 { /* dirty workaround for the channel text cutoff  */
+    position: relative;
+}
+.container_fc4f04::after {
+    background-color: transparent;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 .guilds_a4d4d9,
 [class^='membersWrap_'] {
 	padding-top: var(--txt-pad);
