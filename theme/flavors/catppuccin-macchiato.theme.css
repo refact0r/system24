@@ -70,18 +70,18 @@
 	--reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered. */
 
 	/* color shades */
-	--pink: #ed8796;
-	--pink-1: #cb6878;
-	--pink-2: #a94a5b;
-	--purple: #c6a0f6;
-	--purple-1: #a781d4;
-	--purple-2: #8863b4;
-	--cyan: #7dc4e4;
-	--yellow: #eed49f;
-	--green: #a6da95;
-	--green-1: #87ba76;
-	--green-2: #699a58;
-	--lavender: #b4befe;
-	--lavender-1: #959edc;
-	--lavender-2: #7780bc;
+	--pink: oklch(73.7% 0.125 11.19);
+	--pink-1: oklch(63.7% 0.125 11.19);
+	--pink-2: oklch(53.7% 0.125 11.19);
+	--purple: oklch(77.15% 0.126 303.9);
+	--purple-1: oklch(67.15% 0.126 303.9);
+	--purple-2: oklch(57.15% 0.126 303.9);
+	--cyan: oklch(78.51% 0.085 228.38);
+	--yellow: oklch(87.9% 0.074 84.75);
+	--green: oklch(83.5% 0.108 138.15);
+	--green-1: oklch(73.5% 0.108 138.15);
+	--green-2: oklch(63.5% 0.108 138.15);
+	--lavender: oklch(81.66% 0.091 277.31);
+	--lavender-1: oklch(71.66% 0.091 277.31);
+	--lavender-2: oklch(61.66% 0.091 277.31);
 }
