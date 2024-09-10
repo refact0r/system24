@@ -26,59 +26,43 @@
     --panel-roundness: 0px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
 
     /* background colors */
-    --bg-0: #1f2335; /* main background color. */
-    --bg-1: #24283b; /* background color for secondary elements like code blocks, embeds, etc. */
-    --bg-2: #292e42; /* color of neutral buttons. */
-    --bg-3: #3b4261; /* color of neutral buttons when hovered. */
-
-    /* state modifiers */
-    --hover: #c0caf520; /* color of hovered elements. */
-    --active: #c0caf540; /* color of elements when clicked. */
-    --selected: var(--active); /* color of selected elements. */
+    --bg-0: #16191f; /* main background color. */
+    --bg-1: #1a1e2d; /* background color for secondary elements like code blocks, embeds, etc. */
+    --bg-2: #1f2335; /* color of neutral buttons. */
+    --bg-3: #2a3047; /* color of neutral buttons when hovered. */
 
     /* text colors */
     --txt-dark: var(--bg-0); /* color of dark text on colored backgrounds. */
-    --txt-link: #7aa2f7; /* color of links. */
-    --txt-0: #c0caf5; /* color of bright/white text. */
-    --txt-1: #a9b1d6; /* main text color. */
-    --txt-2: #737aa2; /* color of secondary text like channel list. */
-    --txt-3: #565f89; /* color of muted text. */
+    --txt-link: #6292e4; /* color of links. */
+    --txt-0: #a6b1d6; /* color of bright/white text. */
+    --txt-1: #8f9ab8; /* main text color. */
+    --txt-2: #5d6585; /* color of secondary text like channel list. */
+    --txt-3: #424b6b; /* color of muted text. */
 
     /* accent colors */
-    --acc-0: #bb9af7; /* main accent color. */
-    --acc-1: #9d7cd8; /* color of accent buttons when hovered. */
-    --acc-2: #7dcfff; /* color of accent buttons when clicked. */
+    --acc-0: #9d7cd8; /* main accent color. */
+    --acc-1: #7e63b8; /* color of accent buttons when hovered. */
+    --acc-2: #63a6d8; /* color of accent buttons when clicked. */
 
     /* borders */
-    --border-width: 2px; /* panel border thickness. */
-    --border-color: #414868; /* panel border color. */
-    --border-hover-color: var(--acc-0); /* panel border color when hovered. */
-    --border-transition: 0.2s ease; /* panel border transition. */
+    --border-color: #2f3549; /* panel border color. */
 
     /* status dot colors */
-    --online-dot: #c3e88d; /* color of online dot. */
-    --dnd-dot: #ff757f; /* color of do not disturb dot. */
-    --idle-dot: #ffc777; /* color of idle dot. */
-    --streaming-dot: #bb9af7; /* color of streaming dot. */
-
-    /* mention/ping and message colors */
-    --mention-txt: var(--acc-0); /* color of mention text. */
-    --mention-bg: #7aa2f720; /* background highlight of mention text. */
-    --mention-overlay: #7aa2f720; /* overlay color of messages that mention you. */
-    --mention-hover-overlay: #7aa2f710; /* overlay color of messages that mention you when hovered. */
-    --reply-overlay: var(--active); /* overlay color of message you are replying to. */
-    --reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered. */
+    --online-dot: #a3c86d; /* color of online dot. */
+    --dnd-dot: #e05d65; /* color of do not disturb dot. */
+    --idle-dot: #dba757; /* color of idle dot. */
+    --streaming-dot: #9d7cd8; /* color of streaming dot. */
 
     /* color shades */
-    --pink: #ff757f;
-    --pink-1: #ff007c;
-    --pink-2: #c53b53;
-    --purple: #bb9af7;
-    --purple-1: #9d7cd8;
-    --purple-2: #7aa2f7;
-    --cyan: #7dcfff;
-    --yellow: #ffc777;
-    --green: #c3e88d;
-    --green-1: #4fd6be;
-    --green-2: #41a6b5;
+    --pink: #e05d65;
+    --pink-1: #d60066;
+    --pink-2: #a52f43;
+    --purple: #9d7cd8;
+    --purple-1: #7e63b8;
+    --purple-2: #6292e4;
+    --cyan: #63a6d8;
+    --yellow: #dba757;
+    --green: #a3c86d;
+    --green-1: #3fb6a0;
+    --green-2: #358695;
 }
