@@ -437,8 +437,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container_adcaac /* vc panel */ {
 	padding: var(--txt-pad) var(--txt-pad) calc(var(--txt-pad) / 2) var(--txt-pad);
 }
-.horizontal_bba380 > .flex_bba380 /* fix voice connected cut off */ {
+.horizontal_bba380 > .flex_bba380 /* fix voice connected cut off ?*/ {
 	margin-left: 4px;
+}
+.rtcConnectionStatusConnected_c02c63 { /* dirty workaround for the voice connected cut off */
+	font-size: 0.95em; 
 }
 .guilds_a4d4d9,
 [class^='membersWrap_'] {

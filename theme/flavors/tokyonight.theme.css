@@ -1,0 +1,68 @@
+/**
+ * @name system24 (tokyonight)
+ * @description A tui-style discord theme. Based on the tokyonight material color palette.
+ * @author refact0r, 1a1n
+ * @version 1.0.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24/blob/master/tokyonight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/src/main.css'); /* main theme css. DO NOT REMOVE */
+@import url('https://refact0r.github.io/system24/src/unrounding.css'); /* gets rid of all rounded corners. remove if you want rounded corners. */
+
+/* customize things here */
+:root {
+    --font: 'DM Mono'; /* UI font name. it must be installed on your system. */
+    letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
+    font-weight: 300; /* UI font weight. */
+    --label-font-weight: 500; /* font weight for panel labels. */
+    --corner-text: 'system24'; /* custom text to display in the corner. only works on windows. */
+    --pad: 16px; /* padding between panels. */
+    --txt-pad: 10px; /* padding inside panels to prevent labels from clipping */
+    --panel-roundness: 0px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
+
+    /* background colors */
+    --bg-0: #16191f; /* main background color. */
+    --bg-1: #1a1e2d; /* background color for secondary elements like code blocks, embeds, etc. */
+    --bg-2: #1f2335; /* color of neutral buttons. */
+    --bg-3: #2a3047; /* color of neutral buttons when hovered. */
+
+    /* text colors */
+    --txt-dark: var(--bg-0); /* color of dark text on colored backgrounds. */
+    --txt-link: #6292e4; /* color of links. */
+    --txt-0: #a6b1d6; /* color of bright/white text. */
+    --txt-1: #8f9ab8; /* main text color. */
+    --txt-2: #5d6585; /* color of secondary text like channel list. */
+    --txt-3: #424b6b; /* color of muted text. */
+
+    /* accent colors */
+    --acc-0: #9d7cd8; /* main accent color. */
+    --acc-1: #7e63b8; /* color of accent buttons when hovered. */
+    --acc-2: #63a6d8; /* color of accent buttons when clicked. */
+
+    /* borders */
+    --border-color: #2f3549; /* panel border color. */
+
+    /* status dot colors */
+    --online-dot: #a3c86d; /* color of online dot. */
+    --dnd-dot: #e05d65; /* color of do not disturb dot. */
+    --idle-dot: #dba757; /* color of idle dot. */
+    --streaming-dot: #9d7cd8; /* color of streaming dot. */
+
+    /* color shades */
+    --pink: #e05d65;
+    --pink-1: #d60066;
+    --pink-2: #a52f43;
+    --purple: #9d7cd8;
+    --purple-1: #7e63b8;
+    --purple-2: #6292e4;
+    --cyan: #63a6d8;
+    --yellow: #dba757;
+    --green: #a3c86d;
+    --green-1: #3fb6a0;
+    --green-2: #358695;
+}
