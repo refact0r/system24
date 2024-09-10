@@ -14,7 +14,6 @@
 @import url('https://refact0r.github.io/system24/src/main.css'); /* main theme css. DO NOT REMOVE */
 @import url('https://refact0r.github.io/system24/src/unrounding.css'); /* gets rid of all rounded corners. remove if you want rounded corners. */
 
-
 /* customize things here */
 :root {
 	--font: 'DM Mono'; /* UI font name. it must be installed on your system. */
@@ -71,18 +70,18 @@
 	--reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered. */
 
 	/* color shades */
-	--pink: #f38ba8;
-	--pink-1: #d16c89;
-	--pink-2: #af4e6c;
-	--purple: #cba6f7;
-	--purple-1: #ab87d6;
-	--purple-2: #8d69b5;
-	--cyan: #74c7ec;
-	--yellow: #f9e2af;
-	--green: #a6e3a1;
-	--green-1: #87c282;
-	--green-2: #68a364;
+	--pink: #ed8796;
+	--pink-1: #cb6878;
+	--pink-2: #a94a5b;
+	--purple: #c6a0f6;
+	--purple-1: #a781d4;
+	--purple-2: #8863b4;
+	--cyan: #7dc4e4;
+	--yellow: #eed49f;
+	--green: #a6da95;
+	--green-1: #87ba76;
+	--green-2: #699a58;
 	--lavender: #b4befe;
-	--lavender-1: #a6afe9;
-	--lavender-2: #9aa3e0;
+	--lavender-1: #959edc;
+	--lavender-2: #7780bc;
 }
