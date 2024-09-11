@@ -14,6 +14,10 @@
 @import url('https://raw.githubusercontent.com/undefinedcode0/system24/main/src/main.css'); /* main theme css. DO NOT REMOVE */
 @import url('https://raw.githubusercontent.com/undefinedcode0/system24/main/src/unrounding.css'); /* gets rid of all rounded corners. remove if you want rounded corners. */
 
+/* Adblock Modules */
+@import url("https://croissantdunord.github.io/discord-adblock/adblock.css");
+@import url("https://croissantdunord.github.io/discord-adblock/adblock-extras.css");
+
 /* customize things here */
 :root {
 	--font: 'DM Mono'; /* UI font name. it must be installed on your system. */
