@@ -26,10 +26,7 @@
 	content: '';
 	display: block;
 	position: absolute;
-	height: 8px;
-	width: 8px;
-	bottom: -4px;
-	right: -4px;
+	inset: 75% -12.5% -12.5% 75%;
 	border: 2px solid var(--bg-0);
 }
 .wrapper_c51b4e:has(rect[fill='#23a55a'])::after,
