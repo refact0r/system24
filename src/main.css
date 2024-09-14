@@ -506,6 +506,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	font-family: var(--font-primary);
 	font-size: 16px;
 	font-weight: 500;
+	white-space: no-wrap;
 }
 
 /* adjust divider/border thickness */
