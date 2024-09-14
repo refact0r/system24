@@ -240,6 +240,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	}
 }
 
+/*"ReadAllNotifications" button*/
+.vc-ranb-button {
+	font-size: 12px;
+}
+
 /* move chat bar out */
 :root {
 	--custom-channel-textarea-text-area-height: 56px;
