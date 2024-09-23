@@ -547,6 +547,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	box-shadow: none /* remove top border of footer */
 }
 
+/* forums */
+[class^='textContentFooter_a57509'] {
+	background: none !important /* removes the shadow in grid view forum posts */
+}
+
 @supports (color:color-mix(in lch,red,blue))and (top:var(--f)) {
     .theme-light, .theme-dark {
 	--action-sheet-gradient-bg: var(--primary-630);
