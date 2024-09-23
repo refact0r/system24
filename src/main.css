@@ -547,8 +547,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	box-shadow: none /* remove top border of footer */
 }
 
-.theme-dark,
-html.theme-light {
+@supports (color:color-mix(in lch,red,blue))and (top:var(--f)) {
+    .theme-light, .theme-dark {
 	--action-sheet-gradient-bg: var(--primary-630);
 	--activity-card-background: var(--primary-700);
 	--activity-card-icon-overlay: hsl(223 calc(1 * 6.7%) 20.6% / 0.85);
