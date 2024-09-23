@@ -78,7 +78,7 @@
 [class^=attachedBars_], [class^=replyBar_], [class^=threadSuggestionBar_] /* reply, thread, atttachment bars above chat bar */,
 [class^=panels_] /* user panel */,
 #app-mount #vc-spotify-player,
-[class^=panels_] > [class^=panel_] /* streaming panel */, 
+[class^=panels_] > [class^=panel_] /* streaming panel */,
 [class^=panels_] > [class^=container_] /* user panel inner */,
 [class^=chat_] > [class^=content_] > [class^=container_] /* member list */,
 [class^=members_] /* member list inner */,
@@ -104,11 +104,11 @@
 	color: var(--bg-0);
 }
 /* fix white-500 */
-[class*=buttonColor_] /* play on spotify button */, 
+[class*=buttonColor_] /* play on spotify button */,
 [class*=lookFilled_][class*=colorPrimary_] /* neutral buttons (like in account settings) */,
 #app-mount [class*=lookLink_][class*=colorPrimary_] /* link buttons (like in account settings) */,
 [class^=friendRequestsButton_] [class^=numberBadge_] /* inbox friend requests number */,
-[class^=searchFilter_], [class^=searchAnswer_], 
+[class^=searchFilter_], [class^=searchAnswer_],
 #app-mount [class^=partyStatus_] [class^=anchor_] /* spotify listen along link */,
 #app-mount [class^=partyStatus_] /* spotify listen along text */,
 [class^=iconBadge_]:not([class*=isCurrentUserConnected_]) /* vc icon */,
