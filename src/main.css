@@ -870,14 +870,14 @@ html.theme-light {
 	--elevation-low: none;
 	--shadow-ledge: none;
 
-	--brand-360: var(--acc-1);
+	--brand-360: var(--acc-1); /* tab underlines */
 	--brand-500: var(--acc-0); /* unread bar, accent buttons, spotify */
 	--brand-530: var(--acc-0); /* hover highlight in context menu */
 	--brand-560: var(--acc-1); /* accent button hover */
 	--brand-600: var(--acc-2); /* accent button active */
 
 	--primary-500: var(--bg-2); /* neutral button background */
-	--primary-600: var(--bg-2);
+	--primary-600: var(--bg-2); /* status bubbles, modals */
 	--primary-800: var(--bg-1); /* bot command panel suggestion argument */
 
 	--white-500: var(--txt-dark); /* THE BANE OF MY EXISTENCE */
