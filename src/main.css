@@ -899,4 +899,5 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--green-530: var(--green-2);
 
 	--twitch: var(--acc-1);
+    }
 }
