@@ -543,7 +543,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 
 /* modal */
-.theme-dark .footerSeparator_f9a4c9, .theme-light .footerSeparator_f9a4c9 {
+[class^='footerSeparator_f9a4c9'] {
 	box-shadow: none /* remove top border of footer */
 }
 
@@ -881,6 +881,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--brand-560: var(--acc-1); /* accent button hover */
 	--brand-600: var(--acc-2); /* accent button active */
 
+	--primary-130: var(--txt-0); /* embed titles eg. youtube channel names */
 	--primary-500: var(--bg-2); /* neutral button background */
 	--primary-600: var(--bg-1); /* status bubbles, modals */
 	--primary-800: var(--bg-1); /* bot command panel suggestion argument */
