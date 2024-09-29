@@ -561,14 +561,18 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 /* voice */
 .gradientContainer_dd069c {
 	background: none !important /* removes the top/bottom gradients in voice channels */;
-	overflow: visible
 }
-
 .callContainer_d880dc .container_fc4f04::after {
 	display: none
 }
 .callContainer_d880dc .container_fc4f04 {
 	border: 0
+}
+.button_dd4f85.colorable_ef18ee.red_ef18ee svg {
+	color: var(--white-500) !important /* disconnect button */
+}
+.heading_a5ea57 {
+	color: var(--txt-0) !important /* "you're the only one here. */
 }
 
 @supports (color:color-mix(in lch,red,blue))and (top:var(--f)) {
@@ -717,7 +721,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--divider-subtle: hsl(0 calc(1 * 0%) 100% / 0.08);
 	--embed-background: var(--primary-630);
 	--embed-background-alternate: var(--primary-600);
-	--embed-title: var(--primary-130);
+	--embed-title: var(--txt-0);
 	--expression-picker-bg: var(--primary-630);
 	--focus-primary: var(--blue-345);
 	--forum-post-extra-media-count-container-background: hsl(228 calc(1 * 6.7%) 14.7% / 0.8);
@@ -882,7 +886,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--text-muted-on-default: var(--primary-330);
 	--text-normal: var(--txt-1);
 	--text-positive: var(--green);
-	--text-primary: var(--primary-230);
+	--text-primary: var(--txt-0);
 	--text-secondary: var(--primary-330);
 	--text-warning: var(--yellow-300);
 	--textbox-markdown-syntax: var(--primary-360);
@@ -905,7 +909,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--brand-560: var(--acc-1); /* accent button hover */
 	--brand-600: var(--acc-2); /* accent button active */
 
-	--primary-130: var(--txt-0); /* embed titles eg. youtube channel names */
+	--primary-130: var(--bg-0); /* vc controls (2?) */
+	--primary-230: var(--bg-1); /* vc controls hover (2?) */
 	--primary-500: var(--bg-2); /* neutral button background */
 	--primary-600: var(--bg-1); /* status bubbles, modals */
 	--primary-630: var(--bg-1); /* vc controls */
