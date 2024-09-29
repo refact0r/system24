@@ -84,7 +84,7 @@
 [class^=members_] /* member list inner */,
 [class^=member_] /* member containers */,
 [class^=searchResultsWrap_] /* search results */,
-.container_adcaac /* vc panel */,
+.callContainer_d880dc /* vc panel */,
 [class^=channelTextArea] > [class^=scrollableContainer] {
 	background: none;
 }
@@ -207,7 +207,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=searchResultsWrap_] /* search results */,
 .scroller_fb4810 /* new thread */,
 [class^=chat_] > [class*=container_] /* header bar */,
-[class^='form_'] > [class^='wrapper_'] /* no access chat bar */ {
+[class^='form_'] > [class^='wrapper_'] /* no access chat bar */,
+.callContainer_d880dc /* vc container */ {
 	border-radius: var(--panel-roundness);
 	border: var(--border-width) solid var(--border-color);
 	transition: border-color var(--border-transition);
@@ -345,7 +346,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='searchResultsWrap_']::after,
 .scroller_fb4810::after,
 [class^='peopleColumn_']::after,
-[class^='nowPlayingColumn_']::after {
+[class^='nowPlayingColumn_']::after,
+.root_dd069c::before {
 	display: block;
 	color: var(--txt-3);
 	font-weight: var(--label-font-weight);
@@ -364,6 +366,10 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	content: 'channel';
 	top: -11px;
 }
+.root_dd069c::before {
+	content: 'channel';
+}
+
 [class^='chatContent_'] > [class^='messagesWrapper_']::after,
 .scroller_fb4810::after {
 	content: 'messages';
@@ -550,6 +556,19 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 /* forums */
 [class^='textContentFooter_a57509'] {
 	background: none !important /* removes the shadow in grid view forum posts */
+}
+
+/* voice */
+.gradientContainer_dd069c {
+	background: none !important /* removes the top/bottom gradients in voice channels */;
+	overflow: visible
+}
+
+.callContainer_d880dc .container_fc4f04::after {
+	display: none
+}
+.callContainer_d880dc .container_fc4f04 {
+	border: 0
 }
 
 @supports (color:color-mix(in lch,red,blue))and (top:var(--f)) {
@@ -889,6 +908,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--primary-130: var(--txt-0); /* embed titles eg. youtube channel names */
 	--primary-500: var(--bg-2); /* neutral button background */
 	--primary-600: var(--bg-1); /* status bubbles, modals */
+	--primary-630: var(--bg-1); /* vc controls */
+	--primary-700: var(--bg-2); /* vc controls hover */
 	--primary-800: var(--bg-1); /* bot command panel suggestion argument */
 
 	--white-500: var(--txt-dark); /* THE BANE OF MY EXISTENCE */
