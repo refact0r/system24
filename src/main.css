@@ -78,13 +78,13 @@
 [class^=attachedBars_], [class^=replyBar_], [class^=threadSuggestionBar_] /* reply, thread, atttachment bars above chat bar */,
 [class^=panels_] /* user panel */,
 #app-mount #vc-spotify-player,
-[class^=panels_] > [class^=panel_] /* streaming panel */, 
+[class^=panels_] > [class^=panel_] /* streaming panel */,
 [class^=panels_] > [class^=container_] /* user panel inner */,
 [class^=chat_] > [class^=content_] > [class^=container_] /* member list */,
 [class^=members_] /* member list inner */,
 [class^=member_] /* member containers */,
 [class^=searchResultsWrap_] /* search results */,
-.container_adcaac /* vc panel */,
+.callContainer_d880dc /* vc panel */,
 [class^=channelTextArea] > [class^=scrollableContainer] {
 	background: none;
 }
@@ -104,11 +104,11 @@
 	color: var(--bg-0);
 }
 /* fix white-500 */
-[class*=buttonColor_] /* play on spotify button */, 
+[class*=buttonColor_] /* play on spotify button */,
 [class*=lookFilled_][class*=colorPrimary_] /* neutral buttons (like in account settings) */,
 #app-mount [class*=lookLink_][class*=colorPrimary_] /* link buttons (like in account settings) */,
 [class^=friendRequestsButton_] [class^=numberBadge_] /* inbox friend requests number */,
-[class^=searchFilter_], [class^=searchAnswer_], 
+[class^=searchFilter_], [class^=searchAnswer_],
 #app-mount [class^=partyStatus_] [class^=anchor_] /* spotify listen along link */,
 #app-mount [class^=partyStatus_] /* spotify listen along text */,
 [class^=iconBadge_]:not([class*=isCurrentUserConnected_]) /* vc icon */,
@@ -207,7 +207,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=searchResultsWrap_] /* search results */,
 .scroller_fb4810 /* new thread */,
 [class^=chat_] > [class*=container_] /* header bar */,
-[class^='form_'] > [class^='wrapper_'] /* no access chat bar */ {
+[class^='form_'] > [class^='wrapper_'] /* no access chat bar */,
+.callContainer_d880dc /* vc container */ {
 	border-radius: var(--panel-roundness);
 	border: var(--border-width) solid var(--border-color);
 	transition: border-color var(--border-transition);
@@ -345,7 +346,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='searchResultsWrap_']::after,
 .scroller_fb4810::after,
 [class^='peopleColumn_']::after,
-[class^='nowPlayingColumn_']::after {
+[class^='nowPlayingColumn_']::after,
+.root_dd069c::before {
 	display: block;
 	color: var(--txt-3);
 	font-weight: var(--label-font-weight);
@@ -364,6 +366,10 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	content: 'channel';
 	top: -11px;
 }
+.root_dd069c::before {
+	content: 'channel';
+}
+
 [class^='chatContent_'] > [class^='messagesWrapper_']::after,
 .scroller_fb4810::after {
 	content: 'messages';
@@ -542,8 +548,35 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	order: -1;
 }
 
-.theme-dark,
-html.theme-light {
+/* modal */
+[class^='footerSeparator_f9a4c9'] {
+	box-shadow: none /* remove top border of footer */
+}
+
+/* forums */
+[class^='textContentFooter_a57509'] {
+	background: none !important /* removes the shadow in grid view forum posts */
+}
+
+/* voice */
+.gradientContainer_dd069c {
+	background: none !important /* removes the top/bottom gradients in voice channels */;
+}
+.callContainer_d880dc .container_fc4f04::after {
+	display: none
+}
+.callContainer_d880dc .container_fc4f04 {
+	border: 0
+}
+.button_dd4f85.colorable_ef18ee.red_ef18ee svg {
+	color: var(--white-500) !important /* disconnect button */
+}
+.heading_a5ea57 {
+	color: var(--txt-0) !important /* "you're the only one here. */
+}
+
+@supports (color:color-mix(in lch,red,blue))and (top:var(--f)) {
+    .theme-light, .theme-dark {
 	--action-sheet-gradient-bg: var(--primary-630);
 	--activity-card-background: var(--primary-700);
 	--activity-card-icon-overlay: hsl(223 calc(1 * 6.7%) 20.6% / 0.85);
@@ -688,7 +721,7 @@ html.theme-light {
 	--divider-subtle: hsl(0 calc(1 * 0%) 100% / 0.08);
 	--embed-background: var(--primary-630);
 	--embed-background-alternate: var(--primary-600);
-	--embed-title: var(--primary-130);
+	--embed-title: var(--txt-0);
 	--expression-picker-bg: var(--primary-630);
 	--focus-primary: var(--blue-345);
 	--forum-post-extra-media-count-container-background: hsl(228 calc(1 * 6.7%) 14.7% / 0.8);
@@ -734,8 +767,8 @@ html.theme-light {
 	--logo-primary: var(--white-500);
 	--mention-background: var(--mention-bg);
 	--mention-foreground: var(--mention-txt);
-	--modal-background: var(--primary-600);
-	--modal-footer-background: var(--primary-630);
+	--modal-background: var(--bg-0);
+	--modal-footer-background: var(--primary-600);
 	--navigator-header-tint: var(--white-500);
 	--panel-bg: var(--primary-600);
 	--polls-normal-fill-hover: var(--primary-600);
@@ -853,7 +886,7 @@ html.theme-light {
 	--text-muted-on-default: var(--primary-330);
 	--text-normal: var(--txt-1);
 	--text-positive: var(--green);
-	--text-primary: var(--primary-230);
+	--text-primary: var(--txt-0);
 	--text-secondary: var(--primary-330);
 	--text-warning: var(--yellow-300);
 	--textbox-markdown-syntax: var(--primary-360);
@@ -870,12 +903,18 @@ html.theme-light {
 	--elevation-low: none;
 	--shadow-ledge: none;
 
+	--brand-360: var(--acc-1); /* tab underlines */
 	--brand-500: var(--acc-0); /* unread bar, accent buttons, spotify */
 	--brand-530: var(--acc-0); /* hover highlight in context menu */
 	--brand-560: var(--acc-1); /* accent button hover */
 	--brand-600: var(--acc-2); /* accent button active */
 
+	--primary-130: var(--bg-0); /* vc controls (2?) */
+	--primary-230: var(--bg-1); /* vc controls hover (2?) */
 	--primary-500: var(--bg-2); /* neutral button background */
+	--primary-600: var(--bg-1); /* status bubbles, modals */
+	--primary-630: var(--bg-1); /* vc controls */
+	--primary-700: var(--bg-2); /* vc controls hover */
 	--primary-800: var(--bg-1); /* bot command panel suggestion argument */
 
 	--white-500: var(--txt-dark); /* THE BANE OF MY EXISTENCE */
@@ -892,4 +931,5 @@ html.theme-light {
 	--green-530: var(--green-2);
 
 	--twitch: var(--acc-1);
+    }
 }
