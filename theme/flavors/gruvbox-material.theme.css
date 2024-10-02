@@ -19,7 +19,7 @@
 	letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
 	font-weight: 400; /* UI font weight. */
 	--label-font-weight: 500; /* font weight for panel labels. */
-	--corner-text: 'catppuccin24'; /* custom text to display in the corner. only works on windows. */
+	--corner-text: 'gruvbox material'; /* custom text to display in the corner. only works on windows. */
 	--pad: 16px; /* padding between panels. */
 	--txt-pad: 10px; /* padding inside panels to prevent labels from clipping */
 	--panel-roundness: 0px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
