@@ -47,7 +47,7 @@
 	/* accent colors */
 	--acc-0: var(--purple); /* main accent color. */
 	--acc-1: var(--purple-1); /* color of accent buttons when hovered. */
-	--acc-2: var(--purple-2); /* color of accent buttons when clicked. */
+	--acc-2: var(--purple-1); /* color of accent buttons when clicked. */
 
 	/* borders */
 	--border-width: 2px; /* panel border thickness. */
@@ -74,8 +74,7 @@
 	--pink-1: oklch(63% 0.12 0);
 	--pink-2: oklch(53% 0.12 0);
 	--purple: #d3869b;
-	--purple-1: oklch(63% 0.12 300);
-	--purple-2: oklch(53% 0.12 300);
+	--purple-1: #d27390;
 	--cyan: #7caea3;
 	--yellow: #d8a656;
 	--green: #a8b665;
