@@ -864,7 +864,6 @@ html.theme-light {
 	--user-profile-header-overflow-background: hsl(225 calc(1 * 6.3%) 12.5% / 0.5);
 	--voice-video-video-tile-background: hsl(233 calc(1 * 9 / 0.3%) 19% / 0.4);
 	--voice-video-video-tile-blur-fallback: hsl(225 calc(1 * 6.3%) 12.5% / 0.48);
-	--white: var(--bg-0);
 	--you-bar-bg: var(--primary-800);
 
 	--elevation-low: none;
