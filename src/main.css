@@ -575,6 +575,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	color: var(--txt-0) !important /* "you're the only one here. */
 }
 
+/* image popup */
+.downloadLink_a15d41 {
+	color: white!important /* QUICK FIX, same color as the forward button but technically not themed */
+}
+
 @supports (color:color-mix(in lch,red,blue))and (top:var(--f)) {
     .theme-light, .theme-dark {
 	--action-sheet-gradient-bg: var(--primary-630);
