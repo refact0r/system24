@@ -859,6 +859,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--scrollbar-auto-track: transparent;
 	--scrollbar-thin-thumb: var(--bg-1);
 	--scrollbar-thin-track: transparent;
+	--search-popout-date-picker-hint-text: var(--txt-1);
+	--search-popout-date-picker-hint-value-text: var(--white-500);
+	--search-popout-option-filter-text: var(--txt-1);
+	--search-popout-option-non-text-color: var(--txt-1);
+	--search-popout-option-filter-color: var(--text-1);
 	--spoiler-hidden-background: var(--primary-700);
 	--spoiler-revealed-background: var(--primary-660);
 	--stage-card-pill-bg: var(--primary-630);
@@ -904,6 +909,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--shadow-ledge: none;
 
 	--brand-360: var(--acc-1); /* tab underlines */
+	--brand-400: var(--acc-2); /* search date picker suggestion hover */
 	--brand-500: var(--acc-0); /* unread bar, accent buttons, spotify */
 	--brand-530: var(--acc-0); /* hover highlight in context menu */
 	--brand-560: var(--acc-1); /* accent button hover */
