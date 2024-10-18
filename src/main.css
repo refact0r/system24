@@ -558,6 +558,10 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	background: none !important /* removes the shadow in grid view forum posts */
 }
 
+.chatHeaderBar_e2f46e {
+	margin-bottom: 10px /* removes overlap between "messages" and "this post has been locked" */
+}
+
 /* voice */
 .gradientContainer_dd069c {
 	background: none !important /* removes the top/bottom gradients in voice channels */;
