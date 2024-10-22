@@ -257,7 +257,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	margin-top: 0;
 }
 .form_a7d72e::after,
-.form_a7d72e::before {
+.form_a7d72e::before
+/* remove call container gradient */
+[class^=gradientTop_],
+[class^=gradientBottom_]
+{
 	display: none !important;
 }
 [class^='form_'] [class^='channelTextArea_'] {
@@ -409,8 +413,13 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=peopleColumn_] /* friends page */ ,
 .tabBody_c2739c /* friends page outer */,
 .container_d1c246 /* thread outer */,
-[class^=container_] > [class^=base_] {
+[class^=container_] > [class^=base_],
+[class^=callContainer_] {
 	overflow: visible;
+}
+/* remove black call container */
+[class^=callContainer_] {
+  background: none!important;
 }
 .scroller_fb4810 /* new thread messages box */ {
 	overflow: visible !important;
@@ -882,7 +891,7 @@ html.theme-light {
 	--brand-600: var(--acc-2); /* accent button active */
 
 	--primary-500: var(--bg-2); /* neutral button background */
-	--primary-800: var(--bg-1); /* bot command panel suggestion argument */
+	--primary-800: var(--bg-0); /* call background */
 
 	--white-500: var(--txt-dark); /* THE BANE OF MY EXISTENCE */
 
