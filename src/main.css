@@ -595,6 +595,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
   display: none;
 }
 
+/* placeholder text fixes */
+::placeholder {
+  color: var(--txt-3)!important;
+}
+
 .theme-dark,
 html.theme-light {
 	--action-sheet-gradient-bg: var(--primary-630);
