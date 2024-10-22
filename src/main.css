@@ -557,6 +557,39 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
   background: var(--txt-1);
 }
 
+/* call container border and such */
+[class^=callContainer_] {
+  overflow-x: hidden;
+	border-radius: var(--panel-roundness);
+	border: var(--border-width) solid var(--border-color);
+	transition: border-color var(--border-transition);
+	&:hover {
+		border-color: var(--border-hover-color);
+		&::after {
+			color: var(--border-hover-color);
+		}
+	}
+}
+[class^=callContainer_] [class^=topControls_] section {
+  border: none;
+  &::after {
+    content: '';
+  }
+}
+[class^='callContainer_']::after {
+	content: 'call';
+  display: block;
+	color: var(--txt-3);
+	font-weight: var(--label-font-weight);
+	position: absolute;
+	top: -8px;
+	left: 8px;
+	background-color: var(--bg-0);
+	padding: 0 4px;
+	z-index: 100;
+	transition: color var(--border-transition);
+}
+
 .theme-dark,
 html.theme-light {
 	--action-sheet-gradient-bg: var(--primary-630);
