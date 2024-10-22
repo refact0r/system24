@@ -591,8 +591,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 
 /* fullscreen call left margin fix */
-.wrapper_fea3ef.hidden_fea3ef {
-  display: none;
+.wrapper_fea3ef.guilds_a4d4d9.hidden_fea3ef {
+  display: none!important;
 }
 
 /* placeholder text fixes */
