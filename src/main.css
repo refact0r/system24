@@ -590,6 +590,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	transition: color var(--border-transition);
 }
 
+/* fullscreen call left margin fix */
+.wrapper_fea3ef.hidden_fea3ef {
+  display: none;
+}
+
 .theme-dark,
 html.theme-light {
 	--action-sheet-gradient-bg: var(--primary-630);
