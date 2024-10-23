@@ -257,10 +257,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	margin-top: 0;
 }
 .form_a7d72e::after,
-.form_a7d72e::before,
-/* remove call container gradient */
-[class^=gradientTop_],
-[class^=gradientBottom_]
+.form_a7d72e::before
 {
 	display: none !important;
 }
@@ -413,13 +410,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=peopleColumn_] /* friends page */ ,
 .tabBody_c2739c /* friends page outer */,
 .container_d1c246 /* thread outer */,
-[class^=container_] > [class^=base_],
-[class^=callContainer_] {
+[class^=container_] > [class^=base_] {
 	overflow: visible;
-}
-/* remove black call container */
-[class^=callContainer_] {
-  background: none!important;
 }
 .scroller_fb4810 /* new thread messages box */ {
 	overflow: visible !important;
@@ -551,13 +543,27 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	order: -1;
 }
 
-/* text selected highlight */
+/* begin 909 commits */
+::placeholder {
+  color: var(--txt-3)!important;
+}
 ::selection {
   color: var(--bg-0);
   background: var(--txt-1);
 }
-
-/* call container border and such */
+[class^=callContainer_] {
+	overflow: visible;
+  background: none!important;
+}
+[class^=gradientTop_],
+[class^=gradientBottom_] {
+  display: none!important;
+}
+[class^=topControls_],
+[class^=bottomControls_] {
+  opacity: 1!important;
+  transform: none!important;
+}
 [class^=callContainer_] {
   overflow-x: hidden;
 	border-radius: var(--panel-roundness);
@@ -590,21 +596,10 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	transition: color var(--border-transition);
 }
 
-[class^=topControls_],
-[class^=bottomControls_] {
-  opacity: 1!important;
-  transform: none!important;
+.wrapper_fea3ef.hidden_fea3ef {
+  display: none;
 }
-
-/* fullscreen call left margin fix */
-.wrapper_fea3ef.guilds_a4d4d9.hidden_fea3ef {
-  display: none!important;
-}
-
-/* placeholder text fixes */
-::placeholder {
-  color: var(--txt-3)!important;
-}
+/* end 909 commits */
 
 .theme-dark,
 html.theme-light {
