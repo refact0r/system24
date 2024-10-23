@@ -940,6 +940,8 @@ html.theme-light {
 .wrapper_fea3ef.hidden_fea3ef {
   display: none;
 }
+
+/* from here onward only works if you put this stuff in your theme css file */
 [class^=gradientTop_],
 [class^=gradientBottom_] {
   display: none!important;
