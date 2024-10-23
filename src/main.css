@@ -257,7 +257,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	margin-top: 0;
 }
 .form_a7d72e::after,
-.form_a7d72e::before
+.form_a7d72e::before,
 /* remove call container gradient */
 [class^=gradientTop_],
 [class^=gradientBottom_]
@@ -588,6 +588,12 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	padding: 0 4px;
 	z-index: 100;
 	transition: color var(--border-transition);
+}
+
+[class^=topControls_],
+[class^=bottomControls_] {
+  opacity: 1!important;
+  transform: none!important;
 }
 
 /* fullscreen call left margin fix */
