@@ -522,7 +522,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container_c75f85::after /* channel list dividers */,
 [class^=customizationSection_],
 [class^=session_],
-[class^=columnHeading_], [class^=tableCell_] {
+[class^=columnHeading_],
+[class^=tableCell_] {
 	border-width: var(--border-width);
 	border-color: var(--border-color);
 }
@@ -876,7 +877,7 @@ html.theme-light {
 	--brand-600: var(--acc-2); /* accent button active */
 
 	--primary-500: var(--bg-2); /* neutral button background */
-	--primary-800: var(--bg-1); /* bot command panel suggestion argument */
+	--primary-800: var(--bg-0); /* call background */
 
 	--white-500: var(--txt-dark); /* THE BANE OF MY EXISTENCE */
 
@@ -893,3 +894,61 @@ html.theme-light {
 
 	--twitch: var(--acc-1);
 }
+
+/* begin 909 commits */
+::placeholder {
+  color: var(--txt-3)!important;
+}
+::selection {
+  color: var(--bg-0);
+  background: var(--txt-1);
+}
+[class^=callContainer_] {
+  overflow: visible;
+  background: none!important;
+  overflow-x: hidden;
+	border-radius: var(--panel-roundness);
+	border: var(--border-width) solid var(--border-color);
+	transition: border-color var(--border-transition);
+	&:hover {
+		border-color: var(--border-hover-color);
+		&::after {
+			color: var(--border-hover-color);
+		}
+	}
+}
+[class^=callContainer_] [class^=topControls_] section {
+  border: none;
+  &::after {
+    content: '';
+  }
+}
+[class^='callContainer_']::after {
+	content: 'call';
+  display: block;
+	color: var(--txt-3);
+	font-weight: var(--label-font-weight);
+	position: absolute;
+	top: -8px;
+	left: 8px;
+	background-color: var(--bg-0);
+	padding: 0 4px;
+	z-index: 100;
+	transition: color var(--border-transition);
+}
+
+.wrapper_fea3ef.hidden_fea3ef {
+  display: none;
+}
+
+[class^=gradientTop_],
+[class^=gradientBottom_] {
+  display: none!important;
+}
+[class^=topControls_],
+[class^=bottomControls_] {
+  opacity: 1!important;
+  transform: none!important;
+}
+/* end 909 commits */
+
