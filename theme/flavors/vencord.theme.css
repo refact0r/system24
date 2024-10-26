@@ -27,13 +27,13 @@
 
 	/* background colors */
 	--bg-0: #282828; /* main background color. */
-	--bg-1: #3c3836; /* background color for secondary elements like code blocks, embeds, etc. */
-	--bg-2: #3c3836x; /* color of neutral buttons. */
-	--bg-3: oklch(31% 0 0); /* color of neutral buttons when hovered. */
+	--bg-1: #1d2021; /* background color for secondary elements like code blocks, embeds, etc. */
+	--bg-2: #3c3836; /* color of neutral buttons. */
+	--bg-3: #44403e; /* color of neutral buttons when hovered. */
 
 	/* state modifiers */
-	--hover: oklch(54% 0 0 / 0.1); /* color of hovered elements. */
-	--active: oklch(54% 0 0 / 0.2); /* color of elements when clicked. */
+	--hover: oklch(54% 0.007 48 / 0.1); /* color of hovered elements. */
+	--active: oklch(54% 0.007 48 / 0.2); /* color of elements when clicked. */
 	--selected: var(--active); /* color of selected elements. */
 
 	/* text colors */
@@ -51,7 +51,7 @@
 
 	/* borders */
 	--border-width: 2px; /* panel border thickness. */
-	--border-color: var(--bg-3); /* panel border color. */
+	--border-color: var(--bg-2); /* panel border color. */
 	--border-hover-color: var(--acc-0); /* panel border color when hovered. */
 	--border-transition: 0.2s ease; /* panel border transition. */
 
