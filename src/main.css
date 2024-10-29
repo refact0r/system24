@@ -546,7 +546,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .theme-dark,
 html.theme-light {
 	--action-sheet-gradient-bg: var(--primary-630);
-	--activity-card-background: var(--primary-700);
+	--activity-card-background: var(--bg-0);
 	--activity-card-icon-overlay: hsl(223 calc(1 * 6.7%) 20.6% / 0.85);
 	--alert-bg: var(--primary-600);
 	--android-navigation-bar-background: var(--primary-830);
