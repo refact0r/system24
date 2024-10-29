@@ -27,9 +27,9 @@
 
 	/* background colors */
 	--bg-0: oklch(20% 0.02 285); /* main background color. */
-	--bg-1: oklch(24% 0.02 285); /* background color for secondary elements like code blocks, embeds, etc. */
-	--bg-2: oklch(28% 0.02 285); /* color of neutral buttons. */
-	--bg-3: oklch(32% 0.02 285); /* color of neutral buttons when hovered. */
+	--bg-1: oklch(24% 0.03 275); /* background color for secondary elements like code blocks, embeds, etc. */
+	--bg-2: oklch(28% 0.05 275); /* color of neutral buttons. */
+	--bg-3: oklch(32% 0.05 273); /* color of neutral buttons when hovered. */
 
 	/* state modifiers */
 	--hover: oklch(54% 0.02 285 / 0.1); /* color of hovered elements. */
@@ -40,9 +40,9 @@
 	--txt-dark: var(--bg-0); /* color of dark text on colored backgrounds. */
 	--txt-link: var(--cyan); /* color of links. */
 	--txt-0: oklch(88% 0.06 275); /* color of bright/white text. */
-	--txt-1: oklch(78% 0.06 275); /* main text color. */
-	--txt-2: oklch(58% 0.06 275); /* color of secondary text like channel list. */
-	--txt-3: oklch(38% 0.06 275); /* color of muted text. */
+	--txt-1: oklch(76% 0.05 275); /* main text color. */
+	--txt-2: oklch(58% 0.05 275); /* color of secondary text like channel list. */
+	--txt-3: oklch(38% 0.05 275); /* color of muted text. */
 
 	/* accent colors */
 	--acc-0: var(--blurple); /* main accent color. */
