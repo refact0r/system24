@@ -240,9 +240,9 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	}
 }
 
-/* fix double left border at friends' activity now lane*/
+/* fix double left border at friends' activity now lane */
 .scroller_bf550a {
-	margin-left: -1px;
+    border-left: 0px solid var(--background-modifier-accent);
 }
 
 /*"ReadAllNotifications" button*/
