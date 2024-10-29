@@ -59,3 +59,12 @@ A monochrome version of the default theme with mostly neutral colors.
 [theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/monochrome.theme.css)
 
 ![image](/assets/monochrome.png)
+
+### tokyo-night
+
+A clean ~~Visual Studio Code~~ Discord theme that celebrates the lights of Downtown Tokyo at night.
+based on VSCode theme ["tokyo-night"](https://github.com/tokyo-night/tokyo-night-vscode-theme).
+
+[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/tokyo-night.theme.css)
+
+![image](/assets/tolyo-night.png)
