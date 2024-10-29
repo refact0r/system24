@@ -67,4 +67,4 @@ based on VSCode theme ["tokyo-night"](https://github.com/tokyo-night/tokyo-night
 
 [theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/tokyo-night.theme.css)
 
-![image](/assets/tolyo-night.png)
+![image](/assets/tokyo-night.png)
