@@ -586,7 +586,7 @@ html.theme-light {
 	--bg-base-secondary: var(--bg-1);
 	--bg-base-tertiary: var(--primary-660);
 	--bg-brand: var(--brand-500);
-	--bg-mod-faint: var(--bg-1);
+	--bg-mod-faint: var(--bg-0);
 	--bg-mod-strong: var(--bg-2);
 	--bg-mod-subtle: hsl(228 calc(1 * 6%) 32.5% / 0.48);
 	--bg-surface-overlay: var(--bg-2);
