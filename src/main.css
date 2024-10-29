@@ -240,6 +240,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	}
 }
 
+/* fix double left border at friends' activity now lane*/
+.scroller_bf550a {
+	margin-left: -1px;
+}
+
 /*"ReadAllNotifications" button*/
 .vc-ranb-button {
 	font-size: 12px;
