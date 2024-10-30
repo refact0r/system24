@@ -37,7 +37,7 @@
 	--selected: var(--active); /* color of selected elements. */
 
 	/* text colors */
-	--txt-dark: var(--bg-0); /* color of dark text on colored backgrounds. */
+	--txt-dark: var(--txt-1); /* color of dark text on colored backgrounds. */
 	--txt-link: var(--cyan); /* color of links. */
 	--txt-0: oklch(88% 0.06 275); /* color of bright/white text. */
 	--txt-1: oklch(76% 0.05 275); /* main text color. */
