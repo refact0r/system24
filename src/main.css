@@ -180,6 +180,9 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=content_] > [class^=resizeHandle_] /* pretend to be a margin */ {
 	width: var(--pad);
 }
+.timestamp_f9f2ca.latin24CompactTimeStamp_f9f2ca {
+    width: 3.3rem;
+}
 
 /* fix inbox overflow and hiding window controls */
 [class^='notAppAsidePanel_'] > [class^='layerContainer_'] {
@@ -286,7 +289,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .clipContainer_b11c5e {
 	margin-top: 0;
 }
-.textArea_d0696b {
+.textArea_bdf0de {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -442,7 +445,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container_adcaac /* vc panel */ {
 	padding: var(--txt-pad) var(--txt-pad) calc(var(--txt-pad) / 2) var(--txt-pad);
 }
-.horizontal_bba380 > .flex_bba380 /* fix voice connected cut off */ {
+.horizontal_dc333f > .flex_dc333f /* fix voice connected cut off */ {
 	margin-left: 4px;
 }
 .guilds_a4d4d9,
@@ -951,4 +954,3 @@ html.theme-light {
   transform: none!important;
 }
 /* end 909 commits */
-
