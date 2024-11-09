@@ -12,6 +12,13 @@
 [class^='svg_'] > foreignObject {
 	mask-image: none;
 }
+
+/* fiil circle mask on profile avatar */
+.overlay_f94206:after,  /* profile popup */
+.overlay_f18fcb:after { /* user settings */
+	border-radius: 0;
+}
+
 /* hide status indicators */
 [class^='mask_'] > rect,
 [class^='mask_'] > circle,
@@ -51,6 +58,11 @@
 }
 .wrapper_c51b4e:has(rect[fill='#593695'])::after {
 	background: var(--streaming-dot);
+}
+
+/* unround custom status bubble */
+.statusBubbleOuter_d0a252::before, .statusBubbleOuter_d0a252::after {
+    border-radius: 0 !important;
 }
 
 /* fix server list badges */
