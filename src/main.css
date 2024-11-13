@@ -89,7 +89,7 @@
 	background: none;
 }
 /* fix bgs */
-[class^=userPanelOuter_] /* profile panel */ {
+[class^='content_']>[class^='outer_'] /* profile panel */ {
 	--background-secondary-alt: var(--bg-0) !important;
 }
 [class^=childWrapper_] /* no color servers */ {
@@ -206,7 +206,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=nowPlayingColumn_] /* friends page active now */,
 [class^=channelBottomBarArea_] /* chat bar */,
 .container_a6d69a /* forum */,
-[class^=userPanelOuter_] /* dm profile panel */,
+[class^='content_']>[class^='outer_'] /* dm profile panel */,
 [class^=searchResultsWrap_] /* search results */,
 .scroller_fb4810 /* new thread */,
 [class^=chat_] > [class*=container_] /* header bar */,
@@ -349,7 +349,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='membersWrap_']::after,
 [class^='privateChannels_']::after,
 .container_a6d69a::after,
-[class^='userPanelOuter_']::after,
+[class^='content_']>[class^='outer_']::after,
 [class^='searchResultsWrap_']::after,
 .scroller_fb4810::after,
 [class^='peopleColumn_']::after,
@@ -394,7 +394,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container_a6d69a::after {
 	content: 'forum';
 }
-[class^='userPanelOuter_']::after {
+[class^='content_']>[class^='outer_']::after {
 	content: 'profile';
 }
 [class^='searchResultsWrap_']::after {
@@ -462,12 +462,12 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	box-sizing: border-box;
 }
 /* add padding to user profile panel */
-[class^='userPanelOuter_'] {
+[class^='content_']>[class^='outer_'] {
 	padding: var(--txt-pad);
 	box-sizing: border-box;
 	background-clip: content-box;
 }
-[class^='userPanelInner_'] /* fix profile effects */ {
+[class^='content_']>[class^='outer_']>[class^='inner_'] /* fix profile effects */ {
 	position: relative;
 }
 
