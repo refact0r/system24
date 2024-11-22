@@ -1,10 +1,11 @@
 /**
- * @name system24 (gruvbox material)
- * @description A tui-style discord theme. Based on the gruvbox material color palette.
- * @author refact0r, Sophed
+ * @name system24 (vencord)
+ * @description A tui-style discord theme. Based on Vencord's color palette. (https://vencord.dev/)
+ * @author refact0r, makimwah
  * @version 1.0.0
  * @invite nz87hXyvcy
- * @website https://github.com/refact0r/system24 
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24/blob/master/system24.theme.css
  * @authorId 508863359777505290
  * @authorLink https://www.refact0r.dev
 */
@@ -17,36 +18,36 @@
 :root {
 	--font: 'DM Mono'; /* UI font name. it must be installed on your system. */
 	letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
-	font-weight: 400; /* UI font weight. */
+	font-weight: 300; /* UI font weight. */
 	--label-font-weight: 500; /* font weight for panel labels. */
-	--corner-text: 'gruvbox material'; /* custom text to display in the corner. only works on windows. */
+	--corner-text: 'vencord24'; /* custom text to display in the corner. only works on windows. */
 	--pad: 16px; /* padding between panels. */
 	--txt-pad: 10px; /* padding inside panels to prevent labels from clipping */
 	--panel-roundness: 0px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
 
 	/* background colors */
-	--bg-0: #282828; /* main background color. */
-	--bg-1: #1d2021; /* background color for secondary elements like code blocks, embeds, etc. */
-	--bg-2: #3c3836; /* color of neutral buttons. */
-	--bg-3: #504945; /* color of neutral buttons when hovered. */
+	--bg-0: oklch(28% 0.002 48); /* main background color. */
+	--bg-1: oklch(25% 0.001 48); /* background color for secondary elements like code blocks, embeds, etc. */
+	--bg-2: oklch(34% 0.004 48); /* color of neutral buttons. */
+	--bg-3: oklch(38% 0.006 48); /* color of neutral buttons when hovered. */
 
 	/* state modifiers */
-	--hover: color-mix(in oklch, var(--txt-3), transparent 80%); /* color of hovered elements. */
-	--active: color-mix(in oklch, var(--txt-3), transparent 60%); /* color of elements when clicked. */
+	--hover: oklch(54% 0.006 48 / 0.1); /* color of hovered elements. */
+	--active: oklch(54% 0.006 48 / 0.2); /* color of elements when clicked. */
 	--selected: var(--active); /* color of selected elements. */
 
 	/* text colors */
 	--txt-dark: var(--bg-0); /* color of dark text on colored backgrounds. */
-	--txt-link: var(--aqua); /* color of links. */
-	--txt-0: #d4be98; /* color of bright/white text. */
-	--txt-1: #ddc7a1; /* main text color. */
-	--txt-2: #d4be98; /* color of secondary text like channel list. */
-	--txt-3: #928374; /* color of muted text. */
+	--txt-link: var(--cyan); /* color of links. */
+	--txt-0: oklch(90% 0 0); /* color of bright/white text. */
+	--txt-1: #ddc7a0; /* main text color. */
+	--txt-2: #918274; /* color of secondary text like channel list. */
+	--txt-3: #918274; /* color of muted text. */
 
 	/* accent colors */
-	--acc-0: var(--aqua); /* main accent color. */
-	--acc-1: var(--green); /* color of accent buttons when hovered. */
-	--acc-2: var(--blue); /* color of accent buttons when clicked. */
+	--acc-0: var(--purple); /* main accent color. */
+	--acc-1: var(--purple-1); /* color of accent buttons when hovered. */
+	--acc-2: var(--purple-1); /* color of accent buttons when clicked. */
 
 	/* borders */
 	--border-width: 2px; /* panel border thickness. */
@@ -56,7 +57,7 @@
 
 	/* status dot colors */
 	--online-dot: var(--green); /* color of online dot. */
-	--dnd-dot: var(--red); /* color of do not disturb dot. */
+	--dnd-dot: var(--pink); /* color of do not disturb dot. */
 	--idle-dot: var(--yellow); /* color of idle dot. */
 	--streaming-dot: var(--purple); /* color of streaming dot. */
 
@@ -69,10 +70,14 @@
 	--reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered. */
 
 	/* color shades */
-	--red: #ea6962;
+	--pink: #ea6962;
+	--pink-1: oklch(63% 0.12 0);
+	--pink-2: oklch(53% 0.12 0);
 	--purple: #d3869b;
-	--yellow: #f9e2af;
-	--aqua: #89b482;
-	--blue: #7daea3;
-	--green: #a9b665;
+	--purple-1: #d27390;
+	--cyan: #7caea3;
+	--yellow: #d8a656;
+	--green: #a8b665;
+	--green-1: oklch(63% 0.12 160);
+	--green-2: oklch(53% 0.12 160);
 }

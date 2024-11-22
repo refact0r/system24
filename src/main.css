@@ -89,13 +89,13 @@
 	background: none;
 }
 /* fix bgs */
-[class^=userPanelOuter_] /* profile panel */ {
+[class^='content_']>[class^='outer_'] /* profile panel */ {
 	--background-secondary-alt: var(--bg-0) !important;
 }
 [class^=childWrapper_] /* no color servers */ {
 	background-color: var(--bg-1);
 }
-[class*=embedFull_] /* embed default color */ {
+.embedFull_b0068a /* embed default color */ {
 	border-color: var(--bg-2);
 }
 /* fix text */
@@ -104,16 +104,15 @@
 	color: var(--bg-0);
 }
 /* fix white-500 */
-[class*=buttonColor_] /* play on spotify button */,
-[class*=lookFilled_][class*=colorPrimary_] /* neutral buttons (like in account settings) */,
-#app-mount [class*=lookLink_][class*=colorPrimary_] /* link buttons (like in account settings) */,
+.lookFilled_dd4f85.colorPrimary_dd4f85 /* neutral buttons (like in account settings) */,
+#app-mount .lookLink_dd4f85.colorPrimary_dd4f85 /* link buttons (like in account settings) */,
 [class^=friendRequestsButton_] [class^=numberBadge_] /* inbox friend requests number */,
 [class^=searchFilter_], [class^=searchAnswer_],
 #app-mount [class^=partyStatus_] [class^=anchor_] /* spotify listen along link */,
 #app-mount [class^=partyStatus_] /* spotify listen along text */,
 [class^=iconBadge_]:not([class*=isCurrentUserConnected_]) /* vc icon */,
 [class^=videoControls_] /* video controls */,
-#app-mount [class*=controlIcon_] /* stop streaming icon in preview */,
+#app-mount .controlIcon_ef18ee /* stop streaming icon in preview */,
 [class^=navButton_][class*=navButtonActive_] /* gif picker header selected */,
 [class^=button_][class*=bannerColor_] /* user profile buttons */,
 [class*=backgroundAccent_] /* server insights warning */ {
@@ -180,6 +179,9 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=content_] > [class^=resizeHandle_] /* pretend to be a margin */ {
 	width: var(--pad);
 }
+.timestamp_f9f2ca.latin24CompactTimeStamp_f9f2ca {
+	width: 3.3rem;
+}
 
 /* fix inbox overflow and hiding window controls */
 [class^='notAppAsidePanel_'] > [class^='layerContainer_'] {
@@ -203,7 +205,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=nowPlayingColumn_] /* friends page active now */,
 [class^=channelBottomBarArea_] /* chat bar */,
 .container_a6d69a /* forum */,
-[class^=userPanelOuter_] /* dm profile panel */,
+[class^='content_']>[class^='outer_'] /* dm profile panel */,
 [class^=searchResultsWrap_] /* search results */,
 .scroller_fb4810 /* new thread */,
 [class^=chat_] > [class*=container_] /* header bar */,
@@ -231,14 +233,19 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 
 /* fix border hover effect */
-[class^='chatContent_']:has([class^='messagesWrapper_']:hover),
-[class^='chatContent_']:has([class^='typing_']:hover) {
-	[class^='typing_'] {
+.chatContent_a7d72e:has(> .messagesWrapper_e2e187:hover),
+.chatContent_a7d72e:has(.typing_d7ebeb:hover) {
+	.typing_d7ebeb {
 		border-color: var(--border-hover-color);
 	}
-	& > [class^='messagesWrapper_'] {
+	& > .messagesWrapper_e2e187 {
 		border-color: var(--border-hover-color);
 	}
+}
+
+/* fix double left border at friends' activity now lane */
+.scroller_bf550a {
+	border-left: 0px solid var(--background-modifier-accent);
 }
 
 /*"ReadAllNotifications" button*/
@@ -287,7 +294,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .clipContainer_b11c5e {
 	margin-top: 0;
 }
-.textArea_d0696b {
+.textArea_bdf0de {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -324,10 +331,10 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	}
 }
 [class^='channelBottomBarArea_']:hover {
-	[class^='buttonContainer_'] {
+	& > .buttonContainer_df39bd {
 		border-color: var(--border-hover-color);
 	}
-	[class^='channelTextArea_']::after {
+	& > [class^='channelTextArea_']::after {
 		color: var(--border-hover-color);
 	}
 }
@@ -342,7 +349,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='membersWrap_']::after,
 [class^='privateChannels_']::after,
 .container_a6d69a::after,
-[class^='userPanelOuter_']::after,
+[class^='content_'] > [class^='outer_']::after,
 [class^='searchResultsWrap_']::after,
 .scroller_fb4810::after,
 [class^='peopleColumn_']::after,
@@ -392,7 +399,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container_a6d69a::after {
 	content: 'forum';
 }
-[class^='userPanelOuter_']::after {
+[class^='content_'] > [class^='outer_']::after {
 	content: 'profile';
 }
 [class^='searchResultsWrap_']::after {
@@ -448,7 +455,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container_adcaac /* vc panel */ {
 	padding: var(--txt-pad) var(--txt-pad) calc(var(--txt-pad) / 2) var(--txt-pad);
 }
-.horizontal_bba380 > .flex_bba380 /* fix voice connected cut off */ {
+.horizontal_dc333f > .flex_dc333f /* fix voice connected cut off */ {
 	margin-left: 4px;
 }
 .guilds_a4d4d9,
@@ -460,12 +467,12 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	box-sizing: border-box;
 }
 /* add padding to user profile panel */
-[class^='userPanelOuter_'] {
+[class^='content_'] > [class^='outer_'] {
 	padding: var(--txt-pad);
 	box-sizing: border-box;
 	background-clip: content-box;
 }
-[class^='userPanelInner_'] /* fix profile effects */ {
+[class^='content_']>[class^='outer_']>[class^='inner_'] /* fix profile effects */ {
 	position: relative;
 }
 
@@ -528,7 +535,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container_c75f85::after /* channel list dividers */,
 [class^=customizationSection_],
 [class^=session_],
-[class^=columnHeading_], [class^=tableCell_] {
+[class^=columnHeading_],
+[class^=tableCell_] {
 	border-width: var(--border-width);
 	border-color: var(--border-color);
 }
@@ -587,7 +595,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 @supports (color:color-mix(in lch,red,blue))and (top:var(--f)) {
     .theme-light, .theme-dark {
 	--action-sheet-gradient-bg: var(--primary-630);
-	--activity-card-background: var(--primary-700);
+	--activity-card-background: var(--bg-0);
 	--activity-card-icon-overlay: hsl(223 calc(1 * 6.7%) 20.6% / 0.85);
 	--alert-bg: var(--primary-600);
 	--android-navigation-bar-background: var(--primary-830);
@@ -618,16 +626,16 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--background-tertiary: var(--bg-0);
 	--bg-backdrop: hsl(0 calc(1 * 0%) 0% / 0.7);
 	--bg-backdrop-no-opacity: var(--black-500);
-	--bg-base-primary: var(--primary-600);
-	--bg-base-secondary: var(--primary-630);
+	--bg-base-primary: var(--bg-0);
+	--bg-base-secondary: var(--bg-1);
 	--bg-base-tertiary: var(--primary-660);
 	--bg-brand: var(--brand-500);
-	--bg-mod-faint: var(--bg-1);
+	--bg-mod-faint: var(--bg-0);
 	--bg-mod-strong: var(--bg-2);
 	--bg-mod-subtle: hsl(228 calc(1 * 6%) 32.5% / 0.48);
-	--bg-surface-overlay: var(--bg-0);
+	--bg-surface-overlay: var(--bg-1);
 	--bg-surface-overlay-tmp: var(--primary-800);
-	--bg-surface-raised: var(--primary-600);
+	--bg-surface-raised: var(--bg-0);
 	--black: var(--black-500);
 	--blur-fallback: hsl(225 calc(1 * 6.3%) 12.5% / 0.96);
 	--blur-fallback-pressed: hsl(225 calc(1 * 7.1%) 11% / 0.96);
@@ -776,8 +784,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--logo-primary: var(--white-500);
 	--mention-background: var(--mention-bg);
 	--mention-foreground: var(--mention-txt);
-	--modal-background: var(--bg-0);
-	--modal-footer-background: var(--primary-600);
+	--modal-background: var(--bg-1);
+	--modal-footer-background: var(--bg-0);
 	--navigator-header-tint: var(--white-500);
 	--panel-bg: var(--primary-600);
 	--polls-normal-fill-hover: var(--primary-600);
@@ -930,7 +938,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--primary-600: var(--bg-1); /* status bubbles, modals */
 	--primary-630: var(--bg-1); /* vc controls */
 	--primary-700: var(--bg-2); /* vc controls hover */
-	--primary-800: var(--bg-1); /* bot command panel suggestion argument */
+	--primary-800: var(--bg-0); /* call background */
 
 	--white-500: var(--txt-dark); /* THE BANE OF MY EXISTENCE */
 
@@ -948,3 +956,61 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--twitch: var(--acc-1);
     }
 }
+}
+
+/* begin 909 commits */
+::placeholder {
+	color: var(--txt-3) !important;
+}
+::selection {
+	color: var(--bg-0);
+	background: var(--txt-1);
+}
+[class^='callContainer_'] {
+	overflow: visible;
+	background: none !important;
+	overflow-x: hidden;
+	border-radius: var(--panel-roundness);
+	border: var(--border-width) solid var(--border-color);
+	transition: border-color var(--border-transition);
+	&:hover {
+		border-color: var(--border-hover-color);
+		&::after {
+			color: var(--border-hover-color);
+		}
+	}
+}
+[class^='callContainer_'] [class^='topControls_'] section {
+	border: none;
+	&::after {
+		content: '';
+	}
+}
+[class^='callContainer_']::after {
+	content: 'call';
+	display: block;
+	color: var(--txt-3);
+	font-weight: var(--label-font-weight);
+	position: absolute;
+	top: -8px;
+	left: 8px;
+	background-color: var(--bg-0);
+	padding: 0 4px;
+	z-index: 100;
+	transition: color var(--border-transition);
+}
+
+.wrapper_fea3ef.hidden_fea3ef {
+	display: none;
+}
+
+[class^='gradientTop_'],
+[class^='gradientBottom_'] {
+	display: none !important;
+}
+[class^='topControls_'],
+[class^='bottomControls_'] {
+	opacity: 1 !important;
+	transform: none !important;
+}
+/* end 909 commits */
