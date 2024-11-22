@@ -552,42 +552,6 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	order: -1;
 }
 
-/* modal */
-[class^='footerSeparator_f9a4c9'] {
-	box-shadow: none /* remove top border of footer */
-}
-
-/* forums */
-[class^='textContentFooter_a57509'] {
-	background: none !important /* removes the shadow in grid view forum posts */
-}
-
-.chatHeaderBar_e2f46e {
-	margin-bottom: 10px /* removes overlap between "messages" and "this post has been locked" */
-}
-
-/* voice */
-.gradientContainer_dd069c {
-	background: none !important /* removes the top/bottom gradients in voice channels */;
-}
-.callContainer_d880dc .container_fc4f04::after {
-	display: none
-}
-.callContainer_d880dc .container_fc4f04 {
-	border: 0
-}
-.button_dd4f85.colorable_ef18ee.red_ef18ee svg {
-	color: var(--white-500) !important /* disconnect button */
-}
-.heading_a5ea57 {
-	color: var(--txt-0) !important /* "you're the only one here. */
-}
-
-/* image popup */
-.downloadLink_a15d41 {
-	color: white!important /* QUICK FIX, same color as the forward button but technically not themed */
-}
-
 @supports (color:color-mix(in lch,red,blue))and (top:var(--f)) {
     .theme-light, .theme-dark {
 	--action-sheet-gradient-bg: var(--primary-630);
@@ -1009,3 +973,43 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	transform: none !important;
 }
 /* end 909 commits */
+
+/* begin stel commits */
+
+/* modal */
+[class^='footerSeparator_f9a4c9'] {
+	box-shadow: none /* remove top border of footer */
+}
+
+/* forums */
+[class^='textContentFooter_a57509'] {
+	background: none !important /* removes the shadow in grid view forum posts */
+}
+
+.chatHeaderBar_e2f46e {
+	margin-bottom: 10px /* removes overlap between "messages" and "this post has been locked" */
+}
+
+/* voice */
+.gradientContainer_dd069c {
+	background: none !important /* removes the top/bottom gradients in voice channels */;
+}
+.callContainer_d880dc .container_fc4f04::after {
+	display: none
+}
+.callContainer_d880dc .container_fc4f04 {
+	border: 0
+}
+.button_dd4f85.colorable_ef18ee.red_ef18ee svg {
+	color: var(--white-500) !important /* disconnect button */
+}
+.heading_a5ea57 {
+	color: var(--txt-0) !important /* "you're the only one here. */
+}
+
+/* image popup */
+.downloadLink_a15d41 {
+	color: white!important /* QUICK FIX, same color as the forward button but technically not themed */
+}
+
+/* end stel commits */
