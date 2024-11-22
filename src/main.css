@@ -896,7 +896,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--primary-130: var(--bg-0); /* vc controls (2?) */
 	--primary-230: var(--bg-1); /* vc controls hover (2?) */
 	--primary-330: var(--txt-2);
-	--primary-400: var(--acc-2);
+	--primary-400: var(--bg-2);
 	--primary-500: var(--bg-2); /* neutral button background */
 	--primary-600: var(--bg-1); /* status bubbles, modals */
 	--primary-630: var(--bg-1); /* vc controls */
