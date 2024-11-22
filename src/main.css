@@ -1011,6 +1011,9 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .button_dd4f85.colorable_ef18ee.red_ef18ee svg {
 	color: var(--white-500) !important /* disconnect button */
 }
+.colorable_ef18ee.primaryDark_ef18ee {
+	color: inherit
+}
 .heading_a5ea57 {
 	color: var(--txt-0) !important /* "you're the only one here. */
 }
