@@ -1020,4 +1020,14 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	color: white!important /* QUICK FIX, same color as the forward button but technically not themed */
 }
 
+/* audio controls */
+.audioControls_f72aac {
+	background-color: var(--bg-1);
+	color: var(--txt-1)
+}
+
+.controlIcon_f72aac {
+	color: inherit
+}
+
 /* end stel commits */
