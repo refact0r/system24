@@ -209,8 +209,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=searchResultsWrap_] /* search results */,
 .scroller_fb4810 /* new thread */,
 [class^=chat_] > [class*=container_] /* header bar */,
-[class^='form_'] > [class^='wrapper_'] /* no access chat bar */,
-.callContainer_d880dc /* vc container */ {
+[class^='form_'] > [class^='wrapper_'] /* no access chat bar */ {
 	border-radius: var(--panel-roundness);
 	border: var(--border-width) solid var(--border-color);
 	transition: border-color var(--border-transition);
@@ -372,9 +371,6 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container_fc4f04::after {
 	content: 'channel';
 	top: -11px;
-}
-.root_dd069c::before {
-	content: 'channel';
 }
 
 [class^='chatContent_'] > [class^='messagesWrapper_']::after,
