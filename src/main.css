@@ -956,7 +956,6 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	--twitch: var(--acc-1);
     }
 }
-}
 
 /* begin 909 commits */
 ::placeholder {
