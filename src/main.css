@@ -122,7 +122,6 @@
 [class^=jumpToPresentBar_] > button,
 [class^=gifFavoriteButton_],
 [class^=iconWrapper_] /* video play button */,
-[class^=overlayBottom_] > [class^=text-] /* vc names */,
 [class^=categoryText_] /* gif category labels */ {
 	color: var(--txt-0);
 }
@@ -1016,6 +1015,10 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 .heading_a5ea57 {
 	color: var(--txt-0) !important /* "you're the only one here. */
+}
+
+.overlayBottom .text {
+	color: var(--redesign-button-overlay-alpha-text) /* vc names */
 }
 
 /* image popup */
