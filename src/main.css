@@ -379,7 +379,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='panels_']::after {
 	content: 'user';
 }
-[class^='form_']::not(.container_a6d69a .form) [class^='channelTextArea_']::after {
+[class^='form_a7d72e'] [class^='channelTextArea_']::after {
 	content: 'input';
 }
 .guilds_a4d4d9::after {
