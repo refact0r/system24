@@ -979,6 +979,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 
 /* begin stel commits */
 
+/* placeholder text */
+::placeholder {
+	color: var(--txt-3)!important;
+  }
+
 /* modal */
 [class^='footerSeparator_f9a4c9'] {
 	box-shadow: none /* remove top border of footer */
