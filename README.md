@@ -59,3 +59,11 @@ A monochrome version of the default theme with mostly neutral colors.
 [theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/monochrome.theme.css)
 
 ![image](/assets/monochrome.png)
+
+### rose pine
+
+based on the main palette of [rose pine](https://rosepinetheme.com/palette/).
+
+[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/rosepine.theme.css)
+
+![image](/assets/rosepine.png)
