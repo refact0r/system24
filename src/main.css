@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/asciid');
 
 :root {
 	--font: 'DM Mono';
@@ -548,6 +549,12 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 /* toolbar order */
 [class^='toolbar_'] > [class^='search_'] {
 	order: -1;
+}
+
+h3[data-text-variant='heading-xxl/extrabold'] {
+	font-family: 'asciid';
+	font-size: 50px;
+	font-weight: 400;
 }
 
 .theme-dark,
