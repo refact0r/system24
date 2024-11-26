@@ -90,7 +90,8 @@
 	background: none;
 }
 /* fix bgs */
-[class^='content_']>[class^='outer_'] /* profile panel */ {
+[class^='content_']>[class^='outer_'], /* profile panel */
+.container_adcaac /* "voice connected" box */ {
 	--background-secondary-alt: var(--bg-0) !important;
 }
 [class^=childWrapper_] /* no color servers */ {
