@@ -407,6 +407,11 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	content: 'activity';
 }
 
+/* Fix oversized statuses on friends page */
+[class^=peopleColumn_] {
+	max-width: 50rem
+}
+
 /* fix hidden text labels */
 #app-mount [class^=sidebar_],
 .chat_a7d72e /* header bar */,
