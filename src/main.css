@@ -581,7 +581,7 @@ html.theme-light {
 	--background-message-highlight-hover: var(--reply-hover-overlay);
 	--brand-experiment-10a: var(--background-message-highlight-hover);
 
-	--background-message-hover: hsl(0 calc(1 * 0%) 0.4% / 0.06);
+	--background-message-hover: hsl(0 calc(1 * 0%) 50% / 0.06);
 
 	--background-mobile-primary: var(--primary-600);
 	--background-mobile-secondary: var(--primary-630);
