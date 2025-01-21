@@ -1,7 +1,7 @@
 /**
  * @name system24
  * @description A tui-style discord theme.
- * @author refact0r
+ * @author refact0r, Liyua
  * @version 1.0.0
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/system24
@@ -15,8 +15,10 @@
 @import url('https://mrmalinka.github.io/system24round/src/unrounding.css'); /* gets rid of all rounded corners. remove if you want rounded corners. */
 
 /* customize things here */
-:root {
-	--font: '0xProto Nerd Font Propo';
+:root {{
+	--font: '0xProto Nerd Font Propo'; /* UI font name. it must be installed on your system. */
+	letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
+	font-weight: 300; /* UI font weight. */
 	--label-font-weight: 500; /* font weight for panel labels. */
 	--corner-text: 'system24'; /* custom text to display in the corner. only works on windows. */
 	--pad: 16px; /* padding between panels. */
@@ -24,10 +26,10 @@
 	--panel-roundness: 0px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
 
 	/* background colors */
-	--bg-0: oklch(19% 0 0); /* main background color. */
-	--bg-1: oklch(23% 0 0); /* background color for secondary elements like code blocks, embeds, etc. */
-	--bg-2: oklch(27% 0 0); /* color of neutral buttons. */
-	--bg-3: oklch(31% 0 0); /* color of neutral buttons when hovered. */
+	--bg-0: oklch(from {background} l c h); /* main background color. */
+	--bg-1: oklch(from {background} calc(l + 0.04) c h); /* background color for secondary elements like code blocks, embeds, etc. */
+	--bg-2: oklch(from {background} calc(l + 0.08) c h); /* color of neutral buttons. */
+	--bg-3: oklch(from {background} calc(l + 0.12) c h); /* color of neutral buttons when hovered. */
 
 	/* state modifiers */
 	--hover: oklch(54% 0 0 / 0.1); /* color of hovered elements. */
@@ -37,10 +39,10 @@
 	/* text colors */
 	--txt-dark: var(--bg-0); /* color of dark text on colored backgrounds. */
 	--txt-link: var(--cyan); /* color of links. */
-	--txt-0: oklch(90% 0 0); /* color of bright/white text. */
-	--txt-1: oklch(80% 0 0); /* main text color. */
-	--txt-2: oklch(60% 0 0); /* color of secondary text like channel list. */
-	--txt-3: oklch(40% 0 0); /* color of muted text. */
+	--txt-0: oklch(from {foreground} 100% c h); /* color of bright/white text. */
+	--txt-1: oklch(from {foreground} 80% c h); /* main text color. */
+	--txt-2: oklch(from {foreground} 60% c h); /* color of secondary text like channel list. */
+	--txt-3: oklch(from {foreground} 40% c h); /* color of muted text. */
 
 	/* accent colors */
 	--acc-0: var(--purple); /* main accent color. */
@@ -68,15 +70,15 @@
 	--reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered. */
 
 	/* color shades */
-	--pink: oklch(73% 0.12 0);
-	--pink-1: oklch(63% 0.12 0);
-	--pink-2: oklch(53% 0.12 0);
-	--purple: oklch(73% 0.12 300);
-	--purple-1: oklch(63% 0.12 300);
-	--purple-2: oklch(53% 0.12 300);
-	--cyan: oklch(73% 0.12 200);
-	--yellow: oklch(78% 0.12 80);
-	--green: oklch(73% 0.12 160);
-	--green-1: oklch(63% 0.12 160);
-	--green-2: oklch(53% 0.12 160);
-}
+	--pink: oklch(from {color0} l c h);
+	--pink-1: oklch(from var(--pink) calc(l - 0.1) c h);
+	--pink-2: oklch(from var(--pink) calc(l - 0.2) c h);
+	--purple: oklch(from {color1} l c h);
+	--purple-1: oklch(from var(--purple) calc(l - 0.1) c h);
+	--purple-2: oklch(from var(--purple) calc(l - 0.2) c h);
+	--cyan: oklch(from {color2} l c h);
+	--yellow: oklch(from {color3} l c h);
+	--green: oklch(from {color4} l c h);
+	--green-1: oklch(from var(--green) calc(l - 0.1) c h);
+	--green-2: oklch(from var(--green) calc(l - 0.2) c h);
+}}

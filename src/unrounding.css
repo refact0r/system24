@@ -37,6 +37,7 @@
 	bottom: -4px;
 	right: -4px;
 	border: 2px solid var(--bg-0);
+	border-radius: 10px;
 }
 .wrapper_c51b4e:has(rect[fill='#23a55a'])::after,
 .container_e85446:has(div[style='background-color: rgb(35, 165, 90);'])::after,
