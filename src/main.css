@@ -48,7 +48,7 @@
 	--mention-bg: color-mix(in oklch, var(--acc-0), transparent 90%);
 	--mention-overlay: color-mix(in oklch, var(--acc-0), transparent 90%);
 	--mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 95%);
-	--reply-overlay: var(--active);
+	--reply-overlay: var(--heme/system24.theme.cssactive);
 	--reply-hover-overlay: var(--hover);
 
 	--pink: oklch(73% 0.12 0);
@@ -65,9 +65,9 @@
 }
 
 :root {
-	--font-primary: var(--font), 'gg mono', monospace;
-	--font-display: var(--font), 'gg mono', monospace;
-	--font-code: var(--font), 'gg mono', monospace;
+	--font-primary: var(--font), '0xProto Nerd Font Propo';
+	--font-display: var(--font), '0xProto Nerd Font Propo';
+	--font-code: var(--font), '0xProto Nerd Font Mono', monospace;
 }
 
 /* colors */
