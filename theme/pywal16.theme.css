@@ -36,6 +36,7 @@
 	--active: oklch(54% 0 0 / 0.2); /* color of elements when clicked. */
 	--selected: var(--active); /* color of selected elements. */
 
+
 	/* text colors */
 	--txt-dark: var(--bg-0); /* color of dark text on colored backgrounds. */
 	--txt-link: var(--cyan); /* color of links. */
@@ -52,14 +53,14 @@
 	/* borders */
 	--border-width: 2px; /* panel border thickness. */
 	--border-color: var(--bg-3); /* panel border color. */
-	--border-hover-color: var(--acc-0); /* panel border color when hovered. */
+	--border-hover-color: oklch( from {color11} l 10% h); /* panel border color when hovered. */
 	--border-transition: 0.2s ease; /* panel border transition. */
 
 	/* status dot colors */
-	--online-dot: var(--green); /* color of online dot. */
-	--dnd-dot: var(--pink); /* color of do not disturb dot. */
-	--idle-dot: var(--yellow); /* color of idle dot. */
-	--streaming-dot: var(--purple); /* color of streaming dot. */
+	--online-dot: #BADF89; /* color of online dot. */
+	--dnd-dot: #F4037A; /* color of do not disturb dot. */
+	--idle-dot: #F4C074; /* color of idle dot. */
+	--streaming-dot: #9779D1; /* color of streaming dot. */
 
 	/* mention/ping and message colors */
 	--mention-txt: var(--acc-0); /* color of mention text. */
@@ -67,6 +68,7 @@
 	--mention-overlay: color-mix(in oklch, var(--acc-0), transparent 90%); /* overlay color of messages that mention you. */
 	--mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 95%); /* overlay color of messages that mention you when hovered. */
 	--reply-overlay: var(--active); /* overlay color of message you are replying to. */
+
 	--reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered. */
 
 	/* color shades */
