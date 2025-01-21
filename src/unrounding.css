@@ -1,4 +1,3 @@
-/* not actually unrounding haha */
 ::-webkit-scrollbar-thumb,
 * {
 	border-radius: 10px !important;
@@ -16,7 +15,7 @@
 /* fiil circle mask on profile avatar */
 .overlay_f94206:after,  /* profile popup */
 .overlay_f18fcb:after { /* user settings */
-	border-radius: 0;
+	border-radius: 10px;
 }
 
 /* hide status indicators */
@@ -62,7 +61,7 @@
 
 /* unround custom status bubble */
 .statusBubbleOuter_d0a252::before, .statusBubbleOuter_d0a252::after {
-    border-radius: 0 !important;
+    border-radius: 10px !important;
 }
 
 /* fix server list badges */

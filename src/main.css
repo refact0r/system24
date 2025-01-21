@@ -2,7 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/asciid');
 
 :root {
-	--font: 'DM Mono';
+	--font: '0xProto Nerd Font Propo';
 	letter-spacing: -0.05ch;
 	font-weight: 300;
 	--label-font-weight: 500;
@@ -12,7 +12,7 @@
 	--pad: 16px;
 	--txt-pad: 10px;
 
-	--panel-roundness: 0px;
+	--panel-roundness: 10px;
 
 	--bg-0: oklch(19% 0 0);
 	--bg-1: oklch(23% 0 0);
