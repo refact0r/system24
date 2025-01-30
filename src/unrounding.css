@@ -15,7 +15,8 @@
 
 /* fiil circle mask on profile avatar */
 .overlay__75742:after,  /* profile popup */
-.overlay_c0bea0:after { /* user settings */
+.overlay_c0bea0:after {
+	/* user settings */
 	border-radius: 0;
 }
 
