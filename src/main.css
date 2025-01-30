@@ -408,7 +408,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 
 /* Fix oversized statuses on friends page */
-[class^=peopleColumn_] {
+[class^='peopleColumn_'] {
 	width: 0;
 }
 
