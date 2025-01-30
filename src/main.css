@@ -304,7 +304,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 }
 /* make header bar height match chat bar */
 .container__9293f,
-.container_b2ca13 {
+.container__37e49 {
 	height: var(--custom-channel-textarea-text-area-height);
 	box-sizing: border-box;
 }
@@ -331,7 +331,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	}
 }
 [class^='channelBottomBarArea_']:hover {
-	& > .buttonContainer_df39bd {
+	& > .buttonContainer_e6e74f {
 		border-color: var(--border-hover-color);
 	}
 	& > [class^='channelTextArea_']::after {
