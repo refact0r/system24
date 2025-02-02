@@ -140,7 +140,7 @@
 }
 
 /* accents */
-.expandedFolderIconWrapper__48112>svg /* folder icons */ {
+[style='color: rgb(88, 101, 242);'] /* folder icons */ {
 	color: var(--acc-0) !important;
 }
 .folderIconWrapper__48112[style='background-color: rgba(88, 101, 242, 0.4);'] {
