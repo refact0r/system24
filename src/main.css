@@ -86,7 +86,9 @@
 [class^=member_] /* member containers */,
 [class^=searchResultsWrap_] /* search results */,
 .container_e131a9 /* vc panel */,
-[class^=channelTextArea] > [class^=scrollableContainer] {
+[class^=channelTextArea] > [class^=scrollableContainer],
+[class^=channelAppLauncher_] button /* app button */,
+.footer__214dc /* discover button */ {
 	background: none;
 }
 /* fix bgs */
@@ -210,7 +212,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=searchResultsWrap_] /* search results */,
 .scroller_fb64c9 /* new thread */,
 [class^=chat_] > [class*=container_] /* header bar */,
-[class^='form_'] > [class^='wrapper_'] /* no access chat bar */ {
+[class^='form_'] > [class^='wrapper_'] /* no access chat bar */,
+.chatHeaderBar_dc83f5 /* add to channel list popup */ {
 	border-radius: var(--panel-roundness);
 	border: var(--border-width) solid var(--border-color);
 	transition: border-color var(--border-transition);
@@ -238,7 +241,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	.typing_b88801 {
 		border-color: var(--border-hover-color);
 	}
-	& > .messagesWrapper__36d07 {
+	> .messagesWrapper__36d07 {
 		border-color: var(--border-hover-color);
 	}
 }
@@ -323,7 +326,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='channelAppLauncher_'] {
 	margin: 0;
 
-	& > [class^='buttonContainer_'] {
+	> [class^='buttonContainer_'] {
 		height: 100%;
 		border-left: var(--border-width) solid var(--border-color);
 		transition: border-color var(--border-transition);
@@ -331,10 +334,10 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 	}
 }
 [class^='channelBottomBarArea_']:hover {
-	& > .buttonContainer_e6e74f {
+	> .buttonContainer_e6e74f {
 		border-color: var(--border-hover-color);
 	}
-	& > [class^='channelTextArea_']::after {
+	> [class^='channelTextArea_']::after {
 		color: var(--border-hover-color);
 	}
 }
@@ -969,3 +972,86 @@ html.theme-light {
 	transform: none !important;
 }
 /* end 909 commits */
+
+/* begin Androser commits */
+.chatHeaderBar_dc83f5 {
+  padding: var(--txt-pad);
+  margin-bottom: var(--pad);
+  >:first-child {
+    color: var(--txt-2) !important;
+    font-weight: var(--label-font-weight);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+  }
+}
+
+/* fix theming */
+[class^='circleIconButton_'] /* footer buttons */ {
+  background-color: var(--bg-1);
+  &[class*='selected_'] {
+    color: var(--white);
+  }
+}
+[class^='tooltip_'] {
+  background-color: var(--bg-0);
+  color: var(--txt-1);
+  >[class^='tooltipPointer_'] {
+    border-top-color: var(--bg-0);
+  }
+}
+[class*='tooltipGrey_'] {
+  background-color: var(--bg-1);
+  >[class^='tooltipPointer_'] {
+    border-top-color: var(--bg-1);
+  }
+}
+.activeButtonChild_aa63ab /* send message button */ {
+  color: var(--interactive-normal);
+  transition: none;
+}
+.button_aa63ab {
+  &:hover,
+  &:focus {
+    .activeButtonChild_aa63ab {
+      color: var(--interactive-hover) !important;
+    }
+  }
+}
+.separator_aa63ab /* send message border */ {
+  background-color: var(--border-color);
+  width: var(--border-width);
+  height: 100%;
+}
+
+/* rounding fixes */
+[class^=members] /* member list */,
+[class^='messagesWrapper_']>[class^=scroller_] /* chat */,
+[class^='nowPlayingColumn_']>[class^='container_'] /* friends active now page outer */,
+[class^='nowPlayingColumn_'] [class^='scroller'] /* friends active now page inner */,
+[class^='callContainer_'] /* vc */ {
+  border-radius: var(--panel-roundness) !important;
+}
+[class^='privateChannels_']>[class^='scroller_'] /* dms */ {
+  border-radius: 0 0 var(--panel-roundness) var(--panel-roundness) !important;
+}
+.footer__214dc /* discover button */ {
+  margin-top: unset;
+  >.gradient__214dc {
+    background: var(--bg-overlay-app-frame, var(--background-tertiary))
+  }
+}
+
+/* remove extra space */
+[class^='nowPlayingColumn_'] [class^='scroller'] {
+  margin-left: 0;
+}
+
+/* add discover label */
+[class^='sidebar_']>.container__551b0 {
+  position: relative;
+  &::after {
+    content: "discover";
+  }
+}
+/* end Androser commits */
