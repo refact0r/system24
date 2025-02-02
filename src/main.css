@@ -206,6 +206,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .container__9293f /* header bar */,
 [class^=peopleColumn_] /* friends page list */,
 [class^=nowPlayingColumn_] /* friends page active now */,
+.itemCard__7e549 /* friends active now cards */,
 [class^=channelBottomBarArea_] /* chat bar */,
 .container_f369db /* forum */,
 [class^='content_']>[class^='outer_'] /* dm profile panel */,
@@ -213,7 +214,9 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 .scroller_fb64c9 /* new thread */,
 [class^=chat_] > [class*=container_] /* header bar */,
 [class^='form_'] > [class^='wrapper_'] /* no access chat bar */,
-.chatHeaderBar_dc83f5 /* add to channel list popup */ {
+.chatHeaderBar_dc83f5 /* add to channel list popup */,
+.contentWrapper__08434 /* gifs/emojis/stickers */,
+.container_a592e1 /* discover */ {
 	border-radius: var(--panel-roundness);
 	border: var(--border-width) solid var(--border-color);
 	transition: border-color var(--border-transition);
@@ -356,7 +359,8 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='searchResultsWrap_']::after,
 .scroller_fb64c9::after,
 [class^='peopleColumn_']::after,
-[class^='nowPlayingColumn_']::after {
+[class^='nowPlayingColumn_']::after,
+.container_a592e1::after {
 	display: block;
 	color: var(--txt-3);
 	font-weight: var(--label-font-weight);
@@ -1006,6 +1010,19 @@ html.theme-light {
     border-top-color: var(--bg-1);
   }
 }
+.drawerSizingWrapper__08434 /* gifs/emojis/stickers */ {
+  .contentWrapper__08434,
+  [class*='header_'],
+  [class*='wrapper_'],
+  .inspector_aeaaeb,
+  .container_d02962,
+  .stickerCategory__3ad28,
+  .categoryItemDefaultCategory_b9ee0c,
+  #gif-picker-tab-panel {
+    background-color: var(--bg-0);
+    box-shadow: unset;
+  }
+}
 .activeButtonChild_aa63ab /* send message button */ {
   color: var(--interactive-normal);
   transition: none;
@@ -1040,6 +1057,27 @@ html.theme-light {
   >.gradient__214dc {
     background: var(--bg-overlay-app-frame, var(--background-tertiary))
   }
+}
+.container_a592e1 /* discover */ {
+  position: relative;
+  padding: 8px;
+  .backdrop__8a7fc,
+  .scroller__23746 {
+    border-radius: var(--panel-roundness);
+  }
+  /* add labels */
+  &:has(.outerContainer_e1147e)::after {
+    content: "apps";
+  }
+  &:has(.container_d08938)::after {
+    content: "servers";
+  }
+  &:has(.container__955a3)::after {
+    content: "quests";
+  }
+}
+.overlay__8a7fc::after /* remove discover header separator */ {
+  display: none;
 }
 
 /* remove extra space */
