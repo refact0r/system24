@@ -979,66 +979,66 @@ html.theme-light {
 
 /* begin Androser commits */
 .chatHeaderBar_dc83f5 {
-  padding: var(--txt-pad);
-  margin-bottom: var(--pad);
-  >:first-child {
-    color: var(--txt-2) !important;
-    font-weight: var(--label-font-weight);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-wrap: nowrap;
-  }
+	padding: var(--txt-pad);
+	margin-bottom: var(--pad);
+	>:first-child {
+		color: var(--txt-2) !important;
+		font-weight: var(--label-font-weight);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-wrap: nowrap;
+	}
 }
 
 /* fix theming */
 [class^='circleIconButton_'] /* footer buttons */ {
-  background-color: var(--bg-1);
-  &[class*='selected_'] {
-    color: var(--white);
-  }
+	background-color: var(--bg-1);
+	&[class*='selected_'] {
+		color: var(--white);
+	}
 }
 [class^='tooltip_'] {
-  background-color: var(--bg-0);
-  color: var(--txt-1);
-  >[class^='tooltipPointer_'] {
-    border-top-color: var(--bg-0);
-  }
+	background-color: var(--bg-0);
+	color: var(--txt-1);
+	>[class^='tooltipPointer_'] {
+		border-top-color: var(--bg-0);
+	}
 }
 [class*='tooltipGrey_'] {
-  background-color: var(--bg-1);
-  >[class^='tooltipPointer_'] {
-    border-top-color: var(--bg-1);
-  }
+	background-color: var(--bg-1);
+	>[class^='tooltipPointer_'] {
+		border-top-color: var(--bg-1);
+	}
 }
 .drawerSizingWrapper__08434 /* gifs/emojis/stickers */ {
-  .contentWrapper__08434,
-  [class*='header_'],
-  [class*='wrapper_'],
-  .inspector_aeaaeb,
-  .container_d02962,
-  .stickerCategory__3ad28,
-  .categoryItemDefaultCategory_b9ee0c,
-  #gif-picker-tab-panel {
-    background-color: var(--bg-0);
-    box-shadow: unset;
-  }
+	.contentWrapper__08434,
+	[class*='header_'],
+	[class*='wrapper_'],
+	.inspector_aeaaeb,
+	.container_d02962,
+	.stickerCategory__3ad28,
+	.categoryItemDefaultCategory_b9ee0c,
+	#gif-picker-tab-panel {
+		background-color: var(--bg-0);
+		box-shadow: unset;
+	}
 }
 .activeButtonChild_aa63ab /* send message button */ {
-  color: var(--interactive-normal);
-  transition: none;
+	color: var(--interactive-normal);
+	transition: none;
 }
 .button_aa63ab {
-  &:hover,
-  &:focus {
-    .activeButtonChild_aa63ab {
-      color: var(--interactive-hover) !important;
-    }
-  }
+	&:hover,
+	&:focus {
+		.activeButtonChild_aa63ab {
+			color: var(--interactive-hover) !important;
+		}
+	}
 }
 .separator_aa63ab /* send message border */ {
-  background-color: var(--border-color);
-  width: var(--border-width);
-  height: 100%;
+	background-color: var(--border-color);
+	width: var(--border-width);
+	height: 100%;
 }
 
 /* rounding fixes */
@@ -1047,49 +1047,49 @@ html.theme-light {
 [class^='nowPlayingColumn_']>[class^='container_'] /* friends active now page outer */,
 [class^='nowPlayingColumn_'] [class^='scroller'] /* friends active now page inner */,
 [class^='callContainer_'] /* vc */ {
-  border-radius: var(--panel-roundness) !important;
+	border-radius: var(--panel-roundness) !important;
 }
 [class^='privateChannels_']>[class^='scroller_'] /* dms */ {
-  border-radius: 0 0 var(--panel-roundness) var(--panel-roundness) !important;
+	border-radius: 0 0 var(--panel-roundness) var(--panel-roundness) !important;
 }
 .footer__214dc /* discover button */ {
-  margin-top: unset;
-  >.gradient__214dc {
-    background: var(--bg-overlay-app-frame, var(--background-tertiary))
-  }
+	margin-top: unset;
+	>.gradient__214dc {
+		background: var(--bg-overlay-app-frame, var(--background-tertiary))
+	}
 }
 .container_a592e1 /* discover */ {
-  position: relative;
-  padding: 8px;
-  .backdrop__8a7fc,
-  .scroller__23746 {
-    border-radius: var(--panel-roundness);
-  }
-  /* add labels */
-  &:has(.outerContainer_e1147e)::after {
-    content: "apps";
-  }
-  &:has(.container_d08938)::after {
-    content: "servers";
-  }
-  &:has(.container__955a3)::after {
-    content: "quests";
-  }
+	position: relative;
+	padding: 8px;
+	.backdrop__8a7fc,
+	.scroller__23746 {
+		border-radius: var(--panel-roundness);
+	}
+	/* add labels */
+	&:has(.outerContainer_e1147e)::after {
+		content: "apps";
+	}
+	&:has(.container_d08938)::after {
+		content: "servers";
+	}
+	&:has(.container__955a3)::after {
+		content: "quests";
+	}
 }
 .overlay__8a7fc::after /* remove discover header separator */ {
-  display: none;
+	display: none;
 }
 
 /* remove extra space */
 [class^='nowPlayingColumn_'] [class^='scroller'] {
-  margin-left: 0;
+	margin-left: 0;
 }
 
 /* add discover label */
 [class^='sidebar_']>.container__551b0 {
-  position: relative;
-  &::after {
-    content: "discover";
-  }
+	position: relative;
+	&::after {
+		content: "discover";
+	}
 }
 /* end Androser commits */
