@@ -217,7 +217,8 @@
 [class^='form_']>[class^='wrapper_'] /* no access chat bar */,
 .chatHeaderBar_dc83f5 /* add to channel list popup */,
 .contentWrapper__08434 /* gifs/emojis/stickers */,
-.container_a592e1 /* discover */ {
+.container_a592e1 /* discover */,
+.channelTextArea_fb64c9 /* new thread chatbox */ {
 	border-radius: var(--panel-roundness);
 	border: var(--border-width) solid var(--border-color);
 	transition: border-color var(--border-transition);
@@ -277,12 +278,14 @@
 .form_f75fb0::before {
 	display: none !important;
 }
-.channelTextArea_f75fb0 {
+.channelTextArea_f75fb0,
+.channelTextArea_fb64c9 {
 	margin: 0;
 	border-radius: var(--panel-roundness);
 	box-sizing: border-box;
 }
-.channelBottomBarArea_f75fb0 {
+.channelBottomBarArea_f75fb0,
+.submitContainer_fb64c9 {
 	margin-top: var(--pad);
 }
 [class^='form_']>[class^='typing_'] {
@@ -340,12 +343,15 @@
 	}
 }
 .channelBottomBarArea_f75fb0:hover {
-	>.buttonContainer_e6e74f {
-		border-color: var(--border-hover-color);
-	}
-	>.channelTextArea_f75fb0::after {
-		color: var(--border-hover-color);
-	}
+    >.buttonContainer_e6e74f {
+        border-color: var(--border-hover-color);
+    }
+    >.channelTextArea_f75fb0,
+    >.channelTextArea_fb64c9 {
+        &::after {
+            color: var(--border-hover-color);
+        }
+    }
 }
 
 /* add text labels */
@@ -354,6 +360,7 @@
 .messagesWrapper__36d07::after,
 .panels_c48ade::after,
 .channelTextArea_f75fb0::after,
+.channelTextArea_fb64c9::after,
 .guilds_c48ade::after,
 .membersWrap_c8ffbb::after,
 .privateChannels__35e86::after,
@@ -389,9 +396,12 @@
 .panels_c48ade::after {
 	content: 'user';
 }
-.channelTextArea_f75fb0::after {
-	content: 'input';
-}
+.channelTextArea_f75fb0,
+.channelTextArea_fb64c9 {
+    &::after {
+        content: 'input';
+    }
+} 
 .guilds_c48ade::after {
 	content: 'nav';
 }
@@ -437,6 +447,7 @@
 }
 .scroller_fb64c9 /* new thread messages box */ {
 	overflow: visible !important;
+	margin-top: var(--pad);
 }
 /* fix text label position */
 .panels_c48ade,
@@ -1095,5 +1106,13 @@ html.theme-light {
 	&::after {
 		content: "discover";
 	}
+}
+
+/* fix new thread */
+.channelTextArea_fb64c9 {
+    width: unset;
+}
+.textAreaThreadCreation__74017 {
+    height: unset !important;
 }
 /* end Androser commits */
