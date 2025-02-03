@@ -1117,6 +1117,6 @@ html.theme-light {
 }
 /* end Androser commits */
 
-* {
+[class*='scroll'] {
 	will-change: scroll-position;
 }
