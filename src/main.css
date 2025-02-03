@@ -79,7 +79,7 @@
 .stackedBars__74017, .replyBar__841c8, .threadSuggestionBar__841c8 /* reply, thread, atttachment bars above chat bar */,
 .panels_c48ade /* user panel */,
 #app-mount #vc-spotify-player,
-.panels_c48ade>.panel__5dec7 /* streaming panel */, 
+.panels_c48ade>.panel__5dec7 /* streaming panel */,
 .panels_c48ade>.container__37e49 /* user panel inner */,
 .container_c8ffbb /* member list */,
 .members_c8ffbb /* member list inner */,
@@ -111,7 +111,7 @@
 .lookFilled__201d5.colorPrimary__201d5 /* neutral buttons (like in account settings) */,
 #app-mount .lookLink__201d5.colorPrimary__201d5 /* link buttons (like in account settings) */,
 .friendRequestsButton__523aa>.numberBadge__2b1f5 /* inbox friend requests number */,
-.searchFilter_bd816, .searchAnswer_bd8186, 
+.searchFilter_bd816, .searchAnswer_bd8186,
 .partyStatus__4d3fa .anchor_edefb8 /* spotify listen along link */,
 .partyStatus__4d3fa /* spotify listen along text */,
 .iconBadge__650eb:not(.isCurrentUserConnected__650eb) /* vc icon */,
@@ -583,8 +583,14 @@ h3[data-text-variant='heading-xxl/extrabold'] {
 	font-weight: 400;
 }
 
-.theme-dark,
-html.theme-light {
+h3[data-text-variant='heading-xxl/extrabold'] {
+	font-family: 'asciid';
+	font-size: 50px;
+	font-weight: 400;
+}
+
+@supports (color:color-mix(in lch,red,blue))and (top:var(--f)) {
+    .theme-light, .theme-dark {
 	--action-sheet-gradient-bg: var(--primary-630);
 	--activity-card-background: var(--bg-0);
 	--activity-card-icon-overlay: hsl(223 calc(1 * 6.7%) 20.6% / 0.85);
@@ -729,7 +735,7 @@ html.theme-light {
 	--divider-subtle: hsl(0 calc(1 * 0%) 100% / 0.08);
 	--embed-background: var(--primary-630);
 	--embed-background-alternate: var(--primary-600);
-	--embed-title: var(--primary-130);
+	--embed-title: var(--txt-0);
 	--expression-picker-bg: var(--primary-630);
 	--focus-primary: var(--blue-345);
 	--forum-post-extra-media-count-container-background: hsl(228 calc(1 * 6.7%) 14.7% / 0.8);
@@ -867,6 +873,11 @@ html.theme-light {
 	--scrollbar-auto-track: transparent;
 	--scrollbar-thin-thumb: var(--bg-1);
 	--scrollbar-thin-track: transparent;
+	--search-popout-date-picker-hint-text: var(--txt-1);
+	--search-popout-date-picker-hint-value-text: var(--white-500);
+	--search-popout-option-filter-text: var(--txt-1);
+	--search-popout-option-non-text-color: var(--txt-1);
+	--search-popout-option-filter-color: var(--text-1);
 	--spoiler-hidden-background: var(--primary-700);
 	--spoiler-revealed-background: var(--primary-660);
 	--stage-card-pill-bg: var(--primary-630);
@@ -894,7 +905,7 @@ html.theme-light {
 	--text-muted-on-default: var(--primary-330);
 	--text-normal: var(--txt-1);
 	--text-positive: var(--green);
-	--text-primary: var(--primary-230);
+	--text-primary: var(--txt-0);
 	--text-secondary: var(--primary-330);
 	--text-warning: var(--yellow-300);
 	--textbox-markdown-syntax: var(--primary-360);
@@ -911,12 +922,22 @@ html.theme-light {
 	--elevation-low: none;
 	--shadow-ledge: none;
 
+	--brand-200: var(--txt-2);
+	--brand-360: var(--acc-1); /* tab underlines */
+	--brand-400: var(--acc-2); /* search date picker suggestion hover */
 	--brand-500: var(--acc-0); /* unread bar, accent buttons, spotify */
 	--brand-530: var(--acc-0); /* hover highlight in context menu */
 	--brand-560: var(--acc-1); /* accent button hover */
 	--brand-600: var(--acc-2); /* accent button active */
 
+	--primary-130: var(--bg-0); /* vc controls (2?) */
+	--primary-230: var(--bg-1); /* vc controls hover (2?) */
+	--primary-330: var(--txt-2);
+	--primary-400: var(--bg-3);
 	--primary-500: var(--bg-2); /* neutral button background */
+	--primary-600: var(--bg-1); /* status bubbles, modals */
+	--primary-630: var(--bg-1); /* vc controls */
+	--primary-700: var(--bg-2); /* vc controls hover */
 	--primary-800: var(--bg-0); /* call background */
 
 	--white-500: var(--txt-dark); /* THE BANE OF MY EXISTENCE */
@@ -933,6 +954,7 @@ html.theme-light {
 	--green-530: var(--green-2);
 
 	--twitch: var(--acc-1);
+    }
 }
 
 /* begin 909 commits */
@@ -1124,3 +1146,61 @@ html.theme-light {
 .burstGlow__23977 {
 	display: none;
 }
+
+/* begin stel commits */
+
+/* placeholder text */
+::placeholder {
+	color: var(--txt-3)!important;
+  }
+
+/* modal */
+[class^='footerSeparator_f9a4c9'] {
+	box-shadow: none /* remove top border of footer */
+}
+
+/* forums */
+[class^='textContentFooter_a57509'] {
+	background: none !important /* removes the shadow in grid view forum posts */
+}
+
+.chatHeaderBar_e2f46e {
+	margin-bottom: 10px /* removes overlap between "messages" and "this post has been locked" */
+}
+
+/* voice */
+.gradientContainer_dd069c {
+	background: none !important /* removes the top/bottom gradients in voice channels */;
+}
+.callContainer_d880dc .container_fc4f04::after {
+	display: none
+}
+.callContainer_d880dc .container_fc4f04 {
+	border: 0
+}
+.button_dd4f85.colorable_ef18ee.red_ef18ee svg {
+	color: var(--white-500) !important /* disconnect button */
+}
+.colorable_ef18ee.primaryDark_ef18ee {
+	color: inherit
+}
+.heading_a5ea57 {
+	color: var(--txt-0) !important /* "you're the only one here. */
+}
+
+/* image popup */
+.downloadLink_a15d41 {
+	color: white!important /* QUICK FIX, same color as the forward button but technically not themed */
+}
+
+/* audio controls */
+.audioControls_f72aac {
+	background-color: var(--bg-1);
+	color: var(--txt-1)
+}
+
+.controlIcon_f72aac {
+	color: inherit
+}
+
+/* end stel commits */
