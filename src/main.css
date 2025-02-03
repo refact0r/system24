@@ -1117,6 +1117,10 @@ html.theme-light {
 }
 /* end Androser commits */
 
+/* scroll optimizations */
 [class*='scroll'] {
 	will-change: scroll-position;
+}
+.burstGlow__23977 {
+	display: none;
 }
