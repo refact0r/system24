@@ -188,7 +188,7 @@
 }
 
 /* fix inbox overflow and hiding window controls */
-[class^='notAppAsidePanel_']>[class^='layerContainer_'] {
+[class^='notAppAsidePanel_'] > [class^='layerContainer_'] {
 	overflow: hidden;
 }
 
@@ -243,11 +243,11 @@
 /* fix border hover effect */
 .chatContent_f75fb0 {
 	&:has(.typing_b88801:hover),
-	&:has(>.messagesWrapper__36d07:hover) {
+	&:has(> .messagesWrapper__36d07:hover) {
 		.typing_b88801 {
 			border-color: var(--border-hover-color);
 		}
-		>.messagesWrapper__36d07 {
+		> .messagesWrapper__36d07 {
 			border-color: var(--border-hover-color);
 		}
 	}
@@ -288,7 +288,7 @@
 .submitContainer_fb64c9 {
 	margin-top: var(--pad);
 }
-[class^='form_']>[class^='typing_'] {
+[class^='form_'] > [class^='typing_'] {
 	background: var(--bg-0);
 	order: -1;
 	top: -24px;
@@ -300,7 +300,7 @@
 	border-top: none;
 	transition: border-color var(--border-transition);
 }
-.chatContent_f75fb0:has([class^='typing_'])>.messagesWrapper__36d07>[class^='jumpToPresentBar_'] {
+.chatContent_f75fb0:has([class^='typing_']) > .messagesWrapper__36d07 > [class^='jumpToPresentBar_'] {
 	margin-bottom: 22px;
 }
 .clipContainer__841c8 {
@@ -322,7 +322,7 @@
 }
 
 /* fix chat bar when no chat bar */
-[class^='form_']>[class^='wrapper_'] {
+[class^='form_'] > [class^='wrapper_'] {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -335,7 +335,7 @@
 .channelAppLauncher_e6e74f {
 	margin: 0;
 
-	>[class^='buttonContainer_'] {
+	> [class^='buttonContainer_'] {
 		height: 100%;
 		border-left: var(--border-width) solid var(--border-color);
 		transition: border-color var(--border-transition);
@@ -343,19 +343,19 @@
 	}
 }
 .channelBottomBarArea_f75fb0:hover {
-    >.buttonContainer_e6e74f {
-        border-color: var(--border-hover-color);
-    }
-    >.channelTextArea_f75fb0,
-    >.channelTextArea_fb64c9 {
-        &::after {
-            color: var(--border-hover-color);
-        }
-    }
+	> .buttonContainer_e6e74f {
+		border-color: var(--border-hover-color);
+	}
+	> .channelTextArea_f75fb0,
+	> .channelTextArea_fb64c9 {
+		&::after {
+			color: var(--border-hover-color);
+		}
+	}
 }
 
 /* add text labels */
-.sidebar_c48ade>[class^='container_']::after,
+.sidebar_c48ade > [class^='container_']::after,
 .container__9293f::after,
 .messagesWrapper__36d07::after,
 .panels_c48ade::after,
@@ -365,7 +365,7 @@
 .membersWrap_c8ffbb::after,
 .privateChannels__35e86::after,
 .container_f369db::after,
-.content_f75fb0>.outer_c0bea0::after,
+.content_f75fb0 > .outer_c0bea0::after,
 .searchResultsWrap_a9e706::after,
 .scroller_fb64c9::after,
 .peopleColumn__133bf::after,
@@ -382,7 +382,7 @@
 	z-index: 100;
 	transition: color var(--border-transition);
 }
-.sidebar_c48ade>[class^='container_']::after {
+.sidebar_c48ade > [class^='container_']::after {
 	content: 'server';
 }
 .container__9293f::after {
@@ -398,10 +398,10 @@
 }
 .channelTextArea_f75fb0,
 .channelTextArea_fb64c9 {
-    &::after {
-        content: 'input';
-    }
-} 
+	&::after {
+		content: 'input';
+	}
+}
 .guilds_c48ade::after {
 	content: 'nav';
 }
@@ -414,7 +414,7 @@
 .container_f369db::after {
 	content: 'forum';
 }
-.content_f75fb0>.outer_c0bea0::after {
+.content_f75fb0 > .outer_c0bea0::after {
 	content: 'profile';
 }
 .searchResultsWrap_a9e706::after {
@@ -459,7 +459,7 @@
 [class^=tabBody_] /* friends page */ {
 	min-height: 0;
 }
-[class^='container_']>[class^='base_'] {
+[class^='container_'] > [class^='base_'] {
 	min-width: 0;
 }
 /* add padding to make label not look weird */
@@ -488,7 +488,7 @@
 	box-sizing: border-box;
 }
 /* add padding to user profile panel */
-.content_f75fb0>.outer_c0bea0 {
+.content_f75fb0 > .outer_c0bea0 {
 	padding: var(--txt-pad);
 	box-sizing: border-box;
 	background-clip: content-box;
@@ -526,7 +526,7 @@
 }
 
 /* wordmark */
-.wordmarkWindows__421ed>svg {
+.wordmarkWindows__421ed > svg {
 	display: none;
 }
 .wordmarkWindows__421ed::after {
@@ -573,7 +573,7 @@
 }
 
 /* toolbar order */
-[class^='toolbar_']>[class^='search_'] {
+[class^='toolbar_'] > [class^='search_'] {
 	order: -1;
 }
 
@@ -995,7 +995,7 @@ html.theme-light {
 .chatHeaderBar_dc83f5 {
 	padding: var(--txt-pad);
 	margin-bottom: var(--pad);
-	>:first-child {
+	> :first-child {
 		color: var(--txt-2) !important;
 		font-weight: var(--label-font-weight);
 		overflow: hidden;
@@ -1014,13 +1014,13 @@ html.theme-light {
 [class^='tooltip_'] {
 	background-color: var(--bg-0);
 	color: var(--txt-1);
-	>[class^='tooltipPointer_'] {
+	> [class^='tooltipPointer_'] {
 		border-top-color: var(--bg-0);
 	}
 }
 [class*='tooltipGrey_'] {
 	background-color: var(--bg-1);
-	>[class^='tooltipPointer_'] {
+	> [class^='tooltipPointer_'] {
 		border-top-color: var(--bg-1);
 	}
 }
@@ -1069,8 +1069,8 @@ html.theme-light {
 }
 .footer__214dc /* discover button */ {
 	margin-top: unset;
-	>.gradient__214dc {
-		background: var(--bg-overlay-app-frame, var(--background-tertiary))
+	> .gradient__214dc {
+		background: var(--bg-overlay-app-frame, var(--background-tertiary));
 	}
 }
 .container_a592e1 /* discover */ {
@@ -1082,13 +1082,13 @@ html.theme-light {
 	}
 	/* add labels */
 	&:has(.outerContainer_e1147e)::after {
-		content: "apps";
+		content: 'apps';
 	}
 	&:has(.container_d08938)::after {
-		content: "servers";
+		content: 'servers';
 	}
 	&:has(.container__955a3)::after {
-		content: "quests";
+		content: 'quests';
 	}
 }
 .overlay__8a7fc::after /* remove discover header separator */ {
@@ -1101,18 +1101,22 @@ html.theme-light {
 }
 
 /* add discover label */
-.sidebar_c48ade>.container__551b0 {
+.sidebar_c48ade > .container__551b0 {
 	position: relative;
 	&::after {
-		content: "discover";
+		content: 'discover';
 	}
 }
 
 /* fix new thread */
 .channelTextArea_fb64c9 {
-    width: unset;
+	width: unset;
 }
 .textAreaThreadCreation__74017 {
-    height: unset !important;
+	height: unset !important;
 }
 /* end Androser commits */
+
+* {
+	will-change: scroll-position;
+}
