@@ -1160,7 +1160,7 @@ h3[data-text-variant='heading-xxl/extrabold'] {
 }
 
 /* forums */
-[class^='textContentFooter_a57509'] {
+.textContentFooter__9a337 {
 	background: none !important /* removes the shadow in grid view forum posts */
 }
 
