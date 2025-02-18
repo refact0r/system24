@@ -70,3 +70,9 @@ based on the main palette of [rose pine](https://rosepinetheme.com/palette/).
 [theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/rosepine.theme.css)
 
 ![image](/assets/rosepine.png)
+
+### nord 
+based on the nord colour palette [nord](https://www.nordtheme.com/docs/colors-and-palettes).
+[theme file](https://raw.githubusercontent.com/gator-git/system24/refs/heads/main/theme/flavors/nord.theme.css)
+![image](/assets/nord_theme.png)
+
