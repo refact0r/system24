@@ -73,6 +73,8 @@ based on the main palette of [rose pine](https://rosepinetheme.com/palette/).
 
 ### nord 
 based on the nord colour palette [nord](https://www.nordtheme.com/docs/colors-and-palettes).
+
 [theme file](https://raw.githubusercontent.com/gator-git/system24/refs/heads/main/theme/flavors/nord.theme.css)
+
 ![image](/assets/nord_theme.png)
 
