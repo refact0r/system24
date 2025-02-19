@@ -1,0 +1,27 @@
+name: Update Classes
+
+on:
+  schedule:
+    - cron: "0 */12 * * *" # every 12 hours
+  workflow_dispatch:
+  repository_dispatch: #webhook trigger
+    types: [update_class]
+
+jobs:
+  classUpdate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - id: update
+        uses: metro420yt/class-update@v1-rc
+        with:
+          folder: src
+          ext: css
+          diff: "https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt"
+      - uses: EndBug/add-and-commit@v9
+        if: ${{steps.update.outputs.totalChanges > 0}}
+        with:
+          default_author: github_actions
+          message: "chore: update classes >_<"
+          fetch: true
