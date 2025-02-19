@@ -21,5 +21,5 @@ jobs:
         if: ${{steps.update.outputs.totalChanges > 0}}
         with:
           default_author: github_actions
-          message: "chore: update classes"
+          message: "chore: update classes >_<"
           fetch: true
