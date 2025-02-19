@@ -82,3 +82,7 @@
 	--green-1: oklch(from var(--green) calc(l - 0.1) c h);
 	--green-2: oklch(from var(--green) calc(l - 0.2) c h);
 }}
+/*For testing purposes*/
+.horizontal_bba380 > .flex_bba380 /* fix voice connected cut off */ {
+	margin-left: 4px;
+}
