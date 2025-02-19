@@ -14,7 +14,7 @@ jobs:
       - id: update
         uses: metro420yt/class-update@v1-rc
         with:
-          folder: stuff
+          folder: theme
           ext: css
           diff: 'https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt'
       - uses: EndBug/add-and-commit@v9
