@@ -81,8 +81,3 @@
 	--green-1: oklch(63% 0.12 160);
 	--green-2: oklch(53% 0.12 160);
 }
-
-/*For testing purposes*/
-.horizontal__7c0ba > .flex__7c0ba /* fix voice connected cut off */ {
-	margin-left: 4px;
-}
