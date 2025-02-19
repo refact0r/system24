@@ -1,6 +1,8 @@
 name: Update Classes
 
 on:
+  schedule:
+    - cron: '0 */12 * * *' # every 12 hours
   workflow_dispatch:
   repository_dispatch: #webhook trigger
     types: [update_class]
