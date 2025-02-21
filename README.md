@@ -1,5 +1,5 @@
 > [!WARNING]  
-> recently discord has been rolling out a new UI refresh update to some users, which breaks the theme. if you have this update, please join the [discord server](https://discord.gg/nz87hXyvcy) and see the pinned message in #important for instructions on how to revert the update.
+> recently discord has been rolling out a new UI refresh update to some users, which breaks the theme. please join the [discord server](https://discord.gg/nz87hXyvcy) and see the pinned message in #important for instructions on how to revert the update.
 
 ![preivew](/assets/preview.png)
 
