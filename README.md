@@ -70,3 +70,11 @@ based on the main palette of [rose pine](https://rosepinetheme.com/palette/).
 [theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/rosepine.theme.css)
 
 ![image](/assets/rosepine.png)
+
+### everforest
+
+based on the medium palette of [everforest](https://github.com/sainnhe/everforest).
+
+[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/everforest.theme.css)
+
+![image](/assets/everforest.png)
