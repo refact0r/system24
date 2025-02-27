@@ -70,3 +70,11 @@ based on the main palette of [rose pine](https://rosepinetheme.com/palette/).
 [theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/rosepine.theme.css)
 
 ![image](/assets/rosepine.png)
+
+### kanagawa wave 
+
+based on the neovim theme [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim).
+
+[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/kanagawa-wave.theme.css)
+
+![image](/assets/kanagawa-wave.png)
