@@ -870,6 +870,8 @@ html.theme-light {
 	--scrollbar-thin-track: transparent;
 	--spoiler-hidden-background: var(--primary-700);
 	--spoiler-revealed-background: var(--primary-660);
+	--__spoiler-warning-text-color: var(--txt-1);
+	--__spoiler-warning-text-color--hover: var(--txt-0);
 	--stage-card-pill-bg: var(--primary-630);
 	--status-danger: var(--pink);
 	--status-danger-background: var(--red-430);

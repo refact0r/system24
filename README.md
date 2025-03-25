@@ -70,3 +70,12 @@ based on the main palette of [rose pine](https://rosepinetheme.com/palette/).
 [theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/rosepine.theme.css)
 
 ![image](/assets/rosepine.png)
+
+### tokyo-night
+
+A clean ~~Visual Studio Code~~ Discord theme that celebrates the lights of Downtown Tokyo at night.
+based on VSCode theme ["tokyo-night"](https://github.com/tokyo-night/tokyo-night-vscode-theme).
+
+[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/tokyo-night.theme.css)
+
+![image](/assets/tokyo-night.png)
