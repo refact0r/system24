@@ -33,7 +33,9 @@
 
 	/* state modifiers */
 	--hover: oklch(54% 0.02 285 / 0.1); /* color of hovered elements. */
-	--active: oklch(64% 0.10 18.5 / 0.2); /* color of elements when clicked. */
+	--active: oklch(54% 0.02 285 / 0.2); /* color of elements when clicked. */
+	/* alternative color (terminal red) on selected button */
+	/* --active: oklch(64% 0.10 18.5 / 0.2); */
 	--selected: var(--active); /* color of selected elements. */
 
 	/* text colors */
