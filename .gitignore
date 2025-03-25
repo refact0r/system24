@@ -1,3 +1,12 @@
 node_modules/
-
 .env
+prepros.config
+/.vscode/
+sass.txt
+.prettierignore
+CHECKUP.txt
+node_modules
+dist
+.parcel-cache
+package-lock.json
+*.pyc

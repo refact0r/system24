@@ -1,7 +1,7 @@
 /**
- * @name system24 (vencord)
- * @description A tui-style discord theme. Based on Vencord's color palette. (https://vencord.dev/)
- * @author refact0r, makimwah
+ * @name system24
+ * @description A tui-style discord theme.
+ * @author refact0r
  * @version 1.0.0
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/system24
@@ -17,37 +17,37 @@
 /* customize things here */
 :root {
 	--font: 'DM Mono'; /* UI font name. it must be installed on your system. */
-	letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
-	font-weight: 300; /* UI font weight. */
-	--label-font-weight: 500; /* font weight for panel labels. */
-	--corner-text: 'vencord24'; /* custom text to display in the corner. only works on windows. */
+	letter-spacing: 0; /* decreases letter spacing for better readability. */
+	font-weight: 400; /* UI font weight. */
+	--label-font-weight: 400; /* font weight for panel labels. */
+	--corner-text: 'system24'; /* custom text to display in the corner. only works on windows. */
 	--pad: 16px; /* padding between panels. */
 	--txt-pad: 10px; /* padding inside panels to prevent labels from clipping */
 	--panel-roundness: 0px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
 
 	/* background colors */
-	--bg-0: oklch(28% 0.002 48); /* main background color. */
-	--bg-1: oklch(25% 0.001 48); /* background color for secondary elements like code blocks, embeds, etc. */
-	--bg-2: oklch(34% 0.004 48); /* color of neutral buttons. */
-	--bg-3: oklch(38% 0.006 48); /* color of neutral buttons when hovered. */
+	--bg-0: #191724; /* main background color. */
+	--bg-1: #1f1d2e; /* background color for secondary elements like code blocks, embeds, etc. */
+	--bg-2: #26233a; /* color of neutral buttons. */
+	--bg-3: #403d52; /* color of neutral buttons when hovered. */
 
 	/* state modifiers */
-	--hover: oklch(54% 0.006 48 / 0.1); /* color of hovered elements. */
-	--active: oklch(54% 0.006 48 / 0.2); /* color of elements when clicked. */
+	--hover: color-mix(in srgb, var(--bg-3), transparent 60%); /* color of hovered elements. */
+	--active: color-mix(in srgb, var(--bg-3), transparent 80%); /* color of elements when clicked. */
 	--selected: var(--active); /* color of selected elements. */
 
 	/* text colors */
 	--txt-dark: var(--bg-0); /* color of dark text on colored backgrounds. */
-	--txt-link: var(--cyan); /* color of links. */
-	--txt-0: oklch(90% 0 0); /* color of bright/white text. */
-	--txt-1: #ddc7a0; /* main text color. */
-	--txt-2: #918274; /* color of secondary text like channel list. */
-	--txt-3: #918274; /* color of muted text. */
+	--txt-link: var(--rose); /* color of links. */
+	--txt-0: #ffffff; /* color of bright/white text. */
+	--txt-1: #e0def4; /* main text color. */
+	--txt-2: #908caa; /* color of secondary text like channel list. */
+	--txt-3: #6e6a86; /* color of muted text. */
 
 	/* accent colors */
-	--acc-0: var(--purple); /* main accent color. */
-	--acc-1: var(--purple-1); /* color of accent buttons when hovered. */
-	--acc-2: var(--purple-1); /* color of accent buttons when clicked. */
+	--acc-0: var(--rose); /* main accent color. */
+	--acc-1: var(--rose-1); /* color of accent buttons when hovered. */
+	--acc-2: var(--rose-2); /* color of accent buttons when clicked. */
 
 	/* borders */
 	--border-width: 2px; /* panel border thickness. */
@@ -70,14 +70,18 @@
 	--reply-hover-overlay: var(--hover); /* overlay color of message you are replying to when hovered. */
 
 	/* color shades */
-	--pink: #ea6962;
-	--pink-1: oklch(63% 0.12 0);
-	--pink-2: oklch(53% 0.12 0);
-	--purple: #d3869b;
-	--purple-1: #d27390;
-	--cyan: #7caea3;
-	--yellow: #d8a656;
-	--green: #a8b665;
-	--green-1: oklch(63% 0.12 160);
-	--green-2: oklch(53% 0.12 160);
+	--pink: oklch(69.77% 0.1565 4.22);
+	--pink-1: oklch(59.77% 0.1565 4.22);
+	--pink-2: oklch(49.77% 0.1565 4.22);
+	--purple: oklch(77.6% 0.0945 304.99);
+	--purple-1: oklch(67.6% 0.0945 304.99);
+	--purple-2: oklch(57.6% 0.0945 304.99);
+	--cyan: oklch(52.77% 0.0793 227.72);
+	--yellow: oklch(84.29% 0.11 74.6);
+	--green: oklch(82.19% 0.0543 209.56);
+	--green-1: oklch(72.19% 0.0543 209.56);
+	--green-2: oklch(62.19% 0.0543 209.56);
+	--rose: oklch(83.63% 0.0544 21.14);
+	--rose-1: oklch(73.63% 0.0544 21.14);
+	--rose-2: oklch(63.63% 0.0544 21.14);
 }
