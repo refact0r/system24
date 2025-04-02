@@ -70,3 +70,11 @@ based on the main palette of [rose pine](https://rosepinetheme.com/palette/).
 [theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/rosepine.theme.css)
 
 ![image](/assets/rosepine.png)
+
+### gruvbox light
+
+based on the [gruvbox light palette](https://github.com/morhetz/gruvbox?tab=readme-ov-file#light-mode-1).
+
+[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/gruvbox-light.theme.css)
+
+![image](/assets/gruvbox-light.png)
