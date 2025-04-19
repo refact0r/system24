@@ -1,5 +1,5 @@
 > [!WARNING]  
-> recently discord has been rolling out a new UI refresh update to some users, which breaks the theme. please join the [discord server](https://discord.gg/nz87hXyvcy) and see the pinned message in #important for instructions on how to revert the update.
+> recently discord has rolled out a new UI refresh update, which breaks the theme. for now, development is paused. if and when i find the motivation, the theme will be rewritten for the new UI. until then, please check out my other theme, [midnight](https://github.com/refact0r/midnight-discord).
 
 ![preivew](/assets/preview.png)
 
