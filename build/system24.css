@@ -1,3 +1,31 @@
+/* main.css */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+.visual-refresh {
+	.bg__960e4 {
+		background: var(--bg-base-primary);
+	}
+}
+
+/* colors.css */
+@property --colors {
+	syntax: 'on | off';
+	inherits: false;
+	initial-value: on;
+}
+
+@container root style(--colors: on) {
+	#app-mount .wrapper__44b0c {
+		--online-2: var(--online);
+		--dnd-2: var(--dnd);
+		--idle-2: var(--idle);
+		--offline-2: var(--offline);
+		--streaming-2: var(--streaming);
+	}
+}
+
+/* unrounding.css */
 @property --unrounding {
 	syntax: 'on | off';
 	inherits: false;
@@ -55,3 +83,4 @@
 		background: var(--streaming-2);
 	}
 }
+

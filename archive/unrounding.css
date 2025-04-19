@@ -1,0 +1,67 @@
+/* unrounding */
+::-webkit-scrollbar-thumb,
+* {
+	border-radius: 0 !important;
+}
+/* hide round masks */
+[class^='listItem_'] [class^='wrapper_'] > [class^='svg_'] > mask,
+[class^='bannerSVGWrapper_'] > mask > circle {
+	display: none;
+}
+[class^='mask_'] > foreignObject,
+[class^='svg_'] > foreignObject {
+	mask-image: none;
+}
+
+/* fiil circle mask on profile avatar */
+.overlay__75742:after,  /* profile popup */
+.overlay_c0bea0:after {
+	/* user settings */
+	border-radius: 0;
+}
+
+/* hide status indicators */
+[class^='mask_'] > rect,
+[class^='mask_'] > circle,
+[class^='mask_'] > svg {
+	display: none;
+}
+
+/* re-add status indicators */
+.wrapper__44b0c:has(rect)::after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	bottom: -4px;
+	right: -4px;
+	border: 2px solid var(--bg-0);
+}
+.wrapper__44b0c:has(rect[fill='#23a55a'])::after {
+	background: var(--online-dot) !important;
+}
+.wrapper__44b0c:has(rect[fill='#f23f43'])::after {
+	background: var(--dnd-dot) !important;
+}
+.wrapper__44b0c:has(rect[fill='#f0b232'])::after {
+	background: var(--idle-dot) !important;
+}
+.wrapper__44b0c:has(rect[fill='#80848e'])::after {
+	background: var(--txt-3) !important;
+}
+.wrapper__44b0c:has(rect[fill='#593695'])::after {
+	background: var(--streaming-dot);
+}
+
+/* fix server list badges */
+[class^='lowerBadge_'] {
+	border: 2px solid var(--bg-0);
+	bottom: -4px;
+	right: -4px;
+}
+[class^='upperBadge_'] {
+	border: 2px solid var(--bg-0);
+	top: -4px;
+	right: -4px;
+}
