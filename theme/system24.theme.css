@@ -34,7 +34,7 @@ body {
 	--custom-app-top-bar-height: 32px; /* height of the titlebar/top bar (default is 36px)*/
 
 	/* window controls */
-	--custom-window-controls: on; /* off: default, on: custom window controls */
+	--custom-window-controls: off; /* off: default, on: custom window controls */
 	--window-control-size: 14px; /* size of custom window controls */
 
 	/* dms button icon options */
