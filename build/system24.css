@@ -86,8 +86,7 @@
     }
     .content_a2f514::before {
         display: block;
-        content: url('https://tenor.com/view/ascii-cats-japanese-gif-19296106');
-        filter: invert(1);
+        content: url('https://cdn.discordapp.com/attachments/1050688576431595572/1254353778187042919/68747470733a2f2f692e706f7374696d672e63632f70587464434d6e792f657a6769662d636f6d2d6769662d6d616b65722d312e676966.gif?ex=6806abbd&is=68055a3d&hm=3b42fabaae7a0dcaa846b40e71dcf89ac98c501a660e2addfa3dabd5c4e38885&');
     }
     .text_a2f514 {
         position: static;
