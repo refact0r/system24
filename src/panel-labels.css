@@ -94,5 +94,12 @@ body {
         .headerEllipseForeground_f37cb1 {
             display: none;
         }
+
+        .scroller__36d07 {
+            top: 8px;
+        }
+        .container_c8ffbb {
+            padding-top: 8px;
+        }
     }
 }

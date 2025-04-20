@@ -14,6 +14,7 @@
     .svg_cc5dd2 > mask,
     .svg__44b0c > rect,
     .svg__44b0c > circle,
+    .svg__44b0c > g,
     .svg__44b0c rect[mask='url(#:rhi:)'],
     .avatar__20a53 .status_a423bd {
         display: none;
