@@ -71,4 +71,8 @@
         top: -4px;
         right: -4px;
     }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0 !important;
+    }
 }
