@@ -1,0 +1,105 @@
+body {
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+@property --panel-labels {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: on;
+}
+
+@container body style(--panel-labels: on) {
+    .visual-refresh {
+        .guilds_c48ade::after,
+        .panels_c48ade::after,
+        .sidebarList_c48ade::after,
+        .subtitleContainer_f75fb0::after,
+        .messagesWrapper__36d07::after,
+        .channelTextArea_f75fb0::after,
+        .container_c8ffbb::after,
+        .container__133bf > .container__9293f:after,
+        .peopleColumn__133bf::after,
+        .nowPlayingColumn__133bf::after {
+            display: block;
+            color: var(--label-color);
+            font-weight: var(--label-font-weight);
+            position: absolute;
+            top: -10px;
+            left: 8px;
+            background-color: var(--background-base-lower);
+            padding: 0 4px;
+            z-index: 100;
+            font-size: 16px;
+        }
+
+        .guilds_c48ade::after {
+            content: 'nav';
+        }
+        .panels_c48ade::after {
+            content: 'user';
+        }
+        .sidebarList_c48ade::after {
+            content: 'channels';
+        }
+        .subtitleContainer_f75fb0::after {
+            content: 'channel';
+        }
+        .messagesWrapper__36d07::after {
+            content: 'chat';
+        }
+        .channelTextArea_f75fb0::after {
+            content: 'input';
+        }
+        .container_c8ffbb::after {
+            content: 'members';
+        }
+        .container__133bf > .container__9293f:after {
+            content: 'friends';
+        }
+        .peopleColumn__133bf::after {
+            content: 'list';
+        }
+        .nowPlayingColumn__133bf::after {
+            content: 'activity';
+        }
+
+        .panels_c48ade,
+        .sidebar_c48ade,
+        .sidebarList_c48ade,
+        .chat_f75fb0,
+        .page_c48ade,
+        .channelTextArea_f75fb0,
+        .container__133bf,
+        .container_c8ffbb,
+        .guilds_c48ade,
+        .peopleColumn__133bf,
+        .tabBody__133bf {
+            overflow: visible;
+        }
+        .page_c48ade,
+        .tabBody__133bf {
+            min-height: 0;
+        }
+        .peopleColumn__133bf {
+            min-width: 0;
+        }
+        .sidebarList_c48ade,
+        .container_c8ffbb,
+        .peopleColumn__133bf,
+        .nowPlayingColumn__133bf {
+            position: relative;
+        }
+
+        .headerEllipseForeground_f37cb1 {
+            display: none;
+        }
+
+        .scroller__36d07 {
+            top: 8px;
+        }
+        .container_c8ffbb {
+            padding-top: 8px;
+        }
+    }
+}

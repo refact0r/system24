@@ -1,0 +1,300 @@
+/* main.css */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/asciid');
+
+body {
+    --custom-chatbar: separated !important; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
+    --chatbar-height: 56px !important; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
+}
+
+.visual-refresh {
+    .bg__960e4 {
+        background: var(--bg-base-primary);
+    }
+}
+
+/* ascii.css */
+@property --ascii-titles {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: on;
+}
+
+@container body style(--ascii-titles: on) {
+    h3[data-text-variant='heading-xxl/extrabold'] {
+        font-family: 'asciid';
+        font-size: 50px;
+        font-weight: 400;
+    }
+}
+
+@property --ascii-loader {
+    syntax: 'off | system24 | cats';
+    inherits: false;
+    initial-value: system24;
+}
+
+@container body style(--ascii-loader: system24) {
+    .content_a2f514 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .content_a2f514 > .spinner_a2f514 {
+        display: none;
+    }
+    .content_a2f514::before {
+        display: block;
+        content: '                    __                ___  __ __\A    _______  _______/ /____  ____ ___ |__ \\/ // /\A   / ___/ / / / ___/ __/ _ \\/ __ `__ \\__/ / // /_\A  (__  ) /_/ (__  ) /_/  __/ / / / / / __/__  __/\A/____/\\__, /____/\\__/\\___/_/ /_/ /_/____/ /_/   \A      /____/                                     ';
+        font-size: 18px;
+        font-family: monospace;
+        white-space: pre;
+        line-height: 1.2;
+        background: linear-gradient(to right, var(--brand-360) 0%, var(--background-accent) 25%, var(--background-accent) 75%, var(--brand-360) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% auto;
+        animation: textShine 1.5s linear infinite reverse;
+    }
+    .text_a2f514 {
+        position: static;
+    }
+
+    @keyframes textShine {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        50.0001% {
+            background-position: -100%, 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
+
+@container body style(--ascii-loader: cats) {
+    .content_a2f514 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        position: static;
+    }
+    .content_a2f514 > .spinner_a2f514 {
+        display: none;
+    }
+    .content_a2f514::before {
+        display: block;
+        content: url('https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/assets/cats.gif');
+    }
+    .text_a2f514 {
+        position: static;
+    }
+}
+
+/* colors.css */
+@container root style(--colors: on) {
+    #app-mount .wrapper__44b0c,
+    #app-mount .container__1ce5d {
+        --online-2: var(--online);
+        --dnd-2: var(--dnd);
+        --idle-2: var(--idle);
+        --offline-2: var(--offline);
+        --streaming-2: var(--streaming);
+    }
+}
+
+/* panel-labels.css */
+body {
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+@property --panel-labels {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: on;
+}
+
+@container body style(--panel-labels: on) {
+    .visual-refresh {
+        .guilds_c48ade::after,
+        .panels_c48ade::after,
+        .sidebarList_c48ade::after,
+        .subtitleContainer_f75fb0::after,
+        .messagesWrapper__36d07::after,
+        .channelTextArea_f75fb0::after,
+        .container_c8ffbb::after,
+        .container__133bf > .container__9293f:after,
+        .peopleColumn__133bf::after,
+        .nowPlayingColumn__133bf::after {
+            display: block;
+            color: var(--label-color);
+            font-weight: var(--label-font-weight);
+            position: absolute;
+            top: -10px;
+            left: 8px;
+            background-color: var(--background-base-lower);
+            padding: 0 4px;
+            z-index: 100;
+            font-size: 16px;
+        }
+
+        .guilds_c48ade::after {
+            content: 'nav';
+        }
+        .panels_c48ade::after {
+            content: 'user';
+        }
+        .sidebarList_c48ade::after {
+            content: 'channels';
+        }
+        .subtitleContainer_f75fb0::after {
+            content: 'channel';
+        }
+        .messagesWrapper__36d07::after {
+            content: 'chat';
+        }
+        .channelTextArea_f75fb0::after {
+            content: 'input';
+        }
+        .container_c8ffbb::after {
+            content: 'members';
+        }
+        .container__133bf > .container__9293f:after {
+            content: 'friends';
+        }
+        .peopleColumn__133bf::after {
+            content: 'list';
+        }
+        .nowPlayingColumn__133bf::after {
+            content: 'activity';
+        }
+
+        .panels_c48ade,
+        .sidebar_c48ade,
+        .sidebarList_c48ade,
+        .chat_f75fb0,
+        .page_c48ade,
+        .channelTextArea_f75fb0,
+        .container__133bf,
+        .container_c8ffbb,
+        .guilds_c48ade,
+        .peopleColumn__133bf,
+        .tabBody__133bf {
+            overflow: visible;
+        }
+        .page_c48ade,
+        .tabBody__133bf {
+            min-height: 0;
+        }
+        .peopleColumn__133bf {
+            min-width: 0;
+        }
+        .sidebarList_c48ade,
+        .container_c8ffbb,
+        .peopleColumn__133bf,
+        .nowPlayingColumn__133bf {
+            position: relative;
+        }
+
+        .headerEllipseForeground_f37cb1 {
+            display: none;
+        }
+
+        .scroller__36d07 {
+            top: 8px;
+        }
+        .container_c8ffbb {
+            padding-top: 8px;
+        }
+    }
+}
+
+/* unrounding.css */
+@property --unrounding {
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: on;
+}
+
+@container body style(--unrounding: on) {
+    *,
+    *::before,
+    *::after {
+        border-radius: 0 !important;
+    }
+
+    .svg_cc5dd2 > mask,
+    .svg__44b0c > rect,
+    .svg__44b0c > circle,
+    .svg__44b0c > g,
+    .svg__44b0c rect[mask='url(#:rhi:)'],
+    .avatar__20a53 .status_a423bd {
+        display: none;
+    }
+
+    .mask__68edb > foreignObject,
+    .svg__44b0c > foreignObject,
+    .svg__2338f > foreignObject {
+        mask: none;
+    }
+
+    .wrapper__44b0c,
+    .container__1ce5d {
+        --online-2: #40a258;
+        --dnd-2: #d83a41;
+        --idle-2: #cc954c;
+        --offline-2: #82838b;
+        --streaming-2: #9147ff;
+    }
+    .wrapper__44b0c:has(rect)::after,
+    .container__1ce5d:has(.status_a423bd)::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        bottom: -4px;
+        right: -4px;
+        border: 2px solid var(--background-base-lower);
+    }
+    .wrapper__44b0c:has(rect[fill='#40a258'])::after,
+    .container__1ce5d:has(.status_a423bd[style='background-color: rgb(64, 162, 88);'])::after {
+        background: var(--online-2) !important;
+    }
+    .wrapper__44b0c:has(rect[fill='#d83a41'])::after {
+        background: var(--dnd-2) !important;
+    }
+    .wrapper__44b0c:has(rect[fill='#cc954c'])::after {
+        background: var(--idle-2) !important;
+    }
+    .wrapper__44b0c:has(rect[fill='#82838b'])::after {
+        background: var(--offline-2) !important;
+    }
+    .wrapper__44b0c:has(rect[fill='#9147ff'])::after {
+        background: var(--streaming-2);
+    }
+
+    .lowerBadge_cc5dd2 {
+        border: 2px solid var(--background-base-lower);
+        bottom: -4px;
+        right: -4px;
+    }
+    .upperBadge_cc5dd2 {
+        border: 2px solid var(--background-base-lower);
+        top: -4px;
+        right: -4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0 !important;
+    }
+}
+
