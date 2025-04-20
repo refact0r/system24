@@ -14,136 +14,136 @@
 @import url('https://refact0r.github.io/system24/build/system24.css');
 
 body {
-	/* font, change to '' for default discord font */
-	--font: 'DM Mono';
-	font-weight: 300 /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
+    /* font, change to '' for default discord font */
+    --font: 'DM Mono';
+    font-weight: 300 /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
 
-	/* sizes */
-	--gap: 12px; /* spacing between panels */
-	--divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
-	--border-thickness: 2px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    /* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 2px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
 
-	/* animation/transition options */
-	--animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
-	--list-item-transition: 0.2s ease; /* transition for list items */
-	--dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+    /* animation/transition options */
+    --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
 
-	/* top bar options */
-	--top-bar-height: 32px; /* height of the titlebar/top bar (discord default is 36px, 24px recommended if moving/hiding top bar buttons) */
-	--top-bar-button-position: titlebar; /* off: default position, hide: hide inbox/support buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to titlebar (will hide title) */
-	--top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
-	--subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+    /* top bar options */
+    --top-bar-height: 32px; /* height of the titlebar/top bar (discord default is 36px, 24px recommended if moving/hiding top bar buttons) */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide inbox/support buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to titlebar (will hide title) */
+    --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+    --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
 
-	/* window controls */
-	--custom-window-controls: off; /* off: default window controls, on: custom window controls */
-	--window-control-size: 14px; /* size of custom window controls */
+    /* window controls */
+    --custom-window-controls: off; /* off: default window controls, on: custom window controls */
+    --window-control-size: 14px; /* size of custom window controls */
 
-	/* dms button options */
-	--custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
-	--dms-icon-svg-url: url(''); /* icon svg url. MUST BE A SVG. */
-	--dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
-	--dms-icon-color-before: var(--icon-secondary); /* normal icon color */
-	--dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
-	--custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
-	--dms-background-image-url: url(''); /* url of the background image */
-	--dms-background-image-size: cover; /* size of the background image (css background-size property) */
-	--dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
+    /* dms button options */
+    --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --dms-icon-svg-url: url(''); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
 
-	/* background image options */
-	--background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
-	--background-image-url: url(''); /* url of the background image */
+    /* background image options */
+    --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
+    --background-image-url: url(''); /* url of the background image */
 
-	/* transparency/blur options */
-	/* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
-	--transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
-	--remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
-	--panel-blur: off; /* off: no changes, on: blur the background of panels */
-	--blur-amount: 12px; /* amount of blur */
-	--bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+    /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+    --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: off; /* off: no changes, on: blur the background of panels */
+    --blur-amount: 12px; /* amount of blur */
+    --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
 
-	/* chatbar options */
-	--custom-chatbar: separated; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
-	--chatbar-height: 56px; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
-	--chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
+    /* chatbar options */
+    --custom-chatbar: separated; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
+    --chatbar-height: 56px; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
+    --chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
 
-	/* other options */
-	--small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
+    /* other options */
+    --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
 }
 
 /* color options */
 :root {
-	--colors: on; /* off: discord default colors, on: midnight custom colors */
+    --colors: on; /* off: discord default colors, on: midnight custom colors */
 
-	/* text colors */
-	--text-0: var(--bg-4); /* text on colored elements */
-	--text-1: oklch(95% 0 0); /* other normally white text */
-	--text-2: oklch(85% 0 0); /* headings and important text */
-	--text-3: oklch(75% 0 0); /* normal text */
-	--text-4: oklch(60% 0 0); /* icon buttons and channels */
-	--text-5: oklch(40% 0 0); /* muted channels/chats and timestamps */
+    /* text colors */
+    --text-0: var(--bg-4); /* text on colored elements */
+    --text-1: oklch(95% 0 0); /* other normally white text */
+    --text-2: oklch(85% 0 0); /* headings and important text */
+    --text-3: oklch(75% 0 0); /* normal text */
+    --text-4: oklch(60% 0 0); /* icon buttons and channels */
+    --text-5: oklch(40% 0 0); /* muted channels/chats and timestamps */
 
-	/* background and dark colors */
-	--bg-1: oklch(31% 0 0); /* dark buttons when clicked */
-	--bg-2: oklch(27% 0 0); /* dark buttons */
-	--bg-3: oklch(23% 0 0); /* spacing, secondary elements */
-	--bg-4: oklch(19% 0 0); /* main background color */
-	--hover: oklch(54% 0 0 / 0.1); /* channels and buttons when hovered */
-	--active: oklch(54% 0 0 / 0.2); /* channels and buttons when clicked or selected */
-	--active-2: oklch(54% 0 0 / 0.3); /* extra state for transparent buttons */
-	--message-hover: var(--hover); /* messages when hovered */
+    /* background and dark colors */
+    --bg-1: oklch(31% 0 0); /* dark buttons when clicked */
+    --bg-2: oklch(27% 0 0); /* dark buttons */
+    --bg-3: oklch(23% 0 0); /* spacing, secondary elements */
+    --bg-4: oklch(19% 0 0); /* main background color */
+    --hover: oklch(54% 0 0 / 0.1); /* channels and buttons when hovered */
+    --active: oklch(54% 0 0 / 0.2); /* channels and buttons when clicked or selected */
+    --active-2: oklch(54% 0 0 / 0.3); /* extra state for transparent buttons */
+    --message-hover: var(--hover); /* messages when hovered */
 
-	/* accent colors */
-	--accent-1: var(--purple-1); /* links and other accent text */
-	--accent-2: var(--purple-2); /* small accent elements */
-	--accent-3: var(--purple-3); /* accent buttons */
-	--accent-4: var(--purple-4); /* accent buttons when hovered */
-	--accent-5: var(--purple-5); /* accent buttons when clicked */
-	--accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
-	--mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
-	--mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
-	--reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
-	--reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+    /* accent colors */
+    --accent-1: var(--purple-1); /* links and other accent text */
+    --accent-2: var(--purple-2); /* small accent elements */
+    --accent-3: var(--purple-3); /* accent buttons */
+    --accent-4: var(--purple-4); /* accent buttons when hovered */
+    --accent-5: var(--purple-5); /* accent buttons when clicked */
+    --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
-	/* status indicator colors */
-	--online: var(--green-2); /* change to #40a258 for default */
-	--dnd: var(--red-2); /* change to #d83a41 for default */
-	--idle: var(--yellow-2); /* change to #cc954c for default */
-	--streaming: var(--purple-2); /* change to ##9147ff for default */
-	--offline: var(--text-4); /* change to #82838b for default offline color */
+    /* status indicator colors */
+    --online: var(--green-2); /* change to #40a258 for default */
+    --dnd: var(--red-2); /* change to #d83a41 for default */
+    --idle: var(--yellow-2); /* change to #cc954c for default */
+    --streaming: var(--purple-2); /* change to ##9147ff for default */
+    --offline: var(--text-4); /* change to #82838b for default offline color */
 
-	/* border colors */
-	--border-light: var(--hover); /* light border color */
-	--border: var(--active); /* normal border color */
-	--button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
+    /* border colors */
+    --border-light: var(--hover); /* light border color */
+    --border: var(--active); /* normal border color */
+    --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
 
-	/* base colors */
-	--red-1: oklch(76% 0.12 0);
-	--red-2: oklch(70% 0.12 0);
-	--red-3: oklch(64% 0.12 0);
-	--red-4: oklch(58% 0.12 0);
-	--red-5: oklch(52% 0.12 0);
+    /* base colors */
+    --red-1: oklch(76% 0.12 0);
+    --red-2: oklch(70% 0.12 0);
+    --red-3: oklch(64% 0.12 0);
+    --red-4: oklch(58% 0.12 0);
+    --red-5: oklch(52% 0.12 0);
 
-	--green-1: oklch(76% 0.11 170);
-	--green-2: oklch(70% 0.11 170);
-	--green-3: oklch(64% 0.11 170);
-	--green-4: oklch(58% 0.11 170);
-	--green-5: oklch(52% 0.11 160);
+    --green-1: oklch(76% 0.11 170);
+    --green-2: oklch(70% 0.11 170);
+    --green-3: oklch(64% 0.11 170);
+    --green-4: oklch(58% 0.11 170);
+    --green-5: oklch(52% 0.11 160);
 
-	--blue-1: oklch(76% 0.1 215);
-	--blue-2: oklch(70% 0.1 215);
-	--blue-3: oklch(64% 0.1 215);
-	--blue-4: oklch(58% 0.1 215);
-	--blue-5: oklch(52% 0.1 215);
+    --blue-1: oklch(76% 0.1 215);
+    --blue-2: oklch(70% 0.1 215);
+    --blue-3: oklch(64% 0.1 215);
+    --blue-4: oklch(58% 0.1 215);
+    --blue-5: oklch(52% 0.1 215);
 
-	--yellow-1: oklch(80% 0.11 90);
-	--yellow-2: oklch(74% 0.11 90);
-	--yellow-3: oklch(68% 0.11 90);
-	--yellow-4: oklch(62% 0.11 90);
-	--yellow-5: oklch(56% 0.11 90);
+    --yellow-1: oklch(80% 0.11 90);
+    --yellow-2: oklch(74% 0.11 90);
+    --yellow-3: oklch(68% 0.11 90);
+    --yellow-4: oklch(62% 0.11 90);
+    --yellow-5: oklch(56% 0.11 90);
 
-	--purple-1: oklch(76% 0.11 310);
-	--purple-2: oklch(70% 0.11 310);
-	--purple-3: oklch(64% 0.11 310);
-	--purple-4: oklch(58% 0.11 310);
-	--purple-5: oklch(52% 0.11 310);
+    --purple-1: oklch(76% 0.11 310);
+    --purple-2: oklch(70% 0.11 310);
+    --purple-3: oklch(64% 0.11 310);
+    --purple-4: oklch(58% 0.11 310);
+    --purple-5: oklch(52% 0.11 310);
 }

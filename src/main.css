@@ -1,8 +1,9 @@
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/asciid');
 
 .visual-refresh {
-	.bg__960e4 {
-		background: var(--bg-base-primary);
-	}
+    .bg__960e4 {
+        background: var(--bg-base-primary);
+    }
 }
