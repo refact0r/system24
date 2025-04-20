@@ -16,7 +16,7 @@
     initial-value: on;
 }
 
-@container root style(--ascii-titles: on) {
+@container body style(--ascii-titles: on) {
     h3[data-text-variant='heading-xxl/extrabold'] {
         font-family: 'asciid';
         font-size: 50px;
@@ -25,12 +25,12 @@
 }
 
 @property --ascii-loader {
-    syntax: 'on | off';
+    syntax: 'off | system24 | cats';
     inherits: false;
-    initial-value: on;
+    initial-value: system24;
 }
 
-@container root style(--ascii-loader: on) {
+@container body style(--ascii-loader: system24) {
     .content_a2f514 {
         display: flex;
         flex-direction: column;
@@ -70,6 +70,27 @@
         100% {
             background-position: 0% 50%;
         }
+    }
+}
+
+@container body style(--ascii-loader: cats) {
+    .content_a2f514 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        position: static;
+    }
+    .content_a2f514 > .spinner_a2f514 {
+        display: none;
+    }
+    .content_a2f514::before {
+        display: block;
+        content: url('https://tenor.com/view/ascii-cats-japanese-gif-19296106');
+        filter: invert(1);
+    }
+    .text_a2f514 {
+        position: static;
     }
 }
 

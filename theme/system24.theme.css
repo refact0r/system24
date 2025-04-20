@@ -71,7 +71,7 @@ body {
 
     /* ascii options */
     --ascii-titles: on; /* off: default, on: use ascii font for titles at the start of a channel */
-    --ascii-loader: on; /* off: default, on: use ascii loader */
+    --ascii-loader: cats; /* off: default, system24: use system24 ascii loader, cats: use cats loader */
 }
 
 /* color options */
