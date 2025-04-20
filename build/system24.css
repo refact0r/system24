@@ -1,86 +1,94 @@
 /* main.css */
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/asciid');
 
 .visual-refresh {
-	.bg__960e4 {
-		background: var(--bg-base-primary);
-	}
+    .bg__960e4 {
+        background: var(--bg-base-primary);
+    }
 }
 
 /* colors.css */
 @property --colors {
-	syntax: 'on | off';
-	inherits: false;
-	initial-value: on;
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: on;
 }
 
 @container root style(--colors: on) {
-	#app-mount .wrapper__44b0c {
-		--online-2: var(--online);
-		--dnd-2: var(--dnd);
-		--idle-2: var(--idle);
-		--offline-2: var(--offline);
-		--streaming-2: var(--streaming);
-	}
+    #app-mount .wrapper__44b0c,
+    #app-mount .container__1ce5d {
+        --online-2: var(--online);
+        --dnd-2: var(--dnd);
+        --idle-2: var(--idle);
+        --offline-2: var(--offline);
+        --streaming-2: var(--streaming);
+    }
 }
 
 /* unrounding.css */
 @property --unrounding {
-	syntax: 'on | off';
-	inherits: false;
-	initial-value: on;
+    syntax: 'on | off';
+    inherits: false;
+    initial-value: on;
 }
 
 @container body style(--unrounding: on) {
-	*,
-	*::before,
-	*::after {
-		border-radius: 0 !important;
-	}
+    *,
+    *::before,
+    *::after {
+        border-radius: 0 !important;
+    }
 
-	.svg_cc5dd2 > mask,
-	.svg__44b0c > rect,
-	.svg__44b0c > circle {
-		display: none;
-	}
+    .svg_cc5dd2 > mask,
+    .svg__44b0c > rect,
+    .svg__44b0c > circle,
+    .svg__44b0c rect[mask='url(#:rhi:)'],
+    .avatar__20a53 .status_a423bd {
+        display: none;
+    }
 
-	.mask__68edb > foreignObject,
-	.svg__44b0c > foreignObject {
-		mask: none;
-	}
+    .mask__68edb > foreignObject,
+    .svg__44b0c > foreignObject,
+    .svg__2338f > foreignObject {
+        mask: none;
+    }
 
-	.wrapper__44b0c {
-		--online-2: #40a258;
-		--dnd-2: #d83a41;
-		--idle-2: #cc954c;
-		--offline-2: #82838b;
-		--streaming-2: #9147ff;
-	}
-	.wrapper__44b0c:has(rect)::after {
-		content: '';
-		display: block;
-		position: absolute;
-		height: 8px;
-		width: 8px;
-		bottom: -4px;
-		right: -4px;
-		border: 2px solid var(--bg-4);
-	}
-	#app-mount .wrapper__44b0c:has(rect[fill='#40a258'])::after {
-		background: var(--online-2) !important;
-	}
-	#app-mount .wrapper__44b0c:has(rect[fill='#d83a41'])::after {
-		background: var(--dnd-2) !important;
-	}
-	#app-mount .wrapper__44b0c:has(rect[fill='#cc954c'])::after {
-		background: var(--idle-2) !important;
-	}
-	#app-mount .wrapper__44b0c:has(rect[fill='#82838b'])::after {
-		background: var(--offline-2) !important;
-	}
-	#app-mount .wrapper__44b0c:has(rect[fill='#9147ff'])::after {
-		background: var(--streaming-2);
-	}
+    .wrapper__44b0c,
+    .container__1ce5d {
+        --online-2: #40a258;
+        --dnd-2: #d83a41;
+        --idle-2: #cc954c;
+        --offline-2: #82838b;
+        --streaming-2: #9147ff;
+    }
+    .wrapper__44b0c:has(rect)::after,
+    .container__1ce5d:has(.status_a423bd)::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        bottom: -4px;
+        right: -4px;
+        border: 2px solid var(--bg-4);
+    }
+    .wrapper__44b0c:has(rect[fill='#40a258'])::after,
+    .container__1ce5d:has(.status_a423bd[style='background-color: rgb(64, 162, 88);'])::after {
+        background: var(--online-2) !important;
+    }
+    .wrapper__44b0c:has(rect[fill='#d83a41'])::after {
+        background: var(--dnd-2) !important;
+    }
+    .wrapper__44b0c:has(rect[fill='#cc954c'])::after {
+        background: var(--idle-2) !important;
+    }
+    .wrapper__44b0c:has(rect[fill='#82838b'])::after {
+        background: var(--offline-2) !important;
+    }
+    .wrapper__44b0c:has(rect[fill='#9147ff'])::after {
+        background: var(--streaming-2);
+    }
 }
 
