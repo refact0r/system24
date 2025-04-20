@@ -61,17 +61,17 @@ body {
     --blur-amount: 12px; /* amount of blur */
     --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
 
-    /* chatbar options */
-    --custom-chatbar: separated; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
-    --chatbar-height: 56px; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
-    --chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
-
     /* other options */
     --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
 
     /* ascii options */
     --ascii-titles: on; /* off: default, on: use ascii font for titles at the start of a channel */
     --ascii-loader: cats; /* off: default, system24: use system24 ascii loader, cats: use cats loader */
+
+    /* panel labels */
+    --panel-labels: on; /* off: default, on: add labels to panels */
+    --label-color: var(--text-muted); /* color of labels */
+    --label-font-weight: 500; /* font weight of labels */
 }
 
 /* color options */
