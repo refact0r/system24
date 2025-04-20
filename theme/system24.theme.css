@@ -16,8 +16,7 @@
 body {
 	/* font, change to '' for default discord font */
 	--font: 'DM Mono';
-	font-weight: 300;
-	letter-spacing: -0.05ch;
+	font-weight: 300 /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
 
 	/* sizes */
 	--gap: 12px; /* spacing between panels */
@@ -30,37 +29,37 @@ body {
 	--dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
 
 	/* top bar options */
-	--move-top-bar-buttons: off; /* off: default, on: move inbox button to the server list (recommend setting top bar height to 24px) */
-	--custom-app-top-bar-height: 32px; /* height of the titlebar/top bar (default is 36px)*/
+	--top-bar-height: 32px; /* height of the titlebar/top bar (discord default is 36px, 24px recommended if moving/hiding top bar buttons) */
+	--top-bar-button-position: titlebar; /* off: default position, hide: hide inbox/support buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to titlebar (will hide title) */
+	--top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+	--subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
 
 	/* window controls */
-	--custom-window-controls: off; /* off: default, on: custom window controls */
+	--custom-window-controls: off; /* off: default window controls, on: custom window controls */
 	--window-control-size: 14px; /* size of custom window controls */
 
-	/* dms button icon options */
-	--dms-icon: default; /* default: use discord icon, off: remove icon, on: use custom icon */
-	--dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
-	--dms-icon-svg-size: 90%; /* size of the svg (css mask-size) */
+	/* dms button options */
+	--custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+	--dms-icon-svg-url: url(''); /* icon svg url. MUST BE A SVG. */
+	--dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
 	--dms-icon-color-before: var(--icon-secondary); /* normal icon color */
 	--dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
-
-	/* dms button background options */
-	--dms-background: off; /* off: default, image: use background image (must set url variable below), color: use custom color/gradient */
+	--custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
 	--dms-background-image-url: url(''); /* url of the background image */
-	--dms-background-image-size: cover; /* size of the background image (css background-size) */
-	--dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background) */
+	--dms-background-image-size: cover; /* size of the background image (css background-size property) */
+	--dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
 
 	/* background image options */
-	--background-image: off; /* off: disable background image, on: enable background image (must set url variable below) */
+	--background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
 	--background-image-url: url(''); /* url of the background image */
 
 	/* transparency/blur options */
 	/* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
-	--transparency-tweaks: off; /* off: default, on: remove some elements for better transparency */
-	--remove-bg-layer: off; /* off: default, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
-	--panel-blur: off; /* off: no blur, on: blur the background of panels */
+	--transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+	--remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+	--panel-blur: off; /* off: no changes, on: blur the background of panels */
 	--blur-amount: 12px; /* amount of blur */
-	--bg-floating: var(--bg-3); /* you can set this to a more opaque color if floating panels look too transparent */
+	--bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
 
 	/* chatbar options */
 	--custom-chatbar: separated; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
@@ -68,7 +67,7 @@ body {
 	--chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
 
 	/* other options */
-	--small-user-panel: off; /* off: default user panel, on: make the user panel smaller like in old discord */
+	--small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
 }
 
 /* color options */
