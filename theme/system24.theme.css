@@ -68,6 +68,10 @@ body {
 
     /* other options */
     --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
+
+    /* ascii options */
+    --ascii-titles: on; /* off: default, on: use ascii font for titles at the start of a channel */
+    --ascii-loader: on; /* off: default, on: use ascii loader */
 }
 
 /* color options */

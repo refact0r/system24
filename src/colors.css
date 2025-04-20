@@ -1,9 +1,3 @@
-@property --colors {
-    syntax: 'on | off';
-    inherits: false;
-    initial-value: on;
-}
-
 @container root style(--colors: on) {
     #app-mount .wrapper__44b0c,
     #app-mount .container__1ce5d {
