@@ -164,6 +164,7 @@ body {
         .subtitleContainer_f75fb0::after,
         .messagesWrapper__36d07::after,
         .channelTextArea_f75fb0::after,
+        .content_f75fb0 > .membersWrap_c8ffbb::after,
         .container_c8ffbb::after,
         .container__133bf > .container__9293f:after,
         .peopleColumn__133bf::after,
@@ -198,7 +199,8 @@ body {
         .channelTextArea_f75fb0::after {
             content: 'input';
         }
-        .container_c8ffbb::after {
+        .container_c8ffbb::after,
+        .content_f75fb0 > .membersWrap_c8ffbb::after {
             content: 'members';
         }
         .container__133bf > .container__9293f:after {
@@ -211,6 +213,7 @@ body {
             content: 'activity';
         }
 
+        .content_f75fb0 > .membersWrap_c8ffbb,
         .panels_c48ade,
         .sidebar_c48ade,
         .sidebarList_c48ade,
@@ -245,7 +248,8 @@ body {
         .scroller__36d07 {
             top: 8px;
         }
-        .container_c8ffbb {
+        .membersWrap_c8ffbb,
+        .guilds_c48ade {
             padding-top: 8px;
         }
     }
