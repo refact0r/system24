@@ -12,6 +12,40 @@ body {
     .bg__960e4 {
         background: var(--bg-base-primary);
     }
+
+    #vc-spotify-progress-bar {
+        margin: 8px 0 0 0;
+    }
+    .vc-spotify-button-row {
+        margin-top: 8px;
+    }
+    #app-mount #vc-spotify-progress-bar .bar_a562c8 {
+        height: 22px !important;
+        top: 0 !important;
+        background-color: var(--background-surface-high);
+    }
+    #app-mount #vc-spotify-progress-bar .barFill_a562c8 {
+        height: 22px !important;
+    }
+    .vc-spotify-time-left,
+    .vc-spotify-time-right {
+        z-index: 1;
+        top: 0;
+        margin-top: 0;
+        mix-blend-mode: difference;
+        font-size: 16px;
+        line-height: 22px;
+        font-family: var(--font);
+    }
+    .vc-spotify-time-left {
+        left: 6px;
+    }
+    .vc-spotify-time-right {
+        right: 6px;
+    }
+    .grabber_a562c8 {
+        visibility: hidden;
+    }
 }
 
 /* ascii.css */
@@ -140,7 +174,7 @@ body {
             position: absolute;
             top: -10px;
             left: 8px;
-            background-color: var(--background-base-lower);
+            background-color: var(--bg-base-primary);
             padding: 0 4px;
             z-index: 100;
             font-size: 16px;
@@ -291,6 +325,10 @@ body {
         border: 2px solid var(--background-base-lower);
         top: -4px;
         right: -4px;
+    }
+
+    .slider__87bf1 > rect[rx='10'] {
+        rx: 0 !important;
     }
 
     ::-webkit-scrollbar-thumb {
