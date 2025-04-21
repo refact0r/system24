@@ -105,5 +105,16 @@ body {
         .guilds_c48ade {
             padding-top: 8px;
         }
+
+        .scroller_ef3116 {
+            padding-top: calc(var(--custom-guild-list-padding) - 8px);
+        }
+
+        .animatedContainer_f37cb1 {
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            width: auto;
+        }
     }
 }

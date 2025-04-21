@@ -27,8 +27,8 @@ body {
     #app-mount #vc-spotify-progress-bar .barFill_a562c8 {
         height: 22px !important;
     }
-    .vc-spotify-time-left,
-    .vc-spotify-time-right {
+    #vc-spotify-progress-bar .vc-spotify-time-left,
+    #vc-spotify-progress-bar .vc-spotify-time-right {
         z-index: 1;
         top: 0;
         margin-top: 0;
@@ -37,13 +37,13 @@ body {
         line-height: 22px;
         font-family: var(--font);
     }
-    .vc-spotify-time-left {
+    #vc-spotify-progress-bar .vc-spotify-time-left {
         left: 6px;
     }
-    .vc-spotify-time-right {
+    #vc-spotify-progress-bar .vc-spotify-time-right {
         right: 6px;
     }
-    .grabber_a562c8 {
+    #vc-spotify-progress-bar .grabber_a562c8 {
         visibility: hidden;
     }
 }
@@ -251,6 +251,17 @@ body {
         .membersWrap_c8ffbb,
         .guilds_c48ade {
             padding-top: 8px;
+        }
+
+        .scroller_ef3116 {
+            padding-top: calc(var(--custom-guild-list-padding) - 8px);
+        }
+
+        .animatedContainer_f37cb1 {
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            width: auto;
         }
     }
 }
