@@ -105,6 +105,9 @@ body {
         .guilds_c48ade {
             padding-top: 8px;
         }
+        .membersWrap_c8ffbb {
+            height: calc(100% - 8px);
+        }
 
         .scroller_ef3116 {
             padding-top: calc(var(--custom-guild-list-padding) - 8px);
