@@ -27,7 +27,7 @@ body {
             position: absolute;
             top: -10px;
             left: 8px;
-            background-color: var(--background-base-lower);
+            background-color: var(--bg-base-primary);
             padding: 0 4px;
             z-index: 100;
             font-size: 16px;

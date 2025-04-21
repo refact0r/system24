@@ -73,6 +73,10 @@
         right: -4px;
     }
 
+    .slider__87bf1 > rect[rx='10'] {
+        rx: 0 !important;
+    }
+
     ::-webkit-scrollbar-thumb {
         border-radius: 0 !important;
     }
