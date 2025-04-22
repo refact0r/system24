@@ -72,6 +72,9 @@
         top: -4px;
         right: -4px;
     }
+    .wrapper__48112.isExpanded__48112 > .stack_dbd263 {
+        overflow: visible !important;
+    }
 
     .slider__87bf1 > rect[rx='10'] {
         rx: 0 !important;
