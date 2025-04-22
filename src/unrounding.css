@@ -1,5 +1,5 @@
 @property --unrounding {
-    syntax: 'on | off';
+    syntax: 'off | on';
     inherits: false;
     initial-value: on;
 }
