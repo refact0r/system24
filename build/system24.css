@@ -135,7 +135,9 @@ body {
         .container_c8ffbb,
         .container__133bf > .container__9293f,
         .peopleColumn__133bf,
-        .nowPlayingColumn__133bf {
+        .nowPlayingColumn__133bf,
+        .container__01ae2 > .container__9293f,
+        .callContainer_cb9592 {
             &::after {
                 display: block;
                 color: var(--label-color);
@@ -186,6 +188,12 @@ body {
         .nowPlayingColumn__133bf::after {
             content: 'activity';
         }
+        .container__01ae2 > .container__9293f::after {
+            content: 'thread';
+        }
+        .callContainer_cb9592::after {
+            content: 'vc';
+        }
 
         .content_f75fb0 > .membersWrap_c8ffbb,
         .panels_c48ade,
@@ -198,7 +206,8 @@ body {
         .container_c8ffbb,
         .guilds_c48ade,
         .peopleColumn__133bf,
-        .tabBody__133bf {
+        .tabBody__133bf,
+        .container__01ae2 {
             overflow: visible;
         }
         .page_c48ade,
@@ -215,15 +224,12 @@ body {
             position: relative;
         }
 
-        .headerEllipseForeground_f37cb1 {
-            display: none;
-        }
-
         .scroller__36d07 {
             top: 8px;
         }
         .membersWrap_c8ffbb,
-        .guilds_c48ade {
+        .guilds_c48ade,
+        .sidebarList_c48ade {
             padding-top: 8px;
         }
         .membersWrap_c8ffbb {
@@ -234,11 +240,21 @@ body {
             padding-top: calc(var(--custom-guild-list-padding) - 8px);
         }
 
-        .animatedContainer_f37cb1 {
-            top: 8px;
+        .animatedContainer_f37cb1,
+        .headerGlass_f37cb1 {
             left: 8px;
             right: 8px;
             width: auto;
+        }
+        .header_f37cb1 {
+            margin: 0 8px;
+        }
+        .container__2637a {
+            overflow: hidden;
+        }
+
+        .callContainer_cb9592 {
+            padding: 8px;
         }
     }
 }
@@ -362,6 +378,9 @@ body {
         border: 2px solid var(--background-base-lower);
         top: -4px;
         right: -4px;
+    }
+    .wrapper__48112.isExpanded__48112 > .stack_dbd263 {
+        overflow: visible !important;
     }
 
     .slider__87bf1 > rect[rx='10'] {
