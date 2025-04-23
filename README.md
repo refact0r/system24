@@ -3,9 +3,7 @@
 
 # system24
 
-a customizable, tui-like discord theme.
-
-inspired by [spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text).
+a customizable, tui-like discord theme. inspired by [spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text).
 
 <img src="https://github.com/refact0r/system24/raw/main/assets/screenshot.png">
 
@@ -51,6 +49,6 @@ DEV_OUTPUT_PATH=C:\Users\USERNAME\AppData\Roaming\Vencord\themes\system24-dev.th
 
 ## credits
 
-[spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text) and [spotify-tui](https://github.com/Rigellute/spotify-tui) for primary design inspiration.
+[spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text) for primary design inspiration.
 
 thanks to all the [contributors](https://github.com/refact0r/system24/graphs/contributors)!
