@@ -1,0 +1,2 @@
+- name: Sync and merge upstream repository with your current repository
+  uses: dabreadman/sync-upstream-repo@v1.2.0.b
