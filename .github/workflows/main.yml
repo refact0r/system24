@@ -1,20 +1,25 @@
-- name: Sync and merge upstream repository with your current repository
-uses: dabreadman/sync-upstream-repo@v1.3.0
-with:
-  # URL of gitHub public upstream repo
-  upstream_repo: "https://github.com/refact0r/system24.git"
-  # Branch to merge from upstream (defaults to downstream branch)
-  upstream_branch: main
-  # Branch to merge into downstream
-  downstream_branch: master
-  # GitHub Bot token
-  token: ${{secret.Syc-with-upstream}}
-  # Git fetch arguments
-  fetch_args: # optional, default is 
-  # Git merge arguments
-  merge_args: # optional, default is 
-  # Git push arguments
-  push_args: # optional, default is 
-  # Toggle to spawn `sync-upstream-repo` with time logs
-  spawn_logs: 
-      
+name: Sync Fork
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: "0 13 * * 1"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+    
+      - name: Sync and merge upstream repository with your current repository
+        uses: dabreadman/sync-upstream-repo@v1.3.0
+        with:
+          # URL of gitHub public upstream repo
+          upstream_repo: "https://github.com/refact0r/system24.git"
+          # Branch to merge from upstream (defaults to downstream branch)
+          upstream_branch: master
+          # Branch to merge into downstream
+          downstream_branch: master
+          # GitHub Bot token
+          token: ${{secret.Syc-with-upstream}}
