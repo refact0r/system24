@@ -3,7 +3,7 @@ name: Sync Fork
 on:
   workflow_dispatch:
   schedule:
-  - cron: "0 13 * * 1"
+  - cron: "0 13 * * 4"
 
 jobs:
   sync:
