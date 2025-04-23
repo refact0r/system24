@@ -22,4 +22,4 @@ jobs:
           # Branch to merge into downstream
           downstream_branch: master
           # GitHub Bot token
-          token: ${{secret.Syc-with-upstream}}
+          token: ${{secrets.Syc-with-upstream}}
