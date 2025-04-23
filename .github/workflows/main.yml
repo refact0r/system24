@@ -18,8 +18,8 @@ jobs:
           # URL of gitHub public upstream repo
           upstream_repo: "https://github.com/refact0r/system24.git"
           # Branch to merge from upstream (defaults to downstream branch)
-          upstream_branch: master
+          upstream_branch: main
           # Branch to merge into downstream
-          downstream_branch: master
+          downstream_branch: main
           # GitHub Bot token
           token: ${{secrets.Syc-with-upstream}}
