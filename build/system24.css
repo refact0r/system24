@@ -253,6 +253,10 @@ body {
             overflow: hidden;
         }
 
+        .headerEllipseForeground_f37cb1 {
+            display: none;
+        }
+
         .callContainer_cb9592 {
             padding: 8px;
         }
