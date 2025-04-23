@@ -1,13 +1,13 @@
-> [!WARNING]  
-> recently discord has rolled out a new UI refresh update, which breaks the theme. for now, development is paused. if and when i find the motivation, the theme will be rewritten for the new UI. until then, please check out my other theme, [midnight](https://github.com/refact0r/midnight-discord).
 
-![preivew](/assets/preview.png)
+<img src="https://github.com/refact0r/system24/raw/master/assets/preview.png">
 
 # system24
 
-a tui-style discord theme, inspired by [spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text).
+a customizable, tui-like discord theme.
 
-![screenshot](/assets/screenshot3.png)
+inspired by [spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text).
+
+<img src="https://github.com/refact0r/system24/raw/master/assets/screenshot.png">
 
 ## discord server
 
@@ -15,58 +15,42 @@ need help? want to get notified about updates? have feedback? join <https://disc
 
 ## install
 
-### vencord/betterdiscord (or client with theme folder)
+### vencord/betterdiscord (or any client that supports theme files)
 
-1. go the [default theme file](https://github.com/refact0r/system24/blob/main/theme/system24.theme.css) or choose a flavor from the options below.
-2. click the download button in the top right.
-3. move the downloaded file into your theme folder. (there should be a button to open the theme folder in theme settings)
-4. you may need to enable the theme in your theme settings by clicking a toggle switch.
-5. (optional) customize the theme by editing the variables in `system24.theme.css`.
+1. download the theme file, [`system24.theme.css`](https://github.com/refact0r/system24/blob/master/theme/system24.theme.css). (there should be a download button at the top right of the page)
+2. drag the file into your theme folder. (there should be a button to open the theme folder in theme settings)
+3. (optional) customize the theme by editing the options in `midnight.theme.css`.
 
 ### install through link
 
-1. add `https://refact0r.github.io/system24/theme/system24.theme.css` to your theme import links.
+add `https://refact0r.github.io/system24/build/system24.css` to your theme import links. you will need to copy the theme variables to your quickcss in order to customize the theme.
 
 ## flavors
 
 customized variants of the theme.
 
-### spotify-text
+- [catppuccin mocha](https://github.com/refact0r/system24/blob/master/theme/flavors/system24-catppuccin-mocha.theme.css)
 
-matches the spotify/spicetify ["text" theme](https://github.com/spicetify/spicetify-themes/tree/master/text). thinner borders and different font weights from the default system24.
+## contributing
 
-[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/spotify-text.theme.css)
+this theme depends on [midnight](https://github.com/refact0r/midnight-discord) for its core styles. if you're looking to contribute, please consider which theme you actually want to work on. feel free to open an issue and ask if you're unsure.
 
-![image](https://github.com/user-attachments/assets/f459f9fc-7b6c-4e9d-a8c9-4adefb0be417)
+this theme uses a dev script to check for changes in the source css files and combine them into a build file. to run locally:
 
-### catppuccin mocha
+1. clone the repository.
+2. run `npm i`.
+3. create a `.env` file in the project root with the paths of any local theme files you want to update (comma separated)
 
-based on the mocha palette of [catppuccin](https://catppuccin.com/palette).
+```
+DEV_OUTPUT_PATH=C:\Users\USERNAME\AppData\Roaming\Vencord\themes\system24-dev.theme.css
+```
 
-[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/catppuccin-mocha.theme.css)
+4. run `npm run dev`.
+5. make changes to any file in `/src` or the main theme file. the local theme files you listed will automatically be updated, along with the build file in `/build`.
+6. make a pull request with your changes!
 
-![image](https://github.com/user-attachments/assets/994d35f6-90d8-4f99-bfce-c3df13f415d4)
+## credits
 
-### gruvbox material
+[spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text) and [spotify-tui](https://github.com/Rigellute/spotify-tui) for primary design inspiration.
 
-based on the vim theme [gruvbox material](https://github.com/sainnhe/gruvbox-material).
-
-[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/gruvbox-material.theme.css)
-
-![image](/assets/gruv-material.png)
-
-### monochrome
-
-A monochrome version of the default theme with mostly neutral colors.
-
-[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/monochrome.theme.css)
-
-![image](/assets/monochrome.png)
-
-### rose pine
-
-based on the main palette of [rose pine](https://rosepinetheme.com/palette/).
-
-[theme file](https://github.com/refact0r/system24/blob/main/theme/flavors/rosepine.theme.css)
-
-![image](/assets/rosepine.png)
+thanks to all the [contributors](https://github.com/refact0r/system24/graphs/contributors)!
