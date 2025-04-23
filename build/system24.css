@@ -295,6 +295,7 @@ body {
             mix-blend-mode: difference;
             font-size: 16px;
             line-height: 22px;
+            pointer-events: none;
         }
         #vc-spotify-progress-bar .vc-spotify-time-left {
             left: 6px;
