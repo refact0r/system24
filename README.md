@@ -1,5 +1,5 @@
 
-<img src="https://github.com/refact0r/system24/raw/master/assets/preview.png">
+<img src="https://github.com/refact0r/system24/raw/main/assets/preview.png">
 
 # system24
 
@@ -7,7 +7,7 @@ a customizable, tui-like discord theme.
 
 inspired by [spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text).
 
-<img src="https://github.com/refact0r/system24/raw/master/assets/screenshot.png">
+<img src="https://github.com/refact0r/system24/raw/main/assets/screenshot.png">
 
 ## discord server
 
@@ -17,7 +17,7 @@ need help? want to get notified about updates? have feedback? join <https://disc
 
 ### vencord/betterdiscord (or any client that supports theme files)
 
-1. download the theme file, [`system24.theme.css`](https://github.com/refact0r/system24/blob/master/theme/system24.theme.css). (there should be a download button at the top right of the page)
+1. download the theme file, [`system24.theme.css`](https://github.com/refact0r/system24/blob/main/theme/system24.theme.css). (there should be a download button at the top right of the page)
 2. drag the file into your theme folder. (there should be a button to open the theme folder in theme settings)
 3. (optional) customize the theme by editing the options in `midnight.theme.css`.
 
@@ -29,7 +29,7 @@ add `https://refact0r.github.io/system24/build/system24.css` to your theme impor
 
 customized variants of the theme.
 
-- [catppuccin mocha](https://github.com/refact0r/system24/blob/master/theme/flavors/system24-catppuccin-mocha.theme.css)
+- [catppuccin mocha](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-catppuccin-mocha.theme.css)
 
 ## contributing
 
