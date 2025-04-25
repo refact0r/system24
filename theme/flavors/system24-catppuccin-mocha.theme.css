@@ -1,11 +1,11 @@
 /**
- * @name system24
- * @description a tui-like discord theme.
+ * @name system24 (catppuccin mocha)
+ * @description a tui-like discord theme. based on catppuccin mocha theme (https://catppuccin.com).
  * @author refact0r
  * @version 2.0.0
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/system24
- * @source https://github.com/refact0r/system24/blob/master/theme/system24theme.css
+ * @source https://github.com/refact0r/system24/blob/master/theme/system24-catppuccin-mocha.theme.css
  * @authorId 508863359777505290
  * @authorLink https://www.refact0r.dev
 */
@@ -41,27 +41,15 @@ body {
     --window-control-size: 14px; /* size of custom window controls */
 
     /* dms button options */
-    --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --custom-dms-icon: hide; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
     --dms-icon-svg-url: url(''); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: var(--bg-2); /* normal icon color */
-    --dms-icon-color-after: var(--bg-2); /* icon color when button is hovered/selected */
-    --custom-dms-background: color; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
-    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --custom-dms-background: image; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+    --dms-background-image-url: url('https://raw.githubusercontent.com/catppuccin/catppuccin/refs/heads/main/assets/logos/exports/macchiato_square.png'); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
-    --dms-background-color: linear-gradient(
-        135deg,
-        #f38ba8 20%,
-        #fab387 20%,
-        #fab387 35%,
-        #f9e2af 35%,
-        #f9e2af 50%,
-        #a6e3a1 50%,
-        #a6e3a1 65%,
-        #74c7ec 65%,
-        #74c7ec 80%,
-        #b4befe 80%
-    ); /* fixed color/gradient (css background property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
 
     /* background image options */
     --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
