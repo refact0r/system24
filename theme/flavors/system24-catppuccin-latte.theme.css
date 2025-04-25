@@ -1,13 +1,10 @@
 /**
- * @name system24
- * @description a tui-like discord theme.
- * @author refact0r
+ * @name system24 (catppuccin latte)
+ * @description a tui-like discord theme. based on catppuccin latte theme (https://catppuccin.com).
+ * @author fred9302
  * @version 2.0.0
- * @invite nz87hXyvcy
- * @website https://github.com/refact0r/system24
- * @source https://github.com/refact0r/system24/blob/master/theme/system24theme.css
- * @authorId 508863359777505290
- * @authorLink https://www.refact0r.dev
+ * @website https://github.com/fred9302/system24-with-latte
+ * @source https://github.com/fred9302/system24-with-latte/blob/main/theme/flavors/system24-catppuccin-latte.theme.css
 */
 
 /* import theme modules */
@@ -41,27 +38,15 @@ body {
     --window-control-size: 14px; /* size of custom window controls */
 
     /* dms button options */
-    --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --custom-dms-icon: hide; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
     --dms-icon-svg-url: url(''); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: var(--bg-2); /* normal icon color */
-    --dms-icon-color-after: var(--bg-2); /* icon color when button is hovered/selected */
-    --custom-dms-background: color; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
-    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --custom-dms-background: image; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+    --dms-background-image-url: url('https://raw.githubusercontent.com/catppuccin/catppuccin/refs/heads/main/assets/logos/exports/latte_square.png'); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
-    --dms-background-color: linear-gradient(
-        135deg,
-        #d20f39 20%, /* red */
-        #fe640b 20%, /* peach */
-        #fe640b 35%, /* peach */
-        #df8e1d 35%, /* yellow */
-        #df8e1d 50%, /* yellow */
-        #40a02b 50%, /* green */
-        #40a02b 65%, /* green */
-        #209fb5 65%, /* sapphire */
-        #209fb5 80%, /* sapphire */
-        #7287fd 80% /* lavender */
-    ); /* fixed color/gradient (css background property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
 
     /* background image options */
     --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
