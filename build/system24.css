@@ -12,6 +12,14 @@ body {
     .bg__960e4 {
         background: var(--bg-base-primary);
     }
+    .container__01ae2 {
+        padding-left: 0 !important;
+        background-color: var(--bg-base-primary);
+    }
+    .form_f75fb0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
 
 /* ascii.css */
