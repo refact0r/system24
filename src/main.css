@@ -12,7 +12,6 @@ body {
         background: var(--bg-base-primary);
     }
     .container__01ae2 {
-        padding-left: 0 !important;
         background-color: var(--bg-base-primary);
     }
 }
