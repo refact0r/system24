@@ -12,6 +12,10 @@ body {
     .bg__960e4 {
         background: var(--bg-base-primary);
     }
+    .container__01ae2 {
+        padding-left: 0 !important;
+        background-color: var(--bg-base-primary);
+    }
 }
 
 /* ascii.css */
