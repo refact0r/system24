@@ -15,3 +15,9 @@ body {
         background-color: var(--bg-base-primary);
     }
 }
+
+@container body style(--top-bar-button-position: titlebar) {
+    .platform-osx.visual-refresh .wrapper_ef3116 {
+        margin-top: 24px;
+    }
+}
