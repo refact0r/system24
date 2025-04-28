@@ -17,6 +17,12 @@ body {
     }
 }
 
+@container body style(--top-bar-button-position: titlebar) {
+    .platform-osx.visual-refresh .wrapper_ef3116 {
+        margin-top: 24px;
+    }
+}
+
 /* ascii.css */
 @property --ascii-titles {
     syntax: 'off | on';
