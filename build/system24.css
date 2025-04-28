@@ -15,6 +15,9 @@ body {
     .container__01ae2 {
         background-color: var(--bg-base-primary);
     }
+    .trailing_c38106 {
+        margin-top: 8px;
+    }
 }
 
 .platform-osx.visual-refresh {
@@ -269,19 +272,11 @@ body {
         .callContainer_cb9592 {
             padding: 8px;
         }
-    }
-}
 
-@container body style(--top-bar-button-position: titlebar) {
-    .visual-refresh {
-        .trailing_c38106 {
+        .content_c48ade {
             margin-top: 8px;
         }
     }
-}
-
-.content_c48ade {
-    margin-top: 8px;
 }
 
 /* spotify-bar.css */
