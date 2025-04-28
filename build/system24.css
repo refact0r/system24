@@ -280,10 +280,8 @@ body {
     }
 }
 
-@supports (grid-template-columns:subgrid) and (white-space-collapse:collapse) {
-    .visual-refresh .content_c48ade {
-        margin-top: 8px;
-    }
+.content_c48ade {
+    margin-top: 8px;
 }
 
 /* spotify-bar.css */
