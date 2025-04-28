@@ -1,0 +1,151 @@
+body {
+    --label-color: var(--text-muted);
+    --label-hover-color: var(--brand-360);
+    --label-font-weight: 500;
+}
+
+@property --panel-labels {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: on;
+}
+
+@container body style(--panel-labels: on) {
+    .visual-refresh {
+        .guilds_c48ade,
+        .panels_c48ade,
+        .sidebarList_c48ade,
+        .subtitleContainer_f75fb0,
+        .messagesWrapper__36d07,
+        .channelTextArea_f75fb0,
+        .content_f75fb0 > .membersWrap_c8ffbb,
+        .container_c8ffbb,
+        .container__133bf > .container__9293f,
+        .peopleColumn__133bf,
+        .nowPlayingColumn__133bf,
+        .container__01ae2 > .container__9293f,
+        .callContainer_cb9592 {
+            &::after {
+                display: block;
+                color: var(--label-color);
+                font-weight: var(--label-font-weight);
+                position: absolute;
+                top: -10px;
+                left: 8px;
+                background-color: var(--bg-base-primary);
+                padding: 0 4px;
+                z-index: 100;
+                font-size: 16px;
+                transition: color var(--border-hover-transition);
+            }
+
+            &:hover::after {
+                color: var(--label-hover-color);
+            }
+        }
+
+        .guilds_c48ade::after {
+            content: 'nav';
+        }
+        .panels_c48ade::after {
+            content: 'user';
+        }
+        .sidebarList_c48ade::after {
+            content: 'channels';
+        }
+        .subtitleContainer_f75fb0::after {
+            content: 'channel';
+        }
+        .messagesWrapper__36d07::after {
+            content: 'chat';
+        }
+        .channelTextArea_f75fb0::after {
+            content: 'input';
+        }
+        .container_c8ffbb::after,
+        .content_f75fb0 > .membersWrap_c8ffbb::after {
+            content: 'members';
+        }
+        .container__133bf > .container__9293f:after {
+            content: 'friends';
+        }
+        .peopleColumn__133bf::after {
+            content: 'list';
+        }
+        .nowPlayingColumn__133bf::after {
+            content: 'activity';
+        }
+        .container__01ae2 > .container__9293f::after {
+            content: 'thread';
+        }
+        .callContainer_cb9592::after {
+            content: 'vc';
+        }
+
+        .content_f75fb0 > .membersWrap_c8ffbb,
+        .panels_c48ade,
+        .sidebar_c48ade,
+        .sidebarList_c48ade,
+        .chat_f75fb0,
+        .page_c48ade,
+        .channelTextArea_f75fb0,
+        .container__133bf,
+        .container_c8ffbb,
+        .guilds_c48ade,
+        .peopleColumn__133bf,
+        .tabBody__133bf,
+        .container__01ae2 {
+            overflow: visible;
+        }
+        .page_c48ade,
+        .tabBody__133bf {
+            min-height: 0;
+        }
+        .peopleColumn__133bf {
+            min-width: 0;
+        }
+        .sidebarList_c48ade,
+        .container_c8ffbb,
+        .peopleColumn__133bf,
+        .nowPlayingColumn__133bf {
+            position: relative;
+        }
+
+        .scroller__36d07 {
+            top: 8px;
+        }
+        .membersWrap_c8ffbb,
+        .guilds_c48ade,
+        .sidebarList_c48ade {
+            padding-top: 8px;
+        }
+        .membersWrap_c8ffbb {
+            height: calc(100% - 8px);
+        }
+
+        .scroller_ef3116 {
+            padding-top: calc(var(--custom-guild-list-padding) - 8px);
+        }
+
+        .animatedContainer_f37cb1,
+        .headerGlass_f37cb1 {
+            left: 8px;
+            right: 8px;
+            width: auto;
+        }
+        .header_f37cb1 {
+            margin: 0 8px;
+        }
+        .container__2637a {
+            overflow: hidden;
+        }
+
+        .headerEllipseForeground_f37cb1 {
+            display: none;
+        }
+
+        .callContainer_cb9592 {
+            padding: 8px;
+        }
+    }
+}
