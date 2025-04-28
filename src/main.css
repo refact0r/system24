@@ -11,4 +11,7 @@ body {
     .bg__960e4 {
         background: var(--bg-base-primary);
     }
+    .container__01ae2 {
+        background-color: var(--bg-base-primary);
+    }
 }
