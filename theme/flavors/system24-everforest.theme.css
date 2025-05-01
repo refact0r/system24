@@ -17,7 +17,8 @@ body {
     /* font, change to '' for default discord font */
     --font: 'DM Mono'; /* change to '' for default discord font */
     --code-font: 'DM Mono'; /* change to '' for default discord font */
-    font-weight: 300 /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
+    font-weight: 300; /* text font weight. 300 is light, 400 is normal. DOES NOT AFFECT BOLD TEXT */
+    letter-spacing: -0.05ch; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
@@ -137,13 +138,13 @@ body {
     --green-1: oklch(0.77 0.0906 125.78);
     --green-2: var(--green-1);
     --green-3: var(--green-1);
-    --green-4: oklch(0.60 0.0906 125.78);
+    --green-4: oklch(0.6 0.0906 125.78);
     --green-5: oklch(0.42 0.0231 157.06);
 
     --blue-1: oklch(0.75 0.0631 185.49);
     --blue-2: var(--blue-1);
     --blue-3: var(--blue-1);
-    --blue-4: oklch(0.60 0.0631 185.49);
+    --blue-4: oklch(0.6 0.0631 185.49);
     --blue-5: oklch(0.42 0.0345 231.32);
 
     --yellow-1: oklch(0.81 0.0863 83.7);
