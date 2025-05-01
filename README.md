@@ -1,7 +1,3 @@
-# **This is not the original version of the system24 theme**
-The goal of this fork is to also include a version of the theme that matches the catppuccin latte color palette.
-
----
 
 <img src="https://github.com/refact0r/system24/raw/main/assets/preview.png">
 
