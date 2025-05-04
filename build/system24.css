@@ -514,7 +514,7 @@ body {
     .wrapper__44b0c:has(rect[fill='#d83a42'])::after {
         background: var(--dnd-2) !important;
     }
-    .wrapper__44b0c:has(rect[fill='#cc954c'])::after {
+    .wrapper__44b0c:has(rect[fill='#ca9654'])::after {
         background: var(--idle-2) !important;
     }
     .wrapper__44b0c:has(rect[fill='#82838b'])::after {
