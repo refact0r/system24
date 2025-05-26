@@ -1,7 +1,7 @@
 
 <img src="https://github.com/refact0r/system24/raw/main/assets/preview.png">
 
-# system24
+# system24-red
 
 a customizable, tui-like discord theme. inspired by [spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text).
 
@@ -15,17 +15,17 @@ need help? want to get notified about updates? have feedback? join <https://disc
 
 ### vencord/betterdiscord (or any client that supports theme files)
 
-1. download the theme file, [`system24.theme.css`](https://github.com/refact0r/system24/blob/main/theme/system24.theme.css). (there should be a download button at the top right of the page)
+1. download the theme file, [`system24.theme.css`](https://raw.githubusercontent.com/George-1717/system24-catppuccin-macchiato-red/refs/heads/main/theme/flavors/system24-catppuccin-macchiato.theme.css). (there should be a download button at the top right of the page)
 2. drag the file into your theme folder. (there should be a button to open the theme folder in theme settings)
 3. (optional) customize the theme by editing the options in `midnight.theme.css`.
 
 ### install through link
 
-add `https://refact0r.github.io/system24/build/system24.css` to your theme import links. you will need to copy the theme variables to your quickcss in order to customize the theme.
+add `https://raw.githubusercontent.com/George-1717/system24-catppuccin-macchiato-red/refs/heads/main/theme/flavors/system24-catppuccin-macchiato.theme.css` to your theme import links. you will need to copy the theme variables to your quickcss in order to customize the theme.
 
 ## flavors
 
-customized variants of the theme.
+customized variants of the theme. these are the og ones from their repo just use those if u dont want macchiato red specifically
 
 - [catppuccin mocha](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-catppuccin-mocha.theme.css)
 - [catppuccin macchiato](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-catppuccin-macchiato.theme.css)
