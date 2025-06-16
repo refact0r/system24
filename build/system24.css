@@ -416,6 +416,10 @@ body {
         .callContainer_cb9592 {
             padding: 8px;
         }
+
+        .messagesWrapper__36d07 {
+            mask: none !important;
+        }
     }
 }
 
