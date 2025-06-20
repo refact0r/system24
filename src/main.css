@@ -162,13 +162,13 @@ body {
 
 .density-compact {
     .avatarWrapper__37e49 {
-        margin: 2px 0 2px 2px !important;
+        margin: 2px 0 2px 2px;
     }
 }
 
 .density-cozy {
     .container__37e49 {
-        padding: 8px !important;
+        padding: 8px;
     }
 }
 
