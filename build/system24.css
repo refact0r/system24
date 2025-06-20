@@ -161,8 +161,16 @@ body {
     --chatbar-height: 56px !important; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
 }
 
-.avatarWrapper__37e49 {
-    margin: 2px 0 2px 2px !important;
+.density-compact {
+    .avatarWrapper__37e49 {
+        margin: 2px 0 2px 2px !important;
+    }
+}
+
+.density-cozy {
+    .container__37e49 {
+        padding: 8px !important;
+    }
 }
 
 .visual-refresh {
