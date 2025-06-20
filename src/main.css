@@ -160,6 +160,10 @@ body {
     --chatbar-height: 56px !important; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
 }
 
+.avatarWrapper__37e49 {
+    margin: 2px 0 2px 2px !important;
+}
+
 .visual-refresh {
     .bg__960e4 {
         background: var(--bg-base-primary);
