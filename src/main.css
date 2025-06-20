@@ -73,6 +73,7 @@ body {
     /* panel labels */
     --panel-labels: on; /* off: default, on: add labels to panels */
     --label-color: var(--text-muted); /* color of labels */
+    --label-hover-color: var(--accent-2); /* color of labels when hovered */
     --label-font-weight: 500; /* font weight of labels */
 }
 
