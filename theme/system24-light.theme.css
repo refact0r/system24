@@ -1,0 +1,123 @@
+
+/**
+ * @name System24 Light
+ * @description a tui-like discord theme (light version).
+ * @author refact0r
+ * @author (light) emptyhax
+ 
+ */
+ 
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+   
+    --font: 'DM Mono', monospace;
+    --code-font: 'DM Mono', monospace;
+    font-weight: 350;
+    letter-spacing: -0.03ch;
+    
+ 
+    --bg-1: oklch(98% 0 0);
+    --bg-2: oklch(95% 0 0);
+    --bg-3: oklch(92% 0.01 270);
+    --bg-4: oklch(90% 0.01 270);
+    
+    --text-1: oklch(15% 0 0);
+    --text-2: oklch(25% 0 0);
+    --text-3: oklch(35% 0 0);
+    
+    --border-light: oklch(85% 0.01 270);
+    --border-dark: oklch(80% 0.01 270);
+    
+    --hover: oklch(85% 0.02 270 / 0.15);
+    
+    /* Melhorias nas bordas e cantos */
+    --border-radius: 4px;
+    --avatar-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    --divider-thickness: 2px;
+    --border-thickness: 1px;
+    
+ 
+    --border-hover-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --list-item-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    
+ 
+    --accent-1: oklch(65% 0.08 290);
+    --accent-2: oklch(60% 0.08 290);
+    --accent-3: oklch(55% 0.08 290);
+}
+
+ 
+.avatar-1BDn8e, .avatar-3uk_u9, .avatar-2Vndt_ {
+    border-radius: var(--avatar-radius) !important;
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-light);
+}
+
+.avatar-1BDn8e:hover, .avatar-3uk_u9:hover, .avatar-2Vndt_:hover {
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60% !important;
+    transform: scale(1.05);
+}
+
+ 
+:root {
+    --dms-background-color: linear-gradient(
+        135deg, 
+        oklch(92% 0.05 230), 
+        oklch(92% 0.05 290), 
+        oklch(92% 0.05 350)
+    );
+}
+
+ 
+:root:not([data-unrounding="on"]) {
+    --border-radius: 6px;
+    
+    .container-2cd8Mz, .container-1oAagU, .sidebar-2K8pFh {
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-light);
+    }
+}
+
+/* Barra do Spotify mais discreta */
+.spotify-bar {
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-3), var(--accent-1));
+    border-radius: 1px;
+}
+ 
+.item-2GWPIy:hover {
+    background-color: color-mix(in oklch, var(--hover), transparent 70%);
+    transform: translateX(2px);
+}
+
+ 
+.theme-light {
+    --header-primary: var(--text-1);
+    --header-secondary: var(--text-2);
+    --text-normal: var(--text-1);
+    --text-muted: var(--text-3);
+    --interactive-normal: var(--text-2);
+    --interactive-hover: var(--text-1);
+    --interactive-active: var(--text-1);
+    --background-modifier-hover: var(--hover);
+    --background-modifier-active: color-mix(in oklch, var(--hover), transparent 50%);
+}
+ 
+.message-2CShn3 {
+    background-color: var(--bg-2);
+    border-left: 2px solid var(--border-light);
+}
+
+ 
+.button-1EGGcP {
+    background-color: var(--bg-3);
+    color: var(--text-1);
+    border: 1px solid var(--border-light);
+}
+
+.button-1EGGcP:hover {
+    background-color: var(--bg-4);
+}
+
+
