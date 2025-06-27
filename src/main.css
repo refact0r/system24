@@ -167,4 +167,7 @@ body {
     .container__01ae2 {
         background-color: var(--bg-base-primary);
     }
+    .container__37e49 {
+        padding: 8px;
+    }
 }
