@@ -1,6 +1,6 @@
 body {
     --label-color: var(--text-muted);
-    --label-hover-color: var(--brand-360);
+    --label-hover-color: var(--accent-2);
     --label-font-weight: 500;
 }
 
