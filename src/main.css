@@ -239,35 +239,35 @@ body {
 		--button-border: hsl(220, 100%, 100%, 0.1); /* neutral border color of buttons */
 
 		/* base colors */
-		--red-1: oklch(25% 0.13 0);
-		--red-2: oklch(30% 0.13 0);
-		--red-3: oklch(35% 0.13 0);
-		--red-4: oklch(40% 0.13 0);
-		--red-5: oklch(45% 0.13 0);
+		--red-1: oklch(75% 0.13 0);
+		--red-2: oklch(70% 0.13 0);
+		--red-3: oklch(65% 0.13 0);
+		--red-4: oklch(60% 0.13 0);
+		--red-5: oklch(55% 0.13 0);
 
-		--green-1: oklch(25% 0.12 170);
-		--green-2: oklch(30% 0.12 170);
-		--green-3: oklch(35% 0.12 170);
-		--green-4: oklch(40% 0.12 170);
-		--green-5: oklch(45% 0.12 160);
+		--green-1: oklch(75% 0.12 170);
+		--green-2: oklch(70% 0.12 170);
+		--green-3: oklch(65% 0.12 170);
+		--green-4: oklch(60% 0.12 170);
+		--green-5: oklch(55% 0.12 160);
 
-		--blue-1: oklch(25% 0.11 215);
-		--blue-2: oklch(30% 0.11 215);
-		--blue-3: oklch(35% 0.11 215);
-		--blue-4: oklch(40% 0.11 215);
-		--blue-5: oklch(45% 0.11 215);
+		--blue-1: oklch(75% 0.11 215);
+		--blue-2: oklch(70% 0.11 215);
+		--blue-3: oklch(65% 0.11 215);
+		--blue-4: oklch(60% 0.11 215);
+		--blue-5: oklch(55% 0.11 215);
 
-		--yellow-1: oklch(20% 0.12 90);
-		--yellow-2: oklch(25% 0.12 90);
-		--yellow-3: oklch(30% 0.12 90);
-		--yellow-4: oklch(35% 0.12 90);
-		--yellow-5: oklch(40% 0.12 90);
+		--yellow-1: oklch(80% 0.12 90);
+		--yellow-2: oklch(75% 0.12 90);
+		--yellow-3: oklch(70% 0.12 90);
+		--yellow-4: oklch(65% 0.12 90);
+		--yellow-5: oklch(60% 0.12 90);
 
-		--purple-1: oklch(25% 0.12 310);
-		--purple-2: oklch(30% 0.12 310);
-		--purple-3: oklch(35% 0.12 310);
-		--purple-4: oklch(40% 0.12 310);
-		--purple-5: oklch(45% 0.12 310);
+		--purple-1: oklch(75% 0.12 310);
+		--purple-2: oklch(70% 0.12 310);
+		--purple-3: oklch(65% 0.12 310);
+		--purple-4: oklch(60% 0.12 310);
+		--purple-5: oklch(55% 0.12 310);
 	}
 }
 
