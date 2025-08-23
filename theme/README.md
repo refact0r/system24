@@ -3,7 +3,7 @@
 
 # system24
 
-a customizable, tui-like discord theme. inspired by [spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text).
+a customizable, tui-style discord theme. inspired by [spicetify text theme](https://github.com/spicetify/spicetify-themes/tree/master/text).
 
 <img src="https://github.com/refact0r/system24/raw/main/assets/screenshot.png">
 
