@@ -90,11 +90,12 @@ body {
     --red: #cc241d;
     --bright: #fbf1c7;
     --medium: #d4be98;
+    --medium-dark: #d4be9850;
     --dark: #0d1011;
 
     --accent: #52a4aa;
+    --accent-dark: #52a4aa50;
     --green: #55af39;
-    --purple: #b16286;
     
     /* text colors */
     --text-0: var(--accent); /* text on colored elements */
@@ -105,12 +106,12 @@ body {
     --text-5: var(--medium); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: var(--dark); /* dark buttons when clicked */
+    --bg-1: var(--medium-dark); /* dark buttons when clicked */
     --bg-2: var(--dark); /* dark buttons */
     --bg-3: var(--dark); /* spacing, secondary elements */
     --bg-4: var(--dark); /* main background color */
     --hover: var(--dark); /* channels and buttons when hovered */
-    --active: #d4be9850; /* channels and buttons when clicked or selected */
+    --active: var(--medium-dark); /* channels and buttons when clicked or selected */
     --active-2: var(--dark); /* extra state for transparent buttons */
     --message-hover: var(--hover); /* messages when hovered */
 
@@ -118,7 +119,7 @@ body {
     --accent-1: var(--accent); /* links and other accent text */
     --accent-2: var(--bright); /* small accent elements */
     --accent-3: var(--dark); /* accent buttons */
-    --accent-4: var(--accent); /* accent buttons when hovered */
+    --accent-4: var(--accent-dark); /* accent buttons when hovered */
     --accent-5: var(--accent); /* accent buttons when clicked */
     --accent-new: var(--red); /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
@@ -130,12 +131,12 @@ body {
     --online: var(--green); /* change to #40a258 for default */
     --dnd: var(--red); /* change to #d83a41 for default */
     --idle: var(--medium); /* change to #cc954c for default */
-    --streaming: var(--purple); /* change to ##9147ff for default */
+    --streaming: var(--accent-dark); /* change to ##9147ff for default */
     --offline: var(--text-4); /* change to #82838b for default offline color */
 
     /* border colors */
-    --border-light: #d4be9850; /* general light border color */
-    --border: #d4be9850; /* general normal border color */
+    --border-light: var(--medium-dark); /* general light border color */
+    --border: var(--medium-dark); /* general normal border color */
     --border-hover: var(--accent-2); /* border color of panels when hovered */
-    --button-border: var(--accent-4); /* neutral border color of buttons */
+    --button-border: var(--accent-5); /* neutral border color of buttons */
 }
