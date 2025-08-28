@@ -34,6 +34,7 @@ customized variants of the theme.
 - [tokyo night](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-tokyo-night.theme.css)
 - [nord](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-nord.theme.css)
 - [vencord](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-vencord.theme.css)
+- [gruvbox](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-gruvbox.theme.css)
 
 ## contributing
 
