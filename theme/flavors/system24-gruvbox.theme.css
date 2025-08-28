@@ -97,7 +97,7 @@ body {
     --purple: #b16286;
     
     /* text colors */
-    --text-0: var(--dark); /* text on colored elements */
+    --text-0: var(--accent); /* text on colored elements */
     --text-1: var(--medium); /* other normally white text */
     --text-2: var(--accent); /* headings and important text */
     --text-3: var(--bright); /* normal text */
