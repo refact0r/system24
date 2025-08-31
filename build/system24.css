@@ -75,6 +75,7 @@ body {
     --panel-labels: on; /* off: default, on: add labels to panels */
     --label-color: var(--text-muted); /* color of labels */
     --label-font-weight: 500; /* font weight of labels */
+    --label-casing: lowercase; /* lowercase: default, uppercase: make panel labels fully uppercase, capitalize: make panel labels start with a capital letter */
 }
 
 /* color options */
@@ -309,6 +310,7 @@ body {
                 z-index: 100;
                 font-size: 16px;
                 transition: color var(--border-hover-transition);
+                text-transform: var(--label-casing);
             }
 
             &:hover::after {
