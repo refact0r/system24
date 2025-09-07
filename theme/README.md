@@ -17,7 +17,7 @@ need help? want to get notified about updates? have feedback? join <https://disc
 
 1. download the theme file, [`system24.theme.css`](https://github.com/refact0r/system24/blob/main/theme/system24.theme.css). (there should be a download button at the top right of the page)
 2. drag the file into your theme folder. (there should be a button to open the theme folder in theme settings)
-3. (optional) customize the theme by editing the options in `midnight.theme.css`.
+3. (optional) customize the theme by editing the options in `system24.theme.css`.
 
 ### install through link
 
@@ -29,6 +29,7 @@ customized variants of the theme.
 
 - [catppuccin mocha](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-catppuccin-mocha.theme.css)
 - [catppuccin macchiato](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-catppuccin-macchiato.theme.css)
+- [everforest](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-everforest.theme.css)
 - [rosé pine](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-rose-pine.theme.css)
 - [rose pine moon](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-rose-pine-moon.theme.css)
 - [tokyo night](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-tokyo-night.theme.css)
