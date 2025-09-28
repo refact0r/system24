@@ -90,7 +90,7 @@ body {
     --text-1: var(--base0-3); /* other normally white text */
     --text-2: var(--base1-1); /* headings and important text */
     --text-3: var(--base0-1); /* normal text */
-    --text-4: var(--base3-4); /* icon buttons and channels */
+    --text-4: var(--base1-3); /* icon buttons and channels */
     --text-5: var(--base01-1); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
@@ -98,9 +98,9 @@ body {
     --bg-2: var(--base03-3); /* dark buttons */
     --bg-3: var(--base03-2); /* spacing, secondary elements */
     --bg-4: var(--base03-1); /* main background color */
-    --hover: oklch(57% 0.03 220.96 / 0.2); /* channels and buttons when hovered */
-    --active: oklch(57% 0.03 220.96 / 0.1); /* channels and buttons when clicked or selected */
-    --active-2: oklch(57% 0.03 220.96 / 0.1); /* extra state for transparent buttons */
+    --hover: oklch(31% 0.05 219.65 / 1.0); /* channels and buttons when hovered */
+    --active: oklch(41% 0.05 219.65 / 0.2); /* channels and buttons when clicked or selected */
+    --active-2: oklch(41% 0.05 219.65 / 0.1); /* extra state for transparent buttons */
     --message-hover: var(--hover); /* messages when hovered */
 
     /* accent colors */
@@ -109,17 +109,17 @@ body {
     --accent-3: var(--base00-3); /* accent buttons */
     --accent-4: var(--base00-2); /* accent buttons when hovered */
     --accent-5: var(--base00-1); /* accent buttons when clicked */
-    --accent-new: var(--red-2); /* stuff that's normally red like mute/deafen buttons */
+    --accent-new: var(--red-5); /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
     --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
     --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
     /* status indicator colors */
-    --online: var(--green-2); /* change to #40a258 for default */
-    --dnd: var(--red-2); /* change to #d83a41 for default */
-    --idle: var(--yellow-2); /* change to #cc954c for default */
-    --streaming: var(--violet-2); /* change to ##9147ff for default */
+    --online: var(--green-5); /* change to #40a258 for default */
+    --dnd: var(--red-5); /* change to #d83a41 for default */
+    --idle: var(--yellow-5); /* change to #cc954c for default */
+    --streaming: var(--violet-5); /* change to ##9147ff for default */
     --offline: var(--text-4); /* change to #82838b for default offline color */
 
     /* border colors */
@@ -189,10 +189,10 @@ body {
     --orange-4: oklch(53% 0.17 039.50);
     --orange-5: oklch(58% 0.17 039.50); /* standard */
 
-    --red-1: oklch(59% 0.21 027.12);
-    --red-2: oklch(59% 0.21 027.12);
-    --red-3: oklch(59% 0.21 027.12);
-    --red-4: oklch(59% 0.21 027.12);
+    --red-1: oklch(39% 0.21 027.12);
+    --red-2: oklch(44% 0.21 027.12);
+    --red-3: oklch(49% 0.21 027.12);
+    --red-4: oklch(54% 0.21 027.12);
     --red-5: oklch(59% 0.21 027.12); /* standard */
 
     --magenta-1: oklch(39% 0.20 355.89);
