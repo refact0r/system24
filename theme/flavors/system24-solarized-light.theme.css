@@ -109,17 +109,17 @@ body {
     --accent-3: var(--base00-3); /* accent buttons */
     --accent-4: var(--base00-4); /* accent buttons when hovered */
     --accent-5: var(--base00-5); /* accent buttons when clicked */
-    --accent-new: var(--red-2); /* stuff that's normally red like mute/deafen buttons */
+    --accent-new: var(--red-5); /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
     --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
     --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
     /* status indicator colors */
-    --online: var(--green-2); /* change to #40a258 for default */
-    --dnd: var(--red-2); /* change to #d83a41 for default */
-    --idle: var(--yellow-2); /* change to #cc954c for default */
-    --streaming: var(--violet-2); /* change to ##9147ff for default */
+    --online: var(--green-5); /* change to #40a258 for default */
+    --dnd: var(--red-5); /* change to #d83a41 for default */
+    --idle: var(--yellow-5); /* change to #cc954c for default */
+    --streaming: var(--violet-5); /* change to ##9147ff for default */
     --offline: var(--text-4); /* change to #82838b for default offline color */
 
     /* border colors */
@@ -189,10 +189,10 @@ body {
     --orange-4: oklch(53% 0.17 039.50);
     --orange-5: oklch(58% 0.17 039.50); /* standard */
 
-    --red-1: oklch(59% 0.21 027.12);
-    --red-2: oklch(59% 0.21 027.12);
-    --red-3: oklch(59% 0.21 027.12);
-    --red-4: oklch(59% 0.21 027.12);
+    --red-1: oklch(39% 0.21 027.12);
+    --red-2: oklch(44% 0.21 027.12);
+    --red-3: oklch(49% 0.21 027.12);
+    --red-4: oklch(54% 0.21 027.12);
     --red-5: oklch(59% 0.21 027.12); /* standard */
 
     --magenta-1: oklch(39% 0.20 355.89);
