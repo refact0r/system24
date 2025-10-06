@@ -19,6 +19,12 @@ jobs:
           folder: src
           ext: css
           diff: "https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt"
+      - id: update-build
+        uses: metro420yt/class-update@v1-rc3
+        with:
+          folder: build
+          ext: css
+          diff: "https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt"
       - uses: EndBug/add-and-commit@v9
         if: ${{steps.update.outputs.totalChanges > 0}}
         with:
