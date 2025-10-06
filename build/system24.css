@@ -322,6 +322,12 @@ body {
         .panels_c48ade::after {
             content: 'user';
         }
+        /*Hide the word user when hover to a quest*/
+        body:has(.wrapper__0d616:hover) .panels_c48ade::after,
+        body:has(.questRewardTile__28141:hover) .panels_c48ade::after {
+            opacity: 0;
+            visibility: hidden;
+        }
         .sidebarList_c48ade::after {
             content: 'channels';
         }
