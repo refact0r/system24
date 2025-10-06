@@ -37,6 +37,7 @@ body {
                 z-index: 100;
                 font-size: 16px;
                 transition: color var(--border-hover-transition);
+                text-transform: var(--label-casing);
             }
 
             &:hover::after {
