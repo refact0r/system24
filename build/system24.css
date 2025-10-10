@@ -366,7 +366,8 @@ body {
         .guilds_c48ade,
         .peopleColumn__133bf,
         .tabBody__133bf,
-        .container__01ae2 {
+        .container__01ae2,
+        .chatContent_f75fb0 {
             overflow: visible;
         }
         .page_c48ade,
@@ -551,7 +552,7 @@ body {
         overflow: visible !important;
     }
 
-    .slider__87bf1 > rect[rx='10'] {
+    .slider__3f21e > rect[rx='10'] {
         rx: 0 !important;
     }
 
