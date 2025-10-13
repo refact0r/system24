@@ -1,0 +1,163 @@
+/**
+ * @name System24 Light Enhanced Darker+ Purple
+ * @description Tema TUI-like com cores escuras e scrollbars roxas
+ * @author refact0r
+ * @version 2.1.3
+ * @source https://github.com/refact0r/system24
+ */
+
+/* Importar módulos do tema */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    /* Melhorias na tipografia */
+    --font: 'DM Mono', monospace;
+    --code-font: 'DM Mono', monospace;
+    font-weight: 350;
+    letter-spacing: -0.03ch;
+    
+    /* Esquema de cores claro - versão mais escura */
+    --bg-1: oklch(94% 0 0);
+    --bg-2: oklch(91% 0 0);
+    --bg-3: oklch(88% 0.01 270);
+    --bg-4: oklch(85% 0.01 270);
+    
+    --text-1: oklch(25% 0 0);
+    --text-2: oklch(35% 0 0);
+    --text-3: oklch(45% 0 0);
+    
+    --border-light: oklch(80% 0.01 270);
+    --border-dark: oklch(75% 0.01 270);
+    
+    --hover: oklch(80% 0.02 270 / 0.15);
+    
+    /* Melhorias nas bordas e cantos */
+    --border-radius: 4px;
+    --avatar-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    --divider-thickness: 2px;
+    --border-thickness: 1px;
+    
+    /* Transições suavizadas */
+    --border-hover-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --list-item-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Cores de destaque mais escuras */
+    --accent-1: oklch(55% 0.08 290);
+    --accent-2: oklch(50% 0.08 290);
+    --accent-3: oklch(45% 0.08 290);
+}
+
+/* Aplicar bordas orgânicas aos avatares */
+.avatar-1BDn8e, .avatar-3uk_u9, .avatar-2Vndt_ {
+    border-radius: var(--avatar-radius) !important;
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-light);
+}
+
+.avatar-1BDn8e:hover, .avatar-3uk_u9:hover, .avatar-2Vndt_:hover {
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60% !important;
+    transform: scale(1.05);
+}
+
+/* Degradê mais escuro para o DM */
+:root {
+    --dms-background-color: linear-gradient(
+        135deg, 
+        oklch(88% 0.05 230), 
+        oklch(88% 0.05 290), 
+        oklch(88% 0.05 350)
+    );
+}
+
+/* Suavizar bordas dos painéis */
+:root:not([data-unrounding="on"]) {
+    --border-radius: 6px;
+    
+    .container-2cd8Mz, .container-1oAagU, .sidebar-2K8pFh {
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-light);
+    }
+}
+
+/* Barra do Spotify mais contrastante */
+.spotify-bar {
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-3), var(--accent-1));
+    border-radius: 1px;
+}
+
+/* Efeito de hover mais visível */
+.item-2GWPIy:hover {
+    background-color: color-mix(in oklch, var(--hover), transparent 60%);
+    transform: translateX(2px);
+}
+
+/* Ajustes para elementos específicos no modo claro */
+.theme-light {
+    --header-primary: var(--text-1);
+    --header-secondary: var(--text-2);
+    --text-normal: var(--text-1);
+    --text-muted: var(--text-3);
+    --interactive-normal: var(--text-2);
+    --interactive-hover: var(--text-1);
+    --interactive-active: var(--text-1);
+    --background-modifier-hover: var(--hover);
+    --background-modifier-active: color-mix(in oklch, var(--hover), transparent 40%);
+}
+
+/* Melhor contraste para mensagens */
+.message-2CShn3 {
+    background-color: var(--bg-2);
+    border-left: 2px solid var(--border-light);
+}
+
+/* Botões com mais contraste */
+.button-1EGGcP {
+    background-color: var(--bg-3);
+    color: var(--text-1);
+    border: 1px solid var(--border-light);
+}
+
+.button-1EGGcP:hover {
+    background-color: var(--bg-4);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ==================== */
+/* SCROLLBARS ROXAS */
+/* ==================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-2);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: oklch(60% 0.12 290);
+    border-radius: 5px;
+    border: 2px solid var(--bg-2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: oklch(55% 0.15 290);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--bg-2);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(60% 0.12 290) var(--bg-2);
+}
+
+/* Ajuste para a barra lateral */
+.sidebar-2K8pFh::-webkit-scrollbar-thumb {
+    background: oklch(55% 0.15 290);
+}
