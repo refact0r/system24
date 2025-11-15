@@ -249,7 +249,7 @@ body {
         display: none;
     }
     .content_a2f514::before {
-        display: block;
+        display: block;  
         content: url('https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/assets/cats.gif');
     }
     .text_a2f514 {
@@ -423,6 +423,8 @@ body {
 
         .messagesWrapper__36d07 {
             mask: none !important;
+            position: relative;
+            z-index: 10;
         }
     }
 }
