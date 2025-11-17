@@ -367,8 +367,9 @@ body {
         .peopleColumn__133bf,
         .tabBody__133bf,
         .container__01ae2,
-        .chatContent_f75fb0 {
-            overflow: visible;
+        .chatContent_f75fb0,
+        .messagesWrapper__36d07 {
+            overflow: visible !important;
         }
         .page__5e434,
         .tabBody__133bf {
@@ -380,7 +381,9 @@ body {
         .sidebarList__5e434,
         .container_c8ffbb,
         .peopleColumn__133bf,
-        .nowPlayingColumn__133bf {
+        .nowPlayingColumn__133bf,
+        .messagesWrapper__36d07,
+        .channelTextArea_f75fb0 {
             position: relative;
         }
 
