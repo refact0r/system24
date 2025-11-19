@@ -524,20 +524,20 @@ body {
         right: -4px;
         border: 2px solid var(--background-base-lower);
     }
-    .wrapper__44b0c:has(rect[fill='#43a25a'])::after,
-    .container__1ce5d:has(.status_a423bd[style='background-color: rgb(67, 162, 90);'])::after {
+
+    .wrapper__44b0c[aria-label*="Online"]::after {
         background: var(--online-2) !important;
     }
-    .wrapper__44b0c:has(rect[fill='#d83a42'])::after {
+    .wrapper__44b0c[aria-label*="Do Not Disturb"]::after {
         background: var(--dnd-2) !important;
     }
-    .wrapper__44b0c:has(rect[fill='#ca9654'])::after {
+    .wrapper__44b0c[aria-label*="Idle"]::after {
         background: var(--idle-2) !important;
     }
-    .wrapper__44b0c:has(rect[fill='#82838b'])::after {
+    .wrapper__44b0c[aria-label*="Offline"]::after {
         background: var(--offline-2) !important;
     }
-    .wrapper__44b0c:has(rect[fill='#9147ff'])::after {
+    .wrapper__44b0c[aria-label*="Streaming"]::after {
         background: var(--streaming-2);
     }
 
