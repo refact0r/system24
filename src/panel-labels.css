@@ -12,9 +12,9 @@ body {
 
 @container body style(--panel-labels: on) {
     .visual-refresh {
-        .guilds_c48ade,
-        .panels_c48ade,
-        .sidebarList_c48ade,
+        .guilds__5e434,
+        .panels__5e434,
+        .sidebarList__5e434,
         .subtitleContainer_f75fb0,
         .messagesWrapper__36d07,
         .channelTextArea_f75fb0,
@@ -44,13 +44,13 @@ body {
             }
         }
 
-        .guilds_c48ade::after {
+        .guilds__5e434::after {
             content: 'nav';
         }
-        .panels_c48ade::after {
+        .panels__5e434::after {
             content: 'user';
         }
-        .sidebarList_c48ade::after {
+        .sidebarList__5e434::after {
             content: 'channels';
         }
         .subtitleContainer_f75fb0::after {
@@ -83,32 +83,35 @@ body {
         }
 
         .content_f75fb0 > .membersWrap_c8ffbb,
-        .panels_c48ade,
-        .sidebar_c48ade,
-        .sidebarList_c48ade,
+        .panels__5e434,
+        .sidebar__5e434,
+        .sidebarList__5e434,
         .chat_f75fb0,
-        .page_c48ade,
+        .page__5e434,
         .channelTextArea_f75fb0,
         .container__133bf,
         .container_c8ffbb,
-        .guilds_c48ade,
+        .guilds__5e434,
         .peopleColumn__133bf,
         .tabBody__133bf,
         .container__01ae2,
-        .chatContent_f75fb0 {
-            overflow: visible;
+        .chatContent_f75fb0,
+        .messagesWrapper__36d07 {
+            overflow: visible !important;
         }
-        .page_c48ade,
+        .page__5e434,
         .tabBody__133bf {
             min-height: 0;
         }
         .peopleColumn__133bf {
             min-width: 0;
         }
-        .sidebarList_c48ade,
+        .sidebarList__5e434,
         .container_c8ffbb,
         .peopleColumn__133bf,
-        .nowPlayingColumn__133bf {
+        .nowPlayingColumn__133bf,
+        .messagesWrapper__36d07,
+        .channelTextArea_f75fb0 {
             position: relative;
         }
 
@@ -116,8 +119,8 @@ body {
             top: 8px;
         }
         .membersWrap_c8ffbb,
-        .guilds_c48ade,
-        .sidebarList_c48ade {
+        .guilds__5e434,
+        .sidebarList__5e434 {
             padding-top: 8px;
         }
         .membersWrap_c8ffbb {
