@@ -91,7 +91,7 @@ body {
     --text-2: oklch(85% 0 0); /* headings and important text */
     --text-3: oklch(75% 0 0); /* normal text */
     --text-4: oklch(60% 0 0); /* icon buttons and channels */
-    --text-5: oklch(40% 0 0); /* muted channels/chats and timestamps */
+    --text-5: oklch(50% 0.05 310); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
     --bg-1: oklch(31% 0 0); /* dark buttons when clicked */
