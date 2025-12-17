@@ -161,13 +161,13 @@ body {
 }
 
 .visual-refresh {
-    .bg__960e4 {
+    ._960e4207cea8323e-bg {
         background: var(--bg-base-primary);
     }
-    .container__01ae2 {
+    ._01ae244280823725-container {
         background-color: var(--bg-base-primary);
     }
-    .container__37e49 {
+    ._37e49614b9f110a9-container {
         padding: 8px;
     }
 }
