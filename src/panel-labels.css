@@ -32,7 +32,7 @@ body {
                 position: absolute;
                 top: -10px;
                 left: 8px;
-                background-color: var(--bg-base-primary);
+                background-color: var(--background-base-low);
                 padding: 0 4px;
                 z-index: 100;
                 font-size: 16px;
