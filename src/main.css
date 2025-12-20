@@ -170,4 +170,8 @@ body {
     ._37e49614b9f110a9-container {
         padding: 8px;
     }
+
+    .sidebarList_c48ade:has([data-has-banner='true'][data-banner-visible='true']) {
+        border-top: var(--border-thickness) solid var(--border-subtle);
+    }
 }
