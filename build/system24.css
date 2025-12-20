@@ -390,11 +390,6 @@ body {
         ._36d072eab2b2e737-scroller {
             top: 8px;
         }
-        .c8ffbb79449f399c-membersWrap,
-        ._5e434347c823b592-guilds,
-        ._5e434347c823b592-sidebarList {
-            padding-top: 8px;
-        }
         .c8ffbb79449f399c-membersWrap {
             height: calc(100% - 8px);
         }
