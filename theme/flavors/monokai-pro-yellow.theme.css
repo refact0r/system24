@@ -1,0 +1,60 @@
+/**
+ * @name MonokaiProYellow
+ * @description A Monokai-Pro inspired theme with yellow as it's secondary colour.
+ * @author Doog
+ * @version 1.0.0
+ */
+
+/* Importing necessary base theme files */
+@import url('https://refact0r.github.io/system24/src/main.css');
+@import url('https://refact0r.github.io/system24/src/unrounding.css'); /* Remove this line if you prefer rounded corners */
+
+/* Customize theme variables */
+:root {
+    --font: 'Fira Code', monospace; /* UI font */
+    font-weight: 400; /* Standard font weight */
+    letter-spacing: 0; /* Normal letter spacing */
+
+    /* Panel and element spacing */
+    --pad: 12px; /* Padding between panels */
+    --txt-pad: 8px; /* Padding inside panels */
+    --panel-roundness: 4px; /* Corner roundness for panels */
+
+    /* Background colors */
+    --bg-0: #2d2a2e; /* Main background */
+    --bg-1: #403e41; /* Secondary background */
+    --bg-2: #505050; /* Neutral buttons */
+    --bg-3: #605c60; /* Neutral hover states */
+
+    /* Text colors */
+    --txt-0: #f8f8f2; /* Bright text */
+    --txt-1: #e6e6e6; /* Main text */
+    --txt-2: #a1a1a1; /* Secondary text */
+    --txt-3: #757575; /* Muted text */
+
+    /* Accent colors */
+    --acc-0: oklch(78% 0.10 80); /* Pink (main accent) */
+    --acc-1: #fd971f; /* Orange (hover) */
+    --acc-2: #a6e22e; /* Green (click) */
+    --txt-link: #66d9ef; /* Blue (links) */
+
+    /* Borders */
+    --border-width: 2px; /* Panel border thickness */
+    --border-color: #49483e; /* Panel border color */
+    --border-hover-color: var(--acc-0); /* Border hover state */
+    --border-transition: 0.2s ease; /* Smooth transitions */
+
+    /* Status dot colors */
+    --online-dot: #a6e22e; /* Online (green) */
+    --dnd-dot: #f92672; /* Do not disturb (pink) */
+    --idle-dot: #fd971f; /* Idle (orange) */
+    --streaming-dot: #66d9ef; /* Streaming (blue) */
+
+    /* Mention/ping and message highlights */
+    --mention-txt: #e6db74; /* Yellow for mention text color */
+    --mention-bg: #49483e; /* Keep the mention background highlight */
+    --mention-overlay: rgba(230, 219, 116, 0.2); /* Yellow overlay for mentions */
+    --mention-hover-overlay: rgba(230, 219, 116, 0.3); /* Hover overlay */
+    --reply-overlay: rgba(255, 255, 255, 0.1); /* Reply highlight */
+    --reply-hover-overlay: rgba(255, 255, 255, 0.15); /* Hover reply highlight */
+}
