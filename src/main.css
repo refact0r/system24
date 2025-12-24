@@ -79,80 +79,196 @@ body {
 /* color options */
 :root {
     --colors: on; /* off: discord default colors, on: midnight custom colors */
+}
 
-    /* text colors */
-    --text-0: var(--bg-4); /* text on colored elements */
-    --text-1: oklch(95% 0 0); /* other normally white text */
-    --text-2: oklch(85% 0 0); /* headings and important text */
-    --text-3: oklch(75% 0 0); /* normal text */
-    --text-4: oklch(60% 0 0); /* icon buttons and channels */
-    --text-5: oklch(40% 0 0); /* muted channels/chats and timestamps */
+/* color options dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* text colors */
+        --text-0: var(--bg-4); /* text on colored elements */
+        --text-1: oklch(95% 0 0); /* other normally white text */
+        --text-2: oklch(85% 0 0); /* headings and important text */
+        --text-3: oklch(75% 0 0); /* normal text */
+        --text-4: oklch(60% 0 0); /* icon buttons and channels */
+        --text-5: oklch(40% 0 0); /* muted channels/chats and timestamps */
 
-    /* background and dark colors */
-    --bg-1: oklch(31% 0 0); /* dark buttons when clicked */
-    --bg-2: oklch(27% 0 0); /* dark buttons */
-    --bg-3: oklch(23% 0 0); /* spacing, secondary elements */
-    --bg-4: oklch(19% 0 0); /* main background color */
-    --hover: oklch(54% 0 0 / 0.1); /* channels and buttons when hovered */
-    --active: oklch(54% 0 0 / 0.2); /* channels and buttons when clicked or selected */
-    --active-2: oklch(54% 0 0 / 0.3); /* extra state for transparent buttons */
-    --message-hover: var(--hover); /* messages when hovered */
+        /* background and dark colors */
+        --bg-1: oklch(31% 0 0); /* dark buttons when clicked */
+        --bg-2: oklch(27% 0 0); /* dark buttons */
+        --bg-3: oklch(23% 0 0); /* spacing, secondary elements */
+        --bg-4: oklch(19% 0 0); /* main background color */
+        --hover: oklch(54% 0 0 / 0.1); /* channels and buttons when hovered */
+        --active: oklch(54% 0 0 / 0.2); /* channels and buttons when clicked or selected */
+        --active-2: oklch(54% 0 0 / 0.3); /* extra state for transparent buttons */
+        --message-hover: var(--hover); /* messages when hovered */
 
-    /* accent colors */
-    --accent-1: var(--purple-1); /* links and other accent text */
-    --accent-2: var(--purple-2); /* small accent elements */
-    --accent-3: var(--purple-3); /* accent buttons */
-    --accent-4: var(--purple-4); /* accent buttons when hovered */
-    --accent-5: var(--purple-5); /* accent buttons when clicked */
-    --accent-new: var(--red-2); /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
-    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
-    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
-    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+        /* accent colors */
+        --accent-1: var(--purple-1); /* links and other accent text */
+        --accent-2: var(--purple-2); /* small accent elements */
+        --accent-3: var(--purple-3); /* accent buttons */
+        --accent-4: var(--purple-4); /* accent buttons when hovered */
+        --accent-5: var(--purple-5); /* accent buttons when clicked */
+        --accent-new: var(--red-2); /* stuff that's normally red like mute/deafen buttons */
+        --mention: linear-gradient(
+            to right,
+            color-mix(in hsl, var(--accent-2), transparent 90%) 40%,
+                                   transparent
+        ); /* background of messages that mention you */
+        --mention-hover: linear-gradient(
+            to right,
+            color-mix(in hsl, var(--accent-2), transparent 95%) 40%,
+                                         transparent
+        ); /* background of messages that mention you when hovered */
+        --reply: linear-gradient(
+            to right,
+            color-mix(in hsl, var(--text-3), transparent 90%) 40%,
+                                 transparent
+        ); /* background of messages that reply to you */
+        --reply-hover: linear-gradient(
+            to right,
+            color-mix(in hsl, var(--text-3), transparent 95%) 40%,
+                                       transparent
+        ); /* background of messages that reply to you when hovered */
 
-    /* status indicator colors */
-    --online: var(--green-2); /* change to #40a258 for default */
-    --dnd: var(--red-2); /* change to #d83a41 for default */
-    --idle: var(--yellow-2); /* change to #cc954c for default */
-    --streaming: var(--purple-2); /* change to ##9147ff for default */
-    --offline: var(--text-4); /* change to #82838b for default offline color */
+        /* status indicator colors */
+        --online: var(--green-2); /* change to #40a258 for default */
+        --dnd: var(--red-2); /* change to #d83a41 for default */
+        --idle: var(--yellow-2); /* change to #cc954c for default */
+        --streaming: var(--purple-2); /* change to ##9147ff for default */
+        --offline: var(--text-4); /* change to #82838b for default offline color */
 
-    /* border colors */
-    --border-light: var(--hover); /* general light border color */
-    --border: var(--active); /* general normal border color */
-    --border-hover: var(--accent-2); /* border color of panels when hovered */
-    --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
+        /* border colors */
+        --border-light: var(--hover); /* general light border color */
+        --border: var(--active); /* general normal border color */
+        --border-hover: var(--accent-2); /* border color of panels when hovered */
+        --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
 
-    /* base colors */
-    --red-1: oklch(75% 0.13 0);
-    --red-2: oklch(70% 0.13 0);
-    --red-3: oklch(65% 0.13 0);
-    --red-4: oklch(60% 0.13 0);
-    --red-5: oklch(55% 0.13 0);
+        /* base colors */
+        --red-1: oklch(75% 0.13 0);
+        --red-2: oklch(70% 0.13 0);
+        --red-3: oklch(65% 0.13 0);
+        --red-4: oklch(60% 0.13 0);
+        --red-5: oklch(55% 0.13 0);
 
-    --green-1: oklch(75% 0.12 170);
-    --green-2: oklch(70% 0.12 170);
-    --green-3: oklch(65% 0.12 170);
-    --green-4: oklch(60% 0.12 170);
-    --green-5: oklch(55% 0.12 160);
+        --green-1: oklch(75% 0.12 170);
+        --green-2: oklch(70% 0.12 170);
+        --green-3: oklch(65% 0.12 170);
+        --green-4: oklch(60% 0.12 170);
+        --green-5: oklch(55% 0.12 160);
 
-    --blue-1: oklch(75% 0.11 215);
-    --blue-2: oklch(70% 0.11 215);
-    --blue-3: oklch(65% 0.11 215);
-    --blue-4: oklch(60% 0.11 215);
-    --blue-5: oklch(55% 0.11 215);
+        --blue-1: oklch(75% 0.11 215);
+        --blue-2: oklch(70% 0.11 215);
+        --blue-3: oklch(65% 0.11 215);
+        --blue-4: oklch(60% 0.11 215);
+        --blue-5: oklch(55% 0.11 215);
 
-    --yellow-1: oklch(80% 0.12 90);
-    --yellow-2: oklch(75% 0.12 90);
-    --yellow-3: oklch(70% 0.12 90);
-    --yellow-4: oklch(65% 0.12 90);
-    --yellow-5: oklch(60% 0.12 90);
+        --yellow-1: oklch(80% 0.12 90);
+        --yellow-2: oklch(75% 0.12 90);
+        --yellow-3: oklch(70% 0.12 90);
+        --yellow-4: oklch(65% 0.12 90);
+        --yellow-5: oklch(60% 0.12 90);
 
-    --purple-1: oklch(75% 0.12 310);
-    --purple-2: oklch(70% 0.12 310);
-    --purple-3: oklch(65% 0.12 310);
-    --purple-4: oklch(60% 0.12 310);
-    --purple-5: oklch(55% 0.12 310);
+        --purple-1: oklch(75% 0.12 310);
+        --purple-2: oklch(70% 0.12 310);
+        --purple-3: oklch(65% 0.12 310);
+        --purple-4: oklch(60% 0.12 310);
+        --purple-5: oklch(55% 0.12 310);
+    }
+}
+
+/* color options light mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        /* text colors */
+        --text-0: var(--bg-4); /* text on colored elements */
+        --text-1: oklch(5% 0 0); /* other normally white text */
+        --text-2: oklch(15% 0 0); /* headings and important text */
+        --text-3: oklch(25% 0 0); /* normal text */
+        --text-4: oklch(40% 0 0); /* icon buttons and channels */
+        --text-5: oklch(60% 0 0); /* muted channels/chats and timestamps */
+
+        /* background and dark colors */
+        --bg-1: oklch(69% 0 0); /* dark buttons when clicked */
+        --bg-2: oklch(63% 0 0); /* dark buttons */
+        --bg-3: oklch(77% 0 0); /* spacing, secondary elements */
+        --bg-4: oklch(81% 0 0); /* main background color */
+        --hover: oklch(46% 0 0 / 0.1); /* channels and buttons when hovered */
+        --active: oklch(46% 0 0 / 0.2); /* channels and buttons when clicked or selected */
+        --active-2: oklch(46% 0 0 / 0.3); /* extra state for transparent buttons */
+        --message-hover: var(--hover); /* messages when hovered */
+
+        /* accent colors */
+        --accent-1: var(--purple-1); /* links and other accent text */
+        --accent-2: var(--purple-2); /* small accent elements */
+        --accent-3: var(--purple-3); /* accent buttons */
+        --accent-4: var(--purple-4); /* accent buttons when hovered */
+        --accent-5: var(--purple-5); /* accent buttons when clicked */
+        --accent-new: var(--red-2); /* stuff that's normally red like mute/deafen buttons */
+        --mention: linear-gradient(
+            to right,
+            color-mix(in hsl, var(--accent-2), transparent 10%) 40%,
+                                   transparent
+        ); /* background of messages that mention you */
+        --mention-hover: linear-gradient(
+            to right,
+            color-mix(in hsl, var(--accent-2), transparent 05%) 40%,
+                                         transparent
+        ); /* background of messages that mention you when hovered */
+        --reply: linear-gradient(
+            to right,
+            color-mix(in hsl, var(--text-3), transparent 10%) 40%,
+                                 transparent
+        ); /* background of messages that reply to you */
+        --reply-hover: linear-gradient(
+            to right,
+            color-mix(in hsl, var(--text-3), transparent 05%) 40%,
+                                       transparent
+        ); /* background of messages that reply to you when hovered */
+
+        /* status indicator colors */
+        --online: var(--green-2); /* change to #40a258 for default */
+        --dnd: var(--red-2); /* change to #d83a41 for default */
+        --idle: var(--yellow-2); /* change to #cc954c for default */
+        --streaming: var(--purple-2); /* change to ##9147ff for default */
+        --offline: var(--text-4); /* change to #82838b for default offline color */
+
+        /* border colors */
+        --border-light: var(--hover); /* general light border color */
+        --border: var(--active); /* general normal border color */
+        --border-hover: var(--accent-2); /* border color of panels when hovered */
+        --button-border: hsl(220, 100%, 100%, 0.1); /* neutral border color of buttons */
+
+        /* base colors */
+        --red-1: oklch(75% 0.13 0);
+        --red-2: oklch(70% 0.13 0);
+        --red-3: oklch(65% 0.13 0);
+        --red-4: oklch(60% 0.13 0);
+        --red-5: oklch(55% 0.13 0);
+
+        --green-1: oklch(75% 0.12 170);
+        --green-2: oklch(70% 0.12 170);
+        --green-3: oklch(65% 0.12 170);
+        --green-4: oklch(60% 0.12 170);
+        --green-5: oklch(55% 0.12 160);
+
+        --blue-1: oklch(75% 0.11 215);
+        --blue-2: oklch(70% 0.11 215);
+        --blue-3: oklch(65% 0.11 215);
+        --blue-4: oklch(60% 0.11 215);
+        --blue-5: oklch(55% 0.11 215);
+
+        --yellow-1: oklch(80% 0.12 90);
+        --yellow-2: oklch(75% 0.12 90);
+        --yellow-3: oklch(70% 0.12 90);
+        --yellow-4: oklch(65% 0.12 90);
+        --yellow-5: oklch(60% 0.12 90);
+
+        --purple-1: oklch(75% 0.12 310);
+        --purple-2: oklch(70% 0.12 310);
+        --purple-3: oklch(65% 0.12 310);
+        --purple-4: oklch(60% 0.12 310);
+        --purple-5: oklch(55% 0.12 310);
+    }
 }
 
 body {
