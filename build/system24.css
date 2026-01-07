@@ -519,17 +519,17 @@ body {
         right: -4px;
         border: 2px solid var(--background-base-lower);
     }
-    ._44b0c28be7879b7b-wrapper:has(rect[fill='#43a25a'])::after,
+    ._44b0c28be7879b7b-wrapper:has(rect[fill='#45a366'])::after,
     ._1ce5d425feffd32a-container:has(.a423bdd721ddcc83-status[style='background-color: rgb(67, 162, 90);'])::after {
         background: var(--online-2) !important;
     }
-    ._44b0c28be7879b7b-wrapper:has(rect[fill='#d83a42'])::after {
+    ._44b0c28be7879b7b-wrapper:has(rect[fill='#da3e44'])::after {
         background: var(--dnd-2) !important;
     }
-    ._44b0c28be7879b7b-wrapper:has(rect[fill='#ca9654'])::after {
+    ._44b0c28be7879b7b-wrapper:has(rect[fill='#ffc04e'])::after {
         background: var(--idle-2) !important;
     }
-    ._44b0c28be7879b7b-wrapper:has(rect[fill='#82838b'])::after {
+    ._44b0c28be7879b7b-wrapper:has(rect[fill='#84858d'])::after {
         background: var(--offline-2) !important;
     }
     ._44b0c28be7879b7b-wrapper:has(rect[fill='#9147ff'])::after {
