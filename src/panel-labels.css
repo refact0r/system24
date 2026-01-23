@@ -12,19 +12,19 @@ body {
 
 @container body style(--panel-labels: on) {
     .visual-refresh {
-        ._5e434347c823b592-guilds,
-        ._5e434347c823b592-panels,
-        ._5e434347c823b592-sidebarList,
-        .f75fb00fb7356cbe-subtitleContainer,
-        ._36d072eab2b2e737-messagesWrapper,
-        .f75fb00fb7356cbe-channelTextArea,
-        .f75fb00fb7356cbe-content > .c8ffbb79449f399c-membersWrap,
-        .c8ffbb79449f399c-container,
-        ._133bf5eea8e33a34-container > ._9293f6b2fc12398a-container,
-        ._133bf5eea8e33a34-peopleColumn,
-        ._133bf5eea8e33a34-nowPlayingColumn,
-        ._01ae244280823725-container > ._9293f6b2fc12398a-container,
-        .cb9592ad77576717-callContainer {
+        .guilds__5e434,
+        .panels__5e434,
+        .sidebarList__5e434,
+        .subtitleContainer_f75fb0,
+        .messagesWrapper__36d07,
+        .channelTextArea_f75fb0,
+        .content_f75fb0 > .membersWrap_c8ffbb,
+        .container_c8ffbb,
+        .container__133bf > .container__9293f,
+        .peopleColumn__133bf,
+        .nowPlayingColumn__133bf,
+        .container__01ae2 > .container__9293f,
+        .callContainer_cb9592 {
             &::after {
                 display: block;
                 color: var(--label-color);
@@ -44,110 +44,110 @@ body {
             }
         }
 
-        ._5e434347c823b592-guilds::after {
+        .guilds__5e434::after {
             content: 'nav';
         }
-        ._5e434347c823b592-panels::after {
+        .panels__5e434::after {
             content: 'user';
         }
-        ._5e434347c823b592-sidebarList::after {
+        .sidebarList__5e434::after {
             content: 'channels';
         }
-        .f75fb00fb7356cbe-subtitleContainer::after {
+        .subtitleContainer_f75fb0::after {
             content: 'channel';
         }
-        ._36d072eab2b2e737-messagesWrapper::after {
+        .messagesWrapper__36d07::after {
             content: 'chat';
         }
-        .f75fb00fb7356cbe-channelTextArea::after {
+        .channelTextArea_f75fb0::after {
             content: 'input';
         }
-        .c8ffbb79449f399c-container::after,
-        .f75fb00fb7356cbe-content > .c8ffbb79449f399c-membersWrap::after {
+        .container_c8ffbb::after,
+        .content_f75fb0 > .membersWrap_c8ffbb::after {
             content: 'members';
         }
-        ._133bf5eea8e33a34-container > ._9293f6b2fc12398a-container:after {
+        .container__133bf > .container__9293f:after {
             content: 'friends';
         }
-        ._133bf5eea8e33a34-peopleColumn::after {
+        .peopleColumn__133bf::after {
             content: 'list';
         }
-        ._133bf5eea8e33a34-nowPlayingColumn::after {
+        .nowPlayingColumn__133bf::after {
             content: 'activity';
         }
-        ._01ae244280823725-container > ._9293f6b2fc12398a-container::after {
+        .container__01ae2 > .container__9293f::after {
             content: 'thread';
         }
-        .cb9592ad77576717-callContainer::after {
+        .callContainer_cb9592::after {
             content: 'vc';
         }
 
-        .f75fb00fb7356cbe-content > .c8ffbb79449f399c-membersWrap,
-        ._5e434347c823b592-panels,
-        ._5e434347c823b592-sidebar,
-        ._5e434347c823b592-sidebarList,
-        .f75fb00fb7356cbe-chat,
-        ._5e434347c823b592-page,
-        .f75fb00fb7356cbe-channelTextArea,
-        ._133bf5eea8e33a34-container,
-        .c8ffbb79449f399c-container,
-        ._5e434347c823b592-guilds,
-        ._133bf5eea8e33a34-peopleColumn,
-        ._133bf5eea8e33a34-tabBody,
-        ._01ae244280823725-container,
-        .f75fb00fb7356cbe-chatContent,
-        ._36d072eab2b2e737-messagesWrapper {
+        .content_f75fb0 > .membersWrap_c8ffbb,
+        .panels__5e434,
+        .sidebar__5e434,
+        .sidebarList__5e434,
+        .chat_f75fb0,
+        .page__5e434,
+        .channelTextArea_f75fb0,
+        .container__133bf,
+        .container_c8ffbb,
+        .guilds__5e434,
+        .peopleColumn__133bf,
+        .tabBody__133bf,
+        .container__01ae2,
+        .chatContent_f75fb0,
+        .messagesWrapper__36d07 {
             overflow: visible !important;
         }
-        ._5e434347c823b592-page,
-        ._133bf5eea8e33a34-tabBody {
+        .page__5e434,
+        .tabBody__133bf {
             min-height: 0;
         }
-        ._133bf5eea8e33a34-peopleColumn {
+        .peopleColumn__133bf {
             min-width: 0;
         }
-        ._5e434347c823b592-sidebarList,
-        .c8ffbb79449f399c-container,
-        ._133bf5eea8e33a34-peopleColumn,
-        ._133bf5eea8e33a34-nowPlayingColumn,
-        ._36d072eab2b2e737-messagesWrapper,
-        .f75fb00fb7356cbe-channelTextArea {
+        .sidebarList__5e434,
+        .container_c8ffbb,
+        .peopleColumn__133bf,
+        .nowPlayingColumn__133bf,
+        .messagesWrapper__36d07,
+        .channelTextArea_f75fb0 {
             position: relative;
         }
 
-        ._36d072eab2b2e737-scroller {
+        .scroller__36d07 {
             top: 8px;
         }
-        .c8ffbb79449f399c-membersWrap {
+        .membersWrap_c8ffbb {
             height: calc(100% - 8px);
         }
 
-        .ef3116c2da186559-scroller {
+        .scroller_ef3116 {
             padding-top: calc(var(--custom-guild-list-padding) - 8px);
         }
 
-        .f37cb1984c371ee5-animatedContainer,
-        .f37cb1984c371ee5-headerGlass {
+        .animatedContainer_f37cb1,
+        .headerGlass_f37cb1 {
             left: 8px;
             right: 8px;
             width: auto;
         }
-        .f37cb1984c371ee5-header {
+        .header_f37cb1 {
             margin: 0 8px;
         }
-        ._2637a2609f343032-container {
+        .container__2637a {
             overflow: hidden;
         }
 
-        .f37cb1984c371ee5-headerEllipseForeground {
+        .headerEllipseForeground_f37cb1 {
             display: none;
         }
 
-        .cb9592ad77576717-callContainer {
+        .callContainer_cb9592 {
             padding: 8px;
         }
 
-        ._36d072eab2b2e737-messagesWrapper {
+        .messagesWrapper__36d07 {
             mask: none !important;
         }
     }

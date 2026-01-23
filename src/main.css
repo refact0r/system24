@@ -5,7 +5,9 @@
     font-family: 'asciid';
     font-style: normal;
     font-weight: 400;
-    src: local('asciid'), url('https://refact0r.github.io/system24/assets/asciid.woff') format('woff');
+    src:
+        local('asciid'),
+        url('https://refact0r.github.io/system24/assets/asciid.woff') format('woff');
 }
 
 body {
@@ -161,13 +163,13 @@ body {
 }
 
 .visual-refresh {
-    ._960e4207cea8323e-bg {
+    .bg__960e4 {
         background: var(--background-base-low);
     }
-    ._01ae244280823725-container {
+    .container__01ae2 {
         background-color: var(--background-base-low);
     }
-    ._37e49614b9f110a9-container {
+    .container__37e49 {
         padding: 8px;
     }
 }

@@ -19,16 +19,16 @@
 }
 
 @container body style(--ascii-loader: system24) {
-    .a2f5142ba8328dfd-content {
+    .content_a2f514 {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
-    .a2f5142ba8328dfd-content > .a2f5142ba8328dfd-spinner {
+    .content_a2f514 > .spinner_a2f514 {
         display: none;
     }
-    .a2f5142ba8328dfd-content::before {
+    .content_a2f514::before {
         display: block;
         content: '                    __                ___  __ __\A    _______  _______/ /____  ____ ___ |__ \\/ // /\A   / ___/ / / / ___/ __/ _ \\/ __ `__ \\__/ / // /_\A  (__  ) /_/ (__  ) /_/  __/ / / / / / __/__  __/\A/____/\\__, /____/\\__/\\___/_/ /_/ /_/____/ /_/   \A      /____/                                     ';
         font-size: 18px;
@@ -41,7 +41,7 @@
         background-size: 200% auto;
         animation: textShine 1.5s linear infinite reverse;
     }
-    .a2f5142ba8328dfd-text {
+    .text_a2f514 {
         position: static;
     }
 
@@ -62,21 +62,21 @@
 }
 
 @container body style(--ascii-loader: cats) {
-    .a2f5142ba8328dfd-content {
+    .content_a2f514 {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 32px;
         position: static;
     }
-    .a2f5142ba8328dfd-content > .a2f5142ba8328dfd-spinner {
+    .content_a2f514 > .spinner_a2f514 {
         display: none;
     }
-    .a2f5142ba8328dfd-content::before {
+    .content_a2f514::before {
         display: block;
         content: url('https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/assets/cats.gif');
     }
-    .a2f5142ba8328dfd-text {
+    .text_a2f514 {
         position: static;
     }
 }

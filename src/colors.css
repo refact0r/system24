@@ -1,6 +1,6 @@
 @container root style(--colors: on) {
-    #app-mount ._44b0c28be7879b7b-wrapper,
-    #app-mount ._1ce5d425feffd32a-container {
+    #app-mount .wrapper__44b0c,
+    #app-mount .container__1ce5d {
         --online-2: var(--online);
         --dnd-2: var(--dnd);
         --idle-2: var(--idle);
