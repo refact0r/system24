@@ -15,8 +15,8 @@
 
 body {
     /* font, change to '' for default discord font */
-    --font: 'DM Mono'; /* change to '' for default discord font */
-    --code-font: 'DM Mono'; /* change to '' for default discord font */
+    --font: 'Liberation Mono'; /* change to '' for default discord font */
+    --code-font: 'Liberation Mono'; /* change to '' for default discord font */
     font-weight: 300; /* text font weight. 300 is light, 400 is normal. DOES NOT AFFECT BOLD TEXT */
     letter-spacing: -0.05ch; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
 
