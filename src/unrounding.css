@@ -62,6 +62,14 @@
         background: var(--streaming-2);
     }
 
+    .switchIndicator_a28278[style*='background-color: rgba(0, 0, 0, 0.12);'] svg.thumb_a28278 rect {
+        rx: 0;
+    }
+
+    .switchIndicator_a28278[style*='background-color: rgb(88, 101, 242);'] svg.thumb_a28278 rect {
+        rx: 0;
+    }
+
     .lowerBadge_cc5dd2 {
         border: 2px solid var(--background-base-lower);
         bottom: -4px;
