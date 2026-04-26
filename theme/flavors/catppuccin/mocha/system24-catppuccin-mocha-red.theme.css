@@ -1,11 +1,11 @@
 /**
- * @name system24 (catppuccin macchiato)
- * @description a tui-style discord theme. based on catppuccin macchiato theme (https://catppuccin.com).
+ * @name system24 (catppuccin mocha)
+ * @description a tui-style discord theme. based on catppuccin mocha theme (https://catppuccin.com).
  * @author refact0r
  * @version 2.0.0
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/system24
- * @source https://github.com/refact0r/system24/blob/master/theme/system24-catppuccin-macchiato.theme.css
+ * @source https://github.com/refact0r/system24/blob/master/theme/system24-catppuccin-mocha.theme.css
  * @authorId 508863359777505290
  * @authorLink https://www.refact0r.dev
 */
@@ -86,29 +86,29 @@ body {
     --colors: on; /* off: discord default colors, on: midnight custom colors */
 
     /* text colors */
-    --text-0: var(--bg-4); /* text on colored elements */
-    --text-1: hsl(227, 68%, 95%); /* bright text on colored elements */
-    --text-2: #cad3f5; /* headings and important text */
-    --text-3: #b8c0e0; /* normal text */
-    --text-4: #8087a2; /* icon buttons and channels */
-    --text-5: #5b6078; /* muted channels/chats and timestamps */
+    --text-0: var(--bg-3); /* text on colored elements */
+    --text-1: hsl(226, 64%, 95%); /* other normally white text */
+    --text-2: #cdd6f4; /* headings and important text */
+    --text-3: #bac2de; /* normal text */
+    --text-4: #7f849c; /* icon buttons and channels */
+    --text-5: #585b70; /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: #494d64; /* dark buttons when clicked */
-    --bg-2: #363a4f; /* dark buttons */
-    --bg-3: #1e2030; /* spacing, secondary elements */
-    --bg-4: #24273a; /* main background color */
-    --hover: hsla(230, 15%, 53%, 0.1); /* channels and buttons when hovered */
-    --active: hsla(230, 15%, 53%, 0.2); /* channels and buttons when clicked or selected */
-    --active-2: hsla(230, 15%, 53%, 0.3); /* extra state for transparent buttons */
-    --message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
+    --bg-1: #45475a; /* dark buttons when clicked */
+    --bg-2: #313244; /* dark buttons */
+    --bg-3: #181825; /* spacing, secondary elements */
+    --bg-4: #1e1e2e; /* main background color */
+    --hover: hsla(235, 15%, 53%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(235, 15%, 53%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(235, 15%, 53%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(235, 0%, 0%, 0.1); /* messages when hovered */
 
     /* accent colors */
-    --accent-1: var(--purple-1); /* links and other accent text */
-    --accent-2: var(--purple-2); /* small accent elements */
-    --accent-3: var(--purple-3); /* accent buttons */
-    --accent-4: var(--purple-4); /* accent buttons when hovered */
-    --accent-5: var(--purple-5); /* accent buttons when clicked */
+    --accent-1: var(--red-1); /* links and other accent text */
+    --accent-2: var(--red-2); /* small accent elements */
+    --accent-3: var(--red-3); /* accent buttons */
+    --accent-4: var(--red-4); /* accent buttons when hovered */
+    --accent-5: var(--red-5); /* accent buttons when clicked */
     --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
@@ -126,90 +126,90 @@ body {
     --border-light: var(--hover); /* general light border color */
     --border: var(--active); /* general normal border color */
     --border-hover: var(--accent-2); /* border color of panels when hovered */
-    --button-border: hsl(230, 0%, 100%, 0.1); /* neutral border color of buttons */
+    --button-border: hsl(235, 0%, 100%, 0.1); /* neutral border color of buttons */
 
     /* base colors */
-    --rosewater-1: hsl(10deg, 58%, 95%);
-    --rosewater-2: hsl(10deg, 58%, 90%);
-    --rosewater-3: hsl(10deg, 58%, 90%);
-    --rosewater-4: hsl(10deg, 58%, 85%);
-    --rosewater-5: hsl(10deg, 58%, 80%);
+    --rosewater-1: hsl(10deg, 56%, 96%);
+    --rosewater-2: hsl(10deg, 56%, 91%);
+    --rosewater-3: hsl(10deg, 56%, 91%);
+    --rosewater-4: hsl(10deg, 56%, 86%);
+    --rosewater-5: hsl(10deg, 56%, 81%);
 
-    --flamingo-1: hsl(0deg, 58%, 91%);
-    --flamingo-2: hsl(0deg, 58%, 86%);
-    --flamingo-3: hsl(0deg, 58%, 86%);
-    --flamingo-4: hsl(0deg, 58%, 81%);
-    --flamingo-5: hsl(0deg, 58%, 76%);
+    --flamingo-1: hsl(0deg, 59%, 93%);
+    --flamingo-2: hsl(0deg, 59%, 88%);
+    --flamingo-3: hsl(0deg, 59%, 88%);
+    --flamingo-4: hsl(0deg, 59%, 83%);
+    --flamingo-5: hsl(0deg, 59%, 78%);
 
-    --pink-1: hsl(316deg, 74%, 90%);
-    --pink-2: hsl(316deg, 74%, 85%);
-    --pink-3: hsl(316deg, 74%, 85%);
-    --pink-4: hsl(316deg, 74%, 80%);
-    --pink-5: hsl(316deg, 74%, 75%);
+    --pink-1: hsl(267deg, 84%, 91%);
+    --pink-2: hsl(316deg, 72%, 86%);
+    --pink-3: hsl(316deg, 72%, 86%);
+    --pink-4: hsl(316deg, 72%, 81%);
+    --pink-5: hsl(316deg, 72%, 76%);
 
-    --purple-1: hsl(267deg, 83%, 85%);
-    --purple-2: hsl(267deg, 83%, 80%);
-    --purple-3: hsl(267deg, 83%, 80%);
-    --purple-4: hsl(267deg, 83%, 75%);
-    --purple-5: hsl(267deg, 83%, 70%);
+    --purple-1: hsl(267deg, 84%, 86%);
+    --purple-2: hsl(267deg, 84%, 81%);
+    --purple-3: hsl(267deg, 84%, 81%);
+    --purple-4: hsl(267deg, 84%, 76%);
+    --purple-5: hsl(267deg, 84%, 71%);
 
-    --red-1: hsl(351deg, 74%, 78%);
-    --red-2: hsl(351deg, 74%, 73%);
-    --red-3: hsl(351deg, 74%, 73%);
-    --red-4: hsl(351deg, 74%, 68%);
-    --red-5: hsl(351deg, 74%, 63%);
+    --red-1: hsl(343deg, 81%, 80%);
+    --red-2: hsl(343deg, 81%, 75%);
+    --red-3: hsl(343deg, 81%, 75%);
+    --red-4: hsl(343deg, 81%, 70%);
+    --red-5: hsl(343deg, 81%, 65%);
 
-    --maroon-1: hsl(355deg, 71%, 82%);
-    --maroon-2: hsl(355deg, 71%, 77%);
-    --maroon-3: hsl(355deg, 71%, 77%);
-    --maroon-4: hsl(355deg, 71%, 72%);
-    --maroon-5: hsl(355deg, 71%, 67%);
+    --maroon-1: hsl(350deg, 65%, 82%);
+    --maroon-2: hsl(350deg, 65%, 77%);
+    --maroon-3: hsl(350deg, 65%, 77%);
+    --maroon-4: hsl(350deg, 65%, 72%);
+    --maroon-5: hsl(350deg, 65%, 67%);
 
-    --peach-1: hsl(21deg, 86%, 78%);
-    --peach-2: hsl(21deg, 86%, 73%);
-    --peach-3: hsl(21deg, 86%, 73%);
-    --peach-4: hsl(21deg, 86%, 68%);
-    --peach-5: hsl(21deg, 86%, 63%);
+    --peach-1: hsl(23deg, 92%, 80%);
+    --peach-2: hsl(23deg, 92%, 75%);
+    --peach-3: hsl(23deg, 92%, 75%);
+    --peach-4: hsl(23deg, 92%, 70%);
+    --peach-5: hsl(23deg, 92%, 65%);
 
-    --yellow-1: hsl(40deg, 70%, 83%);
-    --yellow-2: hsl(40deg, 70%, 78%);
-    --yellow-3: hsl(40deg, 70%, 78%);
-    --yellow-4: hsl(40deg, 70%, 73%);
-    --yellow-5: hsl(40deg, 70%, 68%);
+    --yellow-1: hsl(41deg, 86%, 88%);
+    --yellow-2: hsl(41deg, 86%, 83%);
+    --yellow-3: hsl(41deg, 86%, 83%);
+    --yellow-4: hsl(41deg, 86%, 78%);
+    --yellow-5: hsl(41deg, 86%, 73%);
 
-    --green-1: hsl(105deg, 48%, 77%);
-    --green-2: hsl(105deg, 48%, 72%);
-    --green-3: hsl(105deg, 48%, 72%);
-    --green-4: hsl(105deg, 48%, 67%);
-    --green-5: hsl(105deg, 48%, 62%);
+    --green-1: hsl(115deg, 54%, 81%);
+    --green-2: hsl(115deg, 54%, 76%);
+    --green-3: hsl(115deg, 54%, 76%);
+    --green-4: hsl(115deg, 54%, 71%);
+    --green-5: hsl(115deg, 54%, 66%);
 
-    --teal-1: hsl(171deg, 47%, 74%);
-    --teal-2: hsl(171deg, 47%, 69%);
-    --teal-3: hsl(171deg, 47%, 69%);
-    --teal-4: hsl(171deg, 47%, 64%);
-    --teal-5: hsl(171deg, 47%, 59%);
+    --teal-1: hsl(170deg, 57%, 78%);
+    --teal-2: hsl(170deg, 57%, 73%);
+    --teal-3: hsl(170deg, 57%, 73%);
+    --teal-4: hsl(170deg, 57%, 68%);
+    --teal-5: hsl(170deg, 57%, 63%);
 
-    --sky-1: hsl(189deg, 59%, 78%);
-    --sky-2: hsl(189deg, 59%, 73%);
-    --sky-3: hsl(189deg, 59%, 73%);
-    --sky-4: hsl(189deg, 59%, 68%);
-    --sky-5: hsl(189deg, 59%, 63%);
+    --sky-1: hsl(189deg, 71%, 78%);
+    --sky-2: hsl(189deg, 71%, 73%);
+    --sky-3: hsl(189deg, 71%, 73%);
+    --sky-4: hsl(189deg, 71%, 68%);
+    --sky-5: hsl(189deg, 71%, 63%);
 
-    --sapphire-1: hsl(199deg, 66%, 74%);
-    --sapphire-2: hsl(199deg, 66%, 69%);
-    --sapphire-3: hsl(199deg, 66%, 69%);
-    --sapphire-4: hsl(199deg, 66%, 64%);
-    --sapphire-5: hsl(199deg, 66%, 59%);
+    --sapphire-1: hsl(199deg, 76%, 74%);
+    --sapphire-2: hsl(199deg, 76%, 69%);
+    --sapphire-3: hsl(199deg, 76%, 64%);
+    --sapphire-4: hsl(199deg, 76%, 59%);
+    --sapphire-5: hsl(199deg, 76%, 54%);
 
-    --blue-1: hsl(220deg, 83%, 80%);
-    --blue-2: hsl(220deg, 83%, 75%);
-    --blue-3: hsl(220deg, 83%, 75%);
-    --blue-4: hsl(220deg, 83%, 70%);
-    --blue-5: hsl(220deg, 83%, 65%);
+    --blue-1: hsl(217deg, 92%, 71%);
+    --blue-2: hsl(217deg, 92%, 76%);
+    --blue-3: hsl(217deg, 92%, 76%);
+    --blue-4: hsl(217deg, 92%, 71%);
+    --blue-5: hsl(217deg, 92%, 66%);
 
-    --lavender-1: hsl(234deg, 82%, 90%);
-    --lavender-2: hsl(234deg, 82%, 85%);
-    --lavender-3: hsl(234deg, 82%, 85%);
-    --lavender-4: hsl(234deg, 82%, 80%);
-    --lavender-5: hsl(234deg, 82%, 75%);
+    --lavender-1: hsl(232deg, 97%, 90%);
+    --lavender-2: hsl(232deg, 97%, 85%);
+    --lavender-3: hsl(232deg, 97%, 85%);
+    --lavender-4: hsl(232deg, 97%, 80%);
+    --lavender-5: hsl(232deg, 97%, 75%);
 }
