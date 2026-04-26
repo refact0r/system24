@@ -559,5 +559,10 @@ body {
     ::-webkit-scrollbar-thumb {
         border-radius: 0 !important;
     }
+
+    
+    :is(.vc-switch-slider, .thumb_a28278) > rect {
+        rx: 0px !important;
+    }
 }
 
