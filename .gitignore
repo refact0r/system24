@@ -10,3 +10,4 @@ dist
 .parcel-cache
 package-lock.json
 *.pyc
+.DS_Store

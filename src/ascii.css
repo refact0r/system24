@@ -6,7 +6,7 @@
 
 @container body style(--ascii-titles: on) {
     h3[data-text-variant='heading-xxl/extrabold'] {
-        font-family: 'asciid';
+        font-family: 'asciid', 'DM Mono', 'gg mono', 'Source Code Pro', Consolas, Monaco, monospace;
         font-size: 50px;
         font-weight: 400;
     }
