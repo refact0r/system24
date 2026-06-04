@@ -40,7 +40,9 @@ customized variants of the theme.
 
 this theme depends on [midnight](https://github.com/refact0r/midnight-discord) for its core styles. if you're looking to contribute, please consider which theme you actually want to work on. feel free to open an issue and ask if you're unsure.
 
-this theme uses a dev script to check for changes in the source css files and combine them into a build file. to run locally:
+this theme uses a dev script to check for changes in the /src .css files and combine them into a build file in /build. note that both the /src files and the /build file are tracked in git, so any changes you contribute should exist in both places!!
+
+to run locally:
 
 1. clone the repository.
 2. run `npm i`.
