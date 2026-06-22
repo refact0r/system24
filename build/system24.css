@@ -558,6 +558,7 @@ body {
         rx: 0 !important;
     }
 
+    /* vencord membercount plugin */
     .vc-membercount-online-count circle,
     .vc-membercount-total-count circle {
         display: none !important;
@@ -572,6 +573,11 @@ body {
         box-sizing: border-box !important;
         height: 12px !important;
         width: 12px !important;
+    }
+
+    /* prevent the status circle background mask from blocking avatar decorations in profile popouts */
+    .wrapper__44b0c foreignObject {
+        mask: none;
     }
 
     ::-webkit-scrollbar-thumb {
