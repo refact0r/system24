@@ -80,6 +80,22 @@
         rx: 0 !important;
     }
 
+    .vc-membercount-online-count circle,
+    .vc-membercount-total-count circle {
+        display: none !important;
+    }
+    .vc-membercount-online-count {
+        background-color: var(--online) !important;
+        height: 12px !important;
+        width: 12px !important;
+    }
+    .vc-membercount-total-count {
+        border: 3px solid var(--offline) !important;
+        box-sizing: border-box !important;
+        height: 12px !important;
+        width: 12px !important;
+    }
+
     ::-webkit-scrollbar-thumb {
         border-radius: 0 !important;
     }
