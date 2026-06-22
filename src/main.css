@@ -162,14 +162,12 @@ body {
     --chatbar-height: 56px !important; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
 }
 
-.visual-refresh {
-    .bg__960e4 {
-        background: var(--background-base-low);
-    }
-    .container__01ae2 {
-        background-color: var(--background-base-low);
-    }
-    .container__37e49 {
-        padding: 8px;
-    }
+.bg__960e4 {
+    background: var(--background-base-low);
+}
+.container__01ae2 {
+    background-color: var(--background-base-low);
+}
+.container__37e49 {
+    padding: 8px;
 }
