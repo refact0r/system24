@@ -479,6 +479,14 @@ body {
     *::before,
     *::after {
         border-radius: 0 !important;
+        --radius-none: 0px !important;
+        --radius-xs: 0px !important;
+        --radius-sm: 0px !important;
+        --radius-md: 0px !important;
+        --radius-lg: 0px !important;
+        --radius-xl: 0px !important;
+        --radius-xxl: 0px !important;
+        --radius-round: 0px !important;
     }
 
     .svg_cc5dd2 > mask,
@@ -570,7 +578,6 @@ body {
         border-radius: 0 !important;
     }
 
-    
     :is(.vc-switch-slider, .thumb_a28278) > rect {
         rx: 0px !important;
     }
