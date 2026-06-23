@@ -149,4 +149,8 @@ body {
     .messagesWrapper__36d07 {
         mask: none !important;
     }
+
+    .topControls_bfe55a.controlSection_bfe55a .subtitleContainer_f75fb0::after {
+        display: none;
+    }
 }
