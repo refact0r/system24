@@ -110,6 +110,11 @@
         mask: none;
     }
 
+    /* equicord switches */
+    .vc-switch-indicator .vc-switch-thumb rect {
+        rx: var(--radius-lg) !important;
+    }
+
     ::-webkit-scrollbar-thumb {
         border-radius: 0 !important;
     }
