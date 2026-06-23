@@ -422,8 +422,22 @@ body {
         mask: none !important;
     }
 
+    /* hide double label in dm vc */
     .topControls_bfe55a.controlSection_bfe55a .subtitleContainer_f75fb0::after {
         display: none;
+    }
+
+    /* reduce padding and realign top row in vc */
+    .headerBar__49508.container__9293f {
+        padding: 0px 0px 12px 0px;
+        min-height: 0px;
+        height: 46px;
+    }
+    .videoControls_bfe55a {
+        padding: 0 8px 8px;
+    }
+    .headerWrapper_cb9592 {
+        margin: 0;
     }
 }
 
