@@ -17,6 +17,9 @@
         top: 0 !important;
         background-color: var(--background-surface-high);
     }
+    #app-mount #vc-spotify-progress-bar .track_a562c8:hover {
+        cursor: col-resize;
+    }
     #app-mount #vc-spotify-progress-bar .barFill_a562c8 {
         height: 22px !important;
     }
