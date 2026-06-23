@@ -599,5 +599,12 @@ body {
     :is(.vc-switch-slider, .thumb_a28278) > rect {
         rx: 0px !important;
     }
+
+    /* sticker panel */
+    .assetWrapper__31fc2.assetWrapperMasked__31fc2,
+    .inspectedIndicator_c6367b {
+        webkit-mask: none;
+        mask: none;
+    }
 }
 
