@@ -54,7 +54,7 @@
         border: 2px solid var(--background-base-lower);
     }
     .wrapper__44b0c:has(rect[fill='#45a366'])::after,
-    .container__1ce5d:has(.status_a423bd[style='background-color: rgb(67, 162, 90);'])::after {
+    .container__1ce5d:has(.status_a423bd[style='background-color: rgb(69, 163, 102);'])::after {
         background: var(--online-2) !important;
     }
     .wrapper__44b0c:has(rect[fill='#da3e44'])::after {
