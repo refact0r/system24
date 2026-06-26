@@ -27,6 +27,8 @@ add `https://refact0r.github.io/system24/build/system24.css` to your theme impor
 
 customized variants of the theme.
 
+- [light](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-light.theme.css)
+- [auto (system theme)](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-auto.theme.css)
 - [catppuccin mocha](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-catppuccin-mocha.theme.css)
 - [catppuccin macchiato](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-catppuccin-macchiato.theme.css)
 - [everforest](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-everforest.theme.css)
@@ -52,9 +54,9 @@ to run locally:
 DEV_OUTPUT_PATH=C:\Users\USERNAME\AppData\Roaming\Vencord\themes\system24-dev.theme.css
 ```
 
-4. run `npm run dev`.
-5. make changes to any file in `/src` or the main theme file. the local theme files you listed will automatically be updated, along with the build file in `/build`.
-6. make a pull request with your changes!
+1. run `npm run dev`.
+2. make changes to any file in `/src` or the main theme file. the local theme files you listed will automatically be updated, along with the build file in `/build`.
+3. make a pull request with your changes!
 
 ## credits
 
