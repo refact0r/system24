@@ -620,5 +620,26 @@ body {
         webkit-mask: none;
         mask: none;
     }
+
+    /* context menu radio buttons */
+    .radioIndicator__64e61 {
+        background-color: var(--checkbox-background-default);
+        background-image: linear-gradient(var(--white) 0 0);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 0 0;
+        border: 1px solid var(--checkbox-border-default);
+        box-sizing: border-box;
+        transition: background-size 0.25s cubic-bezier(0.35, 1.6, 0.45, 1);
+    }
+    .radioIndicator__64e61 > circle {
+        display: none;
+    }
+    .standaloneRadioIndicator__64e61[data-selected='true'] .radioIndicator__64e61,
+    .radioGroupOption__64e61[data-selected='true'] .radioIndicator__64e61 {
+        background-color: var(--checkbox-background-selected-default);
+        background-size: 8px 8px;
+        border-color: var(--checkbox-border-selected-default);
+    }
 }
 
