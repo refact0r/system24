@@ -165,7 +165,8 @@
     }
 }
 
-@container body style(--round-pfp: off) {
+/* Active only when unrounding is enabled */
+@container body style(--round-pfp: off) and style(--unrounding: on) {
     .wrapper__44b0c foreignObject {
         /* Remove Discord's avatar mask to allow square avatars. */
         mask: none;
@@ -182,7 +183,7 @@
     }
 }
 
-@container body style(--round-pfp: on) {
+@container body style(--round-pfp: on) and style(--unrounding: on) {
     /* Restore Discord's default rounded profile avatars. */
     .wrapper__44b0c,
     .avatarStack__44b0c,
@@ -223,7 +224,7 @@
     }
 }
 
-@container body style(--remove-pfp-decor: on) and style(--round-pfp: off) {
+@container body style(--remove-pfp-decor: on) {
     /* Hide avatar decorations to avoid rounded overlays on square profile pictures. */
     .avatarDecorationContainer__44b0c {
         display: none !important;
