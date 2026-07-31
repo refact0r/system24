@@ -4,6 +4,18 @@
     initial-value: on;
 }
 
+@property --round-pfp {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
+@property --remove-pfp-decor {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
 @container body style(--unrounding: on) {
     *,
     *::before,
@@ -17,15 +29,6 @@
         --radius-xl: 0px !important;
         --radius-xxl: 0px !important;
         --radius-round: 0px !important;
-    }
-
-    .svg_cc5dd2 > mask,
-    .svg__44b0c > rect,
-    .svg__44b0c > circle,
-    .svg__44b0c > g,
-    .svg__44b0c rect[mask='url(#:rhi:)'],
-    .avatar__20a53 .status_a423bd {
-        display: none;
     }
 
     .mask__68edb > foreignObject,
@@ -110,6 +113,16 @@
         mask: none;
     }
 
+    /* Remove the banner cutout since it only fits rounded avatars. */
+    .banner_b83360 > div {
+        --custom-cutout-radius: 0px !important;
+    }
+
+    /* subtle avatar shadow for contrast. */
+    .wrapper__44b0c {
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.9) !important;
+    }
+
     /* equicord switches */
     .vc-switch-indicator .vc-switch-thumb rect {
         rx: var(--radius-lg) !important;
@@ -126,7 +139,7 @@
     /* sticker panel */
     .assetWrapper__31fc2.assetWrapperMasked__31fc2,
     .inspectedIndicator_c6367b {
-        webkit-mask: none;
+        -webkit-mask: none;
         mask: none;
     }
 
@@ -149,5 +162,70 @@
         background-color: var(--checkbox-background-selected-default);
         background-size: 8px 8px;
         border-color: var(--checkbox-border-selected-default);
+    }
+}
+
+@container body style(--round-pfp: off) {
+    .wrapper__44b0c foreignObject {
+        /* Remove Discord's avatar mask to allow square avatars. */
+        mask: none;
+    }
+
+    /* Replace Discord's rounded status indicator with the square variant. */
+    .svg_cc5dd2 > mask,
+    .svg__44b0c > rect,
+    .svg__44b0c > circle,
+    .svg__44b0c > g,
+    .svg__44b0c rect[mask='url(#:rhi:)'],
+    .avatar__20a53 .status_a423bd {
+        display: none;
+    }
+}
+
+@container body style(--round-pfp: on) {
+    /* Restore Discord's default rounded profile avatars. */
+    .wrapper__44b0c,
+    .avatarStack__44b0c,
+    .avatar_c19a55,
+    .avatar__44b0c {
+        border-radius: 50% !important;
+
+        --radius-none: revert !important;
+        --radius-xs: revert !important;
+        --radius-sm: revert !important;
+        --radius-md: revert !important;
+        --radius-lg: revert !important;
+        --radius-xl: revert !important;
+        --radius-xxl: revert !important;
+        --radius-round: revert !important;
+    }
+
+    /* Restore rounded avatars in facepiles and other SVG-based avatars. */
+    foreignObject > img,
+    .circularImage__1ce5d {
+        border-radius: 50% !important;
+    }
+
+    /* Restore Discord's avatar mask. */
+    .wrapper__44b0c foreignObject {
+        mask: url(#svg-mask-avatar-status-round-80) !important;
+    }
+
+    /* Restore Discord's native status indicator. */
+    .container__1ce5d:has(.status_a423bd)::after,
+    .wrapper__44b0c:has(rect)::after {
+        content: none !important;
+    }
+
+    /* Show Discord's original SVG status icon again. */
+    .svg__44b0c > rect {
+        display: initial !important;
+    }
+}
+
+@container body style(--remove-pfp-decor: on) and style(--round-pfp: off) {
+    /* Hide avatar decorations to avoid rounded overlays on square profile pictures. */
+    .avatarDecorationContainer__44b0c {
+        display: none !important;
     }
 }

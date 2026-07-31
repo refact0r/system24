@@ -37,6 +37,7 @@
         line-height: 1.2;
         background: linear-gradient(to right, var(--brand-360) 0%, var(--background-accent) 25%, var(--background-accent) 75%, var(--brand-360) 100%);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         background-size: 200% auto;
         animation: textShine 1.5s linear infinite reverse;
