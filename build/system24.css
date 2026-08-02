@@ -168,6 +168,10 @@ body {
 .bg__960e4 {
     background: var(--background-base-low);
 }
+/* Add contrast to platform icons since the icons have transparent backgrounds */
+.platformIconContainer__9bfb9 {
+    background: rgb(from var(--background-base-low) calc(255 - r) calc(255 - g) calc(255 - b));
+}
 .container__01ae2 {
     background-color: var(--background-base-low);
 }
@@ -513,7 +517,9 @@ body {
 @container body style(--unrounding: on) {
     *,
     *::before,
-    *::after {
+    *::after,
+    /* Exclude avatar wrapper so that --round-pfp has full control */
+    :not(.wrapper__44b0c) {
         border-radius: 0 !important;
         --radius-none: 0px !important;
         --radius-xs: 0px !important;
@@ -526,7 +532,6 @@ body {
     }
 
     .mask__68edb > foreignObject,
-    .svg__44b0c > foreignObject,
     .svg__2338f > foreignObject {
         mask: none;
     }
@@ -602,21 +607,6 @@ body {
         width: 12px !important;
     }
 
-    /* prevent the status circle background mask from blocking avatar decorations in profile popouts */
-    .wrapper__44b0c foreignObject {
-        mask: none;
-    }
-
-    /* Remove the banner cutout since it only fits rounded avatars. */
-    .banner_b83360 > div {
-        --custom-cutout-radius: 0px !important;
-    }
-
-    /* subtle avatar shadow for contrast. */
-    .wrapper__44b0c {
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.9) !important;
-    }
-
     /* equicord switches */
     .vc-switch-indicator .vc-switch-thumb rect {
         rx: var(--radius-lg) !important;
@@ -659,11 +649,23 @@ body {
     }
 }
 
-/* Active only when unrounding is enabled */
+/* Active only when unrounding is enabled. */
 @container body style(--round-pfp: off) and style(--unrounding: on) {
-    .wrapper__44b0c foreignObject {
-        /* Remove Discord's avatar mask to allow square avatars. */
-        mask: none;
+    /* Remove avatar masks to allow square profile pictures. */
+    .wrapper__44b0c foreignObject,
+    /* Moved here so the avatar mask is only removed for square profile pictures. */
+    .svg__44b0c > foreignObject {
+        mask: none !important;
+    }
+
+    /* Remove the banner cutout since it only fits rounded avatars. */
+    .banner_b83360 > div {
+        --custom-cutout-radius: 0px !important;
+    }
+
+    /* Only apply the avatar shadow when using square profile pictures. */
+    .wrapper__44b0c {
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.9) !important;
     }
 
     /* Replace Discord's rounded status indicator with the square variant. */
@@ -701,26 +703,17 @@ body {
         border-radius: 50% !important;
     }
 
-    /* Restore Discord's avatar mask. */
-    .wrapper__44b0c foreignObject {
-        mask: url(#svg-mask-avatar-status-round-80) !important;
-    }
-
     /* Restore Discord's native status indicator. */
     .container__1ce5d:has(.status_a423bd)::after,
     .wrapper__44b0c:has(rect)::after {
         content: none !important;
     }
-
-    /* Show Discord's original SVG status icon again. */
-    .svg__44b0c > rect {
-        display: initial !important;
-    }
 }
 
 @container body style(--remove-pfp-decor: on) {
     /* Hide avatar decorations to avoid rounded overlays on square profile pictures. */
-    .avatarDecorationContainer__44b0c {
+    [class*='avatarDecorationContainer__'],
+    [class*='avatarDecoration_'] {
         display: none !important;
     }
 }

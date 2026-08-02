@@ -167,6 +167,10 @@ body {
 .bg__960e4 {
     background: var(--background-base-low);
 }
+/* Add contrast to platform icons since the icons have transparent backgrounds */
+.platformIconContainer__9bfb9 {
+    background: rgb(from var(--background-base-low) calc(255 - r) calc(255 - g) calc(255 - b));
+}
 .container__01ae2 {
     background-color: var(--background-base-low);
 }
