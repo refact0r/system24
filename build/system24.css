@@ -515,11 +515,10 @@ body {
 }
 
 @container body style(--unrounding: on) {
-    *,
     *::before,
     *::after,
     /* Exclude avatar wrapper so that --round-pfp has full control */
-    :not(.wrapper__44b0c) {
+ *:not(.wrapper__44b0c):not(.container__1ce5d):not(.avatar_c19a55) {
         border-radius: 0 !important;
         --radius-none: 0px !important;
         --radius-xs: 0px !important;
@@ -531,8 +530,12 @@ body {
         --radius-round: 0px !important;
     }
 
-    .mask__68edb > foreignObject,
-    .svg__2338f > foreignObject {
+    /* Server icons */
+    .svg_cc5dd2 > mask {
+        display: none;
+    }
+
+    .mask__68edb > foreignObject {
         mask: none;
     }
 
@@ -654,7 +657,8 @@ body {
     /* Remove avatar masks to allow square profile pictures. */
     .wrapper__44b0c foreignObject,
     /* Moved here so the avatar mask is only removed for square profile pictures. */
-    .svg__44b0c > foreignObject {
+    .svg__44b0c > foreignObject,
+    .svg__2338f > foreignObject {
         mask: none !important;
     }
 
@@ -669,7 +673,6 @@ body {
     }
 
     /* Replace Discord's rounded status indicator with the square variant. */
-    .svg_cc5dd2 > mask,
     .svg__44b0c > rect,
     .svg__44b0c > circle,
     .svg__44b0c > g,
@@ -684,21 +687,7 @@ body {
     .wrapper__44b0c,
     .avatarStack__44b0c,
     .avatar_c19a55,
-    .avatar__44b0c {
-        border-radius: 50% !important;
-
-        --radius-none: revert !important;
-        --radius-xs: revert !important;
-        --radius-sm: revert !important;
-        --radius-md: revert !important;
-        --radius-lg: revert !important;
-        --radius-xl: revert !important;
-        --radius-xxl: revert !important;
-        --radius-round: revert !important;
-    }
-
-    /* Restore rounded avatars in facepiles and other SVG-based avatars. */
-    foreignObject > img,
+    .avatar__44b0c,
     .circularImage__1ce5d {
         border-radius: 50% !important;
     }
