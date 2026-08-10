@@ -14,17 +14,15 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - id: update-src
-        uses: metro420yt/class-update@v1
+        uses: refact0r/class-update@v3
         with:
           folder: src
           ext: css
-          diff: "https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt"
       - id: update-build
-        uses: metro420yt/class-update@v1
+        uses: refact0r/class-update@v3
         with:
           folder: build
           ext: css
-          diff: "https://raw.githubusercontent.com/SyndiShanX/Update-Classes/main/Changes.txt"
       - uses: EndBug/add-and-commit@v10
         if: ${{steps.update-src.outputs.totalChanges > 0 || steps.update-build.outputs.totalChanges > 0}}
         with:
