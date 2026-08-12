@@ -518,7 +518,7 @@ body {
     *::before,
     *::after,
     /* Exclude avatar wrapper so that --round-pfp has full control */
- *:not(.wrapper__44b0c):not(.container__1ce5d):not(.avatar_c19a55) {
+ *:not(.wrapper__44b0c):not(.container__1ce5d):not(.avatar_c19a55):not(.replyAvatar_c19a55) {
         border-radius: 0 !important;
         --radius-none: 0px !important;
         --radius-xs: 0px !important;
@@ -535,7 +535,8 @@ body {
         display: none;
     }
 
-    .mask__68edb > foreignObject {
+    .mask__68edb > foreignObject,
+    .svg__2338f.imageContainer_ef9ae7 > foreignObject {
         mask: none;
     }
 
@@ -662,6 +663,11 @@ body {
         mask: none !important;
     }
 
+    .avatar_c19a55,
+    .replyAvatar_c19a55 {
+        border-radius: 0 !important;
+    }
+
     /* Remove the banner cutout since it only fits rounded avatars. */
     .banner_b83360 > div {
         --custom-cutout-radius: 0px !important;
@@ -669,6 +675,7 @@ body {
 
     /* Only apply the avatar shadow when using square profile pictures. */
     .wrapper__44b0c {
+        border-radius: 0 !important;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.9) !important;
     }
 
@@ -688,6 +695,7 @@ body {
     .avatarStack__44b0c,
     .avatar_c19a55,
     .avatar__44b0c,
+    .replyAvatar_c19a55,
     .circularImage__1ce5d {
         border-radius: 50% !important;
     }
