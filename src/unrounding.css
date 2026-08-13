@@ -150,4 +150,16 @@
         background-size: 8px 8px;
         border-color: var(--checkbox-border-selected-default);
     }
+
+    /* assert viewBox to make sure we don't screw up UI */
+    /* change the maximize path to be square */
+    svg[viewBox="0 0 24 24"] > path[d="M4 6c0-1.1.9-2 2-2h3a1 1 0 0 0 0-2H6a4 4 0 0 0-4 4v3a1 1 0 0 0 2 0V6ZM4 18c0 1.1.9 2 2 2h3a1 1 0 1 1 0 2H6a4 4 0 0 1-4-4v-3a1 1 0 1 1 2 0v3ZM18 4a2 2 0 0 1 2 2v3a1 1 0 1 0 2 0V6a4 4 0 0 0-4-4h-3a1 1 0 1 0 0 2h3ZM20 18a2 2 0 0 1-2 2h-3a1 1 0 1 0 0 2h3a4 4 0 0 0 4-4v-3a1 1 0 1 0-2 0v3Z"] {
+        d: path("M 0 0 h 10 v3 h-7 v7 h-3 Z M 24 0 h-10 v3 h7 v7 h3 Z M 24 24 v-10 h-3 v7 h-7 v3 Z M 0 24 v-10 h3 v7 h7 v3 Z") !important;
+    }
+
+    /* assert viewBox to make sure we don't screw up UI */
+    /* change the minimize path to be square */
+    svg[viewBox="0 0 24 24"] > path[d="M8 6a2 2 0 0 1-2 2H3a1 1 0 0 0 0 2h3a4 4 0 0 0 4-4V3a1 1 0 0 0-2 0v3ZM8 18a2 2 0 0 0-2-2H3a1 1 0 1 1 0-2h3a4 4 0 0 1 4 4v3a1 1 0 1 1-2 0v-3ZM18 8a2 2 0 0 1-2-2V3a1 1 0 1 0-2 0v3a4 4 0 0 0 4 4h3a1 1 0 1 0 0-2h-3ZM16 18c0-1.1.9-2 2-2h3a1 1 0 1 0 0-2h-3a4 4 0 0 0-4 4v3a1 1 0 1 0 2 0v-3Z"] {
+        d: path("M 0 0 m 7 0 h3 v10 h-10 v-3 h7 Z M 24 0 m -7 0 h-3 v10 h10 v-3 h-7 Z M 24 24 m -7 0 h-3 v-10 h10 v3 h-7 Z M 0 24 m 0 -7 v-3 h10 v10 h-3 v-7 Z") !important;
+    }
 }
