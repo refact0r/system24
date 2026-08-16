@@ -158,7 +158,7 @@
 /* Active only when unrounding is enabled. */
 @container body style(--round-pfp: off) and style(--unrounding: on) {
     /* Remove avatar masks to allow square profile pictures. */
-    .wrapper__44b0c foreignObject,
+    .wrapper__44b0c > svg > foreignObject,
     /* Moved here so the avatar mask is only removed for square profile pictures. */
     .svg__44b0c > foreignObject,
     .svg__2338f > foreignObject {
@@ -173,14 +173,13 @@
 
     /* Remove the banner cutout since it only fits rounded avatars. */
     /* Discord may change the generated class suffix after updates, hence using ^ (starts with) to match banner classes. */
-    [class^='banner_'] > div {
+    .banner_f7e69e > .banner__68edb {
         --custom-cutout-radius: 0px !important;
     }
 
     /* Only apply the avatar shadow when using square profile pictures. */
     .wrapper__44b0c {
         border-radius: 0 !important;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.9) !important;
     }
 
     /* Replace Discord's rounded status indicator with the square variant. */

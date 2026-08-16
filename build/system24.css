@@ -168,10 +168,6 @@ body {
 .bg__960e4 {
     background: var(--background-base-low);
 }
-/* Add contrast to platform icons since the icons have transparent backgrounds */
-.platformIconContainer__9bfb9 {
-    background: rgb(from var(--background-base-low) calc(255 - r) calc(255 - g) calc(255 - b));
-}
 .container__01ae2 {
     background-color: var(--background-base-low);
 }
@@ -656,7 +652,7 @@ body {
 /* Active only when unrounding is enabled. */
 @container body style(--round-pfp: off) and style(--unrounding: on) {
     /* Remove avatar masks to allow square profile pictures. */
-    .wrapper__44b0c foreignObject,
+    .wrapper__44b0c > svg > foreignObject,
     /* Moved here so the avatar mask is only removed for square profile pictures. */
     .svg__44b0c > foreignObject,
     .svg__2338f > foreignObject {
@@ -671,14 +667,13 @@ body {
 
     /* Remove the banner cutout since it only fits rounded avatars. */
     /* Discord may change the generated class suffix after updates, hence using ^ (starts with) to match banner classes. */
-    [class^='banner_'] > div {
+    .banner_f7e69e > .banner__68edb {
         --custom-cutout-radius: 0px !important;
     }
 
     /* Only apply the avatar shadow when using square profile pictures. */
     .wrapper__44b0c {
         border-radius: 0 !important;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.9) !important;
     }
 
     /* Replace Discord's rounded status indicator with the square variant. */
