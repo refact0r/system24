@@ -663,13 +663,15 @@ body {
         mask: none !important;
     }
 
+    /* Remove the border radius from reply avatars. */
     .avatar_c19a55,
     .replyAvatar_c19a55 {
         border-radius: 0 !important;
     }
 
     /* Remove the banner cutout since it only fits rounded avatars. */
-    .banner_b83360 > div {
+    /* Discord may change the generated class suffix after updates, hence using ^ (starts with) to match banner classes. */
+    [class^='banner_'] > div {
         --custom-cutout-radius: 0px !important;
     }
 
@@ -701,16 +703,17 @@ body {
     }
 
     /* Restore Discord's native status indicator. */
-    .container__1ce5d:has(.status_a423bd)::after,
-    .wrapper__44b0c:has(rect)::after {
+    .wrapper__44b0c::after,
+    .container__1ce5d::after {
         content: none !important;
+        display: none !important;
     }
 }
 
 @container body style(--remove-pfp-decor: on) {
     /* Hide avatar decorations to avoid rounded overlays on square profile pictures. */
-    [class*='avatarDecorationContainer__'],
-    [class*='avatarDecoration_'] {
+    [class^='avatarDecorationContainer__'],
+    [class^='avatarDecoration_'] {
         display: none !important;
     }
 }
