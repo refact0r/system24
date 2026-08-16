@@ -20,7 +20,7 @@
     *::before,
     *::after,
     /* Exclude avatar wrapper so that --round-pfp has full control */
- *:not(.wrapper__44b0c):not(.container__1ce5d):not(.avatar_c19a55):not(.replyAvatar_c19a55) {
+    *:not(.wrapper__44b0c):not(.avatar_c19a55):not(.replyAvatar_c19a55) {
         border-radius: 0 !important;
         --radius-none: 0px !important;
         --radius-xs: 0px !important;
@@ -172,12 +172,10 @@
     }
 
     /* Remove the banner cutout since it only fits rounded avatars. */
-    /* Discord may change the generated class suffix after updates, hence using ^ (starts with) to match banner classes. */
     .banner_f7e69e > .banner__68edb {
         --custom-cutout-radius: 0px !important;
     }
 
-    /* Only apply the avatar shadow when using square profile pictures. */
     .wrapper__44b0c {
         border-radius: 0 !important;
     }
@@ -193,16 +191,6 @@
 }
 
 @container body style(--round-pfp: on) and style(--unrounding: on) {
-    /* Restore Discord's default rounded profile avatars. */
-    .wrapper__44b0c,
-    .avatarStack__44b0c,
-    .avatar_c19a55,
-    .avatar__44b0c,
-    .replyAvatar_c19a55,
-    .circularImage__1ce5d {
-        border-radius: 50% !important;
-    }
-
     /* Restore Discord's native status indicator. */
     .wrapper__44b0c::after,
     .container__1ce5d::after {
@@ -213,8 +201,8 @@
 
 @container body style(--remove-pfp-decor: on) {
     /* Hide avatar decorations to avoid rounded overlays on square profile pictures. */
-    [class^='avatarDecorationContainer__'],
-    [class^='avatarDecoration_'] {
+    .avatarDecorationContainer__44b0c,
+    .avatarDecoration__44b0c {
         display: none !important;
     }
 }
