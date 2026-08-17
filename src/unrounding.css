@@ -20,7 +20,7 @@
     *::before,
     *::after,
     /* Exclude avatar wrapper so that --round-pfp has full control */
-    *:not(.wrapper__44b0c):not(.avatar_c19a55):not(.replyAvatar_c19a55) {
+ *:not(.wrapper__44b0c):not(.container__1ce5d):not(.avatar_c19a55):not(.replyAvatar_c19a55) {
         border-radius: 0 !important;
         --radius-none: 0px !important;
         --radius-xs: 0px !important;
@@ -50,7 +50,7 @@
         --offline-2: #82838b;
         --streaming-2: #9147ff;
     }
-    .wrapper__44b0c:has(> .svg__44b0c rect)::after,
+    .wrapper__44b0c:has(> .svg__44b0c > g > rect)::after,
     .container__1ce5d:has(> .mask_a423bd .status_a423bd)::after {
         content: '';
         display: block;
@@ -178,6 +178,9 @@
 
     .wrapper__44b0c {
         border-radius: 0 !important;
+    }
+    .avatar__75742 .wrapper__44b0c {
+        border: 2px solid var(--background-base-lower);
     }
 
     /* Replace Discord's rounded status indicator with the square variant. */
