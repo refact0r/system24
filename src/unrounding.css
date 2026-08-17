@@ -20,7 +20,7 @@
     *::before,
     *::after,
     /* Exclude avatar wrapper so that --round-pfp has full control */
- *:not(.wrapper__44b0c):not(.container__1ce5d):not(.avatar_c19a55):not(.replyAvatar_c19a55) {
+    *:not(.wrapper__44b0c):not(.container__1ce5d):not(.avatar_c19a55):not(.replyAvatar_c19a55) {
         border-radius: 0 !important;
         --radius-none: 0px !important;
         --radius-xs: 0px !important;
@@ -178,9 +178,6 @@
 
     .wrapper__44b0c {
         border-radius: 0 !important;
-    }
-    .avatar__75742 .wrapper__44b0c {
-        border: 2px solid var(--background-base-lower);
     }
 
     /* Replace Discord's rounded status indicator with the square variant. */
