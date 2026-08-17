@@ -4,10 +4,23 @@
     initial-value: on;
 }
 
+@property --round-pfp {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
+@property --remove-pfp-decor {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: off;
+}
+
 @container body style(--unrounding: on) {
-    *,
     *::before,
-    *::after {
+    *::after,
+    /* Exclude avatar wrapper so that --round-pfp has full control */
+ *:not(.wrapper__44b0c):not(.container__1ce5d):not(.avatar_c19a55):not(.replyAvatar_c19a55) {
         border-radius: 0 !important;
         --radius-none: 0px !important;
         --radius-xs: 0px !important;
@@ -19,18 +32,13 @@
         --radius-round: 0px !important;
     }
 
-    .svg_cc5dd2 > mask,
-    .svg__44b0c > rect,
-    .svg__44b0c > circle,
-    .svg__44b0c > g,
-    .svg__44b0c rect[mask='url(#:rhi:)'],
-    .avatar__20a53 .status_a423bd {
+    /* Server icons */
+    .svg_cc5dd2 > mask {
         display: none;
     }
 
     .mask__68edb > foreignObject,
-    .svg__44b0c > foreignObject,
-    .svg__2338f > foreignObject {
+    .svg__2338f.imageContainer_ef9ae7 > foreignObject {
         mask: none;
     }
 
@@ -42,7 +50,7 @@
         --offline-2: #82838b;
         --streaming-2: #9147ff;
     }
-    .wrapper__44b0c:has(> .svg__44b0c rect)::after,
+    .wrapper__44b0c:has(> .svg__44b0c > g > rect)::after,
     .container__1ce5d:has(> .mask_a423bd .status_a423bd)::after {
         content: '';
         display: block;
@@ -105,11 +113,6 @@
         width: 12px !important;
     }
 
-    /* prevent the status circle background mask from blocking avatar decorations in profile popouts */
-    .wrapper__44b0c foreignObject {
-        mask: none;
-    }
-
     /* equicord switches */
     .vc-switch-indicator .vc-switch-thumb rect {
         rx: var(--radius-lg) !important;
@@ -126,7 +129,7 @@
     /* sticker panel */
     .assetWrapper__31fc2.assetWrapperMasked__31fc2,
     .inspectedIndicator_c6367b {
-        webkit-mask: none;
+        -webkit-mask: none;
         mask: none;
     }
 
@@ -149,5 +152,60 @@
         background-color: var(--checkbox-background-selected-default);
         background-size: 8px 8px;
         border-color: var(--checkbox-border-selected-default);
+    }
+}
+
+/* Active only when unrounding is enabled. */
+@container body style(--round-pfp: off) and style(--unrounding: on) {
+    /* Remove avatar masks to allow square profile pictures. */
+    .wrapper__44b0c > svg > foreignObject,
+    /* Moved here so the avatar mask is only removed for square profile pictures. */
+    .svg__44b0c > foreignObject,
+    .svg__2338f > foreignObject {
+        mask: none !important;
+    }
+
+    /* Remove the border radius from reply avatars. */
+    .avatar_c19a55,
+    .replyAvatar_c19a55 {
+        border-radius: 0 !important;
+    }
+
+    /* Remove the banner cutout since it only fits rounded avatars. */
+    .banner_f7e69e > .banner__68edb {
+        --custom-cutout-radius: 0px !important;
+    }
+
+    .wrapper__44b0c {
+        border-radius: 0 !important;
+    }
+    .avatar__75742 .wrapper__44b0c {
+        border: 2px solid var(--background-base-lower);
+    }
+
+    /* Replace Discord's rounded status indicator with the square variant. */
+    .svg__44b0c > rect,
+    .svg__44b0c > circle,
+    .svg__44b0c > g,
+    .svg__44b0c rect[mask='url(#:rhi:)'],
+    .avatar__20a53 .status_a423bd {
+        display: none;
+    }
+}
+
+@container body style(--round-pfp: on) and style(--unrounding: on) {
+    /* Restore Discord's native status indicator. */
+    .wrapper__44b0c::after,
+    .container__1ce5d::after {
+        content: none !important;
+        display: none !important;
+    }
+}
+
+@container body style(--remove-pfp-decor: on) {
+    /* Hide avatar decorations to avoid rounded overlays on square profile pictures. */
+    .avatarDecoration_c19a55,
+    .avatarDecoration__44b0c {
+        display: none !important;
     }
 }
