@@ -201,7 +201,7 @@
 
 @container body style(--remove-pfp-decor: on) {
     /* Hide avatar decorations to avoid rounded overlays on square profile pictures. */
-    .avatarDecorationContainer__44b0c,
+    .avatarDecoration_c19a55,
     .avatarDecoration__44b0c {
         display: none !important;
     }
