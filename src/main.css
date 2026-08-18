@@ -66,6 +66,8 @@ body {
 
     /* unrounding options */
     --unrounding: on; /* off: default, on: remove rounded corners from panels */
+    --round-pfp: off; /* off: square profile pictures, on: rounded profile pictures (Discord default) */
+    --remove-pfp-decor: off; /* off: default, on: remove profile picture decorations */
 
     /* styling options */
     --custom-spotify-bar: on; /* off: default, on: custom text-like spotify progress bar */
@@ -162,14 +164,12 @@ body {
     --chatbar-height: 56px !important; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
 }
 
-.visual-refresh {
-    .bg__960e4 {
-        background: var(--background-base-low);
-    }
-    .container__01ae2 {
-        background-color: var(--background-base-low);
-    }
-    .container__37e49 {
-        padding: 8px;
-    }
+.bg__960e4 {
+    background: var(--background-base-low);
+}
+.container__01ae2 {
+    background-color: var(--background-base-low);
+}
+.container__37e49 {
+    padding: 8px;
 }
