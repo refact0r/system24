@@ -27,6 +27,8 @@ add `https://refact0r.github.io/system24/build/system24.css` to your theme impor
 
 customized variants of the theme.
 
+- [light](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-light.theme.css)
+- [auto (system theme)](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-auto.theme.css)
 - [catppuccin mocha](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-catppuccin-mocha.theme.css)
 - [catppuccin macchiato](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-catppuccin-macchiato.theme.css)
 - [everforest](https://github.com/refact0r/system24/blob/main/theme/flavors/system24-everforest.theme.css)
