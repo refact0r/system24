@@ -453,7 +453,7 @@ body {
 
 @container body style(--custom-spotify-bar: on) {
     /* text-like spotify progress bar */
-    .slider__4c059 {
+    .slider_ec237e {
         --bar-size: 22px !important;
     }
     #vc-spotify-progress-bar {
@@ -462,12 +462,12 @@ body {
     .vc-spotify-button-row {
         margin-top: 8px;
     }
-    #app-mount #vc-spotify-progress-bar .bar__4c059 {
+    #app-mount #vc-spotify-progress-bar .bar_ec237e {
         height: 22px !important;
         top: 0 !important;
         background-color: var(--background-surface-high);
     }
-    #app-mount #vc-spotify-progress-bar .track__4c059:hover {
+    #app-mount #vc-spotify-progress-bar .track_ec237e:hover {
         cursor: col-resize;
     }
     #vc-spotify-progress-bar .vc-spotify-time-left,
@@ -486,7 +486,7 @@ body {
     #vc-spotify-progress-bar .vc-spotify-time-right {
         right: 6px;
     }
-    #vc-spotify-progress-bar .grabber__4c059 {
+    #vc-spotify-progress-bar .grabber_ec237e {
         visibility: hidden;
     }
 }
