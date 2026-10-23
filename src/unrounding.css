@@ -37,7 +37,6 @@
         display: none;
     }
 
-    .mask__68edb > foreignObject,
     .svg__2338f.imageContainer_ef9ae7 > foreignObject {
         mask: none;
     }
@@ -90,10 +89,6 @@
     }
     .folderGroup__48112.isExpanded__48112 > .stack_dbd263 {
         overflow: visible !important;
-    }
-
-    .slider__3f21e > rect[rx='10'] {
-        rx: 0 !important;
     }
 
     /* vencord membercount plugin */
