@@ -10,19 +10,34 @@ const { baseFile, buildCombinedTheme, config, root, srcDir } = require('./build'
 const PORT = Number(process.env.PORT) || 8765;
 const HOST = process.env.HOST || '127.0.0.1';
 const injectFile = path.join(__dirname, 'inject.js');
+// Self-contained loader for agents: evaluate_script with sourcePath, no page-to-localhost fetch needed.
+const applyFile = path.join(root, '.theme-dev', 'apply.js');
 
 let cached = buildCombinedTheme();
 let version = 1;
+
+function loader(runtime) {
+    return fs.readFileSync(injectFile, 'utf8').replace('__THEME_DEV_RUNTIME__', () => JSON.stringify(runtime));
+}
+
+function writeApplyFile() {
+    const runtime = { base: null, displayName: config.displayName, version, css: cached };
+    fs.mkdirSync(path.dirname(applyFile), { recursive: true });
+    fs.writeFileSync(applyFile, `async () => {\n${loader(runtime)}\nreturn window.__themeDev.ready;\n}\n`);
+}
 
 function rebuild(reason) {
     try {
         cached = buildCombinedTheme();
         version += 1;
+        writeApplyFile();
         console.log(`[${new Date().toLocaleTimeString()}] rebuilt (${cached.length} bytes) — ${reason}`);
     } catch (error) {
         console.error('build failed:', error.message);
     }
 }
+
+writeApplyFile();
 
 function send(request, response, status, contentType, body) {
     response.statusCode = status;
@@ -56,9 +71,7 @@ const server = http.createServer((request, response) => {
             base: `http://${request.headers.host || `${HOST}:${PORT}`}`,
             displayName: config.displayName,
         };
-        const loader = fs.readFileSync(injectFile, 'utf8')
-            .replace('__THEME_DEV_RUNTIME__', JSON.stringify(runtime));
-        send(request, response, 200, 'application/javascript; charset=utf-8', loader);
+        send(request, response, 200, 'application/javascript; charset=utf-8', loader(runtime));
         return;
     }
     if (pathname === '/theme.css') {
@@ -73,6 +86,7 @@ server.listen(PORT, HOST, () => {
     console.log('  CSS:    /theme.css');
     console.log('  loader: /inject.js  (eval in Discord DevTools to install)');
     console.log(`one-liner: fetch('http://${HOST}:${PORT}/inject.js').then(r=>r.text()).then(eval)`);
+    console.log(`  agents: evaluate_script sourcePath=${applyFile}`);
 });
 
 const watcher = chokidar.watch([baseFile, `${srcDir}/**/*.css`], { ignoreInitial: true });

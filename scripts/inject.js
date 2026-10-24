@@ -1,4 +1,6 @@
-/* Generic Discord theme browser loader. Runtime values are injected by serve.js. */
+/* Generic Discord theme browser loader. Runtime values are injected by serve.js.
+ * Server mode (runtime.css absent): fetches the theme from the dev server and polls for rebuilds.
+ * Embedded mode (runtime.css set): applies the bundled CSS once, no network. Used by .theme-dev/apply.js. */
 
 window.__themeDev?.off?.();
 
@@ -6,20 +8,38 @@ window.__themeDev?.off?.();
     const runtime = __THEME_DEV_RUNTIME__;
     const BASE = runtime.base;
     const DISPLAY_NAME = runtime.displayName;
+    const EMBEDDED = typeof runtime.css === 'string';
     const STYLE_ID = 'theme-dev-injected';
     const POLL_MS = 800;
+    const FETCH_TIMEOUT_MS = 3000;
+    const COMPUTED_PROPS = [
+        'color', 'background-color', 'background-image', 'opacity',
+        'border', 'border-color', 'border-radius', 'box-shadow',
+        'padding', 'margin', 'width', 'height', 'display', 'position',
+        'font-family', 'font-size', 'font-weight', 'line-height',
+        'transition', 'transform', 'filter', 'backdrop-filter', 'z-index',
+    ];
 
     async function checkedFetch(url) {
-        const response = await fetch(url);
+        let response;
+        try {
+            response = await fetch(url, { signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
+        } catch (error) {
+            throw new Error(`${error.name === 'TimeoutError' ? 'timed out' : error.message} — ${url}. `
+                + 'If the dev server is up, the browser may be blocking local network access; '
+                + 'use .theme-dev/apply.js instead (see docs/BROWSER_DEV.md).');
+        }
         if (!response.ok) throw new Error(`${response.status} ${response.statusText} — ${url}`);
         return response;
     }
 
     async function fetchCSS() {
+        if (EMBEDDED) return runtime.css;
         return (await checkedFetch(`${BASE}/theme.css?t=${Date.now()}`)).text();
     }
 
     async function fetchVersion() {
+        if (EMBEDDED) return runtime.version;
         return (await (await checkedFetch(`${BASE}/version`)).json()).version;
     }
 
@@ -68,6 +88,7 @@ window.__themeDev?.off?.();
 
     function start() {
         stop();
+        if (EMBEDDED) return; // nothing to poll; re-run .theme-dev/apply.js after edits
         const activeGeneration = ++generation;
         const tick = async () => {
             try {
@@ -96,15 +117,8 @@ window.__themeDev?.off?.();
         const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
         if (!element) return null;
         const styles = getComputedStyle(element);
-        const props = [
-            'color', 'background-color', 'background-image', 'opacity',
-            'border', 'border-color', 'border-radius', 'box-shadow',
-            'padding', 'margin', 'width', 'height', 'display', 'position',
-            'font-family', 'font-size', 'font-weight', 'line-height',
-            'transition', 'transform', 'filter', 'backdrop-filter', 'z-index',
-        ];
         const output = {};
-        for (const prop of props) output[prop] = styles.getPropertyValue(prop).trim();
+        for (const prop of COMPUTED_PROPS) output[prop] = styles.getPropertyValue(prop).trim();
         output._selector = typeof selector === 'string' ? selector : '<element>';
         output._tag = element.tagName.toLowerCase();
         output._classes = element.className && typeof element.className === 'string' ? element.className : '';
@@ -251,10 +265,121 @@ window.__themeDev?.off?.();
         return length;
     }
 
-    window.__themeDev = { reload, off, start, stop, computed, find, cssVar, trace, BASE, DISPLAY_NAME };
+    function describe(element) {
+        if (element === document.body) return 'body';
+        if (element === document.documentElement) return ':root';
+        const classes = typeof element.className === 'string' ? element.className.trim().split(/\s+/).filter(Boolean) : [];
+        return element.tagName.toLowerCase() + classes.map((name) => `.${name}`).join('');
+    }
 
-    reload().then((length) => {
+    function elementsFor(selector, limit = 5) {
+        return typeof selector === 'string' ? [...document.querySelectorAll(selector)].slice(0, limit) : [selector];
+    }
+
+    function snapshot(element, props) {
+        const styles = getComputedStyle(element);
+        const box = element.getBoundingClientRect();
+        const output = { rect: [box.left, box.top, box.width, box.height].map(Math.round).join(' ') };
+        for (const prop of props) output[prop] = styles.getPropertyValue(prop).trim();
+        return output;
+    }
+
+    // Computed styles and box of the first few matches with the theme on vs. off; only differences are returned.
+    // Transitions are frozen while measuring so the unthemed values are final, not mid-transition.
+    function compare(selector, props = COMPUTED_PROPS) {
+        const style = document.getElementById(STYLE_ID);
+        if (!style) throw new Error('theme is not injected');
+        const freeze = document.createElement('style');
+        freeze.textContent = '*, *::before, *::after { transition: none !important; animation: none !important; }';
+        document.head.appendChild(freeze);
+        try {
+            return elementsFor(selector).map((element) => {
+                const themed = snapshot(element, props);
+                style.disabled = true;
+                const unthemed = snapshot(element, props);
+                style.disabled = false;
+                const diff = {};
+                for (const key of Object.keys(themed)) {
+                    if (themed[key] !== unthemed[key]) diff[key] = { themed: themed[key], unthemed: unthemed[key] };
+                }
+                return { element: describe(element), diff };
+            });
+        } finally {
+            style.disabled = false;
+            freeze.remove();
+        }
+    }
+
+    // Rules from Discord's own stylesheets (not the theme) that set `prop` on the first match: what Discord intends.
+    function discordRules(selector, prop) {
+        const element = elementsFor(selector, 1)[0];
+        if (!element) return null;
+        return rulesFor(element, prop).filter((hit) => hit.source !== `#${STYLE_ID}`);
+    }
+
+    // colors.css maps Discord variables that haven't been found in the UI yet to loud named colors.
+    // Any visible element painted with one is using a variable that now needs a real mapping.
+    const PLACEHOLDER_COLORS = {
+        'rgb(0, 255, 0)': 'lime',
+        'rgb(255, 0, 255)': 'magenta',
+        'rgb(255, 255, 0)': 'yellow',
+        'rgb(0, 0, 255)': 'blue',
+        'rgb(255, 0, 0)': 'red',
+    };
+    // paint properties and when they actually show (borders, outlines and decorations default to currentColor)
+    const PAINT_PROPS = {
+        'color': () => true,
+        'background-color': () => true,
+        'background-image': () => true,
+        'box-shadow': () => true,
+        'fill': () => true,
+        'stroke': (styles) => styles.strokeWidth !== '0px',
+        'border-top-color': (styles) => styles.borderTopWidth !== '0px' && styles.borderTopStyle !== 'none',
+        'border-right-color': (styles) => styles.borderRightWidth !== '0px' && styles.borderRightStyle !== 'none',
+        'border-bottom-color': (styles) => styles.borderBottomWidth !== '0px' && styles.borderBottomStyle !== 'none',
+        'border-left-color': (styles) => styles.borderLeftWidth !== '0px' && styles.borderLeftStyle !== 'none',
+        'outline-color': (styles) => styles.outlineStyle !== 'none' && styles.outlineWidth !== '0px',
+        'text-decoration-color': (styles) => styles.textDecorationLine !== 'none',
+    };
+
+    function placeholders(limit = 50) {
+        const hits = [];
+        for (const element of document.querySelectorAll('body *')) {
+            const box = element.getBoundingClientRect();
+            if (!box.width || !box.height) continue;
+            for (const pseudo of [null, '::before', '::after']) {
+                const styles = getComputedStyle(element, pseudo);
+                if (pseudo && styles.content === 'none') continue;
+                const found = {};
+                for (const [prop, visible] of Object.entries(PAINT_PROPS)) {
+                    const value = styles.getPropertyValue(prop);
+                    const color = Object.keys(PLACEHOLDER_COLORS).find((rgb) => value.includes(rgb));
+                    if (color && visible(styles)) (found[PLACEHOLDER_COLORS[color]] ||= []).push(prop);
+                }
+                for (const [placeholder, props] of Object.entries(found)) {
+                    hits.push({ element: describe(element) + (pseudo || ''), placeholder, props });
+                }
+            }
+            if (hits.length >= limit) break;
+        }
+        return hits.slice(0, limit);
+    }
+
+    function status() {
+        const style = document.getElementById(STYLE_ID);
+        return { mode: EMBEDDED ? 'embedded' : 'server', version: lastVersion, injected: Boolean(style), length: style?.textContent.length ?? 0 };
+    }
+
+    const ready = reload().then((length) => {
         start();
-        console.log(`[${DISPLAY_NAME}] injected ${length}b — auto-reload on. helpers: window.__themeDev`);
-    }).catch((error) => console.error(`[${DISPLAY_NAME}] inject failed:`, error));
+        console.log(`[${DISPLAY_NAME}] injected ${length}b${EMBEDDED ? '' : ' — auto-reload on'}. helpers: window.__themeDev`);
+        return status();
+    });
+    ready.catch((error) => console.error(`[${DISPLAY_NAME}] inject failed:`, error));
+
+    window.__themeDev = {
+        reload, off, start, stop, status, ready,
+        computed, find, cssVar, trace, compare, discordRules, placeholders,
+        BASE, DISPLAY_NAME,
+    };
 })();

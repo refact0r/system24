@@ -19,6 +19,7 @@ A TUI-style CSS theme for Discord built on top of [midnight](https://github.com/
 - `scripts/dev.js` — rebuilds `build/system24.css`, expands the build import into each `DEV_OUTPUT_PATH`, and watches `src/` plus `theme/system24.theme.css`.
 - `scripts/serve.js` + `scripts/inject.js` + `scripts/theme-dev.user.js` — browser dev flow (`npm run serve`).
 - `scripts/screenshot-flavors.js` — captures flavor screenshots into `assets/flavors/` (plus README thumbnails in `assets/flavors/thumbs/`) by cycling each flavor through the live Vesktop theme file (`npm run screenshot`, macOS only, requires `DEV_OUTPUT_PATH`).
+- `scripts/check-classes.js` — lists Discord classes in `src/*.css` that no longer exist in the current client, with file, line, and same-name candidates (`npm run check-classes`; data from itmesarah/DiscordClasses, cached in `.theme-dev/`).
 - `docs/BROWSER_DEV.md` — browser injection and verification flow.
 
 ## System24 vs. midnight
@@ -33,9 +34,10 @@ A TUI-style CSS theme for Discord built on top of [midnight](https://github.com/
 - When adding or removing a source file, update the ordered `sourceFiles` list in `scripts/theme.config.js`; builds fail on an unlisted or missing CSS file.
 - Public defaults are duplicated in `src/main.css` and `theme/system24.theme.css`; keep them in sync. When adding or renaming public variables, also update every affected standalone flavor while preserving flavor-specific values.
 - `npm run dev` requires `DEV_OUTPUT_PATH` in `.env` (comma-separated paths are supported). `npm run build` and `npm run serve` do not.
-- `scripts/build.js`, `dev.js`, `serve.js`, `inject.js`, `screenshot-flavors.js`, `theme-dev.user.js`, and `docs/BROWSER_DEV.md` are intentionally identical to midnight's copies. Keep theme-specific behavior in `scripts/theme.config.js` and theme ownership guidance in `AGENTS.md`.
+- `scripts/build.js`, `dev.js`, `serve.js`, `inject.js`, `check-classes.js`, `screenshot-flavors.js`, `theme-dev.user.js`, and `docs/BROWSER_DEV.md` are intentionally identical to midnight's copies. Keep theme-specific behavior in `scripts/theme.config.js` and theme ownership guidance in `AGENTS.md`.
 - Don't add `!important` merely to fight specificity—tighten the selector first.
+- After adding or changing Discord class selectors, run `npm run check-classes`. It checks this repo's `src/` only; midnight's selectors are checked in midnight.
 
 ## Experimental agentic development
 
-If you're driving Discord through the chrome-devtools MCP to access Discord HTML/CSS or verify changes visually, see [`docs/BROWSER_DEV.md`](./docs/BROWSER_DEV.md). It covers local injection, transient UI states, and verification against real Discord rather than synthetic DOM fragments. The dependency ownership rules remain in this file.
+If you're driving Discord through the chrome-devtools MCP to access Discord HTML/CSS or verify changes visually, see [`docs/BROWSER_DEV.md`](./docs/BROWSER_DEV.md). It covers local injection, transient UI states, and verification against real Discord rather than synthetic DOM fragments. The dependency ownership rules remain in this file. For any visual bug, follow its "Fixing a visual bug" steps: compare against unthemed Discord, and check whether the cause is in midnight before editing here.

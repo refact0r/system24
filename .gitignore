@@ -11,3 +11,5 @@ dist
 package-lock.json
 *.pyc
 .DS_Store
+
+.theme-dev/

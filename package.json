@@ -5,7 +5,8 @@
 		"build": "node scripts/build.js",
 		"dev": "node scripts/dev.js",
 		"serve": "node scripts/serve.js",
-		"screenshot": "node scripts/screenshot-flavors.js"
+		"screenshot": "node scripts/screenshot-flavors.js",
+		"check-classes": "node scripts/check-classes.js"
 	},
 	"author": "refact0r",
 	"license": "MIT",
