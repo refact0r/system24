@@ -19,7 +19,7 @@ A TUI-style CSS theme for Discord built on top of [midnight](https://github.com/
 - `scripts/dev.js` — rebuilds `build/system24.css`, expands the build import into each `DEV_OUTPUT_PATH`, and watches `src/` plus `theme/system24.theme.css`.
 - `scripts/serve.js` + `scripts/inject.js` + `scripts/theme-dev.user.js` — browser dev flow (`npm run serve`).
 - `scripts/screenshot-flavors.js` — captures flavor screenshots into `assets/flavors/` (plus README thumbnails in `assets/flavors/thumbs/`) by cycling each flavor through the live Vesktop theme file (`npm run screenshot`, macOS only, requires `DEV_OUTPUT_PATH`).
-- `scripts/check-classes.js` — lists Discord classes in `src/*.css` that no longer exist in the current client, with file, line, and same-name candidates (`npm run check-classes`; data from itmesarah/DiscordClasses, cached in `.theme-dev/`).
+- `scripts/check-classes.js` — lists Discord classes in `src/*.css` that no longer exist in the current client, with file, line, and same-name candidates (`npm run check-classes`; checks Discord Stable by default, `-- --canary` for Canary; data from itmesarah/DiscordClasses, cached in `.theme-dev/`).
 - `docs/BROWSER_DEV.md` — browser injection and verification flow.
 
 ## System24 vs. midnight

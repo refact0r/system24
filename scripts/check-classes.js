@@ -1,6 +1,7 @@
 /* Flags Discord classes in src/*.css that no longer exist in the current Discord client.
  *
- *   npm run check-classes                 # check against the default class list (cached for 6h)
+ *   npm run check-classes                 # check against Discord Stable's classes (cached for 6h)
+ *   npm run check-classes -- --canary     # check against Canary instead, to see what's coming
  *   npm run check-classes -- --refresh    # re-download the class list
  *   npm run check-classes -- --json       # machine-readable output
  *   npm run check-classes -- --source <url-or-path>
@@ -13,7 +14,8 @@ const path = require('path');
 
 const { config, root, srcDir } = require('./build');
 
-const DEFAULT_SOURCE = 'https://raw.githubusercontent.com/itmesarah/DiscordClasses/main/discordclasses.json';
+const STABLE_SOURCE = 'https://raw.githubusercontent.com/itmesarah/DiscordClasses/main/stableclasses.json';
+const CANARY_SOURCE = 'https://raw.githubusercontent.com/itmesarah/DiscordClasses/main/canaryclasses.json';
 const CACHE_FILE = path.join(root, '.theme-dev', 'classes.json');
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 // Discord's hashed class names: readable name, underscore(s), 5-6 hex chars. e.g. listItem__650eb, grabber_ec237e.
@@ -24,7 +26,7 @@ const flag = (name) => args.includes(name);
 const option = (name) => (args.includes(name) ? args[args.indexOf(name) + 1] : undefined);
 
 async function loadSource() {
-    const source = option('--source') || DEFAULT_SOURCE;
+    const source = option('--source') || (flag('--canary') ? CANARY_SOURCE : STABLE_SOURCE);
     if (!/^https?:/.test(source)) return JSON.parse(fs.readFileSync(source, 'utf8'));
 
     const cached = fs.existsSync(CACHE_FILE) && JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
