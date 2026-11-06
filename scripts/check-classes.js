@@ -6,7 +6,8 @@
  *   npm run check-classes -- --json       # machine-readable output
  *   npm run check-classes -- --source <url-or-path>
  *
- * Accepts the itmesarah/DiscordClasses format ({ module: { key: "class" } }) or
+ * Default source is a mirror of itmesarah/DiscordClasses (the original GitHub repo was removed in Nov 2026).
+ * Accepts the DiscordClasses format ({ module: { key: "class" } }) or
  * sadan's dump format ({ module: { class_names: [{ value }] } }). Exits 1 when dead classes are found. */
 
 const fs = require('fs');
@@ -14,12 +15,14 @@ const path = require('path');
 
 const { config, root, srcDir } = require('./build');
 
-const STABLE_SOURCE = 'https://raw.githubusercontent.com/itmesarah/DiscordClasses/main/stableclasses.json';
-const CANARY_SOURCE = 'https://raw.githubusercontent.com/itmesarah/DiscordClasses/main/canaryclasses.json';
+const MIRROR = 'https://raw.githubusercontent.com/Vexadros/DiscordClasses/main';
+const STABLE_SOURCE = `${MIRROR}/stableclasses.json`;
+const CANARY_SOURCE = `${MIRROR}/canaryclasses.json`;
 const CACHE_FILE = path.join(root, '.theme-dev', 'classes.json');
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000;
-// Discord's hashed class names: readable name, underscore(s), 5-6 hex chars. e.g. listItem__650eb, grabber_ec237e.
-const CLASS_PATTERN = /\.(-?[A-Za-z_][\w-]*?_[0-9a-f]{5,6})(?![\w-])/g;
+// Discord's hashed class names: readable name, underscore, 6-char hash. The hash was hex until Nov 2026
+// (listItem__650eb, grabber_ec237e) and is now base64-ish (container_idTHId, chatHeaderBar_By_-nl).
+const CLASS_PATTERN = /\.(-?[A-Za-z_][\w-]*?_[\w-]{6})(?![\w-])/g;
 
 const args = process.argv.slice(2);
 const flag = (name) => args.includes(name);
@@ -53,7 +56,7 @@ function classesFrom(data) {
     return classes;
 }
 
-const readableName = (name) => name.replace(/_+[0-9a-f]{5,6}$/, '');
+const readableName = (name) => name.replace(/_[\w-]{6}$/, '');
 
 function usedClasses() {
     const used = [];

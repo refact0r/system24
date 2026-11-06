@@ -20,7 +20,7 @@
     *::before,
     *::after,
     /* Exclude avatar wrapper so that --round-pfp has full control */
-    *:not(.wrapper__44b0c):not(.container__1ce5d):not(.avatar_c19a55):not(.replyAvatar_c19a55) {
+    *:not(.wrapper_XpIUHy):not(.container_pfDcF-):not(.avatar_2i8Bfm):not(.replyAvatar_2i8Bfm) {
         border-radius: 0 !important;
         --radius-none: 0px !important;
         --radius-xs: 0px !important;
@@ -33,24 +33,24 @@
     }
 
     /* Server icons */
-    .svg_cc5dd2 > mask {
+    .svg_hqZPsU > mask {
         display: none;
     }
 
-    .svg__2338f.imageContainer_ef9ae7 > foreignObject {
+    .svg_SZ8p4i.imageContainer_1AI0dL > foreignObject {
         mask: none;
     }
 
-    .wrapper__44b0c,
-    .container__1ce5d {
+    .wrapper_XpIUHy,
+    .container_pfDcF- {
         --online-2: #43a25a;
         --dnd-2: #d83a41;
         --idle-2: #ca9654;
         --offline-2: #82838b;
         --streaming-2: #9147ff;
     }
-    .wrapper__44b0c:has(> .svg__44b0c > g > rect)::after,
-    .container__1ce5d:has(> .mask_a423bd .status_a423bd)::after {
+    .wrapper_XpIUHy:has(> .svg_XpIUHy > g > rect)::after,
+    .container_pfDcF-:has(> .mask_PlwcO5 .status_PlwcO5)::after {
         content: '';
         display: block;
         position: absolute;
@@ -60,34 +60,34 @@
         right: -4px;
         border: 2px solid var(--background-base-lower);
     }
-    .wrapper__44b0c:has(> .svg__44b0c rect[fill='#45a366'])::after,
-    .container__1ce5d:has(> .mask_a423bd .status_a423bd[style='background-color: rgb(69, 163, 102);'])::after {
+    .wrapper_XpIUHy:has(> .svg_XpIUHy rect[fill='#45a366'])::after,
+    .container_pfDcF-:has(> .mask_PlwcO5 .status_PlwcO5[style='background-color: rgb(69, 163, 102);'])::after {
         background: var(--online-2) !important;
     }
-    .wrapper__44b0c:has(> .svg__44b0c rect[fill='#da3e44'])::after {
+    .wrapper_XpIUHy:has(> .svg_XpIUHy rect[fill='#da3e44'])::after {
         background: var(--dnd-2) !important;
     }
-    .wrapper__44b0c:has(> .svg__44b0c rect[fill='#ffc04e'])::after {
+    .wrapper_XpIUHy:has(> .svg_XpIUHy rect[fill='#ffc04e'])::after {
         background: var(--idle-2) !important;
     }
-    .wrapper__44b0c:has(> .svg__44b0c rect[fill='#84858d'])::after {
+    .wrapper_XpIUHy:has(> .svg_XpIUHy rect[fill='#84858d'])::after {
         background: var(--offline-2) !important;
     }
-    .wrapper__44b0c:has(> .svg__44b0c rect[fill='#9147ff'])::after {
+    .wrapper_XpIUHy:has(> .svg_XpIUHy rect[fill='#9147ff'])::after {
         background: var(--streaming-2);
     }
 
-    .lowerBadge_cc5dd2 {
+    .lowerBadge_hqZPsU {
         border: 2px solid var(--background-base-lower);
         bottom: -4px;
         right: -4px;
     }
-    .upperBadge_cc5dd2 {
+    .upperBadge_hqZPsU {
         border: 2px solid var(--background-base-lower);
         top: -4px;
         right: -4px;
     }
-    .folderGroup__48112.isExpanded__48112 > .stack_dbd263 {
+    .folderGroup_RTMSuZ.isExpanded_RTMSuZ > .stack_TWWX0S {
         overflow: visible !important;
     }
 
@@ -117,19 +117,19 @@
         border-radius: 0 !important;
     }
 
-    :is(.vc-switch-slider, .thumb_a28278) > rect {
+    :is(.vc-switch-slider, .thumb_9AraPt) > rect {
         rx: 0px !important;
     }
 
     /* sticker panel */
-    .assetWrapper__31fc2.assetWrapperMasked__31fc2,
-    .inspectedIndicator_c6367b {
+    .assetWrapper_1399Om.assetWrapperMasked_1399Om,
+    .inspectedIndicator_5z8c5P {
         -webkit-mask: none;
         mask: none;
     }
 
     /* context menu radio buttons */
-    .radioIndicator__64e61 {
+    .radioIndicator_oJuRbG {
         background-color: var(--checkbox-background-default);
         background-image: linear-gradient(var(--white) 0 0);
         background-position: center;
@@ -139,11 +139,11 @@
         box-sizing: border-box;
         transition: background-size 0.25s cubic-bezier(0.35, 1.6, 0.45, 1);
     }
-    .radioIndicator__64e61 > circle {
+    .radioIndicator_oJuRbG > circle {
         display: none;
     }
-    .standaloneRadioIndicator__64e61[data-selected='true'] .radioIndicator__64e61,
-    .radioGroupOption__64e61[data-selected='true'] .radioIndicator__64e61 {
+    .standaloneRadioIndicator_oJuRbG[data-selected='true'] .radioIndicator_oJuRbG,
+    .radioGroupOption_oJuRbG[data-selected='true'] .radioIndicator_oJuRbG {
         background-color: var(--checkbox-background-selected-default);
         background-size: 8px 8px;
         border-color: var(--checkbox-border-selected-default);
@@ -153,42 +153,42 @@
 /* Active only when unrounding is enabled. */
 @container body style(--round-pfp: off) and style(--unrounding: on) {
     /* Remove avatar masks to allow square profile pictures. */
-    .wrapper__44b0c > svg > foreignObject,
+    .wrapper_XpIUHy > svg > foreignObject,
     /* Moved here so the avatar mask is only removed for square profile pictures. */
-    .svg__44b0c > foreignObject,
-    .svg__2338f > foreignObject {
+    .svg_XpIUHy > foreignObject,
+    .svg_SZ8p4i > foreignObject {
         mask: none !important;
     }
 
     /* Remove the border radius from reply avatars. */
-    .avatar_c19a55,
-    .replyAvatar_c19a55 {
+    .avatar_2i8Bfm,
+    .replyAvatar_2i8Bfm {
         border-radius: 0 !important;
     }
 
     /* Remove the banner cutout since it only fits rounded avatars. */
-    .banner_f7e69e > .banner__68edb {
+    .banner_vNEdYY > .banner_s9bWOi {
         --custom-cutout-radius: 0px !important;
     }
 
-    .wrapper__44b0c {
+    .wrapper_XpIUHy {
         border-radius: 0 !important;
     }
 
     /* Replace Discord's rounded status indicator with the square variant. */
-    .svg__44b0c > rect,
-    .svg__44b0c > circle,
-    .svg__44b0c > g,
-    .svg__44b0c rect[mask='url(#:rhi:)'],
-    .avatar__20a53 .status_a423bd {
+    .svg_XpIUHy > rect,
+    .svg_XpIUHy > circle,
+    .svg_XpIUHy > g,
+    .svg_XpIUHy rect[mask='url(#:rhi:)'],
+    .avatar_TBNqol .status_PlwcO5 {
         display: none;
     }
 }
 
 @container body style(--round-pfp: on) and style(--unrounding: on) {
     /* Restore Discord's native status indicator. */
-    .wrapper__44b0c::after,
-    .container__1ce5d::after {
+    .wrapper_XpIUHy::after,
+    .container_pfDcF-::after {
         content: none !important;
         display: none !important;
     }
@@ -196,8 +196,8 @@
 
 @container body style(--remove-pfp-decor: on) {
     /* Hide avatar decorations to avoid rounded overlays on square profile pictures. */
-    .avatarDecoration_c19a55,
-    .avatarDecoration__44b0c {
+    .avatarDecoration_2i8Bfm,
+    .avatarDecoration_XpIUHy {
         display: none !important;
     }
 }

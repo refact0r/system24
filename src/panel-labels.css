@@ -11,19 +11,19 @@ body {
 }
 
 @container body style(--panel-labels: on) {
-    .guilds__5e434,
-    .panels__5e434,
-    .sidebarList__5e434,
-    .subtitleContainer_f75fb0,
-    .messagesWrapper__36d07,
-    .channelTextArea_f75fb0,
-    .content_f75fb0 > .membersWrap_c8ffbb,
-    .container_c8ffbb,
-    .container__133bf > .container__9293f,
-    .peopleColumn__133bf,
-    .nowPlayingColumn__133bf,
-    .container__01ae2 > .container__9293f,
-    .callContainer_cb9592 {
+    .guilds_pog62O,
+    .panels_pog62O,
+    .sidebarList_pog62O,
+    .subtitleContainer_z_gUBg,
+    .messagesWrapper_8AE1Qq,
+    .channelTextArea_z_gUBg,
+    .content_z_gUBg > .membersWrap_86es0b,
+    .container_86es0b,
+    .container_zrUwGA > .container_ybUK7Z,
+    .peopleColumn_zrUwGA,
+    .nowPlayingColumn_zrUwGA,
+    .container_FrbQJp > .container_ybUK7Z,
+    .callContainer_hbKzX7 {
         &::after {
             display: block;
             color: var(--label-color);
@@ -43,128 +43,128 @@ body {
         }
     }
 
-    .guilds__5e434::after {
+    .guilds_pog62O::after {
         content: 'nav';
     }
-    .panels__5e434::after {
+    .panels_pog62O::after {
         content: 'user';
     }
-    .sidebarList__5e434::after {
+    .sidebarList_pog62O::after {
         content: 'channels';
     }
-    .subtitleContainer_f75fb0::after {
+    .subtitleContainer_z_gUBg::after {
         content: 'channel';
     }
-    .messagesWrapper__36d07::after {
+    .messagesWrapper_8AE1Qq::after {
         content: 'chat';
     }
-    .channelTextArea_f75fb0::after {
+    .channelTextArea_z_gUBg::after {
         content: 'input';
     }
-    .container_c8ffbb::after,
-    .content_f75fb0 > .membersWrap_c8ffbb::after {
+    .container_86es0b::after,
+    .content_z_gUBg > .membersWrap_86es0b::after {
         content: 'members';
     }
-    .container__133bf > .container__9293f:after {
+    .container_zrUwGA > .container_ybUK7Z:after {
         content: 'friends';
     }
-    .peopleColumn__133bf::after {
+    .peopleColumn_zrUwGA::after {
         content: 'list';
     }
-    .nowPlayingColumn__133bf::after {
+    .nowPlayingColumn_zrUwGA::after {
         content: 'activity';
     }
-    .container__01ae2 > .container__9293f::after {
+    .container_FrbQJp > .container_ybUK7Z::after {
         content: 'thread';
     }
-    .callContainer_cb9592::after {
+    .callContainer_hbKzX7::after {
         content: 'vc';
     }
 
-    .content_f75fb0 > .membersWrap_c8ffbb,
-    .panels__5e434,
-    .sidebar__5e434,
-    .sidebarList__5e434,
-    .chat_f75fb0,
-    .page__5e434,
-    .channelTextArea_f75fb0,
-    .container__133bf,
-    .container_c8ffbb,
-    .guilds__5e434,
-    .peopleColumn__133bf,
-    .tabBody__133bf,
-    .container__01ae2,
-    .chatContent_f75fb0,
-    .messagesWrapper__36d07 {
+    .content_z_gUBg > .membersWrap_86es0b,
+    .panels_pog62O,
+    .sidebar_pog62O,
+    .sidebarList_pog62O,
+    .chat_z_gUBg,
+    .page_pog62O,
+    .channelTextArea_z_gUBg,
+    .container_zrUwGA,
+    .container_86es0b,
+    .guilds_pog62O,
+    .peopleColumn_zrUwGA,
+    .tabBody_zrUwGA,
+    .container_FrbQJp,
+    .chatContent_z_gUBg,
+    .messagesWrapper_8AE1Qq {
         overflow: visible !important;
     }
-    .page__5e434,
-    .tabBody__133bf {
+    .page_pog62O,
+    .tabBody_zrUwGA {
         min-height: 0;
     }
-    .peopleColumn__133bf {
+    .peopleColumn_zrUwGA {
         min-width: 0;
     }
-    .sidebarList__5e434,
-    .container_c8ffbb,
-    .peopleColumn__133bf,
-    .nowPlayingColumn__133bf,
-    .messagesWrapper__36d07,
-    .channelTextArea_f75fb0 {
+    .sidebarList_pog62O,
+    .container_86es0b,
+    .peopleColumn_zrUwGA,
+    .nowPlayingColumn_zrUwGA,
+    .messagesWrapper_8AE1Qq,
+    .channelTextArea_z_gUBg {
         position: relative;
     }
 
-    .scroller__36d07 {
+    .scroller_8AE1Qq {
         top: 8px;
     }
-    .membersWrap_c8ffbb {
+    .membersWrap_86es0b {
         height: calc(100% - 8px);
     }
 
-    .scroller_ef3116 {
+    .scroller_5dqHTG {
         padding-top: calc(var(--custom-guild-list-padding) - 8px);
     }
 
-    .animatedContainer_f37cb1,
-    .headerGlass_f37cb1 {
+    .animatedContainer_XH4OpX,
+    .headerGlass_XH4OpX {
         left: 8px;
         right: 8px;
         width: auto;
     }
-    .header_f37cb1 {
+    .header_XH4OpX {
         margin: 0 8px;
     }
-    .container__2637a {
+    .container_H5ozaj {
         overflow: hidden;
     }
 
-    .headerEllipseForeground_f37cb1 {
+    .headerEllipseForeground_XH4OpX {
         display: none;
     }
 
-    .callContainer_cb9592 {
+    .callContainer_hbKzX7 {
         padding: 8px;
     }
 
-    .messagesWrapper__36d07 {
+    .messagesWrapper_8AE1Qq {
         mask: none !important;
     }
 
     /* hide double label in dm vc */
-    .topControls_bfe55a.controlSection_bfe55a .subtitleContainer_f75fb0::after {
+    .topControls_rTsZa_.controlSection_rTsZa_ .subtitleContainer_z_gUBg::after {
         display: none;
     }
 
     /* reduce padding and realign top row in vc */
-    .headerBar__49508.container__9293f {
+    .headerBar_neq5ug.container_ybUK7Z {
         padding: 0px 0px 12px 0px;
         min-height: 0px;
         height: 46px;
     }
-    .videoControls_bfe55a {
+    .videoControls_rTsZa_ {
         padding: 0 8px 8px;
     }
-    .headerWrapper_cb9592 {
+    .headerWrapper_hbKzX7 {
         margin: 0;
     }
 }
