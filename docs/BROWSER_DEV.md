@@ -1,6 +1,6 @@
 # Browser dev — agent flow
 
-How to drive local Discord theme changes in Chrome via the chrome-devtools MCP.
+How to drive local Discord theme changes in Chrome via the chrome-devtools MCP. To work in the maintainer's desktop client instead (Vesktop over CDP, with `scripts/cdp.mjs`), see `docs/DESKTOP_DEV.md`; the helpers and the "Fixing a visual bug" method below apply to both flows.
 
 ## Setup
 
@@ -52,7 +52,7 @@ For automatic installation during interactive browser work, import `scripts/them
 
 **Placeholder colors.** The color mapping assigns pure `lime`, `magenta`, `yellow`, `blue` and `red` to Discord variables that haven't been found in the UI yet. If one shows up on screen (or in `placeholders()`), that variable is now in use and needs a real mapping; use `trace()` to find which one.
 
-**Plugin UI.** Vencord plugin UI (e.g. the Spotify controls, `#vc-*` / `.vc-*`) doesn't exist in browser Discord. Vencord's own plugin CSS ships with the desktop client (in Vesktop: `vencordFiles/vencordDesktopRenderer.css` under the app's data directory) and is the reference for what a plugin rule fights against.
+**Plugin UI.** Vencord plugin UI (e.g. the Spotify controls, `#vc-*` / `.vc-*`) doesn't exist in browser Discord; use the desktop flow (`docs/DESKTOP_DEV.md`) to see it. Vencord's own plugin CSS ships with the desktop client (in Vesktop: `vencordFiles/vencordDesktopRenderer.css` under the app's data directory) and is the reference for what a plugin rule fights against.
 
 ## Transient-state UIs (uploads, hovers, drag previews)
 
