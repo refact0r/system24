@@ -467,6 +467,9 @@ body {
         top: 0 !important;
         background-color: var(--background-surface-high);
     }
+    #vc-spotify-progress-bar .barFill_p3RiOL {
+        border: none;
+    }
     #app-mount #vc-spotify-progress-bar .track_p3RiOL:hover {
         cursor: col-resize;
     }
