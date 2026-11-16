@@ -13,3 +13,4 @@ package-lock.json
 .DS_Store
 
 .theme-dev/
+pnpm-lock.yaml
