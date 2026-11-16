@@ -60,20 +60,20 @@
         right: -4px;
         border: 2px solid var(--background-base-lower);
     }
-    .wrapper_XpIUHy:has(> .svg_XpIUHy rect[fill='#45a366'])::after,
+    .wrapper_XpIUHy:has(> .svg_XpIUHy > g rect[fill='#45a366'])::after,
     .container_pfDcF-:has(> .mask_PlwcO5 .status_PlwcO5[style='background-color: rgb(69, 163, 102);'])::after {
         background: var(--online-2) !important;
     }
-    .wrapper_XpIUHy:has(> .svg_XpIUHy rect[fill='#da3e44'])::after {
+    .wrapper_XpIUHy:has(> .svg_XpIUHy > g rect[fill='#da3e44'])::after {
         background: var(--dnd-2) !important;
     }
-    .wrapper_XpIUHy:has(> .svg_XpIUHy rect[fill='#ffc04e'])::after {
+    .wrapper_XpIUHy:has(> .svg_XpIUHy > g rect[fill='#ffc04e'])::after {
         background: var(--idle-2) !important;
     }
-    .wrapper_XpIUHy:has(> .svg_XpIUHy rect[fill='#84858d'])::after {
+    .wrapper_XpIUHy:has(> .svg_XpIUHy > g rect[fill='#84858d'])::after {
         background: var(--offline-2) !important;
     }
-    .wrapper_XpIUHy:has(> .svg_XpIUHy rect[fill='#9147ff'])::after {
+    .wrapper_XpIUHy:has(> .svg_XpIUHy > g rect[fill='#9147ff'])::after {
         background: var(--streaming-2);
     }
 
