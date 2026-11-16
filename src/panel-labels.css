@@ -127,6 +127,7 @@ body {
 
     .animatedContainer_XH4OpX,
     .headerGlass_XH4OpX {
+        top: 8px;
         left: 8px;
         right: 8px;
         width: auto;
